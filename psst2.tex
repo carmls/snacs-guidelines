@@ -89,6 +89,10 @@
 \setitemize{noitemsep,topsep=0em,leftmargin=*}
 \setenumerate{noitemsep,leftmargin=0em,itemindent=13pt,topsep=0em}
 
+\usepackage{adjustbox}
+\newcommand{\choices}[1]{\adjustbox{stack=ct}{#1}}  % for placing alternatives 
+% inline with an example. e.g. \choices{to\\from\\with}
+% ct = horizontally-centered, top
 
 \usepackage{textcomp}
 % \usepackage{arabtex} % must go after xparse, if xparse is used!
@@ -140,6 +144,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{framed}
+
 %\usepackage{tikz-dependency}
 \usepackage{tikz}
 \usepackage[edges]{forest}
@@ -272,6 +277,8 @@
 %\addtolength{\topsep}{-.5cm} %space between first item and preceding paragraph
 %\setlength{\belowcaptionskip}{-.25cm}
 
+\usepackage{gb4e} % linguistic examples. put after all other package imports
+
 
 % customize \paragraph spacing
 \makeatletter
@@ -346,6 +353,8 @@
 \newenvironment{ggroup}{{}}{{}}
 
 \newenvironment{history}{\color{gray}\begin{framed}\small\noindent\textit{History.}}{\end{framed}}
+
+
 
 \newcommand{\hierA}[1]{\textcolor{red}{\hyperref[sec:#1]{#1}}}
 \newcommand{\hierB}[1]{\textcolor{blue}{\hyperref[sec:#1]{#1}}}
@@ -667,6 +676,34 @@ or \psst{Theme} (with \pex{inform}: direct object).
 
 
 \hierBdef{Cost}
+
+An amount (typically of money) that is linked to an item or service 
+that it pays for\slash could pay for, or given as the amount earned or owed. 
+
+The governor may be an explicit commercial scenario:
+\begin{exe}
+  %\ex I paid/owed John \$10 for the book. %#nonprep
+  \ex I \choices{bought\\sold} the book \p{for} \$10.
+  \ex The book is \choices{priced\\valued} \p{at} \$10.
+  \ex I got a refund \p{of} \$10.
+\end{exe}
+Or the \psst{Cost} may be specified as an adjunct with a non-commerical governor:
+\begin{exe}
+  \ex You can ride the bus \p{for} \choices{free\\\$1}.
+\end{exe}
+\psst{Cost} is \emph{not} used with general scenes of possession or transfer, 
+even if the thing possessed or transferred happens to be an amount of money:
+\begin{exe}
+  \ex I bestowed the winner \p{with}$_{\text{\psst{Co-Theme}}}$ \$100.
+\end{exe}
+
+\begin{history}
+  This category was not present in v1, which had the broader category \sst{Value}. 
+  VerbNet has a similar category called \sst{Asset}; we chose the name 
+  \psst{Cost} to emphasize that it describes a relation rather than an entity type 
+  (it does not apply to money with a verb like \pex{possess} or \pex{transfer}, 
+  for instance).
+\end{history}
 
 \hierBdef{Beneficiary}
 
