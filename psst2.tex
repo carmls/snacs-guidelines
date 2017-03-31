@@ -103,6 +103,7 @@
 
 %\usepackage{mathptmx}	% txfonts
 \usepackage{fourier}
+\usepackage[scaled=.87]{helvet}
 \usepackage[scaled=.8]{beramono}
 \usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
@@ -138,8 +139,10 @@
 \usepackage{colortbl}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{framed}
 %\usepackage{tikz-dependency}
 \usepackage{tikz}
+\usepackage[edges]{forest}
 %\usepackage{tree-dvips}
 \usetikzlibrary{arrows,positioning,calc} 
 
@@ -288,7 +291,7 @@
 \newcommand{\sst}[1]{\lbl{#1}} % supersense tag label
 \newcommand{\nsst}[1]{\sst{n:#1}} % noun supersense tag label
 \newcommand{\vsst}[1]{\sst{v:#1}} % verb supersense tag label
-\newcommand{\psst}[1]{\textcolor{mdgreen}{\sst{#1}}} % preposition supersense tag label
+\newcommand{\psst}[1]{\textcolor{mdgreen}{\hyperref[sec:#1]{\sst{#1}}}} % preposition supersense tag label
 \newcommand{\olbl}[1]{\textcolor{purple}{\textrm{#1}}} % other label: `i, `d, etc.
 %\newcommand{\nsst}[1]{\sst{#1~\textroundcap{\vphantom{-}}~}} % noun supersense tag label
 %\newcommand{\vsst}[1]{\sst{#1\raisebox{-1.5pt}{\textasciicaron}}} % verb supersense tag label
@@ -340,6 +343,20 @@
 \newcommand{\draftnotice}[1]{#1} % for the draft version only
 %\newcommand{\subversion}[1]{}
 
+\newenvironment{ggroup}{{}}{{}}
+
+\newenvironment{history}{\color{gray}\begin{framed}\small\noindent\textit{History.}}{\end{framed}}
+
+\newcommand{\hierA}[1]{\textcolor{red}{\hyperref[sec:#1]{#1}}}
+\newcommand{\hierB}[1]{\textcolor{blue}{\hyperref[sec:#1]{#1}}}
+\newcommand{\hierC}[1]{\textcolor{mdgreen}{\hyperref[sec:#1]{#1}}}
+\newcommand{\hierD}[1]{\textcolor{orange}{\hyperref[sec:#1]{#1}}}
+
+\newcommand{\hierAdef}[1]{\section{\psst{#1}}\label{sec:#1}}
+\newcommand{\hierBdef}[1]{\subsection{\psst{#1}}\label{sec:#1}}
+\newcommand{\hierCdef}[1]{\subsubsection{\psst{#1}}\label{sec:#1}}
+\newcommand{\hierDdef}[1]{\paragraph{\psst{#1}}\label{sec:#1}}
+
 \hyphenation{WordNet}
 \hyphenation{WordNets}
 \hyphenation{FrameNet}
@@ -379,80 +396,281 @@ Version~2 is a revision of the supersense inventory proposed for English by
 The present inventory was developed after extensive review of the 
 v1 corpus annotations for English, as well as consideration of adposition 
 and case phenomena in Hebrew, Hindi, and Korean.
+Examples in this document are limited to English; 
+an online multilingual lexical resource is forthcoming.
 \end{abstract}
 
 \section{Overview}
 
-\section{Inventory}
+v1 is documented in PrepWiki (\url{http://tiny.cc/prepwiki}).
 
-\section{Major changes from v1}
+v2 will be documented in Xposition (URL TBD).
 
-\section{\psst{Circumstance}}
+\subsection{What counts as an adposition?}
 
-\subsection{\psst{Temporal}}
+``Adposition'' is the cover term for prepositions and postpositions. 
+Briefly, we consider a word or multiword expression to be an adposition if it:
+\begin{itemize}
+  \item Mediates a semantically asymmetric figure--ground relation between two concepts
+  \item Is a grammatical item that can mark an NP, and in some cases may mark clauses (as a subordinator) 
+  or be intransitive. 
+  We also include always-intransitive grammatical items whose core meaning is spatial and highly schematic, 
+  like English \p{together}, \p{apart}, \p{away}, and \p{forward}.
+  \item Is not a differential object marker (e.g., Hebrew \p{`et}, which marks direct objects if and only if 
+  they are definite).
+\end{itemize}
+\nss{What about a word that matches the above criteria where it is used as an intransitive 
+predicate, e.g. \pex{She is \p{out}/\p{away}}?}
 
-\subsubsection{\psst{Time}}
+\subsection{Inventory}
 
-\paragraph{\psst{StartTime}}
+The v2 hierarchy is a tree with 50~labels.
+They are organized into three major subhierarchies: 
+\psst{Circumstance} (18~labels), \psst{Participant} (14~labels), 
+and \psst{Configuration} (18~labels). 
 
-\paragraph{\psst{EndTime}}
+\begin{multicols}{3}
+\begin{ggroup}
+  \sffamily\color{gray}
+\begin{forest}
+  for tree={%
+    folder,
+    grow'=0,
+    fit=band,
+    inner ysep=.75,
+  }
+  [{\hierA{Circumstance}}
+    [{\hierB{Temporal}}
+      [{\hierC{Time}}
+        [{\hierD{StartTime}}]
+        [{\hierD{EndTime}}]
+        [{\hierD{DeicticTime}}]
+      ]
+      [{\hierC{Frequency}}]
+      [{\hierC{Duration}}]
+    ]
+    [{\hierB{Locus}}
+      [{\hierC{Source}}]
+      [{\hierC{Goal}}]
+    ]
+    [{\hierB{Path}}
+      [{\hierC{Direction}}]
+      [{\hierC{Extent}}]
+    ]
+    [{\hierB{Means}}]
+    [{\hierB{Manner}}]
+    [{\hierB{Explanation}}
+      [{\hierC{Purpose}}]
+    ]
+  ]
+\end{forest}
+\columnbreak
 
-\paragraph{\psst{DeicticTime}}
+\begin{forest}
+  for tree={%
+    folder,
+    grow'=0,
+    fit=band,
+    inner ysep=.75,
+  }
+  [{\hierA{Participant}}
+    [{\hierB{Causer}}
+      [{\hierC{Agent}}
+        [{\hierD{Co-Agent}}]
+      ]
+    ]
+    [{\hierB{Theme}}
+      [{\hierC{Co-Theme}}]
+      [{\hierC{Topic}}]
+    ]
+    [{\hierB{Stimulus}}]
+    [{\hierB{Experiencer}}]
+    [{\hierB{Originator}}]
+    [{\hierB{Recipient}}]
+    [{\hierB{Cost}}]
+    [{\hierB{Beneficiary}}]
+    [{\hierB{Instrument}}]
+  ]
+\end{forest}
+\columnbreak
 
-\subsubsection{\psst{Frequency}}
+\begin{forest}
+  for tree={%
+    folder,
+    grow'=0,
+    fit=band,
+    inner ysep=.75,
+  }
+  [{\hierA{Configuration}}
+    [{\hierB{Identity}}]
+    [{\hierB{Species}}]
+    [{\hierB{Gestalt}}
+      [{\hierC{Possessor}}]
+      [{\hierC{Whole}}]
+    ]
+    [{\hierB{Characteristic}}
+      [{\hierC{Possession}}]
+      [{\hierC{Part/Portion}}
+        [{\hierD{Stuff}}]
+      ]
+    ]
+    [{\hierB{Accompanier}}]
+    [{\hierB{InsteadOf}}]
+    [{\hierB{ComparisonRef}}]
+    [{\hierB{RateUnit}}]
+    [{\hierB{Quantity}}
+      [{\hierC{Approximator}}]
+    ]
+    [{\hierB{SocialRel}}
+      [{\hierC{OrgRole}}]
+    ]
+  ]
+\end{forest}
+\end{ggroup}
+\end{multicols}
 
-\subsubsection{\psst{Duration}}
+\begin{itemize}
+\item Items in the \psst{Circumstance} subhierarchy are prototypically 
+expressed as adjuncts of time, place, manner, purpose, etc.\ 
+elaborating an event or entity.
+\item Items in the \psst{Participant} subhierarchy are prototypically 
+entities functioning as arguments to an event.
+\item Items in the \psst{Configuration} subhierarchy are prototypically
+entities or properties in a static relationship to some entity.
+\end{itemize}
 
-\subsection{\psst{Locus}}
+\subsection{Major changes from v1}
 
-\subsubsection{\psst{Source}}
+Changes that affect only a single label are explained below the relevant 
+v2 labels.
 
-\subsubsection{\psst{Goal}}
+\begin{itemize}
+  \item \textbf{Removed multiple inheritance.}
+  \item \textbf{Revised and expanded the \psst{Configuration} subhierarchy.}
+  \item \textbf{Removed the locative concreteness distinction.}
+  In v1, labels \sst{Location}, \sst{InitialLocation}, and \sst{Destination} 
+  were reserved for concrete locations, and the respective supertypes 
+  \sst{Locus}, \sst{Source}, and \sst{Goal} used to cover abstract locations.
+  This distinction was found to be difficult and did not seem to be 
+  relevant to grammatical constructions. The concrete labels were thus removed.
+  \item \textbf{Removed the location/state/value distinction.}
+  The v1 scheme attempted to make an elaborate distinction between 
+  values, states, and other kinds of abstract locations. 
+  However, the English preposition system does not seem particularly 
+  sensitive to these distinctions. (We are not aware of any prepositions 
+  that mark primarily values or primarily states; rather, productive 
+  metaphors allow locative prepositions to be extended to cover these, 
+  and there are cases where teasing apart abstract location vs.~state vs.~value 
+  is difficult.) Therefore, \sst{State}, \sst{InitialState}, \sst{EndState}, 
+  \sst{Value}, and \sst{ValueComparison} were removed.
+  \item \textbf{Revised the treatment of comparison and related notions.} 
+  \sst{Comparison/Contrast}, \sst{Scalar/Rank}, \sst{ValueComparison}; 
+  moved \psst{Approximator} under \psst{Quantity}
+  \item \textbf{Greatly simplified the \psst{Path} subhierarchy.} See \cref{sec:Path}.
+  \item \textbf{Simplified the \psst{Temporal} subhierarchy.} See \cref{sec:Temporal}.
+\end{itemize}
 
-\subsection{\psst{Path}}
+\hierAdef{Circumstance}
 
-\subsubsection{\psst{Direction}}
+\hierBdef{Temporal}
 
-\subsubsection{\psst{Extent}}
+\hierCdef{Time}
 
-\subsection{\psst{Means}}
+\hierDdef{StartTime}
 
-\subsection{\psst{Manner}}
+\hierDdef{EndTime}
 
-\subsection{\psst{Explanation}}
+\hierDdef{DeicticTime}
 
-\subsubsection{\psst{Purpose}}
+\hierCdef{Frequency}
+
+\hierCdef{Duration}
+
+\hierBdef{Locus}
+
+\hierCdef{Source}
+
+Initial location, condition, or value. May be abstract.
+Prototypically inanimate, though it can be used to construe animate \psst{Participant}s 
+(especially \psst{Originator}).
+Contrasts with \psst{Goal}.
+
+\hierCdef{Goal}
+
+Final location, condition, or value.  May be abstract.
+Prototypically inanimate, though it can be used to construe animate \psst{Participant}s 
+(especially \psst{Recipient}).
+Constrats with \psst{Source}.
+
+\hierBdef{Path}
+
+\hierCdef{Direction}
+
+\hierCdef{Extent}
+
+\hierBdef{Means}
+
+\hierBdef{Manner}
+
+\hierBdef{Explanation}
+
+\hierCdef{Purpose}
 
 
 
 
-\section{\psst{Participant}}
+\hierAdef{Participant}
 
-\subsection{\psst{Causer}}
+\hierBdef{Causer}
 
-\subsubsection{\psst{Agent}}
+\hierCdef{Agent}
 
-\paragraph{\psst{Co-Agent}}
+\hierDdef{Co-Agent}
 
-\subsection{\psst{Theme}}
+\hierBdef{Theme}
 
-\subsubsection{\psst{Co-Theme}}
+\hierCdef{Co-Theme}
 
-\subsubsection{\psst{Topic}}
+\hierCdef{Topic}
 
-\subsection{\psst{Stimulus}}
+\hierBdef{Stimulus}
 
-\subsection{\psst{Experiencer}}
+\hierBdef{Experiencer}
 
-\subsection{\psst{Originator}}
+\hierBdef{Originator}
 
-\subsection{\psst{Recipient}}
+Animate who is the initial possessor or creator/producer of something,
+including the speaker/communicator of information. 
+A ``source'' in the broadest sense of a starting point/condition. 
+Contrasts with \psst{Recipient}.
 
-\subsection{\psst{Cost}}
+Typically construed as \psst{Agent} (with \pex{give}, \pex{tell}, \pex{create}: 
+subject or passive-\p{by}; adnominal \p{by} as in \pex{works \p{by} Shakespeare}) 
+or \psst{Source} (\pex{obtain/hear \p{from}}; adnominal \p{of} as in \pex{works \p{of} Shakespeare}). 
+Occasionally construed as \psst{Theme} (\pex{rob \uline{her} of her life savings}: direct object).
 
-\subsection{\psst{Beneficiary}}
+\begin{history}
+  \psst{Originator} merges v1 labels \sst{Donor/Speaker} and \sst{Creator}, 
+  which were difficult to distinguish in the case of authorship.
+  %(e.g., \pex{the operas \p{of} Puccini}).
+\end{history}
 
-\subsection{\psst{Instrument}}
+\hierBdef{Recipient}
+
+Animate who is the (actual or intended) final possessor of a thing or message. 
+A ``goal'' in the broadest sense of an ending point/condition. 
+Contrasts with \psst{Originator}.
+
+Typically construed as \psst{Goal} (\pex{give/talk \p{to}}), 
+\psst{Agent} (with \pex{receive}: subject or passive-\p{by}), 
+or \psst{Theme} (with \pex{inform}: direct object).
+
+
+\hierBdef{Cost}
+
+\hierBdef{Beneficiary}
+
+\hierBdef{Instrument}
 
 An entity that facilitates an action by applying intermediate causal force.
 Prototypically, an \psst{Agent} manipulates the \psst{Instrument} with the purpose of achieving a result.
@@ -464,33 +682,33 @@ The key is that the \psst{Instrument} is not sufficiently ``independently causal
 Other non-prototypical instruments include waypoints from \psst{Source} to \psst{Goal}, 
 and people that relay information from \psst{Originator} to \psst{Recipient}.
 
+Compare \psst{Means}, which is used for facilitative events rather than entities.
 
+\hierAdef{Configuration}
 
-\section{\psst{Configuration}}
+\hierBdef{Identity}
 
-\subsection{\psst{Identity}}
+\hierBdef{Species}
 
-\subsection{\psst{Species}}
+\hierBdef{Gestalt}
 
-\subsection{\psst{Gestalt}}
+\hierCdef{Possessor}
 
-\subsubsection{\psst{Possessor}}
+\hierCdef{Whole}
 
-\subsubsection{\psst{Whole}}
+\hierBdef{Characteristic}
 
-\subsection{\psst{Characteristic}}
+\hierCdef{Possession}
 
-\subsubsection{\psst{Possession}}
+\hierCdef{Part/Portion}
 
-\subsubsection{\psst{Part/Portion}}
+\hierDdef{Stuff}
 
-\paragraph{\psst{Stuff}}
+\hierBdef{Accompanier}
 
-\subsection{\psst{Accompanier}}
+\hierBdef{InsteadOf}
 
-\subsection{\psst{InsteadOf}}
-
-\subsection{\psst{ComparisonRef}}
+\hierBdef{ComparisonRef}
 
 The reference point in an explicit comparison (or contrast), i.e., 
 an expression indicating that something is 
@@ -528,15 +746,15 @@ in the \p{as}--\p{as} construction), \p{like}, \p{unlike}.
 Prominent construals are \p{to} (\psst{Goal} for similar-thing) 
 and \p{from} (\psst{Source} for dissimilar-thing).
 
-\subsection{\psst{RateUnit}}
+\hierBdef{RateUnit}
 
-\subsection{\psst{Quantity}}
+\hierBdef{Quantity}
 
-\subsubsection{\psst{Approximator}}
+\hierCdef{Approximator}
 
-\subsection{\psst{SocialRel}}
+\hierBdef{SocialRel}
 
-\subsubsection{\psst{OrgRole}}
+\hierCdef{OrgRole}
 
 \bibliographystyle{plainnat}
 \bibliography{psst2.bib}
