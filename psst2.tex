@@ -82,8 +82,8 @@
   0pt}{% space before (vertical)
   1em}%               space after (horizontal)
 
-% Numbered Examples and lists
-\usepackage{lingmacros}
+%\usepackage{lingmacros}
+% Lists
 
 \usepackage{enumitem} % customizable lists
 \setitemize{noitemsep,topsep=0em,leftmargin=*}
@@ -754,22 +754,24 @@ something else.
 The marker of the ``something else'' (the ground in the figure–ground relationship) 
 is given the label \psst{ComparisonRef}:
 
-\eenumsentence{
-\item She is taller \p{than} me.
-\item She is taller \p{than} I am.
-\item She is taller \p{than} she is wide.
-\item She is better at math \p{than} at drawing.
-\item The shirt is more gray \p{than} black.
-%\item She is greater in height \p{than} me.
-}
-\eenumsentence{
-\item She is as tall \p{as} I am.
-\item Your face is as$_{\text{\psst{Characteristic}}}$ red \p{as} a rose.
-\item Your face is red \p{as} a rose.
-\item Your surname is the\_same \p{as} mine.
-}
-\enumsentence{Harry had never met anyone quite \p{like} Luna.}
-\enumsentence{It was \p{as\_if}/\p{like} he had insulted my mother.}
+\begin{exe}
+  \ex \begin{xlist}
+    \ex She is taller \p{than} me.
+    \ex She is taller \p{than} I am.
+    \ex She is taller \p{than} she is wide.
+    \ex She is better at math \p{than} at drawing.
+    \ex The shirt is more gray \p{than} black.
+    %\ex She is greater in height \p{than} me.
+  \end{xlist}
+  \ex \begin{xlist}
+    \ex She is as tall \p{as} I am.
+    \ex Your face is as$_{\text{\psst{Characteristic}}}$ red \p{as} a rose.
+    \ex Your face is red \p{as} a rose.
+    \ex Your surname is the\_same \p{as} mine.
+  \end{xlist}
+  \ex Harry had never met anyone quite \p{like} Luna.
+  \ex It was \choices{\p{as\_if}\\\p{like}} he had insulted my mother.
+\end{exe}
 
 The comparison is often made with respect to some dimension or attribute, the \psst{Characteristic}, 
 which may or may not be scalar. 
