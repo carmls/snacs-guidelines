@@ -1,0 +1,548 @@
+\PassOptionsToPackage{usenames}{color}
+\documentclass[11pt,letterpaper]{article}
+\usepackage{comment}
+\usepackage{relsize} % relative font sizes (e.g. \smaller). must precede ACL style
+%\usepackage{style/acl2012}
+
+\usepackage[linkcolor=blue]{hyperref}
+
+\usepackage[round]{natbib}
+\begin{comment}
+\usepackage[style=authoryear-comp,natbib=true,hyperref=true]{biblatex}
+
+% tell biblatex not to quote titles in the bibliography
+\DeclareFieldFormat{title}{#1} % don't italicize titles by default
+\DeclareFieldFormat[book]{title}{\mkbibemph{#1}\isdot} % but do italicize books
+\DeclareFieldFormat[article]{title}{#1\isdot}
+\DeclareFieldFormat[inbook]{title}{#1\isdot}
+\DeclareFieldFormat[incollection]{title}{#1\isdot}
+\DeclareFieldFormat[inproceedings]{title}{#1\isdot}
+\DeclareFieldFormat[patent]{title}{#1\isdot}
+\DeclareFieldFormat[thesis]{title}{#1\isdot}
+\DeclareFieldFormat[unpublished]{title}{#1\isdot}
+% ...and for articles, to use number(issue) instead of number.issue
+\renewbibmacro*{journal+issuetitle}{%
+  \usebibmacro{journal}%
+  \setunit*{\addspace}%
+  \iffieldundef{series}
+    {}
+    {\newunit
+     \printfield{series}%
+     \setunit{\addspace}}%
+  \printfield{volume}%
+%  \setunit*{\adddot}%
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}%
+  \setunit{\addspace}%
+  \usebibmacro{issue+date}%
+  \newunit\newblock
+  \usebibmacro{issue}%
+  \newunit}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+% use ``pages'' instead of ``pp.''
+\DefineBibliographyStrings{english}{%
+    pages  =  {pages} % for multiple page numbers
+}
+% but for articles, just use a colon
+\DeclareFieldFormat[article]{pages}{:#1} %TODO. check with LeCun citation
+% and don't put a colon after In
+\renewbibmacro*{in:}{%
+  \bibstring{in}%\addcolon
+  \setunit{\space}}
+
+\DeclareFieldFormat{label}{#1\isdot}
+\renewbibmacro*{year+labelyear}{%
+  \iffieldundef{year}
+    {}
+    {\printtext{%
+       \printfield{year}%
+       \printfield{labelyear}%
+       \setunit{\adddot}}}}
+
+\bibliography{features.bib}
+\end{comment}
+
+
+%\usepackage{times}
+%\usepackage{latexsym}
+
+
+\usepackage[boxed]{algorithm2e}
+\renewcommand\AlCapFnt{\small}
+\usepackage[small,bf,skip=5pt]{caption}
+\usepackage{sidecap} % side captions
+\usepackage{rotating}	% sideways
+
+% Italicize subparagraph headings
+\usepackage{titlesec}
+\titleformat*{\subparagraph}{\itshape}
+\titlespacing{\subparagraph}{%
+  1em}{%              left margin
+  0pt}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+% Numbered Examples and lists
+\usepackage{lingmacros}
+
+\usepackage{enumitem} % customizable lists
+\setitemize{noitemsep,topsep=0em,leftmargin=*}
+\setenumerate{noitemsep,leftmargin=0em,itemindent=13pt,topsep=0em}
+
+
+\usepackage{textcomp}
+% \usepackage{arabtex} % must go after xparse, if xparse is used!
+%\usepackage{utf8}
+% \setcode{utf8} % use UTF-8 Arabic
+% \newcommand{\Ar}[1]{\RL{\novocalize #1}} % Arabic text
+
+\usepackage[procnames]{listings}
+
+\usepackage{amssymb}	%amsfonts,eucal,amsbsy,amsthm,amsopn
+\usepackage{amsmath}
+
+%\usepackage{mathptmx}	% txfonts
+\usepackage{fourier}
+\usepackage[scaled=.8]{beramono}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{MnSymbol}	% must be after mathptmx
+
+\usepackage{latexsym}
+
+
+
+
+
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs} % pretty tables
+\usepackage{multicol}
+\usepackage{footnote}
+
+
+\usepackage{url}
+\usepackage[usenames]{color}
+\usepackage{xcolor}
+
+% colored frame box
+\newcommand{\cfbox}[2]{%
+    \colorlet{currentcolor}{.}%
+    {\color{#1}%
+    \fbox{\color{currentcolor}#2}}%
+}
+
+\usepackage[normalem]{ulem} % \uline
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{subcaption}
+%\usepackage{tikz-dependency}
+\usepackage{tikz}
+%\usepackage{tree-dvips}
+\usetikzlibrary{arrows,positioning,calc} 
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+
+% Author comments
+\usepackage{color}
+\newcommand\bmmax{0} % magic to avoid 'too many math alphabets' error
+\usepackage{bm}
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{mdgreen}{rgb}{0,0.6,0}
+\definecolor{mdblue}{rgb}{0,0,0.7}
+\definecolor{dkblue}{rgb}{0,0,0.5}
+\definecolor{dkgray}{rgb}{0.3,0.3,0.3}
+\definecolor{slate}{rgb}{0.25,0.25,0.4}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{ltgray}{rgb}{0.7,0.7,0.7}
+\definecolor{purple}{rgb}{0.7,0,1.0}
+\definecolor{lavender}{rgb}{0.65,0.55,1.0}
+
+% Settings for algorithm listings
+\makeatletter
+\lst@AddToHook{EveryPar}{%
+  \label{lst:\thelstnumber}% make a label for each line number except the first (assumes only one listing in the document)
+}
+\makeatother
+\lstset{
+% basicstyle=\rmshape,
+  numbers=left,
+  numberstyle=\tt\color{gray},
+  firstnumber=2,
+  stepnumber=5,
+  xleftmargin=3em,
+  language=Python,
+  upquote=true,
+  showstringspaces=false,
+  formfeed=\newpage,
+  tabsize=1,
+  stringstyle=\color{mdgreen},
+  commentstyle=\itshape\color{lavender},
+  basicstyle=\small\smaller\ttfamily,
+  morekeywords={lambda,with,as,assert},
+  keywordstyle=\bfseries\color{magenta},
+  procnamekeys={def},
+  procnamestyle=\bfseries\color{orange},
+  aboveskip=0.5cm,
+  belowskip=0.5cm
+}
+\renewcommand{\lstlistingname}{Algorithm}
+
+
+\newcommand{\ensuretext}[1]{#1}
+\newcommand{\cjdmarker}{\ensuretext{\textcolor{green}{\ensuremath{^{\textsc{CJ}}_{\textsc{D}}}}}}
+\newcommand{\nssmarker}{\ensuretext{\textcolor{magenta}{\ensuremath{^{\textsc{NS}}_{\textsc{S}}}}}}
+\newcommand{\nasmarker}{\ensuretext{\textcolor{red}{\ensuremath{^{\textsc{NA}}_{\textsc{S}}}}}}
+\newcommand{\bomarker}{\ensuretext{\textcolor{blue}{\ensuremath{^{\textsc{B}}_{\textsc{O}}}}}}
+\newcommand{\jbmarker}{\ensuretext{\textcolor{orange}{\ensuremath{^{\textsc{J}}_{\textsc{B}}}}}}
+\newcommand{\dbmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{D}}_{\textsc{B}}}}}}
+\newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
+%\newcommand{\arkcomment}[3]{}
+\newcommand{\cjd}[1]{\arkcomment{\cjdmarker}{#1}{green}}
+\newcommand{\nss}[1]{\arkcomment{\nssmarker}{#1}{magenta}}
+\newcommand{\nas}[1]{\arkcomment{\nasmarker}{#1}{red}}
+\newcommand{\bo}[1]{\arkcomment{\bomarker}{#1}{blue}}
+\newcommand{\jb}[1]{\arkcomment{\jbmarker}{#1}{orange}}
+\newcommand{\db}[1]{\arkcomment{\dbmarker}{#1}{purple}}
+\newcommand{\params}{\mathbf{\theta}}
+\newcommand{\wts}{\mathbf{w}}
+\newcommand{\g}{\mathbf{g}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu} % \bar is too narrow in math
+\newcommand{\cost}{c}
+
+\newcommand{\citeposs}[2][]{\citeauthor{#2}'s (\citeyear[#1]{#2})}
+\newcommand{\Citeposs}[2][]{\Citeauthor{#2}'s (\citeyear[#1]{#2})}
+
+\usepackage{nameref}
+\usepackage{cleveref}
+
+% use \S for all references to all kinds of sections, and \P to paragraphs
+% (sadly, we cannot use the simpler \crefname{} macro because it would insert a space after the symbol)
+\crefformat{part}{\S#2#1#3}
+\crefformat{chapter}{\S#2#1#3}
+\crefformat{section}{\S#2#1#3}
+\crefformat{subsection}{\S#2#1#3}
+\crefformat{subsubsection}{\S#2#1#3}
+\crefformat{paragraph}{\P#2#1#3}
+\crefformat{subparagraph}{\P#2#1#3}
+\crefmultiformat{part}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\crefmultiformat{chapter}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\crefmultiformat{section}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\crefmultiformat{subsection}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\crefmultiformat{subsubsection}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\crefmultiformat{paragraph}{\P\P#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\crefmultiformat{subparagraph}{\P\P#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+% for \label[appsec]{...}
+\crefname{appsec}{appendix}{appendices}
+\Crefname{appsec}{Appendix}{Appendices}
+
+\newcommand{\creflastconjunction}{, and\nobreakspace} % Oxford comma for lists
+
+\newcommand*{\Fullref}[1]{\hyperref[{#1}]{\Cref*{#1}: \nameref*{#1}}}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\cref*{#1}: \nameref{#1}}}
+% \newcommand{\fref}[1]{figure~\ref{#1}}
+% \newcommand{\ffref}[2]{figures~\ref{#1} and~\ref{#2}}
+% \newcommand{\Fref}[1]{Figure~\ref{#1}}
+% \newcommand{\FFref}[2]{Figures~\ref{#1} and~\ref{#2}}
+% \newcommand{\tref}[1]{table~\ref{#1}}
+% \newcommand{\ttref}[2]{tables~\ref{#1} and~\ref{#2}}
+% \newcommand{\Tref}[1]{Table~\ref{#1}}
+% \newcommand{\aref}[1]{algorithm~\ref{#1}}
+% \newcommand{\Aref}[1]{Algorithm~\ref{#1}}
+\newcommand{\fnref}[1]{\autoref{#1}} % don't use \cref{} due to bug in (now out-of-date) cleveref package w.r.t. footnotes
+%\newcommand{\eref}[1]{\eqref{#1}}
+
+% Space savers
+% From http://www.eng.cam.ac.uk/help/tpl/textprocessing/squeeze.html
+%\addtolength{\dbltextfloatsep}{-.5cm} % space between last top float or first bottom float and the text.
+%\addtolength{\intextsep}{-.5cm} % space left on top and bottom of an in-text float.
+%\addtolength{\abovedisplayskip}{-.5cm} % space before maths
+%\addtolength{\belowdisplayskip}{-.5cm} % space after maths
+%\addtolength{\topsep}{-.5cm} %space between first item and preceding paragraph
+%\setlength{\belowcaptionskip}{-.25cm}
+
+
+% customize \paragraph spacing
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{.2ex \@plus 1ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
+
+
+% Special macros
+\newcommand{\w}[1]{\textit{#1}}	% word
+\newcommand{\p}[1]{\textbf{\textsf{#1}}} % preposition type
+\newcommand{\lbl}[1]{\textsc{#1}} % class label
+\newcommand{\sst}[1]{\lbl{#1}} % supersense tag label
+\newcommand{\nsst}[1]{\sst{n:#1}} % noun supersense tag label
+\newcommand{\vsst}[1]{\sst{v:#1}} % verb supersense tag label
+\newcommand{\psst}[1]{\textcolor{mdgreen}{\sst{#1}}} % preposition supersense tag label
+\newcommand{\olbl}[1]{\textcolor{purple}{\textrm{#1}}} % other label: `i, `d, etc.
+%\newcommand{\nsst}[1]{\sst{#1~\textroundcap{\vphantom{-}}~}} % noun supersense tag label
+%\newcommand{\vsst}[1]{\sst{#1\raisebox{-1.5pt}{\textasciicaron}}} % verb supersense tag label
+%\newcommand{\psst}[1]{\sst{#1\raisebox{2pt}{\rotatebox{180}{\textsublhalfring{\phantom{.}}}}}} %\textcorner % preposition supersense tag label
+
+\newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}}
+\newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}
+
+
+\newcommand{\tg}[1]{\texttt{#1}}	% supersense tag name
+\newcommand{\gfl}[1]{%\renewcommand\texttildelow{{\lower.74ex\hbox{\texttt{\char`\~}}}} % http://latex.knobs-dials.com/
+\mbox{\textsmaller{\texttt{#1}}}}	% supersense tag symbol
+ \newcommand{\tagdef}[1]{#1\hfill} % tag definition
+\newcommand{\tagt}[2]{\ensuremath{\underset{\textrm{\textlarger{\tg{#2}}}\strut}{\w{#1}\rule[-.3\baselineskip]{0pt}{0pt}}}} % tag text (a word or phrase) with an SST. (second arg is the tag)
+\newcommand{\glosst}[2]{\ensuremath{\underset{\textrm{#2}}{\textrm{#1}}}} % gloss text (a word or phrase) (second arg is the gloss)
+\newcommand{\AnnA}[0]{\mbox{\textbf{Ann-A}}} % annotator A
+\newcommand{\AnnB}[0]{\mbox{\textbf{Ann-B}}} % annotator B
+\newcommand{\sys}[1]{\mbox{\textbf{#1}}}   % name of a system (one of our experimental conditions)
+\newcommand{\dataset}[1]{\mbox{\textsc{#1}}}	% one of the datasets in our experiments
+\newcommand{\datasplit}[1]{\mbox{\textbf{#1}}}	% portion one of the datasets in our experiments
+
+\newcommand{\fnf}[1]{\textsc{\textsf{#1}}} % FrameNet frame
+\newcommand{\fnr}[1]{\textbf{\textsf{#1}}} % FrameNet role (frame element name)
+\newcommand{\fnrel}[1]{\textsl{#1}} % FrameNet frame relation type
+\newcommand{\fnst}[1]{\textsl{#1}} % FrameNet semantic type
+\newcommand{\fnlu}[1]{\textsf{#1}} % FrameNet lexical unit (predicate)
+\newcommand{\pbf}[1]{\mbox{\textsf{#1}}} % PropBank frame (roleset)
+\newcommand{\pbr}[1]{\textbf{\textsf{#1}}} % PropBank role (numbered or modifier argument label)
+\newcommand{\vpred}[1]{\textbf{#1}} % verb predicate
+
+
+%\newcommand{\lex}[1]{\textsmaller{\textsf{\textcolor{slate}{\textbf{#1}}}}}	% example lexical item
+\newcommand{\lex}[1]{\textit{#1}} % lexical item/lexical example
+\newcommand{\pex}[1]{\textit{#1}} % phrasal example - don't index by default
+
+%\newcommand{\w}[1]{\textit{#1}}	% word
+\newcommand{\gap}[0]{\ \ } % space around gap contents
+\newcommand{\tat}[0]{\textasciitilde}
+
+\newcommand{\shortlong}[2]{#1} % short vs. long version of the paper
+\newcommand{\confversion}[1]{#1}
+%\newcommand{\finalversion}[1]{#1}
+\newcommand{\finalversion}[1]{}
+\newcommand{\futureversion}[1]{}
+\newcommand{\shortversion}[1]{#1}
+\newcommand{\considercutting}[1]{#1}
+\newcommand{\longversion}[1]{} % ...if only there were more space...
+\newcommand{\subversion}[1]{#1} % for the submission version only
+\newcommand{\draftnotice}[1]{#1} % for the draft version only
+%\newcommand{\subversion}[1]{}
+
+\hyphenation{WordNet}
+\hyphenation{WordNets}
+\hyphenation{FrameNet}
+\hyphenation{SemCor}
+\hyphenation{SemEval}
+\hyphenation{ParsedSemCor}
+\hyphenation{VerbNet}
+\hyphenation{PennConverter}
+\hyphenation{an-aly-sis}
+\hyphenation{an-aly-ses}
+\hyphenation{news-text}
+\hyphenation{base-line}
+\hyphenation{de-ve-lop-ed}
+\hyphenation{comb-over}
+\hyphenation{per-cept}
+\hyphenation{per-cepts}
+\hyphenation{post-edit-ing}
+\hyphenation{shriv-eled}
+\hyphenation{Huddle-ston}
+
+\title{\draftnotice{{\it\small WORKING DRAFT}\\[5pt] 
+Adposition Supersenses v2}}
+
+\author{Nathan Schneider\\ \textsmaller{\texttt{\href{mailto:nschneid@cs.cmu.edu}{nathan.schneider@georgetown.edu}}}}
+
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\noindent 
+This document describes an inventory of 50~semantic labels 
+designed to characterize the use of adpositions and case markers 
+at a somewhat coarse level of granularity. 
+Version~2 is a revision of the supersense inventory proposed for English by 
+\citet{schneider-15,schneider-16} (henceforth ``v1''), which in turn was based on previous schemes.
+The present inventory was developed after extensive review of the 
+v1 corpus annotations for English, as well as consideration of adposition 
+and case phenomena in Hebrew, Hindi, and Korean.
+\end{abstract}
+
+\section{Overview}
+
+\section{Inventory}
+
+\section{Major changes from v1}
+
+\section{\psst{Circumstance}}
+
+\subsection{\psst{Temporal}}
+
+\subsubsection{\psst{Time}}
+
+\paragraph{\psst{StartTime}}
+
+\paragraph{\psst{EndTime}}
+
+\paragraph{\psst{DeicticTime}}
+
+\subsubsection{\psst{Frequency}}
+
+\subsubsection{\psst{Duration}}
+
+\subsection{\psst{Locus}}
+
+\subsubsection{\psst{Source}}
+
+\subsubsection{\psst{Goal}}
+
+\subsection{\psst{Path}}
+
+\subsubsection{\psst{Direction}}
+
+\subsubsection{\psst{Extent}}
+
+\subsection{\psst{Means}}
+
+\subsection{\psst{Manner}}
+
+\subsection{\psst{Explanation}}
+
+\subsubsection{\psst{Purpose}}
+
+
+
+
+\section{\psst{Participant}}
+
+\subsection{\psst{Causer}}
+
+\subsubsection{\psst{Agent}}
+
+\paragraph{\psst{Co-Agent}}
+
+\subsection{\psst{Theme}}
+
+\subsubsection{\psst{Co-Theme}}
+
+\subsubsection{\psst{Topic}}
+
+\subsection{\psst{Stimulus}}
+
+\subsection{\psst{Experiencer}}
+
+\subsection{\psst{Originator}}
+
+\subsection{\psst{Recipient}}
+
+\subsection{\psst{Cost}}
+
+\subsection{\psst{Beneficiary}}
+
+\subsection{\psst{Instrument}}
+
+An entity that facilitates an action by applying intermediate causal force.
+Prototypically, an \psst{Agent} manipulates the \psst{Instrument} with the purpose of achieving a result.
+This includes a device serving as a mode of transportation or medium of communication 
+(often construed as a \psst{Locus} or \psst{Path}).
+Less prototypically, the action could be unintentional 
+(\pex{I accidentally poked myself in the eye \p{with} a stick}). 
+The key is that the \psst{Instrument} is not sufficiently ``independently causal'' to instigate the event.
+Other non-prototypical instruments include waypoints from \psst{Source} to \psst{Goal}, 
+and people that relay information from \psst{Originator} to \psst{Recipient}.
+
+
+
+\section{\psst{Configuration}}
+
+\subsection{\psst{Identity}}
+
+\subsection{\psst{Species}}
+
+\subsection{\psst{Gestalt}}
+
+\subsubsection{\psst{Possessor}}
+
+\subsubsection{\psst{Whole}}
+
+\subsection{\psst{Characteristic}}
+
+\subsubsection{\psst{Possession}}
+
+\subsubsection{\psst{Part/Portion}}
+
+\paragraph{\psst{Stuff}}
+
+\subsection{\psst{Accompanier}}
+
+\subsection{\psst{InsteadOf}}
+
+\subsection{\psst{ComparisonRef}}
+
+The reference point in an explicit comparison (or contrast), i.e., 
+an expression indicating that something is 
+\textbf{similar/analogous to}, \textbf{different from}, or \textbf{the same as}
+something else. 
+The marker of the ``something else'' (the ground in the figure–ground relationship) 
+is given the label \psst{ComparisonRef}:
+
+\eenumsentence{
+\item She is taller \p{than} me.
+\item She is taller \p{than} I am.
+\item She is taller \p{than} she is wide.
+\item She is better at math \p{than} at drawing.
+\item The shirt is more gray \p{than} black.
+%\item She is greater in height \p{than} me.
+}
+\eenumsentence{
+\item She is as tall \p{as} I am.
+\item Your face is as$_{\text{\psst{Characteristic}}}$ red \p{as} a rose.
+\item Your face is red \p{as} a rose.
+\item Your surname is the\_same \p{as} mine.
+}
+\enumsentence{Harry had never met anyone quite \p{like} Luna.}
+\enumsentence{It was \p{as\_if}/\p{like} he had insulted my mother.}
+
+The comparison is often made with respect to some dimension or attribute, the \psst{Characteristic}, 
+which may or may not be scalar. 
+The comparison may be figurative, employing simile, hyperbole, or spatial metaphor 
+(\pex{close to} in the sense of `similar to'). 
+The \psst{ComparisonRef} may even be a desirable or hypothetical/irrealis 
+event or state (\pex{It was \p{as} it should have been}).
+
+Prototypical prepositions include \p{than}, \p{as} (including the second item 
+in the \p{as}--\p{as} construction), \p{like}, \p{unlike}. 
+Prominent construals are \p{to} (\psst{Goal} for similar-thing) 
+and \p{from} (\psst{Source} for dissimilar-thing).
+
+\subsection{\psst{RateUnit}}
+
+\subsection{\psst{Quantity}}
+
+\subsubsection{\psst{Approximator}}
+
+\subsection{\psst{SocialRel}}
+
+\subsubsection{\psst{OrgRole}}
+
+\bibliographystyle{plainnat}
+\bibliography{psst2.bib}
+
+
+%\printbibliography[maxnames=99]
+
+
+\end{document}
