@@ -92,6 +92,29 @@
   0pt}{% space before (vertical)
   1em}%               space after (horizontal)
 
+
+% MOVE SECTION NUMBERS INTO LEFT MARGIN
+% They will be roman, right-aligned and separated from the heading text by .2cm
+% adapted from http://tex.stackexchange.com/a/311712
+\titleformat{\section}[block]
+  {\Large\bfseries}
+  {}
+  {0pt}
+  {\hspace{-1.2cm}% Move into margin
+   \makebox[1cm][r]{\normalfont\thesection}\hspace{.2cm}}% Set number + title
+\titleformat{\subsection}[block]
+  {\large\bfseries}
+  {}
+  {0pt}
+  {\hspace{-1.2cm}% Move into margin
+   \makebox[1cm][r]{\normalfont\thesubsection}\hspace{.2cm}}% Set number + title
+\titleformat{\subsubsection}[block]
+  {\normalsize\bfseries}
+  {}
+  {0pt}
+  {\hspace{-1.2cm}% Move into margin
+   \makebox[1cm][r]{\normalfont\thesubsubsection}\hspace{.2cm}}% Set number + title
+
 %\usepackage{lingmacros}
 % Lists
 
