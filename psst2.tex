@@ -74,6 +74,15 @@
 \usepackage{sidecap} % side captions
 \usepackage{rotating}	% sideways
 
+% customize \paragraph spacing
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{3.25ex \@plus 1ex \@minus .2ex}{-1em}% reduce 3.25 to .2 to minimize space
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
 % Italicize subparagraph headings
 \usepackage{titlesec}
 \titleformat*{\subparagraph}{\itshape}
@@ -168,6 +177,7 @@
 \definecolor{slate}{rgb}{0.25,0.25,0.4}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{ltgray}{rgb}{0.7,0.7,0.7}
+\definecolor{ltltgray}{rgb}{0.9,0.9,0.9}
 \definecolor{purple}{rgb}{0.7,0,1.0}
 \definecolor{lavender}{rgb}{0.65,0.55,1.0}
 
@@ -280,14 +290,7 @@
 \usepackage{gb4e} % linguistic examples. put after all other package imports
 
 
-% customize \paragraph spacing
-\makeatletter
-\renewcommand{\paragraph}{%
-  \@startsection{paragraph}{4}%
-  {\z@}{.2ex \@plus 1ex \@minus .2ex}{-1em}%
-  {\normalfont\normalsize\bfseries}%
-}
-\makeatother
+
 
 
 
@@ -354,7 +357,7 @@
 
 \newcommand{\shortdef}[1]{\begin{mdframed}\noindent\textlarger{#1}\end{mdframed}}
 
-\newenvironment{history}{\color{gray}\begin{mdframed}\small\noindent\textit{History.}}{\end{mdframed}}
+\newenvironment{history}{\begin{mdframed}[linecolor=ltltgray,backgroundcolor=ltltgray]\small\noindent\textit{History.}}{\end{mdframed}}
 
 
 
@@ -408,7 +411,7 @@ The present inventory was developed after extensive review of the
 v1 corpus annotations for English, as well as consideration of adposition 
 and case phenomena in Hebrew, Hindi, and Korean.
 Examples in this document are limited to English; 
-an online multilingual lexical resource is forthcoming.
+a multilingual and more detailed online lexical resource is forthcoming.
 \end{abstract}
 
 \section{Overview}
@@ -604,7 +607,7 @@ v2 labels.
 \shortdef{Initial location, condition, or value. May be abstract.}
 
 Prototypically inanimate, though it can be used to construe animate \psst{Participant}s 
-(especially \psst{Originator}).
+(especially \psst{Originator} and \psst{Causer}).
 Contrasts with \psst{Goal}.
 
 \hierCdef{Goal}
@@ -613,7 +616,7 @@ Contrasts with \psst{Goal}.
 
 Prototypically inanimate, though it can be used to construe animate \psst{Participant}s 
 (especially \psst{Recipient}).
-Constrats with \psst{Source}.
+Contrasts with \psst{Source}.
 
 \hierBdef{Path}
 
@@ -636,15 +639,148 @@ Constrats with \psst{Source}.
 
 \hierBdef{Causer}
 
+\shortdef{Instigator of, and a core participant in, an event.}
+
+\psst{Causer} is applied directly to inanimate things or forces conceptualized as entities. 
+Prototypical prepositions are \p{by} (prominently including passive-\p{by}) and \p{of}:
+\begin{exe}
+  \ex the devastation of the town wreaked \p{by} the fire
+  \ex the devastation \p{of} the fire
+\end{exe}
+The \psst{Causer} is sometimes construed as a \psst{Source}:
+\begin{exe}
+  \ex \begin{xlist}
+    \ex the devastation \p{from} the fire (\rf{Causer}{Source})
+    \ex fatalities \p{from} cancer (\rf{Causer}{Source})
+    \ex FDR suffered \p{from} polio. (\rf{Causer}{Source})
+  \end{xlist}
+\end{exe}
+
+See also: \psst{Instrument}
+
 \hierCdef{Agent}
+
+\shortdef{Animate instigator of an action (typically volitional).}
+
+Prototypical prepositions are \p{by} (prominently including passive-\p{by}) and \p{of}:
+\begin{exe}
+  \ex the decisive vote \choices{\p{by}\\\p{of}} the City Council
+\end{exe}
+When two symmetric \psst{Agent}s are collected in a single NP 
+functioning as a set, it is marked as a \psst{Whole} construal:
+\begin{exe}
+  \ex There was a war \p{between} France and Spain. (\rf{Agent}{Whole})
+  \ex This is a discussion \p{among} friends. (\rf{Agent}{Whole})
+%  \ex Please talk \p{amongst} yourselves. \rf{Agent}{Whole}
+% reflexives are weird. maybe Co-Agent
+\end{exe}
+
+Compare: \psst{Co-Agent}; 
+see also: \psst{OrgRole}, \psst{Originator}, \psst{Stimulus}
+
 
 \hierDdef{Co-Agent}
 
+\shortdef{Participant that would otherwise be labeled \psst{Agent}, 
+but which is adpositionally marked in contrast with another \psst{Agent} 
+occupying a non-oblique syntactic position (subject or object).}
+
+\begin{exe}
+  \ex I fought in a war \p{against} the Germans.
+  \ex I \choices{talked\\argued} \p{with} my roommate about cleaning duties.
+\end{exe}
+
+See also: \psst{Accompanier}, \psst{SocialRel}
+
 \hierBdef{Theme}
+
+\shortdef{Undergoer that does not meet the criteria for any other labels.}
+
+Prototypical \psst{Theme}s are semantically core arguments 
+that are in (nonagentive) motion, are transferred, 
+or undergo a change of state (sometimes called \emph{patients}).
+Adpositional \psst{Theme}s are usually construals as something else:
+\begin{exe}
+  \ex Fill the bowl \p{with} water. (\rf{Theme}{Instrument})
+  \ex The mechanic made a repair \p{to} the engine. (\rf{Theme}{Goal})
+  \ex \begin{xlist}
+      \ex Sheldukher \choices{searched\\fumbled} \p{for} his laser pistol. (\rf{Theme}{Goal})
+      \ex There is a significant demand \p{for} new housing. (\rf{Theme}{Goal})
+      \ex They charge higher prices \p{for} goods bought by credit card. (\rf{Theme}{Goal})
+    \end{xlist}
+  \ex \begin{xlist}
+      \ex the price \p{of} tea in China (\rf{Theme}{Gestalt})
+      \ex the approach \p{of} the waves
+      \ex the \choices{death\\murder} \p{of} a salesman
+    \end{xlist}
+  \ex \begin{xlist}
+      \ex The mechanic worked \p{on} the engine.
+      \ex We noshed \p{on} snacks.
+      \ex Students spend a lot of money \p{on} textbooks.\nss{multiple construal: Theme as Goal as Locus?}
+    \end{xlist}
+  \ex \begin{xlist}
+      \ex There was an increase \p{in} oil prices.
+      \ex I'm covered \p{in} bees! (\rf{Theme}{Locus})
+    \end{xlist}
+  \ex \begin{xlist}
+      \ex The training saved us \p{from} almost certain death. (\rf{Theme}{Source})
+      \ex They prevented us \p{from} boarding the plane. (\rf{Theme}{Source})
+    \end{xlist}
+\end{exe}
+When two symmetric undergoers are collected in a single NP 
+functioning as a set, it is marked as a \psst{Whole} construal:
+\begin{exe}
+  \ex There was a collision in mid-air \p{between} two light aircraft.
+  \ex Links \p{between} science and industry are important. (\rf{Theme}{Whole})\nss{or \rf{Locus}{Whole}?}
+\end{exe}
+
+\begin{history}
+  In v1, following many thematic role inventories, 
+  \sst{Patient} was a distinct label for undergoers that were 
+  affected (undergoing an internal change of state). 
+  It was merged into \psst{Theme} because the affectedness criterion can be subtle 
+  and difficult to apply.
+\end{history}
+
+Compare: \psst{Co-Theme}
 
 \hierCdef{Co-Theme}
 
+\shortdef{Undergoer that would otherwise be labeled \psst{Theme}, 
+but which is adpositionally marked in contrast with another \psst{Theme} 
+occupying a non-oblique syntactic position (subject or object).}
+
+\begin{exe}
+  \ex They replaced my old tires \p{with} new ones.
+\end{exe}
+
+\begin{history}
+  In v1, \sst{Co-Patient} was a distinct label. 
+  See note at \psst{Theme}.
+\end{history}
+
+See also: \psst{InsteadOf}, \psst{Co-Agent}
+
 \hierCdef{Topic}
+
+\shortdef{Information content or subject matter in communication or cognition.}
+
+Prototypical prepositions are \p{about} and \p{on}:
+
+\begin{exe}
+  \ex I gave a presentation \choices{\p{about}\\\p{on}} politics.
+  \ex Try not to think \p{about} it.
+\end{exe}
+
+Less prototypical \psst{Topic} markers include:
+
+\begin{exe}
+  \ex Are you interested \p{in} politics?
+  \ex I was accused \p{of} treason.
+  \ex I'm \choices{an expert\\talented} \p{at} cooking.
+\end{exe}
+
+See also: \psst{Stimulus}
 
 \hierBdef{Stimulus}%
 %
@@ -670,7 +806,7 @@ in the languages we have looked at. In English, it can be construed in several w
 \begin{exe}
   \ex The anger \p{of} the students (\rf{Experiencer}{Possessor})
   \ex Running is enjoyable \p{for} me (\rf{Experiencer}{Beneficiary})
-  \ex It feels hot \p{to} me (\rf{Experiencer}{Recipient})
+  \ex It feels hot \p{to} me (\rf{Experiencer}{Goal})
 \end{exe}
 
 Elsewhere, the term \emph{cognizer} is sometimes used for one whose 
@@ -760,7 +896,8 @@ This includes a device serving as a mode of transportation or medium of communic
 (often construed as a \psst{Locus} or \psst{Path}).
 Less prototypically, the action could be unintentional 
 (\pex{I accidentally poked myself in the eye \p{with} a stick}). 
-The key is that the \psst{Instrument} is not sufficiently ``independently causal'' to instigate the event.
+The key is that the \psst{Instrument} is not sufficiently ``independently causal'' to instigate the event, 
+though it can be construed as the instigator (\pex{The window was broken \p{by} the hammer}: \rf{Instrument}{Causer}).
 Other non-prototypical instruments include waypoints from \psst{Source} to \psst{Goal}, 
 and people that relay information from \psst{Originator} to \psst{Recipient}.
 
@@ -789,6 +926,23 @@ Compare \psst{Means}, which is used for facilitative events rather than entities
 \hierBdef{Accompanier}
 
 \hierBdef{InsteadOf}
+
+\shortdef{A default or already established thing for which something else stands in 
+or is chosen as an alternative.}
+
+\begin{exe}
+  \ex I ordered soup \choices{\p{instead\_of}\\\p{rather\_than}} salad.
+  \ex \p{Instead\_of} ordering salad, I ordered soup.
+  %\ex They replaced \uline{my old tires} with new ones. %#nonprep
+  \ex The new shirts were gray \p{instead\_of} black.
+  \ex They \choices{substituted\\swapped} my old tires \p{for} new ones.
+\end{exe}
+May be construed spatially:
+\begin{exe}
+  \ex I chose soup \p{over} salad. (\rf{InsteadOf}{Locus})
+\end{exe}
+
+See also: \psst{Accompanier}, \psst{ComparisonRef}, \psst{Co-Theme}
 
 \hierBdef{ComparisonRef}
 
