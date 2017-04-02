@@ -275,32 +275,65 @@
 \crefformat{subsubsection}{\S#2#1#3}
 \crefformat{paragraph}{\P#2#1#3}
 \crefformat{subparagraph}{\P#2#1#3}
-\crefmultiformat{part}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
-\crefmultiformat{chapter}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
-\crefmultiformat{section}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
-\crefmultiformat{subsection}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
-\crefmultiformat{subsubsection}{\S\S#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
-\crefmultiformat{paragraph}{\P\P#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
-\crefmultiformat{subparagraph}{\P\P#2#1#3}{and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+%\crefmultiformat{part}{\S#2#1#3}{ and~\S#2#1#3}{, \S#2#1#3}{, and~\S#2#1#3}
+%\crefmultiformat{chapter}{\S#2#1#3}{ and~\S#2#1#3}{, \S#2#1#3}{, and~\S#2#1#3}
+\crefmultiformat{section}{\S#2#1#3}{ and~\S#2#1#3}{, \S#2#1#3}{, and~\S#2#1#3}
+\crefmultiformat{subsection}{\S#2#1#3}{ and~\S#2#1#3}{, \S#2#1#3}{, and~\S#2#1#3}
+\crefmultiformat{subsubsection}{\S#2#1#3}{ and~\S#2#1#3}{, \S#2#1#3}{, and~\S#2#1#3}
+\crefmultiformat{paragraph}{\P\P#2#1#3}{ and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\crefmultiformat{subparagraph}{\P\P#2#1#3}{ and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+%\crefrangeformat{part}{\mbox{\S\S#3#1#4--#5#2#6}}
+%\crefrangeformat{chapter}{\mbox{\S\S#3#1#4--#5#2#6}}
+\crefrangeformat{section}{\mbox{\S\S#3#1#4--#5#2#6}}
+\crefrangeformat{subsection}{\mbox{\S\S#3#1#4--#5#2#6}}
+\crefrangeformat{subsubsection}{\mbox{\S\S#3#1#4--#5#2#6}}
+\crefrangeformat{paragraph}{\mbox{\P\P#3#1#4--#5#2#6}}
+\crefrangeformat{subparagraph}{\mbox{\P\P#3#1#4--#5#2#6}}
 % for \label[appsec]{...}
+\crefname{part}{Part}{Parts}
+\Crefname{part}{Part}{Parts}
+\crefname{chapter}{ch.}{ch.}
+\Crefname{chapter}{Ch.}{Ch.}
+\crefname{figure}{figure}{figures}
+\crefname{subfigure}{figure}{figures}
+\Crefname{subfigure}{Figure}{Figures}
 \crefname{appsec}{appendix}{appendices}
 \Crefname{appsec}{Appendix}{Appendices}
+\crefname{algocf}{algorithm}{algorithms}
+\Crefname{algocf}{Algorithm}{Algorithms}
+\crefname{enums}{example}{examples}
+\Crefname{enums}{Example}{Examples}
+\crefname{enumsi}{example}{examples}
+\Crefname{enumsi}{Example}{Examples}
+\crefname{}{example}{examples} % lingmacros \toplabel has no internal name for the kind of label
+\Crefname{}{Example}{Examples}
+\crefformat{enums}{(#2#1#3)}
+\crefformat{enumsi}{(#2#1#3)}
+\crefformat{}{(#2#1#3)}
+\crefname{xnumi}{example}{examples} % gb4e
+\crefname{xnumi}{example}{examples} % gb4e
+\Crefname{xnumii}{Example}{Examples} % gb4e
+\Crefname{xnumii}{Example}{Examples} % gb4e
+\crefformat{xnumi}{(#2#1#3)} % gb4e
+\crefformat{xnumii}{(#2#1#3)} % gb4e
+\crefrangeformat{enums}{\mbox{(#3#1#4--#5#2#6)}}
+\crefrangeformat{enumsi}{\mbox{(#3#1#4--#5#2#6)}}
+\crefrangeformat{xnumi}{\mbox{(#3#1#4--#5#2#6)}} % gb4e
+\crefrangeformat{xnumii}{\mbox{(#3#1#4--#5#2#6)}} % gb4e
 
+\ifx\creflastconjunction\undefined%
 \newcommand{\creflastconjunction}{, and\nobreakspace} % Oxford comma for lists
+\else%
+\renewcommand{\creflastconjunction}{, and\nobreakspace} % Oxford comma for lists
+\fi%
 
 \newcommand*{\Fullref}[1]{\hyperref[{#1}]{\Cref*{#1}: \nameref*{#1}}}
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\cref*{#1}: \nameref{#1}}}
-% \newcommand{\fref}[1]{figure~\ref{#1}}
-% \newcommand{\ffref}[2]{figures~\ref{#1} and~\ref{#2}}
-% \newcommand{\Fref}[1]{Figure~\ref{#1}}
-% \newcommand{\FFref}[2]{Figures~\ref{#1} and~\ref{#2}}
-% \newcommand{\tref}[1]{table~\ref{#1}}
-% \newcommand{\ttref}[2]{tables~\ref{#1} and~\ref{#2}}
-% \newcommand{\Tref}[1]{Table~\ref{#1}}
-% \newcommand{\aref}[1]{algorithm~\ref{#1}}
-% \newcommand{\Aref}[1]{Algorithm~\ref{#1}}
-\newcommand{\fnref}[1]{\autoref{#1}} % don't use \cref{} due to bug in (now out-of-date) cleveref package w.r.t. footnotes
-%\newcommand{\eref}[1]{\eqref{#1}}
+\newcommand{\fnref}[1]{fn.~\ref{#1}} % don't use \cref{} due to bug in (now out-of-date) cleveref package w.r.t. footnotes
+\newcommand{\Fnref}[1]{Fn.~\ref{#1}}
+
+%\captionsetup[subfigure]{labelformat=simple}
+\renewcommand\thesubfigure{(\alph{subfigure})}
 
 % Space savers
 % From http://www.eng.cam.ac.uk/help/tpl/textprocessing/squeeze.html
@@ -583,7 +616,9 @@ Changes that affect only a single label are explained below the relevant
 v2 labels.
 
 \begin{itemize}
-  \item \textbf{Removed multiple inheritance.}
+  \item \textbf{Removed multiple inheritance.} 
+  The v1 network was quite tangled. The structure is greatly simplified 
+  by analyzing some tokens as \emph{construals} \citep{hwang-17}.
   \item \textbf{Revised and expanded the \psst{Configuration} subhierarchy.}
   \item \textbf{Removed the locative concreteness distinction.}
   In v1, labels \sst{Location}, \sst{InitialLocation}, and \sst{Destination} 
@@ -723,7 +758,7 @@ and that does not meet the criteria for any other label.}
 
 Prototypical \psst{Theme}s undergo (nonagentive) motion, are transferred, 
 or undergo an internal change of state (sometimes called \emph{patients}).
-Adpositional \psst{Theme}s are usually construals as something else:
+Adpositional \psst{Theme}s are usually construed as something else:
 \begin{exe}
   \ex Fill the bowl \p{with} water. (\rf{Theme}{Instrument})
   \ex The mechanic made a repair \p{to} the engine. (\rf{Theme}{Goal})
@@ -754,7 +789,7 @@ Adpositional \psst{Theme}s are usually construals as something else:
 When two symmetric undergoers are collected in a single NP 
 functioning as a set, it is marked as a \psst{Whole} construal:
 \begin{exe}
-  \ex There was a collision in mid-air \p{between} two light aircraft.
+  \ex There was a collision in mid-air \p{between} two light aircraft. (\rf{Theme}{Whole})
   \ex Links \p{between} science and industry are important. (\rf{Theme}{Whole})\nss{or \rf{Locus}{Whole}?}
 \end{exe}
 
@@ -762,7 +797,7 @@ functioning as a set, it is marked as a \psst{Whole} construal:
   In v1, following many thematic role inventories, 
   \sst{Patient} was a distinct label for undergoers that were 
   affected (undergoing an internal change of state). 
-  It was merged into \psst{Theme} because the affectedness criterion can be subtle 
+  It was merged into \psst{Theme} for v2 because the affectedness criterion can be subtle 
   and difficult to apply.
 \end{history}
 
@@ -1016,7 +1051,88 @@ and \p{from} (\psst{Source} for dissimilar-thing).
 
 \hierBdef{SocialRel}
 
+\shortdef{Entity, such as an institution or another individual, 
+with which an individual has a stable affiliation.}
+
+Typically, \psst{SocialRel} applies directly to relations between 
+individuals.
+It does not have any prototypical adpositions. 
+Construals include:
+\begin{exe}
+  \ex \begin{xlist}
+      \ex\label{ex:workwithSR} I work \p{with} Michael. (\rf{SocialRel}{Co-Agent})
+      \ex Joan has a class \p{with} Miss Zarves. (\rf{SocialRel}{Co-Agent})
+    \end{xlist}
+  \ex \begin{xlist} 
+      \ex Joan is the \choices{sister\\wife} \p{of} John. (\rf{SocialRel}{Possessor})
+      \ex Joan is a student \p{of} Miss Zarves. (\rf{SocialRel}{Possessor})
+    \end{xlist}
+  \ex Joan is studying \p{under} Prof.~Smith. (\rf{SocialRel}{Locus})
+  \ex Joan is married \p{to} John. (\rf{SocialRel}{Goal})
+\end{exe}
+
+Note, however, that \emph{work \p{with}} is ambiguous between 
+being in an established professional relationship \cref{ex:workwithSR}, 
+and engaging temporarily in a joint productive activity:
+\begin{exe}
+  \ex\label{ex:workwithCA} I was working \p{with}$_{\text{\psst{Co-Agent}}}$ Michael after lunch.
+\end{exe}
+It is up to annotators to decide from context which interpretation 
+better fits the context.
+
+\begin{history}
+  Renamed from v1 label \sst{ProfessionalAspect}, to reflect 
+  a broader set of stative relations involving an individual 
+  in a social context.
+  See note under \psst{OrgRole}.
+\end{history}
+
 \hierCdef{OrgRole}
+
+\shortdef{Organization or institution with which an individual 
+has a stable affiliation, such as membership or a business relationship.}
+
+Like its supertype \psst{SocialRel}, \psst{OrgRole} 
+lacks any prototypical adposition, but participates in numerous construals:
+
+\begin{exe}
+  \ex \begin{xlist}
+      \ex the chairman \p{of} the board (\rf{OrgRole}{Gestalt})
+      \ex the president \p{of} the U.S. (\rf{OrgRole}{Gestalt})
+      \ex I am a loyal customer \p{of} Graeter's. (\rf{OrgRole}{Gestalt})
+      \ex employees \p{of} Grunnings (\rf{OrgRole}{Gestalt})
+    \end{xlist}
+  \ex Mr. Dursley works \p{for} Grunnings. (\rf{OrgRole}{Beneficiary})
+  \ex Mr. Dursley works \p{at} Grunnings. (\rf{OrgRole}{Locus})
+  \ex Mr. Dursley is \p{from} Grunnings. (\rf{OrgRole}{Source})
+  \ex Mr. Dursley is \p{with} Grunnings. (\rf{OrgRole}{Accompanier})
+  \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{OrgRole}{Agent})\nss{or do we say `employ' is just a regular Agent/Theme verb?}
+  \ex I bank \p{with} TSB. (\rf{OrgRole}{Accompanier})
+  \ex I serve \p{on} the committee. (\rf{OrgRole}{Locus})
+\end{exe}
+
+A family counts as an institution 
+construed as a \psst{Whole} (set of its members) 
+or as a \psst{Locus}:\nss{what about `the family of the patient'?}
+\begin{exe}
+  \ex I am the baby \p{of} the family. (\rf{OrgRole}{Whole})
+  \ex I am the baby \p{in} the family. (\rf{OrgRole}{Locus})
+\end{exe}
+
+For a relation between a unit and a larger institution, 
+use \psst{Whole}:
+\begin{exe}
+  \ex the Principals Committee \p{of}$_{\text{\psst{Whole}}}$ the National Security Council
+\end{exe}
+
+\begin{history}
+  \psst{OrgRole} is now distinguished within the broader \psst{SocialRel} category 
+  following the precedent of the Abstract Meaning Representation \citep[AMR;][]{amr,amr-guidelines}. 
+  In AMR, \texttt{have-org-role-91} captures relations between 
+  an individual and an institution (such as an organization or family),
+  whereas \texttt{have-rel-role-91} is used for relations between two individuals.
+\end{history}
+
 
 \bibliographystyle{plainnat}
 \bibliography{psst2.bib}
