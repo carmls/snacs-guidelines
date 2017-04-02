@@ -451,7 +451,29 @@
 \title{\draftnotice{{\it\small WORKING DRAFT}\\[5pt] 
 Adposition Supersenses v2}}
 
-\author{Nathan Schneider\\ \textsmaller{\texttt{\href{mailto:nschneid@cs.cmu.edu}{nathan.schneider@georgetown.edu}}}}
+\newcommand{\emldisplay}[2]{\texttt{\href{mailto:#1}{#2}}}
+\newcommand{\eml}[1]{\textsmaller{\emldisplay{#1}{#1}}}
+
+\author{\textbf{Nathan Schneider} \\ 
+Georgetown University \\
+\eml{nathan.schneider@georgetown.edu} \and
+\textbf{Jena D. Hwang} \quad
+\textbf{Archna Bhatia} \\
+ 	IHMC \\
+     {\smaller \{\emldisplay{jhwang@ihmc.us}{jhwang},\emldisplay{abhatia@ihmc.us}{abhatia}\}\texttt{@ihmc.us}} \and
+\textbf{Na-Rae Han} \\
+	University of Pittsburgh \\
+    \eml{naraehan@pitt.edu} \and 
+\textbf{Vivek Srikumar} \\
+	University of Utah \\
+    \eml{svivek@cs.utah.edu} \and
+\textbf{Tim O'Gorman} \\
+	University of Colorado Boulder \\
+    \eml{timothy.ogorman@colorado.edu} \and
+\textbf{Omri Abend} \\
+  Hebrew University of Jerusalem \\
+    \eml{oabend@cs.huji.ac.il}
+}
 
 \date{}
 
@@ -913,6 +935,11 @@ Occasionally construed as \psst{Theme} (\pex{rob \uline{her} of her life savings
   \psst{Originator} merges v1 labels \sst{Donor/Speaker} and \sst{Creator}, 
   which were difficult to distinguish in the case of authorship.
   %(e.g., \pex{the operas \p{of} Puccini}).
+  \sst{Donor/Speaker} was a subtype of \sst{InitialLocation}, which 
+  inherited from \sst{Location} and \sst{Source}. 
+  \sst{Creator} was a subtype of \psst{Agent}.
+  Moving \psst{Originator} directly under \psst{Participant} 
+  puts it in a neutral position with respect to its possible construals.
 \end{history}
 
 \hierBdef{Recipient}
@@ -925,6 +952,13 @@ Typically construed as \psst{Goal} (\pex{give/talk \p{to}}),
 \psst{Agent} (with \pex{receive}: subject or passive-\p{by}), 
 or \psst{Theme} (with \pex{inform}: direct object).
 
+\begin{history}
+  In v1, \psst{Recipient} was the counterpart to \sst{Donor/Speaker}:
+  \psst{Recipient} was a subtype of \sst{Destination}, which 
+  inherited from \sst{Location} and \sst{Goal}. 
+  Moving \psst{Recipient} directly under \psst{Participant} 
+  puts it in a neutral position with respect to its possible construals.
+\end{history}
 
 \hierBdef{Cost}
 
@@ -950,7 +984,7 @@ even if the thing possessed or transferred happens to be an amount of money:
 
 \begin{history}
   This category was not present in v1, which had the broader category \sst{Value}. 
-  VerbNet has a similar category called \sst{Asset}; we chose the name 
+  VerbNet \citep{verbnet,palmer-17} has a similar category called \sst{Asset}; we chose the name 
   \psst{Cost} to emphasize that it describes a relation rather than an entity type 
   (it does not apply to money with a verb like \pex{possess} or \pex{transfer}, 
   for instance).
@@ -1105,10 +1139,12 @@ It is up to annotators to decide from context which interpretation
 better fits the context.
 
 \begin{history}
-  Renamed from v1 label \sst{ProfessionalAspect}, to reflect 
+  Renamed from v1 label \sst{ProfessionalAspect}, which was borrowed from 
+  \citet{srikumar-13,srikumar-13-inventory}.
+  The name \psst{SocialRel} reflects
   a broader set of stative relations involving an individual 
-  in a social context.
-  See note under \psst{OrgRole}.
+  in a social context, including kinship and friendship.
+  See also note under \psst{OrgRole}.
 \end{history}
 
 \hierCdef{OrgRole}
