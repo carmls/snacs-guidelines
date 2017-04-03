@@ -119,7 +119,7 @@
 % Lists
 
 \usepackage{enumitem} % customizable lists
-\setitemize{noitemsep,topsep=0em,leftmargin=*}
+\setitemize{noitemsep,topsep=0em} %,leftmargin=*
 \setenumerate{noitemsep,leftmargin=0em,itemindent=13pt,topsep=0em}
 
 \usepackage{adjustbox}
@@ -1026,6 +1026,16 @@ Compare \psst{Means}, which is used for facilitative events rather than entities
 \hierBdef{Identity}
 
 \hierBdef{Species}
+\nss{TODO}
+\begin{exe}
+  \ex that sort \p{of} business
+\end{exe}
+
+\psst{Species} is \emph{not} used if the sort/variety noun 
+is the object rather than the governor:
+\begin{exe}
+  \ex a business \p{of}$_{\text{\psst{Characteristic}}}$ that sort
+\end{exe}
 
 \hierBdef{Gestalt}
 
@@ -1041,6 +1051,7 @@ See \psst{Characteristic}.}
       \ex the blueness \p{of} the sky
       \ex the wisdom \p{of} the crowd
       \ex the time \p{of} the party
+      \ex\label{ex:amountGestalt} the amount \p{of} time allowed [but see \cref{ex:QuantityGestalt}]
     \end{xlist}
   \end{exe}
 \item	The wearer of attire:
@@ -1061,6 +1072,8 @@ Used to construe \psst{Locus} for a container denoted by the governor:
 \ex the room\p{'s} 2 beds (\rf{Locus}{Gestalt})
 \end{exe}
 }
+
+See also: \psst{Quantity}
 
 \hierCdef{Possessor}
 
@@ -1084,10 +1097,14 @@ or set element. See \psst{Part/Portion}.}
 \begin{exe}
   \ex \begin{xlist}
     \ex	The new engine \p{of} the car
-    \ex	The 3 layers \p{of} the cake
-    \ex	The 3 prongs \p{of} the strategy
-    \ex 2 \p{of} my 5 daughters
     \ex	The flaxen hair \p{of} the girl
+    \ex\label{ex:layers}	The 3 layers \p{of} the cake
+    \ex\label{ex:prongs}	The 3 prongs \p{of} the strategy
+    %\ex 2 \p{of} my 5 daughters % Quantity ~> Whole
+    \ex\label{ex:rest} The \choices{remainder\\rest} \p{of} the cake\nss{Maybe this should be 
+    \rf{Quantity}{Whole} after all, even though ``the rest of it'' is a dubious way to answer 
+    ``How much of it?''. ``The remaining 6 ounces of cake'' certainly specifies a quantity.}
+    \ex The tastiest bit \p{of} the cake
     \ex	The tennis matches \p{of} a series
     \ex	The interior \p{of} the shopping bag
     \ex	The south (region) \p{of} France
@@ -1099,11 +1116,36 @@ or set element. See \psst{Part/Portion}.}
     \ex the escape key \p{on} the keyboard (\rf{Whole}{Locus})
     \ex	The clothes \p{in} the pile (\rf{Whole}{Manner})\nss{or Locus?}
   \end{xlist}
+  \ex Sets and ratios:
+    \begin{xlist}
+      \ex This is one \p{of} the \choices{worst\\better} retaurants in town. (\psst{Whole})
+      \ex 2 \p{in} 10 American children are redheads. (\rf{Whole}{Locus})
+      \ex 2 \p{out\_of} 10 American children are redheads. (\rf{Whole}{Source})\nss{should this be \psst{RateUnit}?}
+      \ex \p{Out\_of} the 10 children in the class, only Mary is a redhead. (\rf{Whole}{Source})
+      \ex\label{ex:amongSet} \p{Among} the 10 children in the class, only Mary is a redhead. (\psst{Whole})
+    \end{xlist}
 \end{exe}
 
-Used to construe \psst{Locus} for geographic ``containers'':
+If the governor narrows the reference to a certain amount of the \psst{Whole}, 
+the construal \rf{Quantity}{Whole} is used---see \cref{ex:QuantityWhole}. 
+Note that this only applies if the governor is a measure term; 
+it does not apply to distinctive parts like ``layers'' \cref{ex:layers} 
+and ``prongs'' \cref{ex:prongs}, even if a count is specified.
+
+Used to construe geographic and temporal ``containers'':
 \begin{exe}
   \ex	Famous castles \p{of} the valley (\rf{Locus}{Whole})
+  \ex \begin{xlist}
+    \ex the \choices{15th\\Ides} \p{of} March (\rf{Time}{Whole})
+    \ex March \p{of} 44~BC (\rf{Time}{Whole})
+  \end{xlist}
+\end{exe}
+
+The prepositions \p{between} and \p{among} can impose \psst{Whole} construals 
+by combining two or more items in the object NP (contrast with \cref{ex:amongSet}):
+\begin{exe}
+  \ex\label{ex:betweenParties}  The negotiations \choices{\p{between}\\\p{among}} the parties went well. (\rf{Agent}{Whole})
+  \exp{ex:betweenParties} The negotiations \p{by} the parties went well. (\psst{Agent})
 \end{exe}
 
 \hierBdef{Characteristic}
@@ -1123,6 +1165,7 @@ are defined for some important subclasses.
 \begin{exe} \ex \begin{xlist}
   \ex a car \p{of} high quality
   \ex a man \p{of} honor
+  \ex a business \p{of} that sort [contrast with \psst{Species}, \cref{sec:Species}]
 \end{xlist}\end{exe}
 \item	Attire:
 \begin{exe}
@@ -1214,6 +1257,8 @@ or the material comprising some unit of substance.
 \psst{Stuff} is distinguished from other instances of \psst{Part/Portion}
 in fully covering (or ``summarizing'') the aggregate whole.}
 
+Paraphrase test: ``\psst{Whole} CONSISTS OF \psst{Stuff}''
+
 \begin{exe}
   \ex	\begin{xlist}
     \ex A flock \p{of} birds
@@ -1225,14 +1270,20 @@ in fully covering (or ``summarizing'') the aggregate whole.}
     \ex	A meal \p{of} salmon
   \end{xlist}
   \ex	A salad \choices{\p{of}\\\p{with}} mixed greens
-  \ex	A bag('s worth) \p{of} chips (\rf{Quantity}{Stuff})
-  \ex	\begin{xlist}
-    \ex An order \p{of} nuns (\rf{OrgRole}{Stuff})
-    \ex	A chamber group \choices{\p{of}\\\p{with}} 5 players (\rf{OrgRole}{Stuff})
-  \end{xlist}
+  \ex\label{ex:bottleStuff} This bottle is \p{of} beer (and that one is of wine). [but see \cref{ex:bottleQuantity}]
+  % \ex	\rf{Quantity}{Stuff}: see \cref{ex:QuantityStuff}
+  %   \begin{xlist}
+  %     \ex A bottle('s worth) \p{of} beer
+  %     \ex A bag('s worth) \p{of} chips
+  %   \end{xlist}
+  \ex \rf{OrgRole}{Stuff}:
+  	\begin{xlist}
+      \ex An order \p{of} nuns
+      \ex	A chamber group \choices{\p{of}\\\p{with}} 5 players
+    \end{xlist}
 \end{exe}
 
-Paraphrase test: ``\psst{Whole} CONSISTS OF \psst{Stuff}''
+See also: \psst{Quantity}
 
 \psst{Stuff} has no specific counterpart under \psst{Whole}.
 
@@ -1299,9 +1350,100 @@ and \p{from} (\psst{Source} for dissimilar-thing).
 
 \hierBdef{RateUnit}
 
+\shortdef{Unit of measure in a rate expression.}
+
+The prototypical preposition in \p{per}:
+
+\begin{exe} \ex \begin{xlist}
+  \ex The cost is \$10 \p{per} item.
+  \ex A fuel efficiency of 40 miles \p{per} gallon (of gas)
+\end{xlist}\end{exe}
+
+Paraphrase: The adposition can be paraphrased as ``for each/every''.
+
+\begin{history}
+  In v1, this fell under \sst{Value}.
+\end{history}
+
 \hierBdef{Quantity}
 
-See also: \psst{Stuff}
+\shortdef{Something measured by a quantity denoted by the governor.}
+
+The governor may be a precise or vague count/measurement. 
+This includes nouns like ``lack'', ``dearth'', ``shortage'', ``excess'', or ``surplus''
+(meaning a too-small or too-large amount).
+
+Question test: the governor answers ``How much/many of (object)?''
+
+The main preposition is \p{of}.
+
+\begin{itemize}
+\item Simple \psst{Quantity}:
+\begin{exe}
+  \ex\label{ex:bottleQuantity}	Pour me a bottle('s worth) \p{of} beer. [but see \cref{ex:bottleStuff}]
+  \ex	I have 2 years \p{of} training.
+  \ex	\begin{xlist}
+    \ex I ate \choices{6 ounces\\a piece} \p{of} cake.
+    \ex	An ounce \p{of} compassion
+  \end{xlist}
+  \ex	There's a dearth \p{of} cake in the house.
+  \ex	This cake has thousands \p{of} sprinkles.
+  \ex They number in the tens \p{of} thousands.
+  \ex	\begin{xlist}
+    \ex\label{ex:anumber} I have a \choices{number\\handful} \p{of} students.
+    \ex	I have a lot \p{of} students.
+    \ex	We did a lot \p{of} traveling.
+    \ex	There is a lot \p{of} wet sand on the beach.
+  \end{xlist}
+  \ex	A pair \p{of} shoes
+\end{exe}
+
+\item If the measure includes a word like ``amount'', ``quantity'', or ``number'',\footnote{Excluding 
+the expression ``a number'' meaning `several', as in \cref{ex:anumber}.} 
+the construal \rf{Quantity}{Gestalt} is used 
+(because the amount of something can be viewed as an attribute):
+\begin{exe}
+  \ex\label{ex:QuantityGestalt} \rf{Quantity}{Gestalt}:
+  \begin{xlist}
+    \ex	A generous amount \p{of} time
+    \ex A large number \p{of} students
+  \end{xlist}
+\end{exe}
+But if ``amount'', ``quantity'', etc. is used without a measure as its modifier, 
+it is simply \psst{Gestalt}: see \cref{ex:amountGestalt}.
+
+\item If the governor is a \textbf{collective noun}, 
+the construal \rf{Quantity}{Stuff} is used 
+(note that a ``consisting of'' paraphrase is possible):
+\begin{exe}
+  \ex\label{ex:QuantityStuff} \rf{Quantity}{Stuff}:
+  \begin{xlist}
+    \ex Can you outrun a herd \p{of} wildebeest?
+    \ex Put 3 bales \p{of} hay on the truck.
+    \ex	\choices{A group\\2 groups\\A throng} \p{of} vacationers just arrived.
+  \end{xlist}
+\end{exe}
+
+\item Otherwise, if the object refers to \textbf{a specific item or set}, 
+and the quantity measures a portion of that item 
+(whether a quantifier, absolute measure, or fractional measure),
+the construal \rf{Quantity}{Whole} is used:
+\begin{exe}
+  \ex\label{ex:QuantityWhole} \rf{Quantity}{Whole}:
+  \begin{xlist}
+    \ex	I ate 6 ounces \p{of} the cake in the refrigerator.
+    \ex	I ate \choices{half\\50\%} \p{of} the cake.
+    \ex	\choices{All/many/lots/a lot/\\some/few/both/none} \p{of} the town's residents 
+    are students.
+    \ex	I have seen all \p{of} the city. (= the whole city)
+    \ex	A lot \p{of} the sand on the beach is wet.
+    \ex	2 \p{of} the children are redheads.
+    \ex 2 \p{of} the 10 children in the class are redheads.
+  \end{xlist}
+\end{exe}
+However, simple \psst{Whole} is used if the portion is specified as 
+``the rest'', ``the remainder'', etc., as in \cref{ex:rest}.\nss{Reconsidering this: see \cref{ex:rest}}
+\end{itemize}
 
 \hierCdef{Approximator}
 
@@ -1374,7 +1516,7 @@ construed as a \psst{Whole} (set of its members)
 or as a \psst{Locus}:\nss{what about `the family of the patient'?}
 \begin{exe}
   \ex I am the baby \p{of} the family. (\rf{OrgRole}{Whole})
-  \ex I am the baby \p{in} the family. (\rf{OrgRole}{Locus})
+  \ex people \p{in} my family (\rf{OrgRole}{Locus})\nss{double construal?}
 \end{exe}
 
 For a relation between a unit and a larger institution, 
