@@ -85,7 +85,7 @@
 \makeatother
 
 % Italicize subparagraph headings
-\usepackage{titlesec}
+\usepackage[nobottomtitles*]{titlesec}
 \titleformat*{\subparagraph}{\itshape}
 \titlespacing{\subparagraph}{%
   1em}{%              left margin
@@ -523,6 +523,7 @@ They are organized into three major subhierarchies:
 \psst{Circumstance} (18~labels), \psst{Participant} (14~labels), 
 and \psst{Configuration} (18~labels). 
 
+\begin{minipage}{\textwidth}
 \begin{multicols}{3}
 \begin{ggroup}
   \sffamily\color{gray}
@@ -622,6 +623,7 @@ and \psst{Configuration} (18~labels).
 \end{forest}
 \end{ggroup}
 \end{multicols}
+\end{minipage}
 
 \begin{itemize}
 \item Items in the \psst{Circumstance} subhierarchy are prototypically 
