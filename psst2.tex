@@ -696,17 +696,131 @@ v2 labels.
 
 \hierBdef{Temporal}
 
+\shortdef{Abstract supercategory for temporal descriptions: 
+\textbf{when}, \textbf{for how long}, \textbf{how often}, \textbf{how many times}, 
+etc.\ something happened or will happen.}
+
+\begin{history}
+  The v1 category \sst{Age} (e.g., \pex{a child \p{of} five}) 
+  was a mutual subtype of \psst{Temporal} and \sst{Attribute}. 
+  Being quite specific and rare, for v2 it was merged with \psst{Characteristic}. 
+  Combined with the changes to \psst{Time} subcategories (see below), 
+  this reduced by~3 the number of labels in the \psst{Temporal} subtree, 
+  bringing it to 7.
+\end{history}
+
 \hierCdef{Time}
+
+\shortdef{\textbf{When} something happened or will happen, in relation to a reference time or event.}
+
+\begin{exe}
+  \ex We ate \choices{\p{in} the afternoon\\\p{at} 2:00\\\p{on} Friday}.
+  \ex Let's talk \choices{\p{at}\\\p{during}} lunch.\nss{`over lunch': \rf{Time}{Locus}?}
+  \ex I will finish \p{after} \choices{tomorrow\\lunch\\you (do)}.
+  \ex I will finish \p{by} \choices{tomorrow\\lunch}.
+\end{exe}
+
+The preposition \p{since} is ambiguous:
+\begin{exe}
+  \ex {} [`after'] I grew a beard---that was \p{since} the breakup. (\psst{Time})
+  \ex {} [`ever since'] I have loved you \p{since} the party where we met. (\psst{StartTime})
+  \ex {} [`because'] I'll try not to whistle \p{since} I know that gets on your nerves. (\psst{Explanation})
+\end{exe}
+
+\begin{history}
+  In v1, point-like temporal prepositions (\p{at}, \p{on}, \p{in}, \p{as}) 
+  were distinguished from displaced temporal prepositions (\p{before}, \p{after}, etc.) 
+  which present the two times in the relation as unequal. 
+  \sst{RelativeTime} inherited from \psst{Time} and was reserved for the 
+  displaced temporal prepositions, as well as subclasses \psst{StartTime}, 
+  \psst{EndTime}, \psst{DeicticTime}, and \sst{ClockTimeCxn}. 
+  
+  For v2, \sst{RelativeTime} was merged into \psst{Time}: the distinction 
+  was found to be entirely lexical and lacked parallelism with the spatial hierarchy. 
+  \sst{ClockTimeCxn} was also merged with \sst{Time}, the usages covered by the former 
+  (expressions of clock time like \pex{ten \p{of} seven})
+  being exceedingly rare and not very different semantically from 
+  prepositions like \p{before}.
+\end{history}
 
 \hierDdef{StartTime}
 
+\shortdef{When the event denoted by the governor begins.}
+
+Prototypical prepositions are \p{from} and \p{since} (but see note under \psst{Time} 
+about the ambiguity of \p{since}):
+\begin{exe}\ex\begin{xlist}
+  \ex The show will run \p{from} 10 a.m. to 2 p.m.
+  \ex a document dating \p{from} the thirteenth century
+\end{xlist}\end{exe}
+
+Note that simple \psst{Time} is used with verbs like \w{start} and \w{begin}: 
+the event directly described by the PP is the starting, not the thing that started.
+\begin{exe}
+  \ex The show will start \p{at} 10 a.m. (\psst{Time})
+\end{exe}
+
 \hierDdef{EndTime}
+
+\shortdef{When the event denoted by the governor finishes.}
+
+Prototypical prepositions are \p{to}, \p{until}, \p{till}, \p{up\_to}, and \p{through}:
+\begin{exe}
+  \ex The show will run from 10 a.m. \p{to} 2 p.m.
+  \ex Add the cider and boil \p{until} the liquid has reduced by half.
+  \ex If we have survived \p{up\_to} now what is stopping us from surviving in the future?
+  \ex They will be in London from March 24 \p{through} May 7.
+\end{exe}
+
+Note that simple \psst{Time} is used with verbs like \w{end} and \w{finish}: 
+the event directly described by the PP is the ending, not the thing that ended.
+\begin{exe}
+  \ex The show will end \p{at} 2~p.m. (\psst{Time})
+\end{exe}
 
 \hierDdef{DeicticTime}
 
+\shortdef{When an event took place or will take place, 
+expressed with a measure of time that serves as an offset relative to the present time.}
+
+\nss{TODO: also include intransitive prepositions where an implicit reference 
+time is inferred from context, like `To beat the crowds at the game, I arrived an hour before.'?
+before = beforehand, after = afterward}
+
+\begin{exe}
+  \ex I ate \choices{10~minutes \p{ago}\\a while \p{back}}.
+  \ex I will eat \p{in} 10~minutes.
+    \begin{xlist}
+      \ex\label{ex:inDuration} {} [`for no more than 10~minutes' reading]: \psst{Duration}
+      \ex {} [`10~minutes from now' reading]: \psst{DeicticTime}
+    \end{xlist}
+\end{exe}
+  
+
 \hierCdef{Frequency}
 
+\shortdef{\textbf{At what rate} something happens or continues, 
+or the instance of repetition that the event represents.}
+
+\begin{exe}
+  \ex Guests were arriving \p{at} a steady clip.
+  \ex The risk becomes worse \p{by} the day.
+  \ex The camcorder failed \p{for} the third time.
+\end{exe}
+
+Contrast: \psst{RateUnit}
+
 \hierCdef{Duration}
+
+\shortdef{Indication of \textbf{how long} something lasts
+(with reference to an amount of time or 
+time period\slash larger event that it spans).}
+
+\begin{exe}
+  \ex I ate \p{for} 10~minutes.
+  \ex I ate \p{in} [for no more than] 10~minutes. [see \cref{ex:inDuration}]
+  \ex I ate \choices{\p{throughout}\\\p{through}\\\p{into}} the night.
+\end{exe}
 
 \hierBdef{Locus}
 
@@ -1581,7 +1695,7 @@ Construals include:
       \ex Joan is a student \p{of} Miss Zarves. (\rf{SocialRel}{Possessor})
     \end{xlist}
   \ex Joan is studying \p{under} Prof.~Smith. (\rf{SocialRel}{Locus})
-  \ex Joan is married \p{to} John. (\rf{SocialRel}{Goal})
+  \ex Joan is married \p{to} John. (\rf{SocialRel}{Goal})\nss{or \rf{SocialRel}{Co-Theme}? cf. \pex{Joan and John are married.}}
 \end{exe}
 
 Note, however, that \emph{work \p{with}} is ambiguous between 
