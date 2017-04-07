@@ -920,13 +920,110 @@ Contrasts with \psst{Source}.
 
 \hierBdef{Path}
 
+\shortdef{An intermediate space between an initial position and a final position.}
+
+\begin{exe}
+  \ex The bird flew \p{over} the building.
+  \ex The sun traveled \p{across} the sky.
+  \ex Hot water is running \p{through} the pipes.
+\end{exe}
+
+See also: \psst{Instrument}, \psst{Manner}
+
+\begin{history}
+  The v1 hierarchy distinguished many different subcategories of path descriptions. 
+  The labels \sst{Traversed}, \sst{1DTrajectory}, \sst{2DArea}, \sst{3DMedium}, 
+  \sst{Contour}, \sst{Via}, \sst{Transit}, and \sst{Course} have all been merged
+  with \psst{Path} for v2.
+\end{history}
+
 \hierCdef{Direction}
+
+\shortdef{How motion or an object is aimed\slash oriented.}
+
+This is typically used for intransitive prepositions (sometimes classified 
+as adverbs). There may or may not be an implicit \psst{Source} or \psst{Goal}:
+\begin{exe}
+  \ex The bird flew \choices{\p{up}\\\p{out}\\\p{away}}.
+  \ex The price shot \p{up}.
+\end{exe}
+
+\nss{What about conative (kick \p{at} the wall): Goal or Direction?
+Away from: Source or Direction? 
+Inside?}
+
 
 \hierCdef{Extent}
 
+\shortdef{The size of a path.}
+
+This can be the physical distance traversed or the amount of change on a scale:
+\begin{exe}
+  \ex We ran \p{for} miles.
+  \ex The price shot up \p{by} 10\%.
+\end{exe}
+
 \hierBdef{Means}
 
+\shortdef{Secondary action or event that characterizes \textbf{how} 
+the main event happens or is achieved.}
+
+Prototypically a volitional action, though not necessarily \cref{ex:chlorophyll}. 
+A volitional \psst{Means} will often modify an intended result, 
+though the outcome can be unintended as well \cref{ex:oops}.
+\begin{exe}
+  \ex Open the door \p{by} turning the knob.
+  \ex They retaliated \choices{\p{by} shooting\\\p{with} shootings}.
+  \ex\label{ex:oops} The owners destroyed the company \p{by} growing it too fast.
+  \ex\label{ex:chlorophyll} Chlorophyll absorbs the light \p{by} transfer of electrons.
+\end{exe}
+
+\psst{Means} is similar to \psst{Instrument}, which is used for causally supporting entities 
+and is a kind of \psst{Participant}.
+
+Contrast with \psst{Explanation}, which characterizes \textbf{why} 
+something happens. I.e., an \psst{Explanation} portrays the secondary event 
+as the causal \emph{instigator} of the main event, whereas \psst{Means} 
+portrays it merely as a \emph{facilitator}.
+
+\begin{history}
+  In v1, \psst{Means} was a subtype of \psst{Instrument}, 
+  but with the removal of multiple inheritance for v2, 
+  the former was moved directly under \psst{Circumstance} 
+  and the latter directly under \psst{Participant}.
+\end{history}
+
 \hierBdef{Manner}
+
+\shortdef{Description of \textbf{how} something happens or exists
+that does not directly invoke a location, path, or temporal or causal relation. 
+Often the ``style''\nss{or shape?} of something.}
+
+% FN definition of Manner under Expend_resource: 
+%Any description of the intentional act which is not covered by more specific FEs, 
+%including secondary effects (quietly, loudly), and general descriptions comparing events 
+%(the same way). In addition, it may indicate salient characteristics of an Agent 
+%that also affect the action ( deliberately, eagerly, carefully). 
+
+\begin{exe}
+  \ex The toddler is old enough to eat \p{by} herself.
+  \ex The people shouted \p{with} pleasure.
+  \ex\label{ex:pathmanner} They dance \p{in} a circle. (\rf{Path}{Manner})
+  \ex The sand is \p{in} a pyramid shape.\nss{Characteristic as Manner, or just one? same for below}
+  \ex It was written \p{in} French.
+  \ex music \p{in} C major
+  %\ex You can use it \p{as} a hammer. (\rf{Manner}{Identity}\nss{?})
+\end{exe}
+
+\nss{relation to Characteristic?}
+
+\begin{history}
+  In v1, \psst{Manner} was positioned as an ancestor of all 
+  categories that license a \emph{How?} question, including 
+  \psst{Instrument}, \psst{Means}, and \sst{Contour}, as in \cref{ex:pathmanner}. 
+  This criterion was deemed too broad, so \psst{Manner} has no 
+  subtypes in v2.
+\end{history}
 
 \hierBdef{Explanation}
 
@@ -1293,15 +1390,58 @@ This label does not distinguish the polarity of the relation
 
 \shortdef{An entity that facilitates an action by applying intermediate causal force.}
 
-Prototypically, an \psst{Agent} manipulates the \psst{Instrument} with the purpose of achieving a result.
-This includes a device serving as a mode of transportation or medium of communication 
-(often construed as a \psst{Locus} or \psst{Path}).
-Less prototypically, the action could be unintentional 
-(\pex{I accidentally poked myself in the eye \p{with} a stick}). 
-The key is that the \psst{Instrument} is not sufficiently ``independently causal'' to instigate the event, 
-though it can be construed as the instigator (\pex{The window was broken \p{by} the hammer}: \rf{Instrument}{Causer}).
-Other non-prototypical instruments include waypoints from \psst{Source} to \psst{Goal}, 
-and people that relay information from \psst{Originator} to \psst{Recipient}.
+Prototypically, an \psst{Agent} intentionally applies the \psst{Instrument} 
+with the purpose of achieving a result:
+\begin{exe}\ex\begin{xlist}
+  \ex I broke the window \p{with} a hammer.
+  \ex I destroyed the argument \p{with} my words.
+\end{xlist}\end{exe}
+Less prototypically, the action could be unintentional:
+\begin{exe}
+  \ex I accidentally poked myself in the eye \p{with} a stick.
+\end{exe}
+The key is that the \psst{Instrument} is not sufficiently ``independently causal'' 
+to instigate the event.
+
+However, to downplay the agency of the individual operating the instrument, 
+the instrument can be placed in a passive \p{by}-phrase, 
+which construes it as the instigator:
+\begin{exe}\ex\label{ex:passiveInstrument}\begin{xlist}
+  \ex The window was broken \p{by} the hammer. (\rf{Instrument}{Causer})
+  \ex My headache was alleviated \p{by} aspirin. (\rf{Instrument}{Causer})
+\end{xlist}\end{exe}
+Note that the examples in \cref{ex:passiveInstrument} can be rephrased 
+in active voice with the \psst{Instrument} as the subject.
+
+A device serving as a mode of transportation or medium of communication 
+counts as an \psst{Instrument}, but is often construed as a \psst{Locus} or \psst{Path}:
+\begin{exe}
+  \ex Communicate \p{by} \choices{phone\\email}. (\psst{Instrument})
+  \ex Talk \p{on} the phone. (\rf{Instrument}{Locus})
+  \ex Send it \choices{\p{over}\\\p{via}} email. (\rf{Instrument}{Path})
+  \ex Travel \p{by} train. (\psst{Instrument})
+  \ex Escape \p{with} a getaway car. (\psst{Instrument})
+  \ex Escape \p{in} the getaway car. (\rf{Instrument}{Locus})
+\end{exe}
+This includes some expressions which incorporate the \psst{Instrument} 
+in a noun:
+\begin{exe}
+  \ex ride \p{on} horseback (\rf{Instrument}{Locus})
+  \ex hold \p{at} knifepoint (\rf{Instrument}{Locus})
+\end{exe}
+Other non-prototypical instruments that can be construed as paths 
+include waypoints from \psst{Source} to \psst{Goal}, 
+and people that serve as intermediaries:
+\begin{exe}
+  \ex We flew to London \p{via} Paris. (\rf{Instrument}{Path})
+  \ex I found out the news \p{via} Sharon. (\rf{Instrument}{Path})
+\end{exe}
+
+Conversely, roadways count as \psst{Path}s but can be construed as \psst{Instrument}s:
+\begin{exe}
+  \ex Escape \p{through} the tunnel. (\psst{Path})
+  \ex Escape \p{by} tunnel. (\rf{Path}{Instrument})
+\end{exe}
 
 Compare \psst{Means}, which is used for facilitative events rather than entities.
 
