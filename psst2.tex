@@ -698,6 +698,36 @@ v2 labels.
 
 \hierAdef{Circumstance}
 
+\shortdef{Macrolabel for labels pertaining to space and time; 
+abstract\slash metaphoric locations such as states;
+and other categories that usually constitute semantically non-core properties of events.}
+
+Rarely, \psst{Circumstance} is used directly for:
+\begin{itemize}
+  \item \textbf{Contextualization}
+\begin{exe}
+    \ex \p{In} arguing for tax reform, the president claimed that loopholes allow 
+    big corporations to profit from moving their headquarters overseas.
+    \ex Bipartisan compromise is unlikely \p{with} the election just around the corner.
+  \end{exe}
+  For these cases, the preposition helps situate 
+  the background context in which the main event takes place. 
+  The background context is often realized as a subordinate clause 
+  preceding the main clause. 
+  \item \textbf{Occasions}
+  \begin{exe}
+    \ex I bought her a bike \p{for} Christmas.
+    \ex I had peanut butter \p{for} lunch.
+  \end{exe}
+  These simultaneously express a \psst{Time} and some element of causality 
+  similar to \psst{Purpose}.
+  But the PP is not exactly answering a \pex{Why?} or \pex{When?} question. 
+  Instead, the sentence most naturally answers a question like \pex{On what occasion was X done?}
+  or \pex{Under what circumstances did X happen?}.
+  \item Any other descriptions of event/state properties that are \textbf{insufficiently specified} 
+  to fall under spatial, temporal, causal, or other subtypes like \psst{Manner}.
+\end{itemize}
+
 \hierBdef{Temporal}
 
 \shortdef{Abstract supercategory for temporal descriptions: 
@@ -838,7 +868,7 @@ Contrasts with \psst{Goal}.
 
 \hierCdef{Goal}
 
-\shortdef{Final location, condition, or value. May be abstract.}
+\shortdef{Final location (destination), condition, or value. May be abstract.}
 
 Prototypically inanimate, though it can be used to construe animate \psst{Participant}s 
 (especially \psst{Recipient}).
@@ -856,10 +886,79 @@ Contrasts with \psst{Source}.
 
 \hierBdef{Explanation}
 
+\shortdef{Assertion of \textbf{why} something happens or is the case.}
+
+This marks a secondary event that is asserted as the reason for the main event or state. 
+
+\begin{exe}
+\ex  I went outside \p{because\_of} the smell. %(Why did you go outside?)
+\ex  The rain is \p{due\_to} a cold front. %(Why is there rain?)
+\ex  I will appoint him \choices{\p{as}\\\p{since}} he is most qualified for the job.
+\end{exe}
+
+\nss{TODO: Function}
+
+Question test: \psst{Explanation} and its subtype \psst{Purpose} license
+\pex{Why?} questions.
+
 \hierCdef{Purpose}
 
+\shortdef{Something that somebody wants to bring about,
+asserted to be why something was done, is the case, or exists.}
 
+Central usages of \psst{Purpose} explain the motivation behind an action.
+Typically the governing event serves as a means for achieving or facilitating the \psst{Purpose}. 
+Prototypical markers include \p{for} and infinitive marker \p{to}:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex He rose \p{to} make a grand speech.
+    \ex surgery \p{to} treat a leg injury
+  \end{xlist}
+  \ex\begin{xlist} 
+    \ex He rose \p{for} a grand speech.
+    \ex We hired a caterer \p{for} (the party) tonight.
+  \end{xlist}
+\end{exe}
+Something directly manipulated/affected can stand in metonymically 
+for the desired event:
+\begin{exe}\ex\begin{xlist}
+  \ex I went to the store \p{for} eggs. [understood: `to acquire/buy eggs']
+  \ex surgery \p{for} a leg injury [understood: `to treat a leg injury']
+\end{xlist}\end{exe}
 
+In contrast to the above, where the governor denotes an \emph{event}, 
+an \emph{entity} can be modified to explicate an intended use or affordance. 
+Because this can be understood as a static property of the entity---why it was created 
+or what it is useful for (part of its qualia structure)---we
+use the construal \rf{Characteristic}{Purpose}:\footnote{In FrameNet 
+as of v1.7, these sorts of purposes are labeled as \sst{Inherent\_purpose}. 
+See, e.g., the example ``MONEY [to support yourself and your family]'' in the \textbf{Money} frame 
+(\url{https://framenet2.icsi.berkeley.edu/fnReports/data/lu/lu13361.xml?mode=annotation}).}
+\begin{exe}
+  \ex\label{ex:charPurp} \rf{Characteristic}{Purpose}:
+  \begin{xlist}
+    \ex a shoulder \p{to} cry on
+    \ex The noose \p{for} the prisoner was too loose. [understood: `for use on the prisoner']
+    \ex a good store \p{for} eggs [understood: `for acquiring/buying eggs']
+    \ex a good book \p{to} give to young readers
+    \ex a good book \p{for} young readers [understood: `for giving to young readers']
+    %\ex physical therapy \p{for} a leg injury. [understood: `treating a leg injury']
+  \end{xlist}
+\end{exe}
+
+Question test: \psst{Explanation} and its subtype \psst{Purpose}, 
+when used adverbially, license \pex{Why?} questions. 
+\psst{Purpose} usually licenses an \pex{in order to} 
+or \pex{for the purpose of} paraphrase.
+
+\nss{overlap with Circumstance-occasion: for dinner, for my birthday}
+\nss{closeness to Beneficiary}
+
+\begin{history}
+  In v1, the usages illustrated in \cref{ex:charPurp} were assigned a separate label, 
+  \sst{Function}, which inherited from both \sst{Attribute} and \sst{Purpose}.
+  The ability to use construal removes the need for a separate label.
+\end{history}
 
 \hierAdef{Participant}
 
@@ -1679,6 +1778,25 @@ However, simple \psst{Whole} is used if the portion is specified as
 \end{itemize}
 
 \hierCdef{Approximator}
+
+\shortdef{An ``operator'' that semantically takes a measurement, 
+quantity, or range as an argument and ``transforms'' it in some way 
+into a new measurement, quantity, or range.}
+
+For instance:
+\begin{exe}
+  \ex We have \p{about} 3 eggs left.
+  \ex We have \p{in\_the\_vicinity\_of} 3 eggs left.
+  \ex We have \p{over} 3 eggs left.
+  \ex We have \p{between} 3 and 6 eggs left.
+\end{exe}
+Similarly for \p{around}, \p{under}, \p{more\_than}, \p{less\_than}, \p{greater\_than}, 
+\p{fewer\_than}, \p{at\_least}, and \p{at\_most}.\footnote{These constructions are 
+markedly different from most PPs; it is even questionable whether these usages 
+should count as prepositions. Without getting into the details here, 
+even if their syntactic status is in doubt, 
+we deem it practical to assign them with a semantic label in our inventory because they 
+overlap lexically with ``true'' prepositions.}
 
 \hierBdef{SocialRel}
 
