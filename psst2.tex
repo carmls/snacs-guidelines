@@ -246,8 +246,8 @@
 \newcommand{\bomarker}{\ensuretext{\textcolor{blue}{\ensuremath{^{\textsc{B}}_{\textsc{O}}}}}}
 \newcommand{\jbmarker}{\ensuretext{\textcolor{orange}{\ensuremath{^{\textsc{J}}_{\textsc{B}}}}}}
 \newcommand{\dbmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{D}}_{\textsc{B}}}}}}
-\newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
-%\newcommand{\arkcomment}[3]{}
+%\newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
+\newcommand{\arkcomment}[3]{}
 \newcommand{\cjd}[1]{\arkcomment{\cjdmarker}{#1}{green}}
 \newcommand{\nss}[1]{\arkcomment{\nssmarker}{#1}{magenta}}
 \newcommand{\nas}[1]{\arkcomment{\nasmarker}{#1}{red}}
@@ -411,7 +411,7 @@
 \newcommand{\longversion}[1]{} % ...if only there were more space...
 \newcommand{\genitiveversion}[1]{}
 \newcommand{\subversion}[1]{#1} % for the submission version only
-\newcommand{\draftnotice}[1]{#1} % for the draft version only
+\newcommand{\draftnotice}[1]{} % for the draft version only
 %\newcommand{\subversion}[1]{}
 
 \newenvironment{ggroup}{{}}{{}}
@@ -453,7 +453,7 @@
 \hyphenation{Huddle-ston}
 
 \title{\draftnotice{{\it\small WORKING DRAFT}\\[5pt] 
-Adposition Supersenses v2}}
+}Adposition Supersenses v2}
 
 \newcommand{\emldisplay}[2]{\texttt{\href{mailto:#1}{#2}}}
 \newcommand{\eml}[1]{\textsmaller{\emldisplay{#1}{#1}}}
@@ -489,7 +489,8 @@ This document describes an inventory of 50~semantic labels
 designed to characterize the use of adpositions and case markers 
 at a somewhat coarse level of granularity. 
 Version~2 is a revision of the supersense inventory proposed for English by 
-\citet{schneider-15,schneider-16} (henceforth ``v1''), which in turn was based on previous schemes.
+\citet{schneider-15,schneider-16} and documented in PrepWiki\footnote{\url{http://tiny.cc/prepwiki}} 
+(henceforth ``v1''), which in turn was based on previous schemes.
 The present inventory was developed after extensive review of the 
 v1 corpus annotations for English, as well as consideration of adposition 
 and case phenomena in Hebrew, Hindi, and Korean.
@@ -499,9 +500,8 @@ a multilingual and more detailed online lexical resource is forthcoming.
 
 \section{Overview}
 
-v1 is documented in PrepWiki (\url{http://tiny.cc/prepwiki}).
-
-v2 will be documented in Xposition (URL TBD).
+\nss{v1 is documented in PrepWiki (\url{http://tiny.cc/prepwiki}).
+v2 will be documented in Xposition (URL TBD).}
 
 \subsection{What counts as an adposition?}
 
