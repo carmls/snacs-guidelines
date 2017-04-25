@@ -245,7 +245,8 @@
 \newcommand{\nasmarker}{\ensuretext{\textcolor{red}{\ensuremath{^{\textsc{NA}}_{\textsc{S}}}}}}
 \newcommand{\bomarker}{\ensuretext{\textcolor{blue}{\ensuremath{^{\textsc{B}}_{\textsc{O}}}}}}
 \newcommand{\jbmarker}{\ensuretext{\textcolor{orange}{\ensuremath{^{\textsc{J}}_{\textsc{B}}}}}}
-\newcommand{\dbmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{D}}_{\textsc{B}}}}}}
+%\newcommand{\dbmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{D}}_{\textsc{B}}}}}}
+\newcommand{\abmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{A}}_{\textsc{B}}}}}}
 \newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
 %\newcommand{\arkcomment}[3]{}
 \newcommand{\cjd}[1]{\arkcomment{\cjdmarker}{#1}{green}}
@@ -253,7 +254,8 @@
 \newcommand{\nas}[1]{\arkcomment{\nasmarker}{#1}{red}}
 \newcommand{\bo}[1]{\arkcomment{\bomarker}{#1}{blue}}
 \newcommand{\jb}[1]{\arkcomment{\jbmarker}{#1}{orange}}
-\newcommand{\db}[1]{\arkcomment{\dbmarker}{#1}{purple}}
+%\newcommand{\db}[1]{\arkcomment{\dbmarker}{#1}{purple}}
+\newcommand{\ab}[1]{\arkcomment{\abmarker}{#1}{purple}}
 \newcommand{\params}{\mathbf{\theta}}
 \newcommand{\wts}{\mathbf{w}}
 \newcommand{\g}{\mathbf{g}}
@@ -516,8 +518,10 @@ Briefly, we consider an affix, word, or multiword expression to be an adposition
   \item Is not a differential object marker (e.g., Hebrew \p{'et}, which marks direct objects if and only if 
   they are definite).
 \end{itemize}
+\ab{differential object markers are ignored because they don't have any lexical semantic content, is that the criterion?}
+
 \nss{What about a word that matches the above criteria where it is used as an intransitive 
-predicate, e.g. \pex{She is \p{out}/\p{away}}?}
+predicate, e.g. \pex{She is \p{out}/\p{away}}?}\ab{I think that is an adverbial usage instead of adpositional.}
 
 \subsection{Inventory}
 
@@ -645,7 +649,7 @@ This inventory is only designed to capture semantic relations
 with a figure--ground asymmetry. This excludes:
 \begin{itemize}
   \item The semantics of coordination, where the two sides of the relation 
-are on equal footing, are not captured here. (Note that sometimes a morpheme can 
+are on equal footing, is not captured here. (Note that sometimes a morpheme can 
 have symmetric as well as asymmetric interpretations: e.g., Korean \p{-wa}.)
   \item Aspects of meaning that pertain to information structure, discourse, 
 or pragmatics.
@@ -656,7 +660,7 @@ Thus, while there are labels for locative (\psst{Locus}), ablative (\psst{Source
 allative (\psst{Goal}), and \psst{Path} semantics---and analogous temporal categories---%
 finer-grained details of spatiotemporal meaning are for the most part lexical 
 (viz.: the difference between \pex{\p{in} the box} and \pex{\p{on} the box}, 
-or temporal \p{at}, \p{before}, \p{during}, and \p{after}) and are not represented here.\footnote{This is not to claim
+or temporal \p{at}, \p{before}, \p{during}, and \p{after}) and are not represented here.\ab{how does this relate to semantic distinctions correlating with syntactic distribution?}\footnote{This is not to claim
 that all members of a category can be grammatical in all the same contexts: 
 \pex{\p{on} Saturday} and \pex{\p{at} 5:00} are both labeled \psst{Time}, 
 though the prepositions are by no means interchangeable in American English. 
@@ -678,7 +682,7 @@ v2 labels.
   were reserved for concrete locations, and the respective supertypes 
   \sst{Locus}, \sst{Source}, and \sst{Goal} used to cover abstract locations.
   This distinction was found to be difficult and without apparent
-  relevance to the English preposition system. The concrete labels were thus removed.
+  relevance to the English preposition system.\ab{probably also because we did not find it relevant for the other three languages we applied the hierarchy to!}\ab{although I'm thinking for many of these changes- is the hierarchy supposed to be English-focused?} The concrete labels were thus removed.
   \item \textbf{Removed the location/state/value distinction.}
   The v1 scheme attempted to make an elaborate distinction between 
   values, states, and other kinds of abstract locations. 
@@ -757,7 +761,7 @@ etc.\ something happened or will happen.}
 The preposition \p{since} is ambiguous:
 \begin{exe}
   \ex {} [`after'] I grew a beard---that was \p{since} the breakup. (\psst{Time})
-  \ex {} [`ever since'] I have loved you \p{since} the party where we met. (\psst{StartTime})
+  \ex {} [`ever since'] I have loved you \p{since} the party where we met. (\psst{StartTime})\ab{are 9 \& 10 really different?}
   \ex {} [`because'] I'll try not to whistle \p{since} I know that gets on your nerves. (\psst{Explanation})
 \end{exe}
 
@@ -914,7 +918,7 @@ Prototypical prepositions include \p{to}, \p{for}, \p{toward(s)}, \p{into}, and 
 \end{exe}
 
 English regularly allows canonically static locative prepositions to mark 
-goals with motion verbs like \pex{put}. 
+goals with motion verbs like \pex{put}.\ab{Again is the hierarchy supposed to be English-focused? Adpositions in some other languages, e.g., German prepositions, differentiate senses that English does not. Do we ignore those distinctions for now only because we have not applied the hierarchy to those languages or do we do it because the hierarchy is to be faithful to English?} 
 We use the construal \rf{Goal}{Locus}:
 \begin{exe}
   \ex I put the lamp \p{next\_to} the chair.
@@ -1345,7 +1349,7 @@ or \psst{Theme} (with \pex{inform}: direct object).
 
 Does not apply to events like \pex{exchange}, \pex{talk/chat \p{with}}, 
 or \pex{negotiate}, which involve a back-and-forth between 
-\psst{Agent} and \psst{Co-Agent} (or a plural \psst{Agent}).\nss{OK?}
+\psst{Agent} and \psst{Co-Agent} (or a plural \psst{Agent}).\nss{OK?}\ab{seems right}
 
 \begin{history}
   In v1, \psst{Recipient} was the counterpart to \sst{Donor/Speaker}:
@@ -1591,7 +1595,7 @@ or set element. See \psst{Part/Portion}.}
     %\ex 2 \p{of} my 5 daughters % Quantity ~> Whole
     \ex\label{ex:rest} The \choices{remainder\\rest} \p{of} the cake\nss{Maybe this should be 
     \rf{Quantity}{Whole} after all, even though ``the rest of it'' is a dubious way to answer 
-    ``How much of it?''. ``The remaining 6 ounces of cake'' certainly specifies a quantity.}
+    ``How much of it?''. ``The remaining 6 ounces of cake'' certainly specifies a quantity.\ab{but is that because of "6 ounces" or "remainder (\/remaining)"?   Since "remaining of the cake" is cake too (a physical object in this case), it has the property of having quantity, but "remaining of ..." does not have "quantity" as the sense in the foreground, it's part-whole relationship.}}
     \ex The tastiest bit \p{of} the cake
     \ex	The tennis matches \p{of} a series
     \ex	The interior \p{of} the shopping bag
@@ -1608,7 +1612,7 @@ or set element. See \psst{Part/Portion}.}
     \begin{xlist}
       \ex This is one \p{of} the \choices{worst\\better} retaurants in town. (\psst{Whole})
       \ex 2 \p{in} 10 American children are redheads. (\rf{Whole}{Locus})
-      \ex 2 \p{out\_of} 10 American children are redheads. (\rf{Whole}{Source})\nss{should this be \psst{RateUnit}?}
+      \ex 2 \p{out\_of} 10 American children are redheads. (\rf{Whole}{Source})\nss{should this be \psst{RateUnit}?}\ab{maybe}
       \ex \p{Out\_of} the 10 children in the class, only Mary is a redhead. (\rf{Whole}{Source})
       \ex\label{ex:amongSet} \p{Among} the 10 children in the class, only Mary is a redhead. (\psst{Whole})
     \end{xlist}
@@ -1976,7 +1980,7 @@ the construal \rf{Quantity}{Whole} is used:
   \end{xlist}
 \end{exe}
 However, simple \psst{Whole} is used if the portion is specified as 
-``the rest'', ``the remainder'', etc., as in \cref{ex:rest}.\nss{Reconsidering this: see \cref{ex:rest}}
+``the rest'', ``the remainder'', etc., as in \cref{ex:rest}.\nss{Reconsidering this: see \cref{ex:rest}}\ab{I see "half of it", "remainder of it" do have some shared meaning. Why the three "5 ounces of it", "half of it" and "remainder of it" seem different is that in the 1st case, the quantity of the proportion itself is specified, for the 2nd case, it is unspecified but can be determined from knowledge about the quantity of the whole thing and in the 3rd case, it is unspecified and cannot be determined from knowing the quantity of the whole thing only, you also need to know how much has already been removed.}
 \end{itemize}
 
 \hierCdef{Approximator}
