@@ -701,6 +701,13 @@ v2 labels.
   \item \nss{removed \sst{Activity}, \sst{Material}, \sst{Reciprocation}}
 \end{itemize}
 
+\subsection{Major changes from earlier versions of this document}
+
+\begin{itemize}
+  \item \emph{Since the \textbf{April 7, 2017} version:}
+  Clarified \psst{Time} vs.~\psst{DeicticTime}
+\end{itemize}
+
 \hierAdef{Circumstance}
 
 \shortdef{Macrolabel for labels pertaining to space and time; 
@@ -750,7 +757,8 @@ etc.\ something happened or will happen.}
 
 \hierCdef{Time}
 
-\shortdef{\textbf{When} something happened or will happen, in relation to a reference time or event.}
+\shortdef{\textbf{When} something happened or will happen, in relation to an 
+explicit or implicit reference time or event.}
 
 \begin{exe}
   \ex We ate \choices{\p{in} the afternoon\\\p{at} 2:00\\\p{on} Friday}.
@@ -762,9 +770,18 @@ etc.\ something happened or will happen.}
 The preposition \p{since} is ambiguous:
 \begin{exe}
   \ex {} [`after'] I grew a beard---that was \p{since} the breakup. (\psst{Time})
-  \ex {} [`ever since'] I have loved you \p{since} the party where we met. (\psst{StartTime})\ab{are 9 \& 10 really different?}
+  \ex {} [`ever since'] I have loved you \p{since} the party where we met. (\psst{StartTime})\ab{are 9 \& 10 really different?\nss{yes, 10 cannot be paraphrased with `after'}}
   \ex {} [`because'] I'll try not to whistle \p{since} I know that gets on your nerves. (\psst{Explanation})
 \end{exe}
+
+\psst{Time} is also used if the reference time is implicit and determined from 
+the discourse:
+\begin{exe}
+  \ex We broke up last year, and I haven't seen her \p{since}. [since we broke up]
+  \ex We left the party \p{after} an hour. [an hour after it started]
+\end{exe}
+But see \psst{DeicticTime} for preposition senses that are inherently relative to `now' 
+(speech time).
 
 \begin{history}
   In v1, point-like temporal prepositions (\p{at}, \p{on}, \p{in}, \p{as}) 
@@ -820,21 +837,34 @@ the event directly described by the PP is the ending, not the thing that ended.
 \hierDdef{DeicticTime}
 
 \shortdef{When an event took place or will take place, 
-expressed with a measure of time that serves as an offset relative to the present time.}
-
-\nss{TODO: also include intransitive prepositions where an implicit reference 
-time is inferred from context, like `To beat the crowds at the game, I arrived an hour before.'?
-before = beforehand, after = afterward}
+expressed with a measure of time that serves as an offset relative to the speech time specifically.}
 
 \begin{exe}
-  \ex I ate \choices{10~minutes \p{ago}\\a while \p{back}}.
-  \ex I will eat \p{in} 10~minutes.
+  \ex I ate \choices{10~minutes \p{ago}\\a while \p{back}}.\nss{not sure if this use of `back' patterns more like `ago' or more like `before'.}
+  \ex\label{ex:inAmbiguousTime} I will eat \p{in} 10~minutes.
     \begin{xlist}
       \ex\label{ex:inDuration} {} [`for no more than 10~minutes' reading]: \psst{Duration}
-      \ex {} [`10~minutes from now' reading]: \psst{DeicticTime}
+      \ex\label{ex:inDeicticTime} {} [`10~minutes from now' reading]: \psst{DeicticTime}
     \end{xlist}
 \end{exe}
-  
+There is another sense of \p{in} that marks an explicit reference \psst{Time} 
+(\pex{\p{in} the morning}). 
+The \psst{DeicticTime} subcategory allows us to distinguish the sense in \cref{ex:inDeicticTime}.
+
+Some temporal prepositions may be intransitive \cref{ex:IntrRefTime}, 
+or may take a temporal difference measure as the object \cref{ex:TimeDiff},
+provided that a reference time is salient in the discourse. 
+With such prepositions, the reference time may default to the speech time. 
+However, we limit \psst{DeicticTime} to those prepositions 
+whose \emph{inherent} reference point is the speech time. 
+The following contexts allow a \psst{Time} but not a \psst{DeicticTime}: 
+\begin{exe}
+  \ex\label{ex:IntrRefTime} To beat the crowds at the game, I will arrive an hour \choices{\p{before}\\\p{beforehand}\\ \#\p{ago}}.
+  \ex\label{ex:TimeDiff} I took a seat in the waiting room. \choices{\p{After}\\??\p{In}} 15 minutes, the doctor saw me for an hour.
+\end{exe}
+To summarize: \psst{DeicticTime} covers preposition usages where `now' is inherent,
+and the more general \psst{Time} applies if the reference time is given in the 
+direct object or depends on the discourse.
 
 \hierCdef{Frequency}
 
