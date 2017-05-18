@@ -247,6 +247,7 @@
 \newcommand{\jbmarker}{\ensuretext{\textcolor{orange}{\ensuremath{^{\textsc{J}}_{\textsc{B}}}}}}
 %\newcommand{\dbmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{D}}_{\textsc{B}}}}}}
 \newcommand{\abmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{A}}_{\textsc{B}}}}}}
+\newcommand{\ajbmarker}{\ensuretext{\textcolor{mdgreen}{\ensuremath{^{\textsc{AJ}}_{\textsc{B}}}}}}
 \newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
 %\newcommand{\arkcomment}[3]{}
 \newcommand{\cjd}[1]{\arkcomment{\cjdmarker}{#1}{green}}
@@ -256,6 +257,7 @@
 \newcommand{\jb}[1]{\arkcomment{\jbmarker}{#1}{orange}}
 %\newcommand{\db}[1]{\arkcomment{\dbmarker}{#1}{purple}}
 \newcommand{\ab}[1]{\arkcomment{\abmarker}{#1}{purple}}
+\newcommand{\ajb}[1]{\arkcomment{\ajbmarker}{#1}{mdgreen}}
 \newcommand{\params}{\mathbf{\theta}}
 \newcommand{\wts}{\mathbf{w}}
 \newcommand{\g}{\mathbf{g}}
@@ -1327,6 +1329,10 @@ See also: \psst{Instrument}
 Prototypical prepositions are \p{by} (prominently including passive-\p{by}) and \p{of}:
 \begin{exe}
   \ex the decisive vote \choices{\p{by}\\\p{of}} the City Council
+  
+  \ajb{\ex \choices{the City Council\p{'s} decisive vote\\the decisive vote of the City Council (\rf{Agent}{Possessor})}
+  \ex we needed \p{her} help
+  }
 \end{exe}
 When two symmetric \psst{Agent}s are collected in a single NP 
 functioning as a set, it is marked as a \psst{Whole} construal:
@@ -1335,6 +1341,7 @@ functioning as a set, it is marked as a \psst{Whole} construal:
   \ex This is a discussion \p{among} friends. (\rf{Agent}{Whole})
 %  \ex Please talk \p{amongst} yourselves. \rf{Agent}{Whole}
 % reflexives are weird. maybe Co-Agent
+
 \end{exe}
 
 Compare: \psst{Co-Agent}; 
@@ -1470,6 +1477,8 @@ Counterpart: \psst{Experiencer}
 in the languages we have looked at. In English, it can be construed in several ways:
 \begin{exe}
   \ex The anger \p{of} the students (\rf{Experiencer}{Possessor})
+  
+  \ajb{\ex \choices{The anger \p{of} the students\\The students\p{'} anger} (\rf{Experiencer}{Possessor})}
   \ex Running is enjoyable \p{for} me (\rf{Experiencer}{Beneficiary})
   \ex It feels hot \p{to} me (\rf{Experiencer}{Goal})
 \end{exe}
@@ -1490,7 +1499,7 @@ Contrasts with \psst{Recipient} if there is transfer/communication.
 
 Typically construed as \psst{Agent} (with \pex{give}, \pex{tell}, \pex{talk \p{to}}, \pex{create}: 
 subject or passive-\p{by}; adnominal \p{by} as in \pex{works \p{by} Shakespeare}) 
-or \psst{Source} (\pex{obtain/hear \p{from}}; adnominal \p{of} as in \pex{works \p{of} Shakespeare}). 
+or \psst{Source} (\pex{obtain/hear \p{from}}; adnominal \p{of} as in \pex{works \p{of} Shakespeare}\ajb{possessives \p{'s}, \p{my}, etc.}). 
 Occasionally construed as \psst{Theme} (\pex{rob \uline{her} of her life savings}: direct object).
 
 Does not apply to events like \pex{exchange}, \pex{talk/chat \p{with}}, 
@@ -1580,6 +1589,8 @@ This label does not distinguish the polarity of the relation
   \ex Vote \choices{\p{for}\\\p{against}} Pedro!
   \ex Junk food is bad \p{for} your health.
   \ex My parrot died \p{on} me.
+  
+  \ajb{\ex children\p{'s} clothes (\rf{Beneficiary}{Possessor})}
 \end{exe}
 
 \hierBdef{Instrument}
@@ -1722,6 +1733,11 @@ See \psst{Characteristic}.}
       \ex the blueness \p{of} the sky
       \ex the wisdom \p{of} the crowd
       \ex the time \p{of} the party
+      
+      \ajb{\ex the sky\p{'s} blueness
+      \ex the crowd\p{'s} wisdom
+      \ex the party\p{'s} time 
+      (\rf{Gestalt}{Possessor})}
       \ex\label{ex:amountGestalt} the amount \p{of} time allowed [but see \cref{ex:QuantityGestalt}]
     \end{xlist}
   \end{exe}
@@ -1756,7 +1772,10 @@ Prototypically expressed with \p{of}\genitiveversion{or genitive marking}:
 
 \begin{exe}
   \ex the money \p{of} the rich
-  %\ex \p{our} dog % POSSESSIVE
+  
+  \ajb{\ex \choices{the money \p{of} the rich\\the rich\p{'s} money}}
+  
+  \ajb{\ex \p{our} dog} % POSSESSIVE
 \end{exe}
 
 See \psst{SocialRel}.
@@ -2202,6 +2221,12 @@ Construals include:
       \ex Joan is the \choices{sister\\wife} \p{of} John.
       \ex Joan is a student \p{of} Miss Zarves.
       \ex the family \p{of} Miss Zarves
+      
+      \ajb{
+      \ex Joan is \choices{the sister \p{of} John\\John\p{'s} sister}.
+      \ex Joan is \choices{a student \p{of} Miss Zarves\\Miss Zarves\p{'s} student}.
+      \ex \choices{the family \p{of} Miss Zarves\\Miss Zarves\p{'s} family}  
+      }
     \end{xlist}
   \ex Joan is studying \p{under} Prof.~Smith. (\rf{SocialRel}{Locus})
   \ex Joan is married \p{to} John. (\rf{SocialRel}{Co-Theme})
@@ -2241,6 +2266,12 @@ lacks any prototypical adposition, but participates in numerous construals:
       \ex the president \p{of} the U.S.
       \ex I am a loyal customer \p{of} Graeter's.
       \ex employees \p{of} Grunnings
+      
+      \ajb{\choices{\ex the chairman \p{of} the board\\the board\p{'s} chairman}
+      \choices{\ex the president \p{of} the U.S.\\the U.S.\p{'} president}
+      \ex I am \choices{a loyal customer \p{of} Graeter's.\\Graeter\p{'s} loyal customer}
+      \choices{\ex employees \p{of} Grunnings\\Grunnings\p{'} employees}
+      (\rf{OrgRole}{Possessor})}
     \end{xlist}
   \ex Mr. Dursley works \p{for} Grunnings. (\rf{OrgRole}{Beneficiary})
   \ex Mr. Dursley works \p{at} Grunnings. (\rf{OrgRole}{Locus})
