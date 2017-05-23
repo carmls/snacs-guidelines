@@ -549,10 +549,10 @@ and \psst{Configuration} (18~labels).
       [{\hierC{Time}}
         [{\hierD{StartTime}}]
         [{\hierD{EndTime}}]
-        [{\hierD{DeicticTime}}]
       ]
       [{\hierC{Frequency}}]
       [{\hierC{Duration}}]
+      [{\hierC{Interval}}]
     ]
     [{\hierB{Locus}}
       [{\hierC{Source}}]
@@ -708,7 +708,8 @@ v2 labels.
 \begin{itemize}
   \item \emph{Since the \textbf{April 7, 2017} version:}
   \begin{itemize}
-    \item Clarified \psst{Time} vs.~\psst{DeicticTime}
+    \item Broadened and clarified \sst{DeicticTime}, moved it up a level in the hierarchy, 
+      and renamed it to \psst{Interval}
     \item Clarified \psst{Locus}, \psst{Source}, \psst{Goal}, \psst{Path}, and 
       \psst{Direction}, especially with regard to intransitive prepositions
   \end{itemize}
@@ -787,10 +788,14 @@ The preposition \p{since} is ambiguous:
 the discourse:
 \begin{exe}
   \ex We broke up last year, and I haven't seen her \p{since}. [since we broke up]
-  \ex We left the party \p{after} an hour. [an hour after it started]
 \end{exe}
-But see \psst{DeicticTime} for preposition senses that are inherently relative to `now' 
-(speech time).
+
+However, \psst{Interval} is used for adpositions whose complement (object) 
+is the amount of time between two reference points:
+\begin{exe}
+  \ex We left the party \p{after} an hour. [an hour after it started] (\psst{Interval})
+  \ex We left the party an hour \p{ago}. [an hour before now] (\psst{Interval})
+\end{exe}
 
 \begin{history}
   In v1, point-like temporal prepositions (\p{at}, \p{on}, \p{in}, \p{as}) 
@@ -798,7 +803,7 @@ But see \psst{DeicticTime} for preposition senses that are inherently relative t
   which present the two times in the relation as unequal. 
   \sst{RelativeTime} inherited from \psst{Time} and was reserved for the 
   displaced temporal prepositions, as well as subclasses \psst{StartTime}, 
-  \psst{EndTime}, \psst{DeicticTime}, and \sst{ClockTimeCxn}. 
+  \psst{EndTime}, \sst{DeicticTime}, and \sst{ClockTimeCxn}. 
   
   For v2, \sst{RelativeTime} was merged into \psst{Time}: the distinction 
   was found to be entirely lexical and lacked parallelism with the spatial hierarchy. 
@@ -806,6 +811,7 @@ But see \psst{DeicticTime} for preposition senses that are inherently relative t
   (expressions of clock time like \pex{ten \p{of} seven})
   being exceedingly rare and not very different semantically from 
   prepositions like \p{before}.
+  \sst{DeicticTime} became \psst{Interval}.
 \end{history}
 
 \hierDdef{StartTime}
@@ -843,42 +849,6 @@ the event directly described by the PP is the ending, not the thing that ended.
   \ex The show will end \p{at} 2~p.m. (\psst{Time})
 \end{exe}
 
-\hierDdef{DeicticTime}
-
-\shortdef{When an event took place or will take place, 
-expressed with a measure of time that serves as an offset relative to the speech time specifically.}
-
-\begin{exe}
-  \ex I ate \choices{10~minutes \p{ago}\\a while \p{back}}.\footnote{While 
-  \pex{a while \p{back}} and \pex{a few generations \p{back}} are generally accepted, 
-  %\p{back} with smaller measurements,
-  the use of \p{back} rather than \p{ago} for nearer and more precise temporal references,
-  e.g.~\pex{10~minutes \p{back}}, appears to be especially associated with Indian English \citep[p.~7]{yadurajan-01}.}
-  \ex\label{ex:inAmbiguousTime} I will eat \p{in} 10~minutes.
-    \begin{xlist}
-      \ex\label{ex:inDuration} {} [`for no more than 10~minutes' reading]: \psst{Duration}
-      \ex\label{ex:inDeicticTime} {} [`10~minutes from now' reading]: \psst{DeicticTime}
-    \end{xlist}
-\end{exe}
-There is another sense of \p{in} that marks an explicit reference \psst{Time} 
-(\pex{\p{in} the morning}). 
-The \psst{DeicticTime} subcategory allows us to distinguish the sense in \cref{ex:inDeicticTime}.
-
-Some temporal prepositions may be intransitive \cref{ex:IntrRefTime}, 
-or may take a temporal difference measure as the object \cref{ex:TimeDiff},
-provided that a reference time is salient in the discourse. 
-With such prepositions, the reference time may default to the speech time. 
-However, we limit \psst{DeicticTime} to those prepositions 
-whose \emph{inherent} reference point is the speech time. 
-The following contexts allow a \psst{Time} but not a \psst{DeicticTime}: 
-\begin{exe}
-  %\ex\label{ex:IntrRefTime} To beat the crowds at the game, I will arrive an hour \choices{\p{before}\\\p{beforehand}\\ \#\p{ago}}. (\psst{Time})
-  \ex\label{ex:IntrRefTime} To beat the crowds at the game, I will arrive a while \choices{\p{before}\\\p{beforehand}\\\#\p{ago}\\\#\p{back}}. (\psst{Time})
-  \ex\label{ex:TimeDiff} I took a seat in the waiting room. \choices{\p{After}\\??\p{In}} 15 minutes, the doctor saw me for an hour. (\psst{Time})
-\end{exe}
-To summarize: \psst{DeicticTime} covers preposition usages where `now' is inherent,
-and the more general \psst{Time} applies if the reference time is given in the 
-direct object or depends on the discourse.
 
 \hierCdef{Frequency}
 
@@ -922,6 +892,105 @@ Some \p{for}-\psst{Duration}s measure the length of the specified event's \emph{
 in contrast with \pex{John walked to the store \p{for} an hour}, where the most natural reading is that it took an hour to get to the store \citep[p.~230]{chang-98}.}
   \ex John left the party \p{for} an hour. [he spent an hour away from the party before returning]
 \end{xlist}\end{exe}
+
+A \psst{Duration} may be a stretch of time in which a simple event is repeated 
+iteratively or habitually:
+\begin{exe}\ex\begin{xlist}
+  \ex I lifted weights \p{for} an hour. [many individual lifting acts collectively lasting an hour]
+  \ex I walked to the store \p{for} a year. [over the course of a year, habitually went to the store by walking]
+\end{xlist}\end{exe}
+
+See further discussion at \psst{Interval}.
+
+\hierCdef{Interval}
+
+\shortdef{The amount of time between a reference time and 
+(the nearest boundary of) an event or state.}
+
+This applies to adpositions whose \emph{complement} (object) 
+is the amount of intervening time:
+\begin{exe}
+  \ex I ate \choices{10~minutes \p{ago}\\a while \p{back}}. [before now]\footnote{While 
+  \pex{a while \p{back}} and \pex{a few generations \p{back}} are generally accepted, 
+  %\p{back} with smaller measurements,
+  the use of \p{back} rather than \p{ago} for nearer and more precise temporal references,
+  e.g.~\pex{10~minutes \p{back}}, appears to be especially associated with Indian English \citep[p.~7]{yadurajan-01}.}
+  \ex\label{ex:inAmbiguousTime} I will eat \p{in} 10~minutes.
+    \begin{xlist}
+      \ex\label{ex:inDuration} {} [`for no more than 10~minutes' reading]: \psst{Duration}
+      \ex\label{ex:inInterval} {} [`10~minutes from now' reading]: \psst{Interval}
+    \end{xlist}
+  \ex\label{ex:AfterObj} The game started at 7:00, but I arrived \choices{\p{after}\\\p{within}} 20~minutes.
+\end{exe}
+Some adpositions license a temporal difference measure in \emph{modifier} position, which does not qualify:
+\begin{exe}
+  \ex To beat the crowds, I will arrive \uline{a while} \choices{\p{before} (it starts)\\\p{beforehand}}. (\psst{Time})
+  \ex\label{ex:AfterMod} The game started at 7:00, but I arrived \uline{20~minutes} \choices{\p{after} (it started)\\\p{afterward}}. (\psst{Time})
+\end{exe}
+The preposition \p{after} can be used either way---contrast \cref{ex:AfterMod} with \cref{ex:AfterObj}.
+
+Note that having \psst{Interval} as a separate category allows us to distinguish the sense of \p{in} 
+in \cref{ex:inInterval} from both the \psst{Duration} sense \cref{ex:inDuration} 
+and the \psst{Time} sense (\pex{\p{in} the morning}).
+
+\paragraph{Versus \psst{Duration}.} 
+The prepositions \p{in} and \p{within} are ambiguous between \psst{Interval} and \psst{Duration}.\footnote{By contrast, 
+\p{afer} seems to strongly favor \psst{Interval}. 
+\pex{\p{After} a week, I had climbed all the way to the summit} is possible, 
+but the conclusion that the climbing took a week may be an inference 
+rather than something that is directly expressed.}
+The distinction can be subtle.
+With a verb which refers to a punctual moment of culmination, 
+we use \psst{Interval} even though there may be an implicit 
+preparatory process with a duration:
+\begin{exe}\ex\begin{xlist}
+  \ex I reached the summit \p{in} 3~days. [3 days from some salient prior time, e.g., when I started climbing]
+  \ex I was at the summit \p{within} 3~days.
+  \ex I finished climbing \p{in} 3~days.
+  \ex I had the engine fixed \p{in} 3~days.
+\end{xlist}\end{exe}
+Whereas if the verb can be made progressive and the preposition replaced with \p{for}, 
+it is a \psst{Duration}:
+\begin{exe}\ex\begin{xlist}
+  \ex I had climbed to the summit \p{in} 3~days.\\
+  $\rightarrow$ I had been climbing to the summit \p{for} 3~days. (\psst{Duration})
+  \ex I fixed the engine \p{in} 3~days.\\
+  $\rightarrow$ I was fixing the engine \p{for} 3~days. (\psst{Duration})
+\end{xlist}\end{exe}
+
+Though \p{for} generally marks \psst{Duration}s, it can mark an \psst{Interval} under negation:
+\begin{exe}
+  \ex I haven't eaten \choices{\p{in}\\\p{for}} hours. [hours have passed since the last time I ate]
+\end{exe}
+
+% Some temporal prepositions may be intransitive \cref{ex:IntrRefTime}, 
+% or may take a temporal difference measure as the object \cref{ex:TimeDiff},
+% provided that a reference time is salient in the discourse. 
+% With such prepositions, the reference time may default to the speech time. 
+% However, we limit \psst{DeicticTime} to those prepositions 
+% whose \emph{inherent} reference point is the speech time. 
+% The following contexts allow a \psst{Time} but not a \psst{DeicticTime}: 
+% \begin{exe}
+%   %\ex\label{ex:IntrRefTime} To beat the crowds at the game, I will arrive an hour \choices{\p{before}\\\p{beforehand}\\ \#\p{ago}}. (\psst{Time})
+%   \ex\label{ex:IntrRefTime} To beat the crowds at the game, I will arrive a while \choices{\p{before}\\\p{beforehand}\\\#\p{ago}\\\#\p{back}}. (\psst{Time})
+%   \ex\label{ex:TimeDiff} I took a seat in the waiting room. \choices{\p{After}\\\p{Within}\\??\p{In}} 15 minutes, the doctor saw me for an hour. (\psst{Time})
+% \end{exe}
+% To summarize: \psst{DeicticTime} covers preposition usages where `now' is inherent,
+% and the more general \psst{Time} applies if the reference time is given in the 
+% direct object or depends on the discourse.
+
+\begin{history}
+  Version~1 featured a label called \sst{DeicticTime}, under \psst{RelativeTime}, 
+  which was meant to cover \p{ago} and temporal usages of other adpositions 
+  (such as \p{in}) whose reference point is the utterance time or deictic center. 
+  This concept proved difficult to apply and was (without good justification) 
+  used as a catch-all for intransitive usages of temporal prepositions. 
+  For v2, the new concept of \psst{Interval} is broader in that it drops the deictic 
+  requirement (also covering \p{within}), while \psst{Time} has been clarified to include 
+  intransitive usages of prepositions like \p{before} where the reference time 
+  can be recovered from discourse context.
+\end{history}
+
 
 \hierBdef{Locus}
 
