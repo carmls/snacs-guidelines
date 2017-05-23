@@ -895,15 +895,33 @@ Contrast: \psst{RateUnit}
 
 \hierCdef{Duration}
 
-\shortdef{Indication of \textbf{how long} something lasts
+\shortdef{Indication of \textbf{how long} an event or state lasts
 (with reference to an amount of time or 
 time period\slash larger event that it spans).}
 
 \begin{exe}
-  \ex I ate \p{for} 10~minutes.
-  \ex I ate \p{in} [for no more than] 10~minutes. [see \cref{ex:inDuration}]
-  \ex I ate \choices{\p{throughout}\\\p{through}\\\p{into}} the night.
+  \ex\label{ex:forDuration} I walked \choices{\p{for}\\\#\p{in}} 20~minutes.
+  \ex\label{ex:GoalDuration} I walked to$_{\psst{Goal}}$ the store \choices{\p{in}/\p{within}\\\#\p{for}} 20~minutes. [see \cref{ex:inDuration}]
+  \ex\label{ex:ExtentDuration} I walked a mile \choices{\p{in}/\p{within}\\\#\p{for}} 20~minutes.
+  \ex\label{ex:AmbigDuration} I mowed the lawn \choices{\p{for}\\\p{in}/\p{within}} an hour.
+  \ex I walked \p{for} the entire race. [the entire time of the race]
+  \ex I walked \choices{\p{throughout}\\\p{through}\\well \p{into}} the night.
 \end{exe}
+Note that the presence of a goal \cref{ex:GoalDuration} or 
+extent of an event (\pex{a mile} in \cref{ex:ExtentDuration}) 
+can affect the choice \psst{Duration} preposition, blocking \p{for}.
+\Cref{ex:AmbigDuration} shows a direct object which can be interpreted 
+either as something against which partial progress is made---licensing \p{for} 
+and the inference that some of the lawn was not reached---or 
+as defining the complete scope of progress, licensing \p{in}/\p{within} 
+and the inference that the lawn was covered in its entirety.
+
+Some \p{for}-\psst{Duration}s measure the length of the specified event's \emph{result}:
+\begin{exe}\ex \begin{xlist}
+  \ex John went to the store \p{for} an hour. [he spent an hour at the store, not an hour going there]\footnote{This stands 
+in contrast with \pex{John walked to the store \p{for} an hour}, where the most natural reading is that it took an hour to get to the store \citep[p.~230]{chang-98}.}
+  \ex John left the party \p{for} an hour. [he spent an hour away from the party before returning]
+\end{xlist}\end{exe}
 
 \hierBdef{Locus}
 
