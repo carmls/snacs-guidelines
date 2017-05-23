@@ -247,6 +247,7 @@
 \newcommand{\jbmarker}{\ensuretext{\textcolor{orange}{\ensuremath{^{\textsc{J}}_{\textsc{B}}}}}}
 %\newcommand{\dbmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{D}}_{\textsc{B}}}}}}
 \newcommand{\abmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{A}}_{\textsc{B}}}}}}
+\newcommand{\jhmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{JD}}_{\textsc{H}}}}}}
 \newcommand{\ajbmarker}{\ensuretext{\textcolor{mdgreen}{\ensuremath{^{\textsc{AJ}}_{\textsc{B}}}}}}
 \newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
 %\newcommand{\arkcomment}[3]{}
@@ -255,6 +256,7 @@
 \newcommand{\nas}[1]{\arkcomment{\nasmarker}{#1}{red}}
 \newcommand{\bo}[1]{\arkcomment{\bomarker}{#1}{blue}}
 \newcommand{\jb}[1]{\arkcomment{\jbmarker}{#1}{orange}}
+\newcommand{\jh}[1]{\arkcomment{\jhmarker}{#1}{cyan}}
 %\newcommand{\db}[1]{\arkcomment{\dbmarker}{#1}{purple}}
 \newcommand{\ab}[1]{\arkcomment{\abmarker}{#1}{purple}}
 \newcommand{\ajb}[1]{\arkcomment{\ajbmarker}{#1}{mdgreen}}
@@ -1423,6 +1425,10 @@ Prototypical prepositions are \p{by} (prominently including passive-\p{by}) and 
 \begin{exe}
   \ex the devastation of the town wreaked \p{by} the fire
   \ex the devastation \p{of} the fire
+  \ajb{
+  Compare \p{of} and \p{'s}:
+      \ex the fire \p{'s} devastation
+      }
 \end{exe}
 The \psst{Causer} is sometimes construed as a \psst{Source}:
 \begin{exe}
@@ -1442,9 +1448,12 @@ See also: \psst{Instrument}
 Prototypical prepositions are \p{by} (prominently including passive-\p{by}) and \p{of}:
 \begin{exe}
   \ex the decisive vote \choices{\p{by}\\\p{of}} the City Council
-  
-  \ajb{\ex \choices{the City Council\p{'s} decisive vote\\the decisive vote of the City Council (\rf{Agent}{Possessor})}
-  \ex we needed \p{her} help
+  \ajb{
+  Compare \p{of} and \p{'s}:
+  \ex the City Council \p{'s} decisive vote 
+  \ex they needed \p{her} help
+  \ex ?they needed help of hers
+  (\rf{Agent}{Possessor})
   }
 \end{exe}
 When two symmetric \psst{Agent}s are collected in a single NP 
@@ -1496,6 +1505,10 @@ Adpositional \psst{Theme}s are usually construed as something else:
       \ex the price \p{of} tea in China (\rf{Theme}{Gestalt})
       \ex the approach \p{of} the waves
       \ex the \choices{death\\murder} \p{of} a salesman
+      \ajb{
+      Comapare \p{of} and \p{'s}:
+      \ex \choices{the waves \p{'} approach}
+      \ex a salesman \p{'s} \choices{death\\murder}}
     \end{xlist}
   \ex \begin{xlist}
       \ex The mechanic worked \p{on} the engine.
@@ -1590,8 +1603,9 @@ Counterpart: \psst{Experiencer}
 in the languages we have looked at. In English, it can be construed in several ways:
 \begin{exe}
   \ex The anger \p{of} the students (\rf{Experiencer}{Possessor})
-  
-  \ajb{\ex \choices{The anger \p{of} the students\\The students\p{'} anger} (\rf{Experiencer}{Possessor})}
+  \ajb{
+  Compare \p{of} and \p{'s}:
+  \ex The students \p{'} anger (\rf{Experiencer}{Possessor})}
   \ex Running is enjoyable \p{for} me (\rf{Experiencer}{Beneficiary})
   \ex It feels hot \p{to} me (\rf{Experiencer}{Goal})
 \end{exe}
@@ -1612,7 +1626,7 @@ Contrasts with \psst{Recipient} if there is transfer/communication.
 
 Typically construed as \psst{Agent} (with \pex{give}, \pex{tell}, \pex{talk \p{to}}, \pex{create}: 
 subject or passive-\p{by}; adnominal \p{by} as in \pex{works \p{by} Shakespeare}) 
-or \psst{Source} (\pex{obtain/hear \p{from}}; adnominal \p{of} as in \pex{works \p{of} Shakespeare}\ajb{possessives \p{'s}, \p{my}, etc.}). 
+or \psst{Source} (\pex{obtain/hear \p{from}}; adnominal \p{of}\ajb{ or genitive marking \p{'s}, \p{my}, etc.} as in \pex{works \p{of} Shakespeare}). 
 Occasionally construed as \psst{Theme} (\pex{rob \uline{her} of her life savings}: direct object).
 
 Does not apply to events like \pex{exchange}, \pex{talk/chat \p{with}}, 
@@ -1702,8 +1716,7 @@ This label does not distinguish the polarity of the relation
   \ex Vote \choices{\p{for}\\\p{against}} Pedro!
   \ex Junk food is bad \p{for} your health.
   \ex My parrot died \p{on} me.
-  
-  \ajb{\ex children\p{'s} clothes (\rf{Beneficiary}{Possessor})}
+  \ajb{\ex children \p{'s} clothes (\rf{Beneficiary}{Possessor})}
 \end{exe}
 
 \hierBdef{Instrument}
@@ -1846,10 +1859,11 @@ See \psst{Characteristic}.}
       \ex the blueness \p{of} the sky
       \ex the wisdom \p{of} the crowd
       \ex the time \p{of} the party
-      
-      \ajb{\ex the sky\p{'s} blueness
-      \ex the crowd\p{'s} wisdom
-      \ex the party\p{'s} time 
+      \ajb{
+      Compare \p{of} and \p{'s}
+      \ex the sky \p{'s} blueness
+      \ex the crowd \p{'s} wisdom
+      \ex the party \p{'s} time 
       (\rf{Gestalt}{Possessor})}
       \ex\label{ex:amountGestalt} the amount \p{of} time allowed [but see \cref{ex:QuantityGestalt}]
     \end{xlist}
@@ -1881,14 +1895,16 @@ See also: \psst{Quantity}
 which is not part of their body 
 or inherent to their identity/character but could, in principle, be taken away.}
 
-Prototypically expressed with \p{of}\genitiveversion{or genitive marking}:
+Prototypically expressed with \p{of}\genitiveversion{ or genitive marking}:
 
 \begin{exe}
   \ex the money \p{of} the rich
-  
-  \ajb{\ex \choices{the money \p{of} the rich\\the rich\p{'s} money}}
-  
-  \ajb{\ex \p{our} dog} % POSSESSIVE
+  \ajb{
+  Compare \p{of} and \p{'s}:
+  \ex the rich \p{'s} money}
+  \ajb{\ex \choices{John \p{'s}\\\p{our}} dog
+  \ex ?the dog \p{of} John
+  \ex the dog \p{of} ours}
 \end{exe}
 
 See \psst{SocialRel}.
@@ -1904,6 +1920,13 @@ or set element. See \psst{Part/Portion}.}
     \ex	The flaxen hair \p{of} the girl
     \ex\label{ex:layers}	The 3 layers \p{of} the cake
     \ex\label{ex:prongs}	The 3 prongs \p{of} the strategy
+    \ajb{
+    Compare \p{of} and \p{'s}:
+      \ex The car \p{'s} new engine
+    \ex	The girl \p{'s} flaxen hair
+    \ex The cake \p{'s} 3 layers
+    \ex The strategy \p{'s} 3 prongs
+      }
     %\ex 2 \p{of} my 5 daughters % Quantity ~> Whole
     \ex\label{ex:rest} The \choices{remainder\\rest} \p{of} the cake %\nss{Maybe this should be 
     % \rf{Quantity}{Whole} after all, even though ``the rest of it'' is a dubious way to answer 
@@ -2334,11 +2357,11 @@ Construals include:
       \ex Joan is the \choices{sister\\wife} \p{of} John.
       \ex Joan is a student \p{of} Miss Zarves.
       \ex the family \p{of} Miss Zarves
-      
       \ajb{
-      \ex Joan is \choices{the sister \p{of} John\\John\p{'s} sister}.
-      \ex Joan is \choices{a student \p{of} Miss Zarves\\Miss Zarves\p{'s} student}.
-      \ex \choices{the family \p{of} Miss Zarves\\Miss Zarves\p{'s} family}  
+      Compare \p{of} and \p{'s}:
+      \ex Joan is John \p{'s} \choices{sister\\wife}.
+      \ex Joan is Miss Zarves \p{'s} student.
+      \ex Miss Zarves \p{'} family 
       }
     \end{xlist}
   \ex Joan is studying \p{under} Prof.~Smith. (\rf{SocialRel}{Locus})
@@ -2379,11 +2402,12 @@ lacks any prototypical adposition, but participates in numerous construals:
       \ex the president \p{of} the U.S.
       \ex I am a loyal customer \p{of} Graeter's.
       \ex employees \p{of} Grunnings
-      
-      \ajb{\choices{\ex the chairman \p{of} the board\\the board\p{'s} chairman}
-      \choices{\ex the president \p{of} the U.S.\\the U.S.\p{'} president}
-      \ex I am \choices{a loyal customer \p{of} Graeter's.\\Graeter\p{'s} loyal customer}
-      \choices{\ex employees \p{of} Grunnings\\Grunnings\p{'} employees}
+      \ajb{
+      Compare \p{of} and \p{'s}:
+      \ex the board \p{'s} chairman
+      \ex the U.S. \p{'} president
+      \ex I am Graeter \p{'s} loyal customer
+      \ex Grunnings \p{'} employees
       (\rf{OrgRole}{Possessor})}
     \end{xlist}
   \ex Mr. Dursley works \p{for} Grunnings. (\rf{OrgRole}{Beneficiary})
