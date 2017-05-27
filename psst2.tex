@@ -243,12 +243,11 @@
 \newcommand{\cjdmarker}{\ensuretext{\textcolor{green}{\ensuremath{^{\textsc{CJ}}_{\textsc{D}}}}}}
 \newcommand{\nssmarker}{\ensuretext{\textcolor{magenta}{\ensuremath{^{\textsc{NS}}_{\textsc{S}}}}}}
 \newcommand{\nasmarker}{\ensuretext{\textcolor{red}{\ensuremath{^{\textsc{NA}}_{\textsc{S}}}}}}
-\newcommand{\bomarker}{\ensuretext{\textcolor{blue}{\ensuremath{^{\textsc{B}}_{\textsc{O}}}}}}
 \newcommand{\jbmarker}{\ensuretext{\textcolor{orange}{\ensuremath{^{\textsc{J}}_{\textsc{B}}}}}}
 %\newcommand{\dbmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{D}}_{\textsc{B}}}}}}
 \newcommand{\abmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{A}}_{\textsc{B}}}}}}
 \newcommand{\jhmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{JD}}_{\textsc{H}}}}}}
-\newcommand{\ajbmarker}{\ensuretext{\textcolor{mdgreen}{\ensuremath{^{\textsc{AJ}}_{\textsc{B}}}}}}
+\newcommand{\ajbmarker}{\ensuretext{\textcolor{blue}{\ensuremath{^{\textsc{AJ}}_{\textsc{B}}}}}}
 \newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
 %\newcommand{\arkcomment}[3]{}
 \newcommand{\cjd}[1]{\arkcomment{\cjdmarker}{#1}{green}}
@@ -259,7 +258,7 @@
 \newcommand{\jh}[1]{\arkcomment{\jhmarker}{#1}{cyan}}
 %\newcommand{\db}[1]{\arkcomment{\dbmarker}{#1}{purple}}
 \newcommand{\ab}[1]{\arkcomment{\abmarker}{#1}{purple}}
-\newcommand{\ajb}[1]{\arkcomment{\ajbmarker}{#1}{mdgreen}}
+\newcommand{\ajb}[1]{\arkcomment{\ajbmarker}{#1}{blue}}
 \newcommand{\params}{\mathbf{\theta}}
 \newcommand{\wts}{\mathbf{w}}
 \newcommand{\g}{\mathbf{g}}
@@ -1637,13 +1636,13 @@ which involve a back-and-forth between
 \begin{exe}
   \ex \rf{Originator}{Agent} (passive-\p{by} or adnominal \p{by}):
   \begin{xlist}
-    \ex\label{ex:worksBy} works \p{by} Shakespeare (cf.~\cref{ex:worksOf})
-    \ex The telephone was invented \p{by} Alexander Graham Bell.
+    \ex\label{ex:worksBy} works \p{by} Shakespeare [cf.~\cref{ex:worksOf}]
+    \ex The telephone was invented \p{by} AlexanderGraham Bell.
     \ex The story was \choices{given\\told} to$_{\text{\rf{Recipient}{Goal}}}$ her \p{by} her editor.
   \end{xlist}
   \ex \rf{Originator}{Source}:
   \begin{xlist}
-    \ex\label{ex:worksOf} works \p{of} Shakespeare (cf.~\cref{ex:worksBy})
+    \ex\label{ex:worksOf} works \p{of} Shakespeare [cf.~\cref{ex:worksBy}]
     \ex The story was obtained \p{from} an anonymous White House employee.
     \ex I heard the news \p{from} Larry.
   \end{xlist}
@@ -1741,9 +1740,9 @@ This label does not distinguish the polarity of the relation
 
 \begin{exe}
   \ex Vote \choices{\p{for}\\\p{against}} Pedro!
+  \ex These are \choices{clothes \p{for} children\\children\p{'s} clothes}.\nss{s-genitive simple Beneficiary or \rf{Beneficiary}{Possessor}?}
   \ex Junk food is bad \p{for} your health.
   \ex My parrot died \p{on} me.
-  \ajb{\ex children \p{'s} clothes (\rf{Beneficiary}{Possessor})}
 \end{exe}
 
 \hierBdef{Instrument}
@@ -1883,15 +1882,18 @@ See \psst{Characteristic}.}
 \item	The holder of a property if the property is the governor:
 \begin{exe}
   \ex \begin{xlist} 
-      \ex the blueness \p{of} the sky
-      \ex the wisdom \p{of} the crowd
-      \ex the time \p{of} the party
-      \ajb{
-      Compare \p{of} and \p{'s}
-      \ex the sky \p{'s} blueness
-      \ex the crowd \p{'s} wisdom
-      \ex the party \p{'s} time 
-      (\rf{Gestalt}{Possessor})}
+      \ex\begin{xlist}
+        \ex the blueness \p{of} the sky
+        \ex the sky\p{'s} blueness\nss{\rf{Gestalt}{Possessor}?}
+      \end{xlist}
+      \ex\begin{xlist}
+        \ex the wisdom \p{of} the crowd
+        \ex the crowd\p{'s} wisdom\nss{\rf{Gestalt}{Possessor}?}
+      \end{xlist}
+      \ex\begin{xlist}
+        \ex the start time \p{of} the party
+        \ex the party\p{'s} start time\nss{\rf{Gestalt}{Possessor}?}
+      \end{xlist}
       \ex\label{ex:amountGestalt} the amount \p{of} time allowed [but see \cref{ex:QuantityGestalt}]
     \end{xlist}
   \end{exe}
