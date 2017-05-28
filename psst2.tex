@@ -455,7 +455,7 @@
 \hyphenation{Huddle-ston}
 
 \title{\draftnotice{{\it\small WORKING DRAFT}\\[5pt] 
-}Adposition Supersenses v2}
+}Adposition and Case Supersenses v2}
 
 \newcommand{\emldisplay}[2]{\texttt{\href{mailto:#1}{#2}}}
 \newcommand{\eml}[1]{\textsmaller{\emldisplay{#1}{#1}}}
@@ -478,7 +478,10 @@
     \eml{timothy.ogorman@colorado.edu} \and
 \textbf{Omri Abend} \\
   \hspace{.1cm}Hebrew University of Jerusalem\hspace{.1cm} \\
-    \eml{oabend@cs.huji.ac.il}
+    \eml{oabend@cs.huji.ac.il} \and
+\textbf{Austin Blodgett} \\
+  Georgetown University \\
+    \eml{ajb341@georgetown.edu}
 }
 
 \date{\nss{\today{} draft; insert arXiv submission date here}}
@@ -496,6 +499,8 @@ Version~2 is a revision of the supersense inventory proposed for English by
 The present inventory was developed after extensive review of the 
 v1 corpus annotations for English, as well as consideration of adposition 
 and case phenomena in Hebrew, Hindi, and Korean.
+It also adds examples for English \p{'s} (genitive case) possessives, 
+as described in \nss{\citet{blodgett-??}}.
 Examples in this document are limited to English; 
 a multilingual and more detailed online lexical resource is forthcoming.
 \end{abstract}
@@ -1941,34 +1946,46 @@ See \psst{SocialRel}.
 or set element. See \psst{Part/Portion}.}
 
 \begin{exe}
+  {\setlength\multicolsep{0pt}%
+  \begin{multicols}{2}
   \ex \begin{xlist}
-    \ex	The new engine \p{of} the car
-    \ex	The flaxen hair \p{of} the girl
-    \ex\label{ex:layers}	The 3 layers \p{of} the cake
-    \ex\label{ex:prongs}	The 3 prongs \p{of} the strategy
-    \ajb{
-    Compare \p{of} and \p{'s}:
-      \ex The car \p{'s} new engine
-    \ex	The girl \p{'s} flaxen hair
-    \ex The cake \p{'s} 3 layers
-    \ex The strategy \p{'s} 3 prongs
-      }
+    % of-genitive
+    \ex	the new engine \p{of} the car
+    \ex	the flaxen hair \p{of} the girl
+    \ex\label{ex:layers}	the 3 layers \p{of} the cake
+    \ex\label{ex:prongs}	the 3 prongs \p{of} the strategy
+    \ex the tastiest bit \p{of} the cake
+    \ex the southern tip \p{of} the island
+    \ex the interior \p{of} the shopping bag
+    \ex the end \p{of} the journey
+    \ex the 14~episodes \p{of} a TV series
+    
+    % s-genitive
+    \sn the car\p{'s} new engine
+    \sn the girl\p{'s} flaxen hair
+    \sn the cake\p{'s} 3 layers
+    \sn the strategy\p{'s} 3 prongs
+    \sn the cake\p{'s} tastiest bit
+    \sn the island\p{'s} southern tip
+    \sn the shopping bag\p{'s} interior
+    \sn the journey\p{'s} end
+    \sn a TV series\p{'s} 14~episodes
+  \end{xlist}
+  \end{multicols}}
+  \ex	the south \p{of} France
     %\ex 2 \p{of} my 5 daughters % Quantity ~> Whole
-    \ex\label{ex:rest} The \choices{remainder\\rest} \p{of} the cake %\nss{Maybe this should be 
+  \ex\label{ex:rest} The \choices{remainder\\rest} \p{of} the cake %\nss{Maybe this should be 
     % \rf{Quantity}{Whole} after all, even though ``the rest of it'' is a dubious way to answer 
     % ``How much of it?''. ``The remaining 6 ounces of cake'' certainly specifies a quantity.\ab{but is that because of "6 ounces" or "remainder (\/remaining)"?   Since "remaining of the cake" is cake too (a physical object in this case), it has the property of having quantity, but "remaining of ..." does not have "quantity" as the sense in the foreground, it's part-whole relationship.}}
-    \ex The tastiest bit \p{of} the cake
-    \ex	The tennis matches \p{of} a series
-    \ex	The interior \p{of} the shopping bag
-    \ex	The south (region) \p{of} France
-    \ex	The beginning \p{of} the party
+    %\ex	the tennis matches \p{of} a series
+    %\ex	the beginning \p{of} the party
+  \ex \rf{Whole}{Locus}: \begin{xlist}
+    \ex	the 14~episodes \p{in} a TV series
+    \ex	the new engine \p{in} the car
+    \ex the escape key \p{on} the keyboard
+    \ex the flaxen hair \p{on} the girl
   \end{xlist}
-  \ex \begin{xlist}
-    \ex	The tennis matches \p{in} a series (\rf{Whole}{Locus})
-    \ex	The new engine \p{in} the car (\rf{Whole}{Locus})
-    \ex the escape key \p{on} the keyboard (\rf{Whole}{Locus})
-    \ex	The clothes are \p{in} a pile (\rf{Whole}{Manner})
-  \end{xlist}
+  \ex	the clothes are \p{in} a pile (\rf{Whole}{Manner})
   \ex Sets and ratios:
     \begin{xlist}
       \ex This is one \p{of} the \choices{worst\\better} retaurants in town. (\psst{Whole})
