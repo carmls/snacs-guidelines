@@ -364,6 +364,7 @@
 \newcommand{\nsst}[1]{\sst{n:#1}} % noun supersense tag label
 \newcommand{\vsst}[1]{\sst{v:#1}} % verb supersense tag label
 \newcommand{\psst}[1]{\textcolor{mdgreen}{\hyperref[sec:#1]{\sst{#1}}}} % preposition supersense tag label
+\newcommand{\psstX}[2]{\textcolor{mdgreen}{\hyperref[sec:#1]{\sst{#2}}}} % preposition supersense tag label
 \newcommand{\olbl}[1]{\textcolor{purple}{\textrm{#1}}} % other label: `i, `d, etc.
 %\newcommand{\nsst}[1]{\sst{#1~\textroundcap{\vphantom{-}}~}} % noun supersense tag label
 %\newcommand{\vsst}[1]{\sst{#1\raisebox{-1.5pt}{\textasciicaron}}} % verb supersense tag label
@@ -1503,20 +1504,19 @@ Adpositional \psst{Theme}s are usually construed as something else:
       \ex There is a significant demand \p{for} new housing. (\rf{Theme}{Goal})
       \ex They charge higher prices \p{for} goods bought by credit card. (\rf{Theme}{Goal})
     \end{xlist}
-  \ex\begin{xlist}
-      \ex\begin{xlist} 
-        \ex the price \p{of} tea (\rf{Theme}{Gestalt})\nss{?}
-        \ex the tea\p{'s} price\nss{or is this just \psst{Characteristic}?}
-      \end{xlist}
-      \ex\begin{xlist} 
+  \ex
+  {\setlength\multicolsep{0pt}%
+  \begin{multicols}{2}
+    \begin{xlist}
+        \ex the price \p{of} tea (\rf{Theme}{Gestalt})\nss{just \psst{Gestalt}?}
         \ex the approach \p{of} the waves
-        \ex the wave\p{s'} approach
-      \end{xlist}
-      \ex\begin{xlist}
         \ex the \choices{death\\murder} \p{of} a salesman
-        \ex the salesman\p{'s} \choices{death\\murder}
-      \end{xlist}
+        
+        \sn the tea\p{'s} price\nss{just \psst{Gestalt}?}
+        \sn the wave\p{s'} approach
+        \sn the salesman\p{'s} \choices{death\\murder}
     \end{xlist}
+  \end{multicols}}
   \ex \begin{xlist}
       \ex The mechanic worked \p{on} the engine.
       \ex We noshed \p{on} snacks.
@@ -1886,22 +1886,21 @@ See \psst{Characteristic}.}
 \begin{itemize}
 \item	The holder of a property if the property is the governor:
 \begin{exe}
-  \ex \begin{xlist} 
-      \ex\begin{xlist}
+  \ex 
+    {\setlength\multicolsep{0pt}%
+    \begin{multicols}{2}
+      \begin{xlist} 
         \ex the blueness \p{of} the sky
-        \ex the sky\p{'s} blueness\nss{\rf{Gestalt}{Possessor}?}
-      \end{xlist}
-      \ex\begin{xlist}
-        \ex the wisdom \p{of} the crowd
-        \ex the crowd\p{'s} wisdom\nss{\rf{Gestalt}{Possessor}? also, why is this not Experiencer, like anger?}
-      \end{xlist}
-      \ex\begin{xlist}
+        \ex the size \p{of} the crowd
         \ex the start time \p{of} the party
-        \ex the party\p{'s} start time\nss{\rf{Gestalt}{Possessor}?}
+        
+        \sn the sky\p{'s} blueness
+        \sn the crowd\p{'s} size
+        \sn the party\p{'s} start time
       \end{xlist}
-      \ex\label{ex:amountGestalt} the amount \p{of} time allowed [but see \cref{ex:QuantityGestalt}]
-    \end{xlist}
-  \end{exe}
+    \end{multicols}}
+    \ex\label{ex:amountGestalt} the amount \p{of} time allowed [but see \cref{ex:QuantityGestalt}]
+\end{exe}
 \item	The wearer of attire:
 \begin{exe}
   \ex the uniforms \p{of} the children
@@ -2061,7 +2060,7 @@ are defined for some important subclasses.
 \begin{exe}
   \ex a room \p{with} 2 beds
 \end{exe}
-\item	Anything that is borderline between subcategories \psst{Possession} and \psst{Part/Portion}
+\item	Anything that is borderline between subcategories \psst{Possession} and \psstX{Part/Portion}{Part\slash Portion}
 \end{itemize}
 
 Typically, one of ``\psst{Gestalt} \{HAS, CONTAINS\} \psst{Characteristic}'' is entailed. 
