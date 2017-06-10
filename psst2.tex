@@ -357,6 +357,8 @@
 %\addtolength{\topsep}{-.5cm} %space between first item and preceding paragraph
 %\setlength{\belowcaptionskip}{-.25cm}
 
+\usepackage{suffix} % for \WithSuffix
+
 \usepackage{gb4e} % linguistic examples. put after all other package imports
 
 
@@ -367,6 +369,7 @@
 % Special macros
 \newcommand{\w}[1]{\textit{#1}}	% word
 \newcommand{\p}[1]{\textbf{\textsf{#1}}\index{#1@\textbf{\textsf{#1}}}} % preposition type
+\WithSuffix\newcommand\p*[2]{\textbf{\textsf{#1}}\index{#2@\textbf{\textsf{#2}}}} % preposition token and lemma
 \newcommand{\lbl}[1]{\textsc{#1}} % class label
 \newcommand{\sst}[1]{\lbl{#1}\index{#1@\lbl{#1}}} % OLD supersense tag label
 \newcommand{\nsst}[1]{\sst{n:#1}} % noun supersense tag label
@@ -737,7 +740,7 @@ Rarely, \psst{Circumstance} is used directly for:
 \begin{itemize}
   \item \textbf{Contextualization}
 \begin{exe}
-    \ex \p{In} arguing for tax reform, the president claimed that loopholes allow 
+    \ex \p*{In}{in} arguing for tax reform, the president claimed that loopholes allow 
     big corporations to profit from moving their headquarters overseas.
     \ex Bipartisan compromise is unlikely \p{with} the election just around the corner.
   \end{exe}
@@ -957,7 +960,7 @@ and the \psst{Time} sense (\pex{\p{in} the morning}).
 \paragraph{Versus \psst{Duration}.} 
 The prepositions \p{in} and \p{within} are ambiguous between \psst{Interval} and \psst{Duration}.\footnote{By contrast, 
 \p{after} seems to strongly favor \psst{Interval}. 
-\pex{\p{After} a week, I had climbed all the way to the summit} is possible, 
+\pex{\p*{After}{after} a week, I had climbed all the way to the summit} is possible, 
 but the conclusion that the climbing took a week may be an inference 
 rather than something that is directly expressed.}
 The distinction can be subtle.
@@ -1853,7 +1856,7 @@ and \p{as} (where the object is the category):
 \begin{exe}
   \ex\label{ex:stateof} the state \p{of} Washington [as opposed to the city]
   \ex The liberal state \p{of} Washington has not been receptive to Trump's message.
-  \ex \p{As} a liberal state, Washington has not been receptive to Trump's message.
+  \ex \p*{As}{as} a liberal state, Washington has not been receptive to Trump's message.
   \ex\label{ex:ascolleague} I like Bob \p{as} a colleague. [but not as a friend]
   \ex What a gem \p{of} a restaurant! [exclamative idiom: both NPs are indefinite]
   \ex the \choices{idea\\task\\hassle} \p{of} opening a new business
@@ -2029,8 +2032,8 @@ or set element. See \psst{Part/Portion}.}
       \ex This is one \p{of} the \choices{worst\\better} retaurants in town. (\psst{Whole})
       \ex 2 \p{in} 10 American children are redheads. (\rf{Whole}{Locus})
       \ex 2 \p{out\_of} 10 American children are redheads. (\rf{Whole}{Source}) %\nss{should this be \psst{RateUnit}?}\ab{maybe}
-      \ex \p{Out\_of} the 10 children in the class, only Mary is a redhead. (\rf{Whole}{Source})
-      \ex\label{ex:amongSet} \p{Among} the 10 children in the class, only Mary is a redhead. (\psst{Whole})
+      \ex \p*{Out\_of}{out\_of} the 10 children in the class, only Mary is a redhead. (\rf{Whole}{Source})
+      \ex\label{ex:amongSet} \p*{Among}{among} the 10 children in the class, only Mary is a redhead. (\psst{Whole})
     \end{xlist}
 \end{exe}
 
@@ -2220,7 +2223,7 @@ By contrast, if the nature of the scene fundamentally requires multiple particip
 simple \psst{Co-Agent} is used. Often there is ambiguity:\footnote{Adding \p{together} 
 seems to favor the (b)~readings: \pex{I fought \p{together\_with} them}, \pex{We fought \p{together}} 
 can only mean we were on the same side. Contrastive stress can also force one reading: 
-\pex{I fought \p{WITH} them (not \p{AGAINST} them)}.}
+\pex{I fought \p*{WITH}{with} them (not \p*{AGAINST}{against} them)}.}
 \begin{exe}
   \ex Do you want to talk \p{with} me? 
   \begin{xlist}
@@ -2250,7 +2253,7 @@ or is chosen as an alternative.}
 
 \begin{exe}
   \ex I ordered soup \choices{\p{instead\_of}\\\p{rather\_than}} salad.
-  \ex \p{Instead\_of} ordering salad, I ordered soup.
+  \ex \p*{Instead\_of}{instead\_of} ordering salad, I ordered soup.
   %\ex They replaced \uline{my old tires} with new ones. %#nonprep
   \ex The new shirts were gray \p{instead\_of} black.
   \ex They \choices{substituted\\swapped} my old tires \p{for} new ones.
