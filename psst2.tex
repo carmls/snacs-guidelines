@@ -68,6 +68,8 @@
 %\usepackage{times}
 %\usepackage{latexsym}
 
+\usepackage{makeidx} % index
+\makeindex
 
 \usepackage[boxed]{algorithm2e}
 \renewcommand\AlCapFnt{\small}
@@ -102,6 +104,12 @@
   {0pt}
   {\hspace{-1.2cm}% Move into margin
    \makebox[1cm][r]{\normalfont\thesection}\hspace{.2cm}}% Set number + title
+\titleformat{\section}[block]
+  {\Large\bfseries}
+  {}
+  {0pt}
+  {\hspace{-1.2cm}% Move into margin
+   \makebox[1cm][r]{\normalfont}\hspace{.2cm}}% Set  title
 \titleformat{\subsection}[block]
   {\large\bfseries}
   {}
@@ -358,8 +366,8 @@
 
 % Special macros
 \newcommand{\w}[1]{\textit{#1}}	% word
-\newcommand{\p}[1]{\textbf{\textsf{#1}}} % preposition type
-\newcommand{\lbl}[1]{\textsc{#1}} % class label
+\newcommand{\p}[1]{\textbf{\textsf{#1}}\index{#1@\textbf{\textsf{#1}}}} % preposition type
+\newcommand{\lbl}[1]{\textsc{#1}\index{#1@\textsc{#1}}} % class label
 \newcommand{\sst}[1]{\lbl{#1}} % supersense tag label
 \newcommand{\nsst}[1]{\sst{n:#1}} % noun supersense tag label
 \newcommand{\vsst}[1]{\sst{v:#1}} % verb supersense tag label
@@ -2542,8 +2550,8 @@ This section discusses notable constructions that are not limited to a single su
 \bibliographystyle{plainnat}
 \bibliography{psst2.bib}
 
-
 %\printbibliography[maxnames=99]
 
+\printindex
 
 \end{document}
