@@ -367,12 +367,12 @@
 % Special macros
 \newcommand{\w}[1]{\textit{#1}}	% word
 \newcommand{\p}[1]{\textbf{\textsf{#1}}\index{#1@\textbf{\textsf{#1}}}} % preposition type
-\newcommand{\lbl}[1]{\textsc{#1}\index{#1@\textsc{#1}}} % class label
-\newcommand{\sst}[1]{\lbl{#1}} % supersense tag label
+\newcommand{\lbl}[1]{\textsc{#1}} % class label
+\newcommand{\sst}[1]{\lbl{#1}\index{#1@\lbl{#1}}} % OLD supersense tag label
 \newcommand{\nsst}[1]{\sst{n:#1}} % noun supersense tag label
 \newcommand{\vsst}[1]{\sst{v:#1}} % verb supersense tag label
-\newcommand{\psst}[1]{\textcolor{mdgreen}{\hyperref[sec:#1]{\sst{#1}}}} % preposition supersense tag label
-\newcommand{\psstX}[2]{\textcolor{mdgreen}{\hyperref[sec:#1]{\sst{#2}}}} % preposition supersense tag label
+\newcommand{\psst}[1]{\psstX{#1}{#1}} % preposition supersense tag label
+\newcommand{\psstX}[2]{\textcolor{mdgreen}{\hyperref[sec:#1]{\lbl{#2}}}\index{#1@\textcolor{mdgreen}{\textbf{\textsc{#1}}}}} % preposition supersense tag label
 \newcommand{\olbl}[1]{\textcolor{purple}{\textrm{#1}}} % other label: `i, `d, etc.
 %\newcommand{\nsst}[1]{\sst{#1~\textroundcap{\vphantom{-}}~}} % noun supersense tag label
 %\newcommand{\vsst}[1]{\sst{#1\raisebox{-1.5pt}{\textasciicaron}}} % verb supersense tag label
