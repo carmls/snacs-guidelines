@@ -1881,6 +1881,8 @@ Paraphrase test: ``(thing) IS (category) [in the context of the event]'':
 to a verb, as in \cref{ex:ascolleague} and  \cref{ex:assituational}, 
 rather than being governed by the item it describes.
 
+See also: \psst{ComparisonRef}
+
 \begin{history}
   Generalized from v1, where it was called \sst{Instance} and restricted 
   to the ``(category) \p{of} (thing)'' formulation. 
@@ -2143,24 +2145,33 @@ Prototypical prepositions include \p{with}, \p{without};
 and \p{but}, \p{except}, \p{except\_for} for exceptions:
 \begin{exe}
   \ex \begin{xlist}
-    \ex	A car \p{with} a new engine
-    \ex	A strategy \p{with} 3 prongs
-    \ex	The girl \p{with} flaxen hair
-    \ex	A man \p{with} a wooden leg named Smith
-    \ex	A valley \p{with} a castle
-    \ex	A quintet \p{with} 2 cellos
-    \ex	A performance \p{with} a guitar solo
-    \ex	A cake \p{with} 3 layers
-    \ex	A sandwich \p{with} wheat bread
-    \ex	Soup \p{with} carrots (in it)
-    \ex	A chicken sandwich \p{with} ketchup (on it)
+    \ex	a car \p{with} a new engine
+    \ex	a strategy \p{with} 3 prongs
+    \ex	the girl \p{with} flaxen hair
+    \ex	a man \p{with} a wooden leg named Smith
+    \ex	a valley \p{with} a castle
+    \ex	a quintet \p{with} 2 cellos
+    \ex	a performance \p{with} a guitar solo
+    \ex	a cake \p{with} 3 layers
+    \ex	a sandwich \p{with} wheat bread
+    \ex	soup \p{with} carrots (in it)
+    \ex	a chicken sandwich \p{with} ketchup (on it)
   \end{xlist}
   \ex	Bread \p{without} gluten
-  \ex	Strategies \p{such\_as} divide-and-conquer
+\end{exe}
+Some can be paraphrased with INCLUDES, but this is not determinative.
+
+\paragraph{Elements and Exceptions.} 
+\psst{Part/Portion} is used for adpositions marking a member or non-member of a set:
+\begin{exe}
+  \ex\label{ex:suchAs}	strategies \p{such\_as} divide-and-conquer
   \ex Everyone \p{except} Bob plays trombone.
 \end{exe}
+Set-membership can be construed as comparison:
+\begin{exe}
+  \ex strategies \p{like} divide-and-conquer [same reading as \cref{ex:suchAs}] (\rf{Part/Portion}{ComparisonRef})
+\end{exe}
 
-Some can be paraphrased with INCLUDES, but this is not determinative.
 
 
 \hierDdef{Stuff}
@@ -2306,6 +2317,25 @@ Prototypical prepositions include \p{than}, \p{as} (including the second item
 in the \p{as}--\p{as} construction), \p{like}, \p{unlike}. 
 Prominent construals are \p{to} (\psst{Goal} for similar-thing) 
 and \p{from} (\psst{Source} for dissimilar-thing).
+
+\paragraph{Categories and Sets.} 
+When governed by an NP naming a category or set, \p{like} is ambiguous 
+between exemplifying a member, as in \cref{ex:likeSetMember} and \cref{ex:likeCatMember}, 
+and merely indicating similarity, as in \cref{ex:likeSetSimilar} and \cref{ex:likeCatSimilar}:
+\begin{exe}
+  \ex Colbert frequently promotes comedians \p{like} himself.
+    \begin{xlist}
+      \ex\label{ex:likeSetSimilar} [\emph{Exclusive/restrictive reading:} \emph{similar to} himself (but not including himself)]
+        (\psst{ComparisonRef})
+      \ex\label{ex:likeSetMember} [\emph{Inclusive/nonrestrictive reading:} \emph{such as}/\emph{including} himself (he promotes himself, among others)]
+        (\rf{Part/Portion}{ComparisonRef})
+    \end{xlist}
+  \ex 
+    \begin{xlist}
+      \ex\label{ex:likeCatSimilar} I don't know anyone else \p{like} her. [anyone else \emph{similar to} her] (\psst{ComparisonRef})
+      \ex\label{ex:likeCatMember} It must be great to have a doctor \p{like} her. [to have her as a doctor] (\rf{Identity}{ComparisonRef})
+    \end{xlist}
+\end{exe}
 
 \hierBdef{RateUnit}
 
