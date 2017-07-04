@@ -333,6 +333,13 @@
 \crefrangeformat{enumsi}{\mbox{(#3#1#4--#5#2#6)}}
 \crefrangeformat{xnumi}{\mbox{(#3#1#4--#5#2#6)}} % gb4e
 \crefrangeformat{xnumii}{\mbox{(#3#1#4--#5#2#6)}} % gb4e
+\crefmultiformat{enumsi}{(#2#1#3}{, #2#1#3)}{, #2#1#3}{, #2#1#3)}
+\crefmultiformat{xnumi}{(#2#1#3}{, #2#1#3)}{, #2#1#3}{, #2#1#3)} % gb4e
+\crefmultiformat{xnumii}{(#2#1#3}{, #2#1#3)}{, #2#1#3}{, #2#1#3)} % gb4e
+\crefrangemultiformat{enumsi}{(#3#1#4--#5#2#6}{, #3#1#4--#5#2#6)}{, #3#1#4--#5#2#6}{, #3#1#4--#5#2#6)}
+\crefrangemultiformat{xnumi}{(#3#1#4--#5#2#6}{, #3#1#4--#5#2#6)}{, #3#1#4--#5#2#6}{, #3#1#4--#5#2#6)} % gb4e
+\crefrangemultiformat{xnumii}{(#3#1#4--#5#2#6}{, #3#1#4--#5#2#6)}{, #3#1#4--#5#2#6}{, #3#1#4--#5#2#6)} % gb4e
+
 
 \ifx\creflastconjunction\undefined%
 \newcommand{\creflastconjunction}{, and\nobreakspace} % Oxford comma for lists
@@ -929,26 +936,56 @@ See further discussion at \psst{Interval}.
 
 \hierCdef{Interval}
 
-\shortdef{The amount of time between a reference time and 
-(the nearest boundary of) an event or state.}
+\shortdef{A marker that points retrospectively or prospectively in time, 
+and if transitive, marks the time elapsed between two points in time.}
 
-This applies to adpositions whose \emph{complement} (object) 
-is the amount of intervening time:
+The clearest example is \p{ago}, which only serves to locate the \psst{Time}
+of some past event in terms of its distance from the present:
 \begin{exe}
-  \ex I ate \choices{10~minutes \p{ago}\\a while \p{back}}. [before now]\footnote{While 
+  \ex\label{ex:ago} I arrived a year \p{ago}. \rf{Time}{Interval} \\{}
+  [points backwards from the present: before now]
+\end{exe}
+The most common use of \psst{Interval} is in the construal \rf{Time}{Interval}: 
+the time of an event is described via a temporal offset from some other time.
+
+Another retrospective marker, \p{back}, can be transitive \cref{ex:backTrans}, 
+or can be an intransitive modifier 
+of a \psst{Time} PP \cref{ex:backIntrans}. 
+Plain \psst{Interval} is used in the latter case:
+\begin{exe}
+  \ex\label{ex:backTrans} I arrived a year \p{back}.\footnote{While 
   \pex{a while \p{back}} and \pex{a few generations \p{back}} are generally accepted, 
   %\p{back} with smaller measurements,
   the use of \p{back} rather than \p{ago} for nearer and more precise temporal references,
-  e.g.~\pex{10~minutes \p{back}}, appears to be especially associated with Indian English \citep[p.~7]{yadurajan-01}.}
+  e.g.~\pex{10~minutes \p{back}}, appears to be especially associated with Indian English \citep[p.~7]{yadurajan-01}.} \rf{Time}{Interval}
+  \ex\label{ex:backIntrans} I arrived \p{back} in$_{\psst{Time}}$ June. (\psst{Interval})
+\end{exe}
+
+
+
+(This category is unusual in primarily marking a construal for a different scene role. 
+But this seems justified given the restrictive set of English temporal prepositions 
+that can appear with a temporal offset, and the distinct ambiguity of \p{in}.
+\psst{Interval} is designed as the temporal counterpart of \psst{Direction}, 
+which can construe static distance measures; 
+in fact, \sst{TimeDirection} was considered as a possible name, 
+but \psst{Interval} seemed more straightforward for the most frequent class of usages.)
+
+Other adpositions can also take an amount of intervening time as their \emph{complement} (object):
+\begin{exe}
   \ex\label{ex:inAmbiguousTime} I will eat \p{in} 10~minutes.
     \begin{xlist}
-      \ex\label{ex:inDuration} {} [`for no more than 10~minutes' reading]: \psst{Duration}
-      \ex\label{ex:inInterval} {} [`10~minutes from now' reading]: \psst{Interval}
+      \ex\label{ex:inDuration} {} [`for no more than 10~minutes' reading]: \psst{Duration}\footnote{This usage of \p{in} has been classified under the terms \emph{frame adverbial} \citep{pustejovsky-91} and \emph{span adverbial} \citep{chang-98}.}
+      \ex\label{ex:inInterval} {} [`10~minutes from now' reading]: \rf{Time}{Interval}\footnote{This usage of \p{in}, as well as \p{ago} \cref{ex:ago} and \p{back} \cref{ex:backTrans,ex:backIntrans},
+      are \emph{deictic}, i.e., they are inherently relative to the speech time or deictic center. 
+      (See also \citet[pp.~154--157]{klein-94}.)
+      This was taken to be a criterion for the v1 category \sst{DeicticTime}, 
+      but that was never well-defined in v1 and was broadened for this version.}
     \end{xlist}
-  \ex\begin{xlist}
-    \ex What are the revenue projections 6~months \p{out}?
-    \ex I've started watching a new TV series and am 3~episodes \p{in}.\nss{``3 episodes into the show''?}
-  \end{xlist}
+  % \ex\begin{xlist}\nss{not sure what to do with these. remove for now}
+  %   \ex What are the revenue projections 6~months \p{out}?
+  %   \ex I've started watching a new TV series and am 3~episodes \p{in}.\nss{``3 episodes into the show''?}
+  %\end{xlist}
   \ex\label{ex:AfterObj} The game started at 7:00, but I arrived \choices{\p{after}\\\p{within}} 20~minutes.
 \end{exe}
 Some adpositions license a temporal difference measure in \emph{modifier} position, which does not qualify:
@@ -963,35 +1000,42 @@ in \cref{ex:inInterval} from both the \psst{Duration} sense \cref{ex:inDuration}
 and the \psst{Time} sense (\pex{\p{in} the morning}).
 
 \paragraph{Versus \psst{Duration}.} 
+The key test is whether the phrase answers a \emph{When?} question. 
+If so, its scene role is \psst{Time}; otherwise, it is a \psst{Duration}.
+
 The prepositions \p{in} and \p{within} are ambiguous between \psst{Interval} and \psst{Duration}.\footnote{By contrast, 
 \p{after} seems to strongly favor \psst{Interval}. 
 \pex{\p*{After}{after} a week, I had climbed all the way to the summit} is possible, 
 but the conclusion that the climbing took a week may be an inference 
 rather than something that is directly expressed.}
-The distinction can be subtle.
-With a verb which refers to a punctual moment of culmination, 
-we use \psst{Interval} even though there may be an implicit 
-preparatory process with a duration:
-\begin{exe}\ex\begin{xlist}
-  \ex I reached the summit \p{in} 3~days. [3 days from some salient prior time, e.g., when I started climbing]
-  \ex I was at the summit \p{within} 3~days.
-  \ex I finished climbing \p{in} 3~days.
-  \ex I had the engine fixed \p{in} 3~days.
-\end{xlist}\end{exe}
-Whereas if the verb can be made progressive and the preposition replaced with \p{for}, 
-it is a \psst{Duration}:
-\begin{exe}\ex\begin{xlist}
-  \ex I had climbed to the summit \p{in} 3~days.\\
-  $\rightarrow$ I had been climbing to the summit \p{for} 3~days. (\psst{Duration})
-  \ex I had climbed 1000 feet \p{in} 3~days.\\
-  $^{?}\rightarrow$ I had been climbing 1000 feet \p{for} 3~days.\nss{TODO}
-  \ex I fixed the engine \p{in} 3~days.\\
-  $\rightarrow$ I was fixing the engine \p{for} 3~days. (\psst{Duration})
-\end{xlist}\end{exe}
+The distinction can be subtle and context-dependent.
+%With a verb which refers to a punctual moment of culmination, 
+%we use \psst{Interval} even though there may be an implicit 
+%preparatory process with a duration:
+\begin{exe}
+  \ex \rf{Time}{Interval}:
+  \begin{xlist}
+    \ex I reached the summit \p{in} 3~days. [= 3~days later, I reached the summit.]
+    \ex I was at the summit \p{within} 3~days. [= 3~days later, I was at the summit.]
+    \ex I finished climbing \p{in} 3~days. [= 3~days later, I finished climbing.]
+    \ex They had the engine fixed \p{in} 3~days. [= 3~days later, they had the engine fixed.]
+  \end{xlist}
+\end{exe}
+\begin{exe}
+  \ex \psst{Duration}:
+    \begin{xlist}
+      \ex I reached the summit \p{in} 3~days. [it took not more than 3~days]
+      \ex I had climbed 1000 feet \p{in} [a total of] 3~days.
+      \ex I fixed the engine \p{in} 3~days. [it took not more than 3~days] %\\
+      %$\rightarrow$ I was fixing the engine \p{for} 3~days. (\psst{Duration})
+    \end{xlist}
+\end{exe}
 
-Though \p{for} generally marks \psst{Duration}s, it can mark an \psst{Interval} under negation:
+%Though \p{for} generally marks \psst{Duration}s, it can mark an \psst{Interval} under negation:
+With a negated event, we use \psst{Duration}:
 \begin{exe}
   \ex I haven't eaten \choices{\p{in}\\\p{for}} hours. [hours have passed since the last time I ate]
+  (\choices{\#When} haven't you eaten?)
 \end{exe}
 
 % Some temporal prepositions may be intransitive \cref{ex:IntrRefTime}, 
