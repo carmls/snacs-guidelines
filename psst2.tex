@@ -736,6 +736,8 @@ v2 labels.
     \item Clarified \p{like} as \psst{ComparisonRef} with regard to categories and sets, 
     and \psst{Part/Portion} with regard to elements and exceptions.
     \item Clarified \p{with} in regard to \psst{Topic} and \psst{Stimulus}.
+    \item Extensively clarified \psst{Purpose} and \psst{Beneficiary}, 
+    and their relationship to \psst{ComparisonRef}, \psst{Recipient}, \psst{Experiencer}, and \psst{Stimulus}.
     \item Added examples of \p{'s} possessive/genitive marking, and added ``case'' to the title.
     \item Added discussion of special syntactic constructions (\cref{sec:cxns}).
     \item Added an index of adpositions and supersenses.
@@ -1813,8 +1815,24 @@ in the languages we have looked at. In English, it can be construed in several w
     \ex The anger \p{of} the students (\rf{Experiencer}{Possessor})
     \ex The student\p{s'} anger (\rf{Experiencer}{Possessor})
   \end{xlist}
-  \ex Running is enjoyable \p{for} me (\rf{Experiencer}{Beneficiary})
+  \ex\begin{xlist} 
+    \ex Running is enjoyable \p{for} me (\rf{Experiencer}{Beneficiary})
+    \ex The pizza was (too) salty \p{for} me (\rf{Experiencer}{Beneficiary})
+  \end{xlist}
   \ex It feels hot \p{to} me (\rf{Experiencer}{Goal})
+\end{exe}
+
+Less canonically, \psst{Experiencer} applies to semi-pragmatic usages meaning `from the perspective of':\footnote{Interestingly, 
+many uses of \p{for} carry an information structural association of delimiting the scope of an assertion. 
+\pex{\p{For} John, the party was not fun at all} makes no commitment regarding how fun the party was to others. 
+\pex{This food is good \p{for}$_{\psst{Purpose}}$ dinner\slash \p{for}$_{\psst{Beneficiary}}$ folks with dietary constraints} 
+and \pex{He is short \p{for}$_{\psst{ComparisonRef}}$ a basketball player} also have this property. 
+As the present scheme targets semantic relations, it is not equipped to formalize pragmatic aspects of the meaning.}
+\begin{exe}
+  \ex \begin{xlist}
+    \ex \p{For} John, the party was not fun at all. (\rf{Experiencer}{Beneficiary})
+    \ex \p{For} John, there was no reason to attend. (\rf{Experiencer}{Beneficiary})
+  \end{xlist}
 \end{exe}
 
 Elsewhere, the term \emph{cognizer} is sometimes used for one whose 
@@ -1887,15 +1905,18 @@ If direct object position is viewed as a \psst{Theme} construal,
 then \pex{She informed \uline{her editor}} are \rf{Recipient}{Theme}.}
 \begin{exe}
   \ex She \choices{gave the story\\spoke} \p{to} her editor. (\rf{Recipient}{Goal})
+  \ex news \p{for} our readers (\rf{Recipient}{Direction})
   \ex The news was not well received \p{by} the White House. (\rf{Recipient}{Agent})
 \end{exe}
 
-\psst{Originator} does not apply to events like \pex{exchange/talk/chat (\p{with})}, 
+\psst{Recipient} does not apply to events like \pex{exchange/talk/chat (\p{with})}, 
 which involve a back-and-forth between 
 \psst{Agent} and \psst{Co-Agent} (or a plural \psst{Agent} subject):
 \begin{exe}
   \ex She \choices{swapped stories\\chatted} \p{with} her friends. (\psst{Co-Agent})
 \end{exe}
+
+See also: \psst{Beneficiary}
 
 \begin{history}
   In v1, \psst{Recipient} was the counterpart to \sst{Donor/Speaker}:
@@ -1950,6 +1971,35 @@ This label does not distinguish the polarity of the relation
   \ex My parrot died \p{on} me.
 \end{exe}
 
+\noindent Specific subclasses include:
+\begin{itemize}
+\item	Animate who will potentially experience a benefit or harm as a result of something 
+but is not an experiencer or recipient of the main predicate itself. 
+(May be an experiencer or recipient of the result.)
+\item	Animate target of emotion or behavior, discussed below. %(rude TO women, compassion FOR animals)
+\item	Animate who someone supports or opposes (e.g., \emph{vote \p{for}}, 
+\emph{cheer \p{for}}, \emph{Hooray \p{for}}). % but "Well done TO John" is Recipient ~> Goal)
+\item Intended user/usee: 
+  \begin{exe}
+    \ex (We sell) clothes \p{for} children
+    \ex a gallows \p{for} criminals
+    \ex This is the car \p{for} you! [advertising idiom]
+  \end{exe}
+\item	Something characterized as good/appropriate (or not) for some kind of 
+\textbf{animate user or usee}, delimiting the applicability of a descriptor 
+to that kind of individual: 
+  \begin{exe}
+    \ex \begin{xlist}
+      \ex This place is great \p{for} young children.
+      \ex This is a great place \p{for} young children.
+    \end{xlist}
+  \end{exe}
+\end{itemize}
+The first and last items above have analogues with \psst{Purpose}. 
+The key difference is that \psst{Beneficiary} applies to an animate participant, 
+whereas \psst{Purpose} applies to an intended consequence or one of its inanimate participants.
+
+\paragraph{Targets of behavior versus emotion.}
 A preposition can mark an individual in the context of evaluating how someone else is treating them, 
 with a noun or adjective governor. 
 If behavior is more salient than emotion, then \psst{Beneficiary} is the scene role. 
@@ -1969,6 +2019,19 @@ If emotion is highly salient, then \psst{Stimulus} is the scene role.
 \end{exe}
 Note that the emotion-focused examples can describe private emotional states directly, 
 while the behavior-focused examples are behavior-based judgments or inferences about emotional states.
+
+\paragraph{Versus \psst{Recipient}.}
+\psst{Beneficiary} applies to the classic English benefactive construction 
+where it is ambiguous between assistance and intended-transfer:
+\begin{exe}
+  \ex John baked a cake \p{for} Mary. [to help Mary out, and/or with the intention of giving her the cake]
+\end{exe}
+However, if transfer (or communication) is the main semantics of the scene 
+and benefit or harm is no more than an inference, then the scene role is \psst{Recipient}:
+\begin{exe}
+  \ex a \choices{message\\gift} \p{for} my mother (\rf{Recipient}{Direction})
+  \ex a \choices{package} \p{for} the front office (\rf{Recipient}{Direction})
+\end{exe}
 
 See also: \psst{Experiencer}, \psst{OrgRole}
 
