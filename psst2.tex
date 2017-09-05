@@ -1210,8 +1210,10 @@ Prototypical prepositions include \p{to}, \p{into}, and \p{onto}:
 \begin{exe}
   \ex I ran \p{to} the store.
   \ex The cat jumped \p{onto} the ledge.
+  \ex Add vanilla extract \p{to} the mix.
+  \ex Everyone contributed \p{to} the meeting.
   \ex The temperature is rising \p{to} a high of 40 degrees.
-  \ex She slipped \p{into} a coma.
+  \ex She slipped \p{into} a coma.\nss{\rf{Circumstance}{Goal}?}
 \end{exe}
 For motion events, a \psst{Goal} must have been reached if the event 
 has progressed to completion (was not interrupted).
@@ -1223,6 +1225,24 @@ which mark an intended destination that is not necessarily reached:
     \ex I headed \choices{\p{towards}\\\p{for}\\\#\p{to}} work but never made it there. (\psst{Direction})
   \end{xlist}
 \end{exe}
+
+% \paragraph{\emph{refer to} RESOURCE.}
+% When \emph{refer to} means `mention' or `use a term for' \nss{TODO}
+% When \emph{refer to} means `consult' or `advise to consult' a source of information such as a book,
+% it is considered a multiword verbal expression (because the \p{to} cannot be omitted in adverbial questions\nss{Is it relevant that \emph{there} can be substituted?}), 
+% so the \p{to} is not labeled with a supersense:
+% \begin{exe}
+%   \ex I referred\_to the dictionary. (\#Why did you refer?)
+%   \ex I was referred\_to the dictionary. (\#Why were you referred?)
+% \end{exe}
+% When it means `make a referral', i.e.~`direct somebody to a business or service-provider', 
+% and \p{to} marks the suggested business or service-provider, it is labeled \psst{Goal}.
+% However, when \p{to} marks the recommendation-seeker, it is labeled \psst{Recipient}{Goal}:
+% \begin{exe}
+%   \ex\begin{xlist}
+%     \ex I needed a hairdresser, so my friend referred me \p{to} \choices{Natasha\\Hair Inc.}. (\psst{Goal})
+%     \ex I am a great hairdresser---please refer me \p{to} your friends! (\rf{Recipient}{Goal})
+% \end{exe}
 
 \paragraph{\emph{go to}.} A conventional way to express one's status as a student at some school is 
 with the expression \pex{go \p{to} (name or kind of school)}.
@@ -1243,12 +1263,15 @@ being in a professional relationship, so we simply use \psst{Goal}:
 \paragraph{Locative as destination.}
 English regularly allows canonically static locative prepositions to mark 
 goals with motion verbs like \pex{put}.\ab{Again is the hierarchy supposed to be English-focused? Adpositions in some other languages, e.g., German prepositions, differentiate senses that English does not. Do we ignore those distinctions for now only because we have not applied the hierarchy to those languages or do we do it because the hierarchy is to be faithful to English?} 
-We use the construal \rf{Goal}{Locus}:
+We use construal to capture both the static and dynamic aspects of meaning:
 \begin{exe}
-  \ex I put the lamp \p{next\_to} the chair.
-  \ex I'll just hop \p{in} the shower.
-  \ex I put my CV \p{on} the internet.
-  \ex The cat jumped \p{on} my face.
+  \ex\rf{Goal}{Locus}: \begin{xlist}
+    \ex I put the lamp \p{next\_to} the chair.
+    \ex I'll just hop \p{in} the shower.
+    \ex I put my CV \p{on} the internet.
+    \ex The cat jumped \p{on} my face.
+    \ex We arrived \p{at} the airport.
+  \end{xlist}
 \end{exe}
 
 % Examined COCA first 100 results for "for London" and "for Paris".
@@ -1506,6 +1529,7 @@ when used adverbially, license \pex{Why?} questions.
 \psst{Purpose} usually licenses an \pex{in order to} 
 or \pex{for the purpose of} paraphrase.
 
+\paragraph{Goods and services.} See discussion at \psst{Theme}.
 
 \paragraph{Inherent purposes.}
 An \emph{entity} (typically an artifact) can be modified to explicate an intended use or affordance. 
@@ -1701,6 +1725,22 @@ Adpositional \psst{Theme}s are usually, but not always, construed as something e
       \ex They prevented us \p{from} boarding the plane. (\rf{Theme}{Source})
     \end{xlist}
 \end{exe}
+
+\paragraph{Goods and services.}
+In a commercial transaction scene, the preposition introducing the item or event 
+incurring a cost receives \psst{Theme} as its scene role. 
+If the object of the preposition denotes an event and the preposition 
+is \p{to}, \p{for}, or similar, then the construal \rf{Theme}{Purpose} is used:
+\begin{exe}
+  \ex \begin{xlist}
+    \ex They spent \$500 \p{on} the repairs. (\psst{Theme})
+    \ex They charged/paid/owed \$500 \p{for} the bicycle. (\psst{Theme}\nss{or \rf{Theme}{Direction}---see above})
+    \ex They charged/paid/owed \$500 \p{for} the repairs. (\rf{Theme}{Purpose})
+    \ex They asked \$500 \p{to} make the repairs. (\rf{Theme}{Purpose})
+  \end{xlist}
+\end{exe}
+
+\paragraph{\emph{Between} and \emph{among}.}
 When two symmetric undergoers are collected in a single NP 
 functioning as a set, it is marked as a \psst{Whole} construal:
 \begin{exe}
@@ -1779,6 +1819,14 @@ a device facilitating communication, or some aspect of transferred information:
     \ex He responded to my accusation \p{with} a lawsuit. (\psst{Means})
     \ex He responded to my accusation \p{with} dishonest emails. (\psst{Instrument})
     \ex He responded to my accusation \p{with} falsehoods. (\psst{Topic})
+  \end{xlist}
+\end{exe}
+
+\paragraph{\emph{agree}.}
+\begin{exe}
+  \ex\begin{xlist}
+    \ex Let us agree \p{on} the deal. (\psst{Topic})
+    \ex Let us agree \p{to} the deal. (\rf{Topic}{Goal})
   \end{xlist}
 \end{exe}
 
@@ -2044,11 +2092,11 @@ An obligation directed at somebody is analyzed like targeted behavior:
 \end{exe}
 
 Similar to the behavior-focused examples, inanimate causes can have the potential to positively or negatively
-affect somebody:
+affect somebody. Ability and permission modalities are included here:
 \begin{exe}
     \ex\begin{xlist}
-      \ex The strategy \choices{is beneficial \\ is risky} \p{for} investors. (\psst{Beneficiary})
-      \ex The strategy \choices{is helpful \\ poses a risk} \p{to} investors. (\rf{Beneficiary}{Goal})
+      \ex The strategy is \choices{beneficial \\ risky \\ an option} \p{for} investors. (\psst{Beneficiary})
+      \ex The strategy \choices{is helpful \\ poses a risk \\ is available} \p{to} investors. (\rf{Beneficiary}{Goal})
     \end{xlist}
 \end{exe}
 
@@ -2561,6 +2609,7 @@ May be construed spatially:
 \begin{exe}
   \ex I chose soup \p{over} salad. (\rf{InsteadOf}{Locus})
 \end{exe}
+But when \p{over} is used for a scene of liking or preference, see \psst{ComparisonRef}.
 
 See also: \psst{Accompanier}, \psst{ComparisonRef}, \psst{Co-Theme}
 
@@ -2603,6 +2652,13 @@ Prototypical prepositions include \p{than}, \p{as} (including the second item
 in the \p{as}--\p{as} construction), \p{like}, \p{unlike}. 
 Prominent construals are \p{to} (\psst{Goal} for similar-thing) 
 and \p{from} (\psst{Source} for dissimilar-thing).
+
+\paragraph{\psst{Locus} construal.}
+If something is preferred or appreciated \p{over} something else, \rf{ComparisonRef}{Locus} is used:
+\begin{exe}
+  \ex I prefer this restaurant \p{over} the one across the street. (\rf{ComparisonRef}{Locus})
+\end{exe}
+But for scenes of choice and substitution, see \psst{InsteadOf}.
 
 \paragraph{\psst{Goal} construal.}
 The construal \rf{ComparisonRef}{Goal} is used for \p{to} in examples like:
