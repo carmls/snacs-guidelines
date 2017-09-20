@@ -370,7 +370,7 @@
 
 
 
-
+\newcommand{\backtick}[0]{\textasciigrave}
 
 
 % Special macros
@@ -744,6 +744,7 @@ v2 labels.
     \item Various selectional verbs and miscellaneous constructions.
     \item Added examples of \p{'s} possessive/genitive marking, and added ``case'' to the title.
     \item Added discussion of special syntactic constructions (\cref{sec:cxns}): Reflexive PP idioms.
+    \item Added special labels (\cref{sec:special}).
     \item Added an index of adpositions and supersenses.
   \end{itemize}
 \end{itemize}
@@ -3042,7 +3043,7 @@ See also: \psst{Stuff}
 \end{history}
 
 
-\section{Special Constructions}
+\section{Special Constructions}\label{sec:cxns}
 
 This section discusses notable constructions that are not limited to a single supersense.
 
@@ -3098,6 +3099,45 @@ This section discusses notable constructions that are not limited to a single su
 Alone; unaccompanied:
 \begin{exe}
   \ex I am \p{by} myself right now. (\psst{Accompanier})
+\end{exe}
+
+
+\section{Special Labels}\label{sec:special}
+
+For annotating data, there needs to be a way to indicate that \emph{none} 
+of the adposition supersenses apply to a particular token. 
+
+\subsection{DISCOURSE (\backtick d)}
+
+Discourse connectives and other markers that transition between ideas 
+or convey speaker attitude/hedging/emphasis/attribution but do not belong 
+to propositional content. Examples include:
+\p{according\_to}; \w{\p{after}\_all}, \w{\p{of}\_course}, \w{\p{by}\_the\_way}; 
+\w{\p{for}\_chrissake} (interjection); 
+\w{\p{above}\_all}, \w{more\_often\_than\_not}, \w{\p{to}\_boot};
+\w{\p{in}\_other\_words}, \w{\p{on}\_the\_other\_hand}.
+
+This label also covers ``additive focusing markers'' 
+\citep[p.~592]{cgel} with a meaning similar to `also' or `too',
+where an item is added to something already established in the discourse:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex I shot the sheriff \w{\p{as}\_well}.
+    \ex They serve coffee, and tea \w{\p{as}\_well}.
+  \end{xlist}
+\end{exe}
+It also covers topicalization markers:
+\begin{exe}
+  \ex \p{As\_for} the sheriff, well, I shot 'im.
+\end{exe}
+
+\subsection{COORDINATOR (\backtick c)}
+
+Coordinating conjunctions and similar expressions where 
+the two elements in the relation are semantically on an equal footing, 
+rather than in a figure/ground relationship: 
+\begin{exe}
+  \ex They serve coffee \p{as\_well\_as} tea. [`They serve coffee and also tea']
 \end{exe}
 
 
