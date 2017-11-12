@@ -393,6 +393,7 @@
 \newcommand{\backc}[0]{\backtick c\index{\backtick c}\xspace}
 \newcommand{\backd}[0]{\backtick d\index{\backtick d}\xspace}
 \newcommand{\backi}[0]{\backtick i\index{\backtick i}\xspace}
+\newcommand{\backposs}[0]{\backtick \$\index{\backtick \$}\xspace}
 
 \newcommand{\tg}[1]{\texttt{#1}}	% supersense tag name
 \newcommand{\gfl}[1]{%\renewcommand\texttildelow{{\lower.74ex\hbox{\texttt{\char`\~}}}} % http://latex.knobs-dials.com/
@@ -3269,9 +3270,21 @@ See also: \psst{Stuff}
 
 This section discusses notable constructions that are not limited to a single supersense.
 
-\subsection{Genitives/Possessives}
+\subsection{Genitives/Possessives}\label{sec:genitives}
 
-\nss{briefly define of-genitive, s-genitive, say they are sometimes but not always interchangable, give examples with different supersenses}
+\Citet{blodgett-toappear} detail the application of this scheme to English possessive constructions:
+the so-called \textbf{s-genitive} (\pex{the car\p{'s}/\p{its} hood}) and 
+\textbf{of-genitive} (\pex{the hood \p{of} the car}). 
+The case clitic \p{'s} and the preposition \p{of} are particularly associated with 
+\psst{Gestalt} and its subtypes, though both can mark participant roles 
+(\pex{the queen\p{'s} arrival $\sim$ the arrival \p{of} the queen}: \psst{Theme})
+and other roles (\pex{the bride\p{'s} mother $\sim$ the mother \p{of} the bride}: \psst{SocialRel}). 
+The literature on the genitive alternation examines the factors that condition 
+the choice of construction; important factors include the length and animacy of the possessed NP.
+In addition, \p{of} participates in certain constructions that are not really possessives---e.g.~\pex{this sort \p{of} sweater} (\psst{Species}).
+
+Certain idioms require an s-genitive argument that does not participate in 
+any transparent semantic relationship; for these, \backposs is used (\cref{sec:possidiom}).
 
 %\subsubsection{Construct State Genitive in Hebrew}
 
@@ -3490,6 +3503,20 @@ Whenever \p{for} introduces a subject of an infinitival clause, the \p{for} toke
 \begin{exe}\ex\begin{xlist}
   \ex I need [\p{for}$_{\text{\backi}}$ you \p{to}$_{\text{\backi}}$ help me].
   \ex I opened the door [\p{for}$_{\text{\backi}}$ Steve \p{to}$_{\psst{Purpose}}$ take out the trash].
+\end{xlist}\end{exe}
+
+\subsection{OPAQUE POSSESSIVE SLOT IN IDIOM (\backposs)}\label{sec:possidiom}
+
+Semantic supersenses are used where possible for genitive\slash possessive 
+constructions, as discussed in \cref{sec:genitives}. 
+However, there are a few idioms which require a possessive pronoun 
+that does not participate transparently in any semantic relation; 
+these are designated with the special label \backposs:
+\begin{exe}\ex\begin{xlist}
+  \ex I am eating on\_ \p{my} \_own today.
+  \ex She tried \p{her} best.
+  \ex He's not \p{your} average baseball player.
+  \ex Billy knows \p{his} ABCs!
 \end{xlist}\end{exe}
 
 \bibliographystyle{plainnat}
