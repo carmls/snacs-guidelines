@@ -390,7 +390,9 @@
 
 \newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}}
 \newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}
-
+\newcommand{\backc}[0]{\backtick c\index{\backtick c}\xspace}
+\newcommand{\backd}[0]{\backtick d\index{\backtick d}\xspace}
+\newcommand{\backi}[0]{\backtick i\index{\backtick i}\xspace}
 
 \newcommand{\tg}[1]{\texttt{#1}}	% supersense tag name
 \newcommand{\gfl}[1]{%\renewcommand\texttildelow{{\lower.74ex\hbox{\texttt{\char`\~}}}} % http://latex.knobs-dials.com/
@@ -2002,7 +2004,7 @@ is \p{to}, \p{for}, or similar, then the construal \rf{Theme}{Purpose} is used:
     \ex They charged/paid/owed \$500 \p{for} the bicycle. (\psst{Theme})
     \ex They charged/paid/owed \$500 \p{for} the repairs. (\rf{Theme}{Purpose})
     \ex They asked \$500 \p{to} make the repairs. (\rf{Theme}{Purpose})
-    \ex \$500 \p{for} the repairs was excessive. (\rf{Theme}{Purpose})
+    \ex \$500 \choices{\p{for}\\\p{to} make} the repairs was excessive. (\rf{Theme}{Purpose})
   \end{xlist}
 \end{exe}
 
@@ -3310,9 +3312,66 @@ The function of the first \p{as} is always \psst{Identity}:
 See more at \psst{Whole}.
 
 
-\subsection{Infinitive Clauses}
+\subsection{Infinitive Clauses}\label{sec:inf}
 
-\nss{TO (\psst{Purpose}, \rf{Characteristic}{Purpose} a.k.a. FN Inherent\_purpose, complement), FOR-TO}
+In its function as infinitive marker, \p{to} is not generally considered to be a preposition. 
+Nevertheless, we consider all uses of \p{to} for adposition supersense annotation 
+because infinitive clauses (infinitivals) can express similar semantic relations 
+as prepositional phrases. Most notably, infinitival purpose adjuncts alternate 
+with \p{for}-PP purpose adjuncts:
+\begin{exe}
+  \ex\label{ex:infPurpose}\psst{Purpose}:\begin{xlist}
+    \ex\begin{xlist}
+      \ex Open the door \p{to} let in some air.
+      \ex Open the \p{for} some air.
+    \end{xlist}
+    \ex\begin{xlist}
+      \ex I flew to headquarters \p{to} meet with the principals.
+      \ex I flew to headquarters \p{for} a meeting with the principals.
+    \end{xlist}
+  \end{xlist}
+\end{exe}
+Thus, from a practical point of view, we might as well treat infinitival \p{to} 
+as capable of marking a \psst{Purpose}.
+
+The following is an exhaustive list of semantic analyses that we consider for infinitivals: 
+\begin{itemize}
+  \item \textbf{Purpose adjuncts}, generally adverbial, as in \cref{ex:infPurpose}. 
+  These are labeled \psst{Purpose}. They can generally be paraphrased with \p{in\_order\_to}.
+  
+  \item \textbf{Inherent purposes}, generally adnominal, as in \cref{ex:charPurp}, 
+  described under \psst{Purpose}. 
+  These are labeled \rf{Characteristic}{Purpose}.
+  
+  \item In a \textbf{commercial scene}, that which costs money; labeled \rf{Theme}{Purpose}.
+  Repeated from the discussion under \psst{Theme}:
+  \begin{exe}
+    \ex\begin{xlist}
+      \ex They asked \$500 \p{to} make the repairs. (\rf{Theme}{Purpose})
+      \ex \$500 \p{to} make the repairs was excessive. (\rf{Theme}{Purpose})
+    \end{xlist}
+  \end{exe}
+  
+  \item Constructions of \textbf{sufficiency and excess}---\pex{too short \p{to} ride}, 
+  \pex{not tall enough \p{to} ride}, etc., where the assertion of sufficiency or excess 
+  licenses an infinitival, labeled \rf{ComparisonRef}{Purpose}. 
+  See discussion at \psst{Purpose}.\nss{maybe move to ComparisonRef}
+\end{itemize}
+
+Infinitival tokens not covered by this list are labeled \backi (\cref{sec:specialinf}).
+
+\paragraph{Infinitival with \p{for}-subject.}
+In \cref{ex:infPurpose}, the infinitive clause has no local subject---rather, 
+an argument of the matrix clause doubles as the subject of the infinitive clause 
+(control). However, a separate subject can be introduced with \p{for}, 
+in which case \p{for}+NP is treated as a dependent of the infinitive verb 
+and labeled \backi:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex I opened the door [\p{for}$_{\text{\backi}}$ Steve \p{to}$_{\psst{Purpose}}$ take out the trash].
+    \ex It cost \$500 [\p{for}$_{\text{\backi}}$ the mechanic \p{to}$_{\text{\rf{Theme}{Purpose}}}$ make the repairs].
+  \end{xlist}
+\end{exe}
 
 \subsection{With Absolutes}
 
@@ -3360,7 +3419,7 @@ Alone; unaccompanied:
 For annotating data, there needs to be a way to indicate that \emph{none} 
 of the adposition supersenses apply to a particular token. 
 
-\subsection{DISCOURSE (\backtick d)}
+\subsection{DISCOURSE (\backd)}\label{sec:discourse}
 
 Discourse connectives and other markers that transition between ideas 
 or convey speaker attitude/hedging/emphasis/attribution but do not belong 
@@ -3384,7 +3443,7 @@ It also covers topicalization markers:
   \ex \p{As\_for} the sheriff, well, I shot 'im.
 \end{exe}
 
-\subsection{COORDINATOR (\backtick c)}
+\subsection{COORDINATOR (\backc)}\label{sec:coord}
 
 Coordinating conjunctions and similar expressions where 
 the two elements in the relation are semantically on an equal footing, 
@@ -3393,6 +3452,41 @@ rather than in a figure/ground relationship:
   \ex They serve coffee \p{as\_well\_as} tea. [`They serve coffee and also tea']
 \end{exe}
 
+\subsection{OTHER INFINITIVE (\backi)}\label{sec:specialinf}
+
+As described in \cref{sec:inf}, infinitive clauses are analyzed with a supersense 
+if and only if they serve as a purpose adjunct, or in certain purpose-related constructions 
+(inherent purpose, action that costs money in a commercial scene, 
+that which something is sufficient or excessive for).
+The special label \backi is reserved for all other uses of infinitival \p{to}, 
+as well as \p{for} whenever it introduces the subject of an infinitive clause.\footnote{Essentially, 
+our position is that these uses of infinitivals are more like syntactically core elements 
+(subject, object) than obliques, and thus should be excluded from semantic annotation 
+under the present scheme.}
+
+Infinitivals warranting \backi include:
+\begin{exe}\ex\begin{xlist}
+  \ex I want \p{to} meet you. [complement of control verb]
+  \ex It seems \p{to} be broken. [complement of raising verb]
+  \ex You have an opportunity \p{to} succeed. [complement of noun]
+  \ex I'm ready \p{to} leave. [complement of adjective]
+  \ex I'm glad \p{to} hear you're engaged! [complement of emotion adjective]
+  \ex You're great/a pleasure \p{to} work with. [complement of evaluative adjective or noun]
+  \ex These new keys are expensive \p{to} copy. [tough-movement]
+  \ex My plan is \p{to} eat at noon. [infinitival as NP]
+  \ex It's impossible \p{to} get an appointment. [infinitival as NP, with cleft]
+  \ex I know how \p{to} lead. [complement of wh-word]
+  \ex I have nothing \p{to} hide. [complement of indefinite pronoun]
+  \ex Do you have time \p{to} help me? [with resource]
+  \ex You have \p{to} choose a date. [quasi-modal multiword expression: also \emph{have yet to}, \emph{would like to}, etc.]
+\end{xlist}\end{exe}
+
+Whenever \p{for} introduces a subject of an infinitival clause, the \p{for} token is labeled 
+\backi (regardless of whether \p{to} receives a semantic label; see \cref{sec:inf}):
+\begin{exe}\ex\begin{xlist}
+  \ex I need [\p{for}$_{\text{\backi}}$ you \p{to}$_{\text{\backi}}$ help me].
+  \ex I opened the door [\p{for}$_{\text{\backi}}$ Steve \p{to}$_{\psst{Purpose}}$ take out the trash].
+\end{xlist}\end{exe}
 
 \bibliographystyle{plainnat}
 \bibliography{psst2.bib}
