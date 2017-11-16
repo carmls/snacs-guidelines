@@ -390,10 +390,10 @@
 
 \newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}}
 \newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}
-\newcommand{\backc}[0]{\backtick c\index{\backtick c}\xspace}
-\newcommand{\backd}[0]{\backtick d\index{\backtick d}\xspace}
-\newcommand{\backi}[0]{\backtick i\index{\backtick i}\xspace}
-\newcommand{\backposs}[0]{\backtick \$\index{\backtick \$}\xspace}
+\newcommand{\backc}[0]{\hyperref[sec:coord]{\olbl{\backtick c}}\index{\backtick c@\olbl{\backtick c}}\xspace}
+\newcommand{\backd}[0]{\hyperref[sec:discourse]{\olbl{\backtick d}}\index{\backtick d@\olbl{\backtick d}}\xspace}
+\newcommand{\backi}[0]{\hyperref[sec:inf]{\olbl{\backtick i}}\index{\backtick i@\olbl{\backtick i}}\xspace}
+\newcommand{\backposs}[0]{\hyperref[sec:possidiom]{\olbl{\backtick \$}}\index{\backtick \$@\olbl{\backtick \$}}\xspace}
 
 \newcommand{\tg}[1]{\texttt{#1}}	% supersense tag name
 \newcommand{\gfl}[1]{%\renewcommand\texttildelow{{\lower.74ex\hbox{\texttt{\char`\~}}}} % http://latex.knobs-dials.com/
@@ -853,7 +853,10 @@ A liberal use of construal would treat \pex{arriving \p{in} the afternoon} as \r
 But for simplicity and practicality, we elect not to annotate \psst{Locus}, \psst{Path}, or \psst{Extent} 
 construals on temporal adpositions.}
 \begin{exe}
-  \ex They will greet us \choices{\p{on}\\\p{upon}} our arrival.
+  \ex\begin{xlist}
+    \ex They will greet us \choices{\p{on}\\\p{upon}} our arrival.
+    \ex\label{ex:onXOccasion} I succeeded \p{on} \choices{the fourth attempt\\several occasions}. [contrast \emph{on occasion}, \cref{ex:onOccasion}]
+  \end{xlist}
   \ex I will finish \p{after} \choices{tomorrow\\lunch\\you (do)}.
   \ex I will finish \p{by} \choices{tomorrow\\lunch}.
 \end{exe}
@@ -948,6 +951,7 @@ or the instance of repetition that the event represents.}
 \begin{exe}
   \ex Guests were arriving \p{at} a steady clip.
   \ex The risk becomes worse \p{by} the day.
+  \ex\label{ex:onOccasion} I have seen them \choices{\p{on}\_occasion\\\p{from}\_time\_to\_time}. [contrast \emph{on \dots occasion}, \cref{ex:onXOccasion}]
 \end{exe}
 \psst{Frequency} is also used when an iteration is specified with an obligatory 
 ordinal number modifier. 
@@ -1195,6 +1199,7 @@ etc.\ when used to describe a location without an overt object:
   \ex\begin{xlist}
     \ex The doctor is \choices{\p{in}\\\p{out\_of}\\\p{away\_from}} the office.
     \ex The doctor is \choices{\p{in}\\\p{out}\\\p{away}}.
+    \ex They are \p{out} to eat.
   \end{xlist}
 \end{exe}
 And to \p{around} meaning `nearby' or `in the area':
@@ -1567,7 +1572,7 @@ which typically license some sort of \pex{How?} question:
   \begin{exe}
     \ex He reacted \choices{\p{with} anger\\\p{in} anger\\angrily}.\footnote{\pex{He reacted \p{out\_of} anger} is \rf{Explanation}{Source}.}
 %His reaction was angry; His angry reaction: also Manner, though not prepositional
-    \ex I made the decision \choices{\p{by} myself\\\p{without} anyone else\\\p{on}\_ my \_own}. [see \cref{sec:refl}]
+    \ex I made the decision \choices{\p{by} myself\\\p{without} anyone else\\\p{on}\_~~my~~\_own}. [see \cref{sec:refl}]
   \end{exe}
   
   \item An adverbial \textbf{depictive} characterizing a participant of an event:
@@ -1628,6 +1633,7 @@ which typically license some sort of \pex{How?} question:
       \pex{\p{on} time} (contrast \pex{\p{at} the time}), 
       \pex{\p{in} trouble}, \pex{\p{in} love}, \pex{\p{in} tune}, \pex{\p{in} a hurry}, 
       \pex{\p{at} odds}, \pex{\p{out\_of} business}, \pex{\p{out\_of} control} (\rf{Manner}{Locus})
+    \ex They are \choices{\p{on}\_~~the~~\_way\\\p{on}\_~~their$_{\text{\backposs}}$~~\_way}  (\rf{Manner}{Locus})
     \end{exe}
     
     \item Intransitive prepositions expressing a qualitative state (not location, time, etc.):
@@ -2167,6 +2173,14 @@ a device facilitating communication, or some aspect of transferred information:
   \ex\begin{xlist}
     \ex Let us agree \p{on} the deal. (\psst{Topic})
     \ex Let us agree \p{to} the deal. (\rf{Topic}{Goal})
+  \end{xlist}
+\end{exe}
+
+\paragraph{\emph{answer}, \emph{respond}, etc.}
+\begin{exe}
+  \ex\rf{Topic}{Goal}:\begin{xlist}
+    \ex the answer \p{to} the question
+    \ex my response \p{to} your question
   \end{xlist}
 \end{exe}
 
@@ -3563,7 +3577,7 @@ However, there are a few idioms which require a possessive pronoun
 that does not participate transparently in any semantic relation; 
 these are designated with the special label \backposs:
 \begin{exe}\ex\begin{xlist}
-  \ex I am eating on\_ \p{my} \_own today.
+  \ex I am eating on\_~~\p{my}~~\_own today.
   \ex She tried \p{her} best.
   \ex He's not \p{your} average baseball player.
   \ex Billy knows \p{his} ABCs!
