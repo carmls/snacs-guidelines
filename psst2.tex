@@ -1790,7 +1790,6 @@ there are tokens where they cannot be paraphrased respectively with \p{after} an
 \end{exe}
 
 
-\nss{TODO: Function}
 
 Question test: \psst{Explanation} and its subtype \psst{Purpose} license
 \pex{Why?} questions.
@@ -1841,9 +1840,11 @@ delimiting the applicability of a descriptor to that aspect of the thing:
       \ex This is a great place \p{for} ping-pong.
     \end{xlist}
   \ex This cleaner is good \p{for} hardwood floors.
-  \ex This restaurant is great \p{for} dinner.
+  \ex\label{ex:greatForDinner} This restaurant is great \p{for} dinner.
 \end{exe}
-\jh{I think the note you have above is important enough to expand on a little:} Note that in these sentences, there is no general commitment to providing a general evaluation of a place or an item as being good/. Rather, the adjectival is specifically used to provide evaluation of the activity specified in the purpose clause.
+The evaluation is being delimited to a particular purpose:
+\cref{ex:greatForDinner} is not claiming the restaurant is great \emph{in general}, 
+just with respect to dinner.
 
 For \textbf{animates} used in similar constructions, see \psst{Beneficiary}.
 \end{itemize}
@@ -1861,7 +1862,7 @@ or \pex{for the purpose of} paraphrase.
 An \emph{entity} (typically an artifact) can be modified to explicate an intended use or affordance. 
 Because this can be understood as a static property of the entity---why it was created 
 or what it is useful for (part of its qualia structure)---we
-use the construal \rf{Characteristic}{Purpose} \jh{so the Characteristic designation speaks to the item's affordance and the Purpose to its ``static property''? Is ``static property'' a terminology in qualia structure? If not, on the surface read ``property'' sounds a lot like you are describing Characteristic, not purpose.}:
+use the construal \rf{Characteristic}{Purpose} \jh{so the Characteristic designation speaks to the item's affordance and the Purpose to its ``static property''? Is ``static property'' a terminology in qualia structure? If not, on the surface read ``property'' sounds a lot like you are describing Characteristic, not purpose.}:%
 \footnote{In FrameNet 
 as of v1.7, these sorts of purposes are labeled as \sst{Inherent\_purpose}. 
 See, e.g., the example ``MONEY [to support yourself and your family]'' in the \textbf{Money} frame 
@@ -1882,26 +1883,22 @@ See, e.g., the example ``MONEY [to support yourself and your family]'' in the \t
 Question test: \pex{What is this \_ for?}
 
 
-\paragraph{With semantics of \textbf{necessity}, \textbf{sufficiency}, or \textbf{excess}.}
-\psst{Purpose} marks the consequence enabled or prevented by some condition.
-Because sufficiency and excess involve comparison in the condition, 
-the scene role for the consequence is \psst{ComparisonRef}:
+\paragraph{Necessity.}
+\psst{Purpose} marks the consequence enabled or prevented by some condition, 
+typically a resource:
 \begin{exe}
   \ex I need another course \p{in\_order\_to} graduate. (\psst{Purpose})
   \ex I need \$20 \choices{\p{for}\\\p{to} attend} the show. (\psst{Purpose})
   \ex The dough takes an hour \p{to} rise. (\psst{Purpose})
-  \ex\label{ex:tooShort} He is \choices{too short\\not tall enough} \choices{\p{for}\\\p{to} play} basketball. (\rf{ComparisonRef}{Purpose})
-\end{exe}
-Note that \cref{ex:tooShort} should be contrasted with:
-\begin{exe}
-  \ex He is short \p{for} a basketball player. (\psst{ComparisonRef})
 \end{exe}
 
-\jh{I am wondering if the discussion on ComparisonRef examples should be in the ComparisonRef section. Especially with Purpose section coming before the Comparison ref, the sentence and two/three examples you have don't really do a complete job in explaining this. Also, more explanation needs to be given too for the construction; that the pp is being licensed by the adjective, and that basketball serves as a ref point for comparison of those who are deemed sufficient/insufficient. And this would be more easily done under comparisonRef mindset. }
+\paragraph{Sufficiency and excess.}
+See \psst{ComparisonRef}.
+
 
 \paragraph{Versus \psst{Circumstance} for ritualized occasions.}
 \psst{Purpose} applies to \p{for} 
-when it marks a ritualized activity such as a meal or holiday/commemoration \jh {edit} for which the main event describes a preparation stage:
+when it marks a ritualized activity such as a meal or holiday/commemoration for which the main event describes a \textbf{preparation} stage:
 %ORIGINAL HERE: provided that the main event is in preparation for the observance: 
 \begin{exe}
   \ex \psst{Purpose}:
@@ -1911,7 +1908,7 @@ when it marks a ritualized activity such as a meal or holiday/commemoration \jh 
       \ex We saved money \p{for} our annual vacation.
     \end{xlist}
 \end{exe}
-However, if the activity marked by \p{for} is interpreted as containing \jh{edit} the ritualized activity during which the main event occurs, 
+However, if the activity marked by \p{for} is interpreted as \textbf{containing} the main event, 
 then we use \psst{Circumstance}: 
 \begin{exe}
   \ex \psst{Circumstance}: 
@@ -3084,20 +3081,32 @@ while difference may be expressed with \p{from}:
   \end{xlist}
 \end{exe}
 
-\paragraph{Sufficiency and excess.}
-When there is a semantics of sufficiency, as with \emph{enough}, or excess, 
-as with \emph{too}, the construal \rf{ComparisonRef}{Purpose} is used for the consequence: 
-see discussion at \psst{Purpose}.
-
 \paragraph{Category as standard.} 
 An indirect comparison can be made by relating something to a category 
-to which it may or may not belong. \jh{edit} That is, the ``basket player'' in the following example stands as the standard given which ``he'' is deemed short. The category stands for its members 
-or prototypes:
+to which it may or may not belong. 
+The category stands for its members or prototypes. For example, in:
 \begin{exe}
-  \ex He is short \p{for} a basketball player. (\psst{ComparisonRef})
+  \ex\label{ex:catAsStandard} He is short \p{for} a basketball player. (\psst{ComparisonRef})
 \end{exe}
+the category \pex{basketball player} serves as the standard against which \pex{he} is deemed short.
 
-\jh{Ah, I think Category as standard discussion should come first. That one's simpler to understand than the purpose construal one. }
+\paragraph{Sufficiency and excess.}
+In a statement of sufficiency or excess, 
+\rf{ComparisonRef}{Purpose} marks the consequence enabled or prevented by some condition.
+This is similar to \textbf{necessity} (discussed under \psst{Purpose}), 
+only here, the condition involves a comparison; the standard of comparison 
+is implied by the consequence:
+\begin{exe}
+  \ex\rf{ComparisonRef}{Purpose}:\begin{xlist}
+    \ex\label{ex:tooShort} He is \choices{too short\\not tall enough} \choices{\p{for}\\\p{to} play} basketball.
+    \ex\label{ex:insufficient} His height is insufficient \p{for} basketball.
+  \end{xlist}
+\end{exe}
+In these constructions, an adverb (\pex{too}, \pex{enough}, \pex{insufficiently}, etc.)\ 
+or an adjective (\pex{insufficient}) licenses the PP or infinitival expressing the consequence.
+They amount to saying
+\pex{He is shorter than the height he would have to be in order to play basketball}, 
+which features separate constructions for comparison and necessity-for-purpose.
 
 \paragraph{Category exemplars and set members.} 
 When governed by an NP naming a category or set, \p{like} is ambiguous 
