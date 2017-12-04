@@ -68,8 +68,10 @@
 %\usepackage{times}
 %\usepackage{latexsym}
 
-\usepackage{makeidx} % index
-\makeindex
+%\usepackage{makeidx} % index
+\usepackage{imakeidx} % allows multiple indices
+\makeindex % regular index
+\makeindex[name=construals,title={Index of Construals}]
 
 \usepackage[boxed]{algorithm2e}
 \renewcommand\AlCapFnt{\small}
@@ -388,8 +390,8 @@
 %\newcommand{\vsst}[1]{\sst{#1\raisebox{-1.5pt}{\textasciicaron}}} % verb supersense tag label
 %\newcommand{\psst}[1]{\sst{#1\raisebox{2pt}{\rotatebox{180}{\textsublhalfring{\phantom{.}}}}}} %\textcorner % preposition supersense tag label
 
-\newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}}
-\newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}
+\newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}\index[construals]{\protect\psst{#1}$\leadsto$\protect\psst{#2}}}
+\newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}\index[construals]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}}
 \newcommand{\backc}[0]{\hyperref[sec:coord]{\olbl{\backtick c}}\index{\backtick c@\olbl{\backtick c}}\xspace}
 \newcommand{\backd}[0]{\hyperref[sec:discourse]{\olbl{\backtick d}}\index{\backtick d@\olbl{\backtick d}}\xspace}
 \newcommand{\backi}[0]{\hyperref[sec:inf]{\olbl{\backtick i}}\index{\backtick i@\olbl{\backtick i}}\xspace}
@@ -2036,6 +2038,7 @@ Adpositional \psst{Theme}s are usually, but not always, construed as something e
       \ex The food was covered \p{in} grease. (\rf{Theme}{Locus})
     \end{xlist}
   \ex My hovercraft is full \p{of} eels.
+  %\ex I wouldn't want to deprive you \p{of} this opportunity. - Theme or Possession?
   \ex \begin{xlist}
       \ex\label{ex:search-for} Sheldukher \choices{looked\\searched\\fumbled} \p{for} his laser pistol.\\{}
       [contrast with transitive verb plus \psst{Characteristic} in \cref{ex:search-obj-for}]
@@ -3687,5 +3690,6 @@ these are designated with the special label \backposs:
 %\printbibliography[maxnames=99]
 
 \printindex
+\printindex[construals]
 
 \end{document}
