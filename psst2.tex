@@ -791,6 +791,13 @@ and other relations that are usually semantically non-core properties of events.
       \ex You were correct \p{in} \choices{answering the question\\your answer}.
     \end{xlist}
   \end{exe}
+  Relatedly, we use \psst{Circumstance} to analyze \pex{involved \p{in}}:
+  \begin{exe}
+    \ex\begin{xlist}
+      \ex I was involved \p{in} a car accident. (\psst{Circumstance})
+      \ex Many steps are involved \p{in} the process of buying a home. \\(\rf{Whole}{Circumstance})
+    \end{xlist}
+  \end{exe}
   \item \textbf{Setting events}
   \begin{exe}
     \ex\label{ex:settingevt} We are having fun \choices{\p{at} the party\\\p{on} vacation}. (\rf{Circumstance}{Locus})
@@ -1554,7 +1561,7 @@ though the outcome can be unintended as well \cref{ex:oops}.
 
 \psst{Means} is similar to \psst{Instrument}, which is used for causally supporting entities 
 and is a kind of \psst{Participant}.
-See also \psst{Topic}.
+See also \psst{Manner}, \psst{Topic}.
 
 Contrast with \psst{Explanation}, which characterizes \textbf{why} 
 something happens. I.e., an \psst{Explanation} portrays the secondary event 
@@ -1587,6 +1594,7 @@ which typically license some sort of \pex{How?} question:
   expressed adverbially (canonical use of the term ``manner''):
   \begin{exe}
     \ex He reacted \choices{\p{with} anger\\\p{in} anger\\angrily}.\footnote{\pex{He reacted \p{out\_of} anger} is \rf{Explanation}{Source}.}
+    \ex He reacted \p{with} nervous laughter. [contrast: \psst{Means}]
 %His reaction was angry; His angry reaction: also Manner, though not prepositional
     \ex I made the decision \choices{\p{by} myself\\\p{without} anyone else\\\p{on}\_~~my~~\_own}. [see \cref{sec:refl}]
   \end{exe}
@@ -1703,7 +1711,7 @@ which typically license some sort of \pex{How?} question:
   combination that links two arguments:
   \begin{exe}
     \ex\rf{Manner}{Locus}:\begin{xlist}
-      \ex John is \p{in} love (with$_{\text{\rf{Stimulus}{Topic}}}$ Mary).
+      \ex\label{ex:InLove} John is \p{in} love (with$_{\text{\rf{Stimulus}{Topic}}}$ Mary). [cf.~\cref{ex:InLoveWith}]
       \ex That is \p{at} odds with$_{\text{\rf{ComparisonRef}{Topic}}}$ our agreement.
     \end{xlist}
   \end{exe}
@@ -2016,7 +2024,12 @@ Prototypical \psst{Theme}s undergo (nonagentive) motion, are transferred,
 or undergo an internal change of state (sometimes called \emph{patients}).
 Adpositional \psst{Theme}s are usually, but not always, construed as something else:
 \begin{exe}
-  \ex I managed to cope \p{with} \choices{the heavy load\\my fear of heights}.
+  \ex\begin{xlist}
+    \ex Quit \p{with} the whining!
+    \ex Don't \choices{bother\\waste time} \p{with} an extra trip.
+    \ex I managed to cope \p{with} \choices{the heavy load\\my fear of heights}.
+  \end{xlist}
+  \ex There's nothing wrong \p{with} the engine.
   \ex Fill the bowl \p{with} water. (\rf{Theme}{Instrument})
   \ex\begin{xlist}
       \ex The food was covered \p{with} grease. (\rf{Theme}{Instrument})
@@ -2108,27 +2121,42 @@ This includes concrete scenes of combination, attachment, separation, and substi
 of two similar entities, as well as creation or transformation of one into another:
 
 \begin{exe}
-  \ex His bicycle collided \p{with} hers.
-  \ex Combine butter \p{with} vanilla.
-  \ex\label{ex:repl-with} They replaced my old tires \p{with} new ones. [replacement; contrast \cref{ex:subst-for}]
-\end{exe}
-Construals:
-\begin{exe}
-  \ex You can't create something \p{from} nothing. (\rf{Co-Theme}{Source})
-  \ex The boys were separated \p{from} the girls. (\rf{Co-Theme}{Source})
-  \ex Keep the dogs \p{from} the cats. (\rf{Co-Theme}{Source})
-  \ex The shin bone is connected \p{to} the knee bone. (\rf{Co-Theme}{Goal})
+  \ex\begin{xlist}
+    \ex His bicycle collided \p{with} hers.
+    \ex Combine butter \p{with} vanilla.
+    \ex\label{ex:repl-with} They replaced my old tires \p{with} new ones. [replacement; contrast \cref{ex:subst-for}]
+  \end{xlist}
+  \ex\begin{xlist}
+    \ex You can't create something \p{from} nothing. (\rf{Co-Theme}{Source})
+    \ex The boys were separated \p{from} the girls. (\rf{Co-Theme}{Source})
+    \ex Keep the dogs \p{from} the cats. (\rf{Co-Theme}{Source})
+    \ex The shin bone is connected \p{to} the knee bone. (\rf{Co-Theme}{Goal})
+  \end{xlist}
 \end{exe}
 
 By contrast, for similar scenes where the oblique argument is a ground-like entity 
 (larger, less dynamic, more locational, etc.\ than the \psst{Theme}), 
 that entity is typically a \psst{Locus}, \psst{Source}, or \psst{Goal}:
 \begin{exe}
-  \ex Add vanilla \p{to} the mixture. (\psst{Goal})
-  \ex Stir vanilla \p{into} the mixture. (\psst{Goal})
-  \ex Detach the cable \p{from} the wall. (\psst{Source})
-  \ex The cable \choices{is attached\\connects} \p{to} the wall. (\rf{Locus}{Goal})
-  \ex Protesters were \choices{kept\\missing} \p{from} the area. (\rf{Locus}{Source}) [repeated: \cref{ex:protesters}]
+  \ex Dynamic:\begin{xlist}
+    \ex Add vanilla \p{to} the mixture. (\psst{Goal})
+    \ex Stir vanilla \p{into} the mixture. (\psst{Goal})
+    \ex Detach the cable \p{from} the wall. (\psst{Source})
+  \end{xlist}
+  \ex Static:\begin{xlist}
+    \ex The cable \choices{is attached\\connects} \p{to} the wall. (\rf{Locus}{Goal})
+    \ex Protesters were \choices{kept\\missing} \p{from} the area. (\rf{Locus}{Source}) [repeated: \cref{ex:protesters}]
+  \end{xlist}
+\end{exe}
+
+With abstract scenes, \psst{Co-Theme} is sometimes needed because another 
+argument would be \psst{Theme}---e.g.~2-argument adjectives:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex You shouldn't confuse/associate Mozart \p{with} Rossini. (\psst{Co-Theme})
+    \ex We are ready/eligible/due \p{for} an upgrade. (\rf{Co-Theme}{Purpose})
+    \ex They prevented us \p{from} entering. (\rf{Co-Theme}{Source})
+  \end{xlist}
 \end{exe}
 
 \begin{history}
@@ -2229,6 +2257,7 @@ in the languages we have looked at. In English, it can be construed in several w
       \ex I took\_pride \p{in} the results.
       \ex I was \choices{proud \p{of}\\happy \p{with}} the results.
       \ex\label{ex:AngryWith} I was angry \p{with} him. [cf.~\cref{ex:AngryAt}]
+      \ex\label{ex:InLoveWith} I was in$_{\text{\rf{Manner}{Locus}}}$ love \p{with} him. [cf.~\cref{ex:InLove}]
       \ex They bored me \p{with} their incessant talk about cats.
     \end{xlist}
   \ex\label{ex:StimBen} \rf{Stimulus}{Beneficiary}:
@@ -3101,6 +3130,11 @@ while difference may be expressed with \p{from}:
   \end{xlist}
 \end{exe}
 
+\paragraph{\psst{Accompanier} construal.}
+\begin{exe}
+  \ex Don't compare me \p{with} my sister! (\rf{Comparison}{Accompanier})
+\end{exe}
+
 \paragraph{Category as standard.} 
 An indirect comparison can be made by relating something to a category 
 to which it may or may not belong. 
@@ -3342,7 +3376,10 @@ lacks any prototypical adposition, but participates in numerous construals:
   \ex Mr. Dursley is \p{from} Grunnings. (\rf{OrgRole}{Source})
   \ex Mr. Dursley is \p{with} Grunnings. (\rf{OrgRole}{Accompanier})
   \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{OrgRole}{Agent}) %\nss{or do we say `employ' is just a regular Agent/Theme verb?}
-  \ex I bank \p{with} TSB. (\rf{OrgRole}{Accompanier})
+  \ex\begin{xlist}
+    \ex I bank \p{with} TSB. (\rf{OrgRole}{Accompanier})
+    \ex my phone service \p{with} Verizon (\rf{OrgRole}{Accompanier})
+  \end{xlist}
   \ex I serve \p{on} the committee. (\rf{OrgRole}{Locus})
 \end{exe}
 
