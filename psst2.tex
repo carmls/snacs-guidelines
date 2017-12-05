@@ -369,7 +369,7 @@
 \usepackage{suffix} % for \WithSuffix
 
 \usepackage{gb4e} % linguistic examples. put after all other package imports
-
+\newenvironment{xexe}{\begin{exe}\ex\begin{xlist}}{\end{xlist}\end{exe}} % single numbered example with sub-examples
 
 
 \newcommand{\backtick}[0]{\textasciigrave}
@@ -2174,66 +2174,71 @@ See also: \psst{InsteadOf}, \psst{Co-Agent}
 
 \shortdef{Information content or subject matter in communication or cognition.}
 
-Prototypical prepositions are \p{about} and \p{on}:
+A variety of prepositions---including the vast majority of occurrences of \p{about}---can 
+mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene role:
 
-\begin{exe}
-  \ex I gave a presentation \choices{\p{about}\\\p{on}} politics.
-  \ex Try not to think \p{about} it.
-\end{exe}
-
-Less prototypical \psst{Topic} markers include:
-
-\begin{exe}
-  \ex\label{ex:in-activity-Topic} 
-    I wouldn't hestitate \p{in} seeing a doctor.\\{} 
-    [but see \cref{ex:in-activity-Circumstance} under \psst{Circumstance}, which is syntactically parallel]
-  \ex Are you interested \p{in} politics?
-  \ex My daughter excels \choices{\p{in}\\\p{at}} sports.
-  \ex I'm \choices{an expert\\talented} \p{at} cooking.
-  \ex I was accused \p{of} treason.
-  \ex The \choices{ratings\\reviews} \p{for} this film are atrocious.
-  \ex\begin{xlist}
+\begin{itemize}
+  \item \textbf{Communication} scenes: the content or subject matter of 
+  speech, writing, art, performance, etc.
+  \begin{xexe}
+    \ex I \choices{gave a presentation\\spoke} \p{about}/\p{on} politics.
+    \ex I was accused \p{of} treason.
+    \ex a picture \p{of} Whistler's mother
+    \ex The \choices{ratings\\reviews} \p{for} this film are atrocious.
+  \end{xexe}
+  \item \textbf{Cognition} scenes: the content or subject matter of thought and knowledge---belief, opinion,
+  decision, learning, study, interest, expertise, skill, etc.
+  \begin{xexe}
+    \ex Try not to think \p{about} it.
+    \ex There is not enough research \p{on} the effects of global warming.
+    \ex Think \p{of} all the possibilities!
+    \ex I have no memory \p{of} the incident.
     \ex I disagree \p{with} that statement.
     \ex I am familiar \p{with} this topic.
+    \ex Are you interested \p{in} politics?
+    \ex My daughter excels \choices{\p{in}\\\p{at}} sports.
+    \ex I'm \choices{an expert\\talented} \p{at} cooking.
+    \ex\label{ex:in-activity-Topic} 
+      I wouldn't hestitate \p{in} seeing a doctor.\\{} 
+      [but see \cref{ex:in-activity-Circumstance} under \psst{Circumstance}, which is syntactically parallel]
+  \end{xexe}
+  \item Relations of \textbf{regard}:\nss{TODO}
+  \begin{xexe}
     \ex Be reasonable \p{with} your expectations!
-  \end{xlist}
-\end{exe}
+  \end{xexe}
+\end{itemize}
 
-\psst{Topic} is used for \w{(have) problems \p{with}} and \w{(have) experience \p{with}}:
-\begin{exe}
-  \ex\begin{xlist}
-    \ex \choices{There was\\We had} a problem \p{with} mice in the basement.
-    \ex I have limited experience \p{with} numerical methods.
-    \ex \choices{I had a bad experience\\my bad experience} \p{with} a vampire.
-  \end{xlist}
-\end{exe}
+A few specific governors merit further discussion:
 
-For \w{respond \p{with}} and similar, it depends whether the object is an action, 
-a device facilitating communication, or some aspect of transferred information:
-\begin{exe}
-  \ex\begin{xlist}
-    \ex He responded to my kick \p{with} a punch. (\psst{Means})
-    \ex He responded to my accusation \p{with} a lawsuit. (\psst{Means})
-    \ex He responded to my accusation \p{with} dishonest emails. (\psst{Instrument})
-    \ex He responded to my accusation \p{with} falsehoods. (\psst{Topic})
-  \end{xlist}
-\end{exe}
+\paragraph{\pex{agree}.}
+\begin{xexe}
+  \ex Let us agree \p{on} the deal. (\psst{Topic})
+  \ex Let us agree \p{to} the deal. (\rf{Topic}{Goal})
+\end{xexe}
 
-\paragraph{\emph{agree}.}
-\begin{exe}
-  \ex\begin{xlist}
-    \ex Let us agree \p{on} the deal. (\psst{Topic})
-    \ex Let us agree \p{to} the deal. (\rf{Topic}{Goal})
-  \end{xlist}
-\end{exe}
-
-\paragraph{\emph{answer}, \emph{respond}, etc.}
+\paragraph{\pex{answer}, \pex{respond}, etc.}
 \begin{exe}
   \ex\rf{Topic}{Goal}:\begin{xlist}
     \ex the answer \p{to} the question
     \ex my response \p{to} your question
   \end{xlist}
 \end{exe}
+
+For \w{respond \p{with}} and similar, it depends whether the object is an action, 
+a device facilitating communication, or some aspect of transferred information:
+\begin{xexe}
+  \ex He responded to my kick \p{with} a punch. (\psst{Means})
+  \ex He responded to my accusation \p{with} a lawsuit. (\psst{Means})
+  \ex He responded to my accusation \p{with} dishonest emails. (\psst{Instrument})
+  \ex He responded to my accusation \p{with} falsehoods. (\psst{Topic})
+\end{xexe}
+
+\paragraph{\pex{problem \p{with}}, \pex{experience \p{with}}, etc.}
+\begin{xexe}
+  \ex \choices{There was\\We had} a problem \p{with} mice in the basement.
+  \ex I have limited experience \p{with} numerical methods.
+  \ex \choices{I had a bad experience\\my bad experience} \p{with} a vampire.
+\end{xexe}
 
 See also: \psst{Stimulus}
 
