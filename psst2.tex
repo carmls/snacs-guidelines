@@ -385,6 +385,7 @@
 \newcommand{\vsst}[1]{\sst{v:#1}} % verb supersense tag label
 \newcommand{\psst}[1]{\psstX{#1}{#1}} % preposition supersense tag label
 \newcommand{\psstX}[2]{\textcolor{mdgreen}{\hyperref[sec:#1]{\lbl{#2}}}\index{#1@\textcolor{mdgreen}{\textbf{\textsc{#1}}}}} % preposition supersense tag label
+\newcommand{\psstdef}[1]{\textcolor{mdgreen}{\hyperref[sec:#1]{\lbl{#1}}}\index{#1@\textcolor{mdgreen}{\textbf{\textsc{#1}}}|textbf}} % preposition supersense tag label
 \newcommand{\olbl}[1]{\textcolor{purple}{\textrm{#1}}} % other label: `i, `d, etc.
 %\newcommand{\nsst}[1]{\sst{#1~\textroundcap{\vphantom{-}}~}} % noun supersense tag label
 %\newcommand{\vsst}[1]{\sst{#1\raisebox{-1.5pt}{\textasciicaron}}} % verb supersense tag label
@@ -452,10 +453,10 @@
 \newcommand{\hierC}[1]{\textcolor{mdgreen}{\hyperref[sec:#1]{#1}}}
 \newcommand{\hierD}[1]{\textcolor{orange}{\hyperref[sec:#1]{#1}}}
 
-\newcommand{\hierAdef}[1]{\section{\psst{#1}}\label{sec:#1}}
-\newcommand{\hierBdef}[1]{\subsection{\psst{#1}}\label{sec:#1}}
-\newcommand{\hierCdef}[1]{\subsubsection{\psst{#1}}\label{sec:#1}}
-\newcommand{\hierDdef}[1]{\paragraph{\psst{#1}}\label{sec:#1}}
+\newcommand{\hierAdef}[1]{\section{\psstdef{#1}}\label{sec:#1}}
+\newcommand{\hierBdef}[1]{\subsection{\psstdef{#1}}\label{sec:#1}}
+\newcommand{\hierCdef}[1]{\subsubsection{\psstdef{#1}}\label{sec:#1}}
+\newcommand{\hierDdef}[1]{\paragraph{\psstdef{#1}}\label{sec:#1}}
 
 \hyphenation{WordNet}
 \hyphenation{WordNets}
