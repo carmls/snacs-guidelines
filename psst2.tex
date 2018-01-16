@@ -527,6 +527,9 @@ and case phenomena in Hebrew, Hindi, and Korean.
 \Citet{hwang-17} present the theoretical underpinnings of the v2 scheme.
 Though the v2~inventory aspires to be universal, this document is specific to English; 
 documentation for other languages will be published separately.
+
+The STREUSLE~4.0 corpus containing English annotations according to this scheme 
+will be released at \url{https://github.com/nert-gu/streusle/}.
 \end{abstract}
 
 
@@ -535,8 +538,17 @@ documentation for other languages will be published separately.
 
 \section{Overview}
 
-\nss{v1 is documented in PrepWiki (\url{http://tiny.cc/prepwiki}).
-v2 will be documented in Xposition (URL TBD).}
+%\nss{v1 is documented in PrepWiki (\url{http://tiny.cc/prepwiki}).
+%v2 will be documented in Xposition (URL TBD).}
+
+This document details version~2 of a scheme for annotating English 
+prepositions and related grammatical markers with semantic class categories 
+called \emph{supersenses}. 
+The motivation and general principles for this scheme are laid out in 
+publications cited in the abstract. 
+This document focuses on the technical details, giving definitions, 
+descriptions, and examples for each supersense and a variety of 
+prepositions and constructions that occasion its use.
 
 \subsection{What counts as an adposition?}
 
@@ -544,8 +556,11 @@ v2 will be documented in Xposition (URL TBD).}
 Briefly, we consider an affix, word, or multiword expression to be adpositional if it:
 \begin{itemize}
   \item mediates a semantically asymmetric figure--ground relation between two concepts, and
-  \item is a grammatical item that can mark an NP, and in some cases may mark clauses (as a subordinator) 
-  or be intransitive. 
+  \item is a grammatical item that can mark an NP. 
+  We annotate \emph{tokens} of these items even where they mark clauses (as a subordinator) 
+  or are intransitive.\footnote{Usually a coordinating conjunction, \p{but}  
+  only receives a supersense when it is prepositional, as described 
+  under \psst{Part/Portion}.}
   We also include always-intransitive grammatical items whose core meaning is spatial and highly schematic, 
   like \p{together}, \p{apart}, and \p{away}.
   % \item Is not a differential object marker (e.g., Hebrew \p{'et}, which marks direct objects if and only if 
@@ -697,10 +712,11 @@ This inventory is only designed to capture semantic relations
 with a figure--ground asymmetry. This excludes:
 \begin{itemize}
   \item The semantics of coordination, where the two sides of the relation 
-are on equal footing, is not captured here. (Note that sometimes a morpheme can 
-have symmetric as well as asymmetric interpretations: e.g., Korean \p{-wa}.)
+are on equal footing (see \cref{sec:coord}).
+%(Note that sometimes a morpheme can 
+%have symmetric as well as asymmetric interpretations: e.g., Korean \p{-wa}.)
   \item Aspects of meaning that pertain to information structure, discourse, 
-or pragmatics.
+or pragmatics (see \cref{sec:discourse}).
 \end{itemize}
 Moreover, this inventory only captures semantic distinctions 
 that tend to correlate with major differences in syntactic distribution. 
@@ -708,7 +724,7 @@ Thus, while there are labels for locative (\psst{Locus}), ablative (\psst{Source
 allative (\psst{Goal}), and \psst{Path} semantics---and analogous temporal categories---%
 finer-grained details of spatiotemporal meaning are for the most part lexical 
 (viz.: the difference between \pex{\p{in} the box} and \pex{\p{on} the box}, 
-or temporal \p{at}, \p{before}, \p{during}, and \p{after}) and are not represented here.\ab{how does this relate to semantic distinctions correlating with syntactic distribution?}\footnote{This is not to claim
+or temporal \p{at}, \p{before}, \p{during}, and \p{after}) and are not represented here.\footnote{This is not to claim
 that all members of a category can be grammatical in all the same contexts: 
 \pex{\p{on} Saturday} and \pex{\p{at} 5:00} are both labeled \psst{Time}, 
 though the prepositions are by no means interchangeable in American English. 
@@ -3021,7 +3037,7 @@ Some can be paraphrased with INCLUDES, but this is not determinative.
 \psst{Part/Portion} is used for adpositions marking a member or non-member of a set:
 \begin{exe}
   \ex\label{ex:suchAs}	strategies \p{such\_as} divide-and-conquer
-  \ex Everyone \p{except} Bob plays trombone.
+  \ex Everyone \p{except}/\p{but} Bob plays trombone.
 \end{exe}
 Set-membership can be construed as comparison:
 \begin{exe}
