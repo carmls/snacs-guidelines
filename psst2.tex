@@ -773,6 +773,8 @@ v2 labels.
 \begin{itemize}
   \item \emph{Since the \textbf{January 16, 2018} version:}
   \begin{itemize}
+    \item Added \cref{sec:constraints}: Constraints on Role and Function Combinations.
+    \item A few additional examples.
     \item Added an index of construals by function.
   \end{itemize}
   \item \emph{Since the \textbf{April 7, 2017} version:}
@@ -896,14 +898,8 @@ explicit or implicit reference time or event.}
   \ex\label{ex:at-lunch} Let's talk \choices{\p{at}\\\p{during}} lunch. [compare \cref{ex:over-lunch}]
 \end{exe}
 For a containing time period or event, \p{during} can be used and is unambiguously \psst{Time}---%
-unlike \p{in}, \p{at}, and \p{on}, which can also be locative.\footnote{In fact, languages 
-routinely borrow from spatial language to describe time, 
-and spatial cognition may underlie temporal cognition \citep[e.g.,][]{lakoff-80,nunez-06,casasanto-08}.
-A liberal use of construal would treat \pex{arriving \p{in} the afternoon} as \rf{Time}{Locus}, 
-\pex{sleeping \p{through} the night} as \rf{Duration}{Path}, 
-\pex{running \p{for} 20~minutes} as \rf{Duration}{Extent}, and so forth.
-But for simplicity and practicality, we elect not to annotate \psst{Locus}, \psst{Path}, or \psst{Extent} 
-construals on temporal adpositions.}
+unlike \p{in}, \p{at}, and \p{on}, which can also be locative.\footnote{See \cref{sec:temploc} regarding the 
+use of locational metaphors for temporal relations.}
 \begin{exe}
   \ex\begin{xlist}
     \ex They will greet us \choices{\p{on}\\\p{upon}} our arrival.
@@ -3573,6 +3569,69 @@ See also: \psst{Stuff}
   whereas \texttt{have-rel-role-91} is used for relations between two individuals.
 \end{history}
 
+\section{Constraints on Role and Function Combinations}\label{sec:constraints}
+
+The present scheme emerged out of extensive descriptive work with corpus data. 
+Given the abundance of rare preposition usages, this document does not claim 
+to cover every possible role\slash function combination for English, 
+let alone other languages. 
+Below are the few categorical restrictions that seem warranted for English.
+
+\subsection{Supersenses that are purely abstract}
+
+\psst{Participant}, \psst{Configuration}, and \psst{Temporal} are intended only to 
+organize subtrees of the hierarchy, and not to be used directly. 
+
+\subsection{Supersenses that cannot serve as functions}
+
+\textbf{\psst{Experiencer}, \psst{Stimulus}, \psst{Originator}, \psst{Recipient}, \psst{SocialRel}, and \psst{OrgRole} 
+can only serve as scene roles in English.} 
+Though scenes of perception, transfer, and interpersonal\slash organizational relationships 
+are fundamental in language, they always seem to exploit construals from other domains 
+(motion, causation, possession, and so forth), at least insofar as 
+English preposition\slash case marking is concerned. 
+
+For example, \cref{ex:RecGoal} is clearly \psst{Recipient} at the scene level---Sam 
+acquires possession of the box---but also 
+fits the criteria for \psst{Goal} because Sam is an endpoint of motion 
+(and \p{to} frequently marks \psst{Goal}s that are not \psst{Recipient}s). 
+\Cref{ex:RecAgent} and \cref{ex:RecPoss} reflect \rf{Recipient}{Agent} and 
+\rf{Recipient}{Possessor} construals, respectively. 
+\begin{xexe}
+  \ex\label{ex:RecGoal} Give the box \p{to} Sam. (\rf{Recipient}{Goal})
+  \ex\label{ex:RecAgent} the box received \p{by} Sam (\rf{Recipient}{Agent})
+  \ex\label{ex:RecPoss} Sam\p{'s} receipt of the box (\rf{Recipient}{Possessor})
+\end{xexe}
+Though the \psst{Goal} construal is arguably the most canonical expression of \psst{Recipient},
+there is no preposition with a primary meaning of \psst{Recipient} independent of one of these other domains.
+
+\subsection{Supersenses that cannot serve as roles}
+
+In the present scheme, there are no supersenses that are restricted to serving as functions.
+
+\subsection{No temporal-locational construals}\label{sec:temploc}
+
+\textbf{Temporal supersenses never occur with a function of \psst{Locus}, \psst{Path}, or \psst{Extent}.}
+
+Languages routinely borrow from spatial language to describe time, 
+and spatial cognition may underlie temporal cognition \citep[e.g.,][]{lakoff-80,nunez-06,casasanto-08}.
+A liberal use of construal would treat \pex{arriving \p{in} the afternoon} as \rf{Time}{Locus}, 
+\pex{sleeping \p{through} the night} as \rf{Duration}{Path}, 
+\pex{running \p{for} 20~minutes} as \rf{Duration}{Extent}, and so forth.
+However, for simplicity and practicality, we elect not to annotate \psst{Locus}, \psst{Path}, or \psst{Extent} 
+construals on temporal adpositions. Thus:
+\begin{xexe}
+  \ex arriving \p{in} the afternoon (\psst{Time})
+  \ex sleeping \p{through} the night (\psst{Duration})
+  \ex running \p{for} 20~minutes (\psst{Duration})
+\end{xexe}
+\rf{Time}{Direction} is possible, however, as are other atemporal functions:
+\begin{xexe}
+  \ex Schedule the appointment \p{for} Monday. (\rf{Time}{Direction})
+  \ex January \p{of} last year (\rf{Time}{Whole})
+  \ex Will you attend Saturday\p{'s} class? (\rf{Time}{Possessor})
+  \ex It took a year\p{'s} work to finish the book. (\rf{Duration}{Possessor})
+\end{xexe}
 
 \section{Special Constructions}\label{sec:cxns}
 
