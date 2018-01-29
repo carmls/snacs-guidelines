@@ -71,7 +71,8 @@
 %\usepackage{makeidx} % index
 \usepackage{imakeidx} % allows multiple indices
 \makeindex % regular index
-\makeindex[name=construals,title={Index of Construals}]
+\makeindex[name=construals,title={Index of Construals by Scene Role}]
+\makeindex[name=revconstruals,title={Index of Construals by Function}]
 
 \usepackage[boxed]{algorithm2e}
 \renewcommand\AlCapFnt{\small}
@@ -391,7 +392,7 @@
 %\newcommand{\vsst}[1]{\sst{#1\raisebox{-1.5pt}{\textasciicaron}}} % verb supersense tag label
 %\newcommand{\psst}[1]{\sst{#1\raisebox{2pt}{\rotatebox{180}{\textsublhalfring{\phantom{.}}}}}} %\textcorner % preposition supersense tag label
 
-\newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}\index[construals]{\protect\psst{#1}$\leadsto$\protect\psst{#2}}}
+\newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}\index[construals]{\protect\psst{#1}$\leadsto$\protect\psst{#2}}\index[revconstruals]{#2 #1@\protect\psst{#1}$\leadsto$\protect\psst{#2}}}
 \newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}\index[construals]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}}
 \newcommand{\backc}[0]{\hyperref[sec:coord]{\olbl{\backtick c}}\index{\backtick c@\olbl{\backtick c}}\xspace}
 \newcommand{\backd}[0]{\hyperref[sec:discourse]{\olbl{\backtick d}}\index{\backtick d@\olbl{\backtick d}}\xspace}
@@ -507,7 +508,7 @@
     {\smaller \{\emldisplay{ajb341@georgetown.edu}{ajb341},\emldisplay{jp1724@georgetown.edu}{jp1724}\}\texttt{@georgetown.edu}}
 }
 
-\date{January 16, 2018}
+\date{\today \nss{insert arXiv date here}}
 
 \begin{document}
 \maketitle
@@ -770,6 +771,10 @@ v2 labels.
 \subsection{Major changes from earlier versions of this document}
 
 \begin{itemize}
+  \item \emph{Since the \textbf{January 16, 2018} version:}
+  \begin{itemize}
+    \item Added an index of construals by function.
+  \end{itemize}
   \item \emph{Since the \textbf{April 7, 2017} version:}
   \begin{itemize}
     \item Broadened and clarified \sst{DeicticTime}, moved it up a level in the hierarchy, 
@@ -3860,5 +3865,6 @@ these are designated with the special label \backposs:
 
 \printindex
 \printindex[construals]
+\printindex[revconstruals]
 
 \end{document}
