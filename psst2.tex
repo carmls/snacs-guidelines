@@ -774,6 +774,9 @@ v2 labels.
   \item \emph{Since the \textbf{January 16, 2018} version:}
   \begin{itemize}
     \item Added \cref{sec:constraints}: Constraints on Role and Function Combinations.
+    \item Rewrote \cref{sec:genitives}: Genitives/Possessives and updated corresponding examples 
+    to reflect a clarified policy on possessive construals.
+    \item Added \cref{sec:passives}: Passives and updated corresponding examples.
     \item A few additional examples.
     \item Added an index of construals by function.
   \end{itemize}
@@ -2010,21 +2013,22 @@ Not used directly---see subtypes.
 
 \shortdef{Instigator of, and a core participant in, an event.}
 
-\psst{Causer} is applied directly to inanimate things or forces conceptualized as entities. 
-Prototypical prepositions are \p{by} (prominently including passive-\p{by}), \p{of}, and \p{'s}:
+\psst{Causer} is applied directly to inanimate things or forces conceptualized as entities, 
+such as in a passive \p{by}-phrase (\cref{sec:passives}):
+%Prototypical prepositions are \p{by} (prominently including passive-\p{by}), \p{of}, and \p{'s}:
 \begin{exe}
   \ex the devastation of$_{\psst{Theme}}$ the town wreaked \p{by} the fire
-  \ex\begin{xlist} 
-    \ex the devastation \p{of} the fire
+  \ex\rf{Causer}{Gestalt}:\begin{xlist} 
+    \ex the devastation \p{of} the fire on$_{\psst{Theme}}$ the town
     \ex the fire\p{'s} devastation of$_{\psst{Theme}}$ the town
   \end{xlist}
 \end{exe}
 The \psst{Causer} is sometimes construed as a \psst{Source}:
 \begin{exe}
-  \ex \begin{xlist}
-    \ex the devastation \p{from} the fire (\rf{Causer}{Source})
-    \ex fatalities \p{from} cancer (\rf{Causer}{Source})
-    \ex FDR suffered \p{from} polio. (\rf{Causer}{Source})
+  \ex\rf{Causer}{Source}: \begin{xlist}
+    \ex the devastation \p{from} the fire
+    \ex fatalities \p{from} cancer
+    \ex FDR suffered \p{from} polio.
   \end{xlist}
 \end{exe}
 
@@ -2034,13 +2038,16 @@ See also: \psst{Instrument}
 
 \shortdef{Animate instigator of an action (typically volitional).}
 
-Prototypical prepositions are \p{by} (prominently including passive-\p{by}), \p{of}, and \p{'s}:
+%Prototypical prepositions are \p{by} (prominently including passive-\p{by}), \p{of}, and \p{'s}:
+This is most directly associated with the passive \p{by}-phrase (\cref{sec:passives}), 
+but also permits other construals:
 \begin{exe}
-  \ex\begin{xlist}
-    \ex the decisive vote \choices{\p{by}\\\p{of}} the City Council
-    \ex the City Council\p{'s} decisive vote 
+  \ex the decisive vote \p{by} the City Council
+  \ex\rf{Agent}{Gestalt}:\begin{xlist}
+    \ex the decisive vote \p{of} the City Council
+    \ex the City Council\p{'s} decisive vote
+    \ex they needed Joan\p{'s} help
   \end{xlist}
-  \ex they needed Joan\p{'s} help
   %\ex ?they needed help of hers
   %(\rf{Agent}{Possessor})
 \end{exe}
@@ -2109,10 +2116,12 @@ Adpositional \psst{Theme}s are usually, but not always, construed as something e
   \begin{multicols}{2}
     \begin{xlist}
         %\ex the price \p{of} tea % moved to Gestalt
+        \sn \psst{Theme}
         \ex the approach \p{of} the waves
         \ex the \choices{death\\murder} \p{of} a salesman
         
         %\sn the tea\p{'s} price % moved to Gestalt
+        \sn \rf{Theme}{Gestalt}
         \sn the wave\p{s'} approach
         \sn the salesman\p{'s} \choices{death\\murder}
     \end{xlist}
@@ -2385,8 +2394,8 @@ Counterpart: \psst{Experiencer}
 in the languages we have looked at. In English, it can be construed in several ways:
 \begin{exe}
   \ex\begin{xlist}
-    \ex The anger \p{of} the students (\rf{Experiencer}{Possessor})
-    \ex The student\p{s'} anger (\rf{Experiencer}{Possessor})
+    \ex The anger \p{of} the students (\rf{Experiencer}{Gestalt})
+    \ex The student\p{s'} anger (\rf{Experiencer}{Gestalt})
   \end{xlist}
   \ex\begin{xlist} 
     \ex Running is enjoyable \p{for} me (\rf{Experiencer}{Beneficiary})
@@ -2446,7 +2455,11 @@ which involve a back-and-forth between
     \ex I bought it \p{from} this company.
     \ex I heard the news \p{from} Larry.
   \end{xlist}
-  \ex\label{ex:worksGen} Shakespeare\p{'s} works (\rf{Originator}{Possessor}) [cf.~\cref{ex:worksOf,ex:worksBy}]
+  \ex \rf{Originator}{Possessor}: \begin{xlist}
+    \ex \label{ex:worksGen} Shakespeare\p{'s} works [cf.~\cref{ex:worksOf,ex:worksBy}]
+    \ex the store\p{'s} fresh produce
+    \ex the restaurant\p{'s} food
+  \end{xlist}
 \end{exe}
 
 \paragraph{\emph{learn from.}} If the source of learning is an individual 
@@ -2497,7 +2510,7 @@ the \psst{Recipient} aspect of the meaning is more explicit and essential:
 yelling from a distance at someone does not imply criticism, 
 and criticism about someone who is absent is not yelling at them.})
   \ex The news was not well received \p{by} the White House. (\rf{Recipient}{Agent})
-  \ex Timmy\p{'s} piano lesson (\rf{Recipient}{Possessor})
+  \ex Timmy\p{'s} piano lesson (\rf{Recipient}{Gestalt})
   \ex I'll have to check \p{with} my supervisor. (\rf{Recipient}{Co-Agent})
 \end{exe}
 
@@ -2829,7 +2842,7 @@ See also: \psst{Quantity}
 which is not part of their body 
 or inherent to their identity/character but could, in principle, be taken away.}
 
-Prototypically expressed with \p{'s} (the \emph{s-genitive}, a case clitic) 
+Prototypically expressed with the \emph{s-genitive} (\cref{sec:genitives}: \p{'s} and possessive pronouns), 
 and \p{of} (the \emph{of-genitive}):
 
 \begin{exe}
@@ -2858,10 +2871,12 @@ See \psst{SocialRel}.
 or set element. See \psst{Part/Portion}.}
 
 \begin{exe}
-  {\setlength\multicolsep{0pt}%
-  \begin{multicols}{2}
-  \ex \begin{xlist}
+  
+  \ex {\setlength\multicolsep{0pt}%
+  \begin{multicols}{2} 
+   \begin{xlist}
     % of-genitive
+    \sn \psst{Whole}
     \ex	the new engine \p{of} the car
     \ex	the flaxen hair \p{of} the girl
     \ex\label{ex:layers}	the 3 layers \p{of} the cake
@@ -2873,6 +2888,7 @@ or set element. See \psst{Part/Portion}.}
     \ex the 14~episodes \p{of} a TV series
     
     % s-genitive
+    \sn \rf{Whole}{Gestalt}
     \sn the car\p{'s} new engine
     \sn the girl\p{'s} flaxen hair
     \sn the cake\p{'s} 3 layers
@@ -3471,7 +3487,7 @@ Construals include:
       \ex\label{ex:workwithSR} I work \p{with} Michael. (\rf{SocialRel}{Co-Agent})
       \ex Joan has a class \p{with} Miss Zarves. (\rf{SocialRel}{Co-Agent})
     \end{xlist}
-  \ex\rf{SocialRel}{Possessor} 
+  \ex\rf{SocialRel}{Gestalt} 
   {\setlength\multicolsep{0pt}%
   \begin{multicols}{2}
     \begin{xlist}
@@ -3596,14 +3612,21 @@ acquires possession of the box---but also
 fits the criteria for \psst{Goal} because Sam is an endpoint of motion 
 (and \p{to} frequently marks \psst{Goal}s that are not \psst{Recipient}s). 
 \Cref{ex:RecAgent} and \cref{ex:RecPoss} reflect \rf{Recipient}{Agent} and 
-\rf{Recipient}{Possessor} construals, respectively. 
+\rf{Recipient}{Gestalt} construals, respectively. 
 \begin{xexe}
   \ex\label{ex:RecGoal} Give the box \p{to} Sam. (\rf{Recipient}{Goal})
   \ex\label{ex:RecAgent} the box received \p{by} Sam (\rf{Recipient}{Agent})
-  \ex\label{ex:RecPoss} Sam\p{'s} receipt of the box (\rf{Recipient}{Possessor})
+  \ex\label{ex:RecPoss} Sam\p{'s} receipt of the box (\rf{Recipient}{Gestalt})
 \end{xexe}
 Though the \psst{Goal} construal is arguably the most canonical expression of \psst{Recipient},
 there is no preposition with a primary meaning of \psst{Recipient} independent of one of these other domains.
+
+\textbf{Additional constraints on functions arise in the context of specific 
+constructions (\cref{sec:cxns}).} For instance,
+\begin{itemize}
+  \item the s-genitive requires either \psst{Possessor} or \psst{Gestalt} as its function (\cref{sec:genitives})
+  \item passive \p{by} requires \psst{Agent} or \psst{Causer} as its function (\cref{sec:passives})
+\end{itemize}
 
 \subsection{Supersenses that cannot serve as roles}
 
@@ -3629,8 +3652,8 @@ construals on temporal adpositions. Thus:
 \begin{xexe}
   \ex Schedule the appointment \p{for} Monday. (\rf{Time}{Direction})
   \ex January \p{of} last year (\rf{Time}{Whole})
-  \ex Will you attend Saturday\p{'s} class? (\rf{Time}{Possessor})
-  \ex It took a year\p{'s} work to finish the book. (\rf{Duration}{Possessor})
+  \ex Will you attend Saturday\p{'s} class? (\rf{Time}{Gestalt})
+  \ex It took a year\p{'s} work to finish the book. (\rf{Duration}{Gestalt})
 \end{xexe}
 
 \section{Special Constructions}\label{sec:cxns}
@@ -3640,20 +3663,82 @@ This section discusses notable constructions that are not limited to a single su
 \subsection{Genitives/Possessives}\label{sec:genitives}
 
 \Citet{blodgett-18} detail the application of this scheme to English possessive constructions:
-the so-called \textbf{s-genitive} (\pex{the car\p{'s}/\p{its} hood}) and 
-\textbf{of-genitive} (\pex{the hood \p{of} the car}). 
-The case clitic \p{'s} and the preposition \p{of} are particularly associated with 
-\psst{Gestalt} and its subtypes, though both can mark participant roles 
-(\pex{the queen\p{'s} arrival $\sim$ the arrival \p{of} the queen}: \psst{Theme})
-and other roles (\pex{the bride\p{'s} mother $\sim$ the mother \p{of} the bride}: \psst{SocialRel}). 
+the so-called \textbf{s-genitive}, as in \cref{ex:SGen}, and 
+\textbf{of-genitive}, as in \cref{ex:OfGen}:
+\begin{exe}
+  \ex\label{ex:SGen} 
+    \begin{xlist}
+      \ex \choices{the Smith family\p{'s}\\\p{their}} house (\psst{Possessor})
+      \ex \choices{the tea\p{'s}\\\p{its}} price (\psst{Gestalt})
+    \end{xlist}
+  \ex\label{ex:OfGen} 
+    \begin{xlist}
+      \ex the house \p{of} the Smith family (\psst{Possessor})
+      \ex the price \p{of} the tea (\psst{Gestalt})
+    \end{xlist}
+\end{exe}
+Note that the s-genitive is realized with case marking (clitic \p{'s} or possessive pronoun\footnote{For ease of indexing, 
+\p{'s} or \p{s'} is preferred over possessive pronouns for s-genitive examples in this document.}) 
+rather than a preposition, 
+and the case-marked NP in the s-genitive alternates with the object of the preposition in the of-genitive.
+(This may feel unintuitive: annotators looking at the s-genitive construction are often tempted to focus on 
+the role occupied by the head noun rather than the case-marked noun.)
+
+The s-genitive and of-genitive are particularly associated with 
+\psst{Possessor} (which applies to a canonical form of possession) 
+and the more general category \psst{Gestalt}; both supersenses are illustrated above \cref{ex:SGen,ex:OfGen}.
+In addition, both genitive constructions can mark participant roles and other kinds of relations, 
+including \psst{Whole} and \psst{SocialRel} relations. 
+When the s-genitive is used, the \emph{function} is always either \psst{Gestalt} (most cases) 
+or \psst{Possessor} (when the possession is sufficiently canonical).
+While overlapping in scene roles with the s-genitive, 
+\p{of} is considered compatible with some additional functions, 
+including \psst{Whole}, \psst{Source}, and \psst{Theme}; thus of-genitives 
+with such roles do not need to be construed as \psst{Gestalt} or \psst{Possessor}:
+\begin{exe}
+  \ex\rf{SocialRel}{Gestalt}:\begin{xlist}
+    \ex the grandfather \p{of} Lord Voldemort
+    \ex Lord Voldemort\p{'s} grandfather
+  \end{xlist}
+  \ex\begin{xlist}
+    \ex the hood \p{of} the car (\psst{Whole})
+    \ex the car\p{'s} hood (\rf{Whole}{Gestalt})
+  \end{xlist}
+  \ex\begin{xlist}
+    \ex the arrival \p{of} the queen (\psst{Theme})
+    \ex the queen\p{'s} arrival (\rf{Theme}{Gestalt})
+  \end{xlist}
+  \ex These are children\p{'s} clothes. [clothes intended for use and possession by children] (\rf{Beneficiary}{Possessor})
+  \ex Shakespeare\p{'s} works [items that the creator or transferer possesses (at least initially)] (\rf{Originator}{Possessor})
+\end{exe}
+
 The literature on the genitive alternation examines the factors that condition 
 the choice of construction; important factors include the length and animacy of the possessed NP.
-In addition, \p{of} participates in certain constructions that are not really possessives---e.g.~\pex{this sort \p{of} sweater} (\psst{Species}).
+In addition, \p{of} participates in certain constructions that are not really possessives---%
+e.g.~\pex{this sort \p{of} sweater} (\psst{Species}).
 
 Certain idioms require an s-genitive argument that does not participate in 
 any transparent semantic relationship; for these, \backposs is used (\cref{sec:possidiom}).
 
 %\subsubsection{Construct State Genitive in Hebrew}
+
+\subsection{Passives}\label{sec:passives}
+
+The construction for passive voice (in verbs and nominalizations thereof) 
+involves an optional \p{by}-PP;
+the object of \p{by} alternates with the subject in active voice. 
+While a variety of scene roles can be expressed with this phrase, 
+the \emph{functions} associated with passive \p{by} are limited to 
+\psst{Agent} and \psst{Causer}:
+\begin{xexe}
+  \ex the decisive vote \p{by} the City Council (\psst{Agent})
+  \ex the devastation wreaked \p{by} the fire (\psst{Causer})
+  \ex This story was told \p{by} my grandmother. (\rf{Originator}{Agent})
+  \ex The news was not well received \p{by} the White House. (\rf{Recipient}{Agent})
+  \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{OrgRole}{Agent})
+  \ex The window was broken \p{by} the hammer. (\rf{Instrument}{Causer})
+  \ex scared \p{by} the bear (\rf{Stimulus}{Causer})
+\end{xexe}
 
 \subsection{Comparatives and Superlatives}
 
