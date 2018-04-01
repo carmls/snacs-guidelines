@@ -561,7 +561,7 @@ Briefly, we consider an affix, word, or multiword expression to be adpositional 
   We annotate \emph{tokens} of these items even where they mark clauses (as a subordinator) 
   or are intransitive.\footnote{Usually a coordinating conjunction, \p{but}  
   only receives a supersense when it is prepositional, as described 
-  under \psst{Part/Portion}.}
+  under \psst{PartPortion}.}
   We also include always-intransitive grammatical items whose core meaning is spatial and highly schematic, 
   like \p{together}, \p{apart}, and \p{away}.
   % \item Is not a differential object marker (e.g., Hebrew \p{'et}, which marks direct objects if and only if 
@@ -677,7 +677,7 @@ and \psst{Configuration} (18~labels).
     ]
     [{\hierB{Characteristic}}
       [{\hierC{Possession}}]
-      [{\hierC{Part/Portion}}
+      [{\hierC{PartPortion}}
         [{\hierD{Stuff}}]
       ]
     ]
@@ -779,7 +779,11 @@ v2 labels.
     Moved wearer from \psst{Gestalt} to \psst{Possessor}
     and attire from \psst{Characteristic} to \psst{Possession}.
     \item Added \cref{sec:passives}: Passives and updated corresponding examples.
-    \item A few additional examples.
+    \item In \cref{sec:as-as}, changed the function of the first \p{as} in the \p{as}-\p{as} construction 
+    to \psst{Extent} (was \psst{Identity}).
+    \item Renamed \sst{Part/Portion} to \psst{PartPortion} to avoid technical complications 
+    of the slash.
+    \item A few additional examples and fixes.
     \item Added an index of construals by function.
   \end{itemize}
   \item \emph{Since the \textbf{April 7, 2017} version:}
@@ -791,7 +795,7 @@ v2 labels.
       (ii)~distance measurements, and (iii)~inherent parts.
     \item Significantly expanded the scope of \psst{Manner} to cover states of entities and depictives.
     \item Clarified \p{like} as \psst{ComparisonRef} with regard to categories and sets, 
-    and \psst{Part/Portion} with regard to elements and exceptions.
+    and \psst{PartPortion} with regard to elements and exceptions.
     \item Clarified \p{with} in regard to \psst{Topic} and \psst{Stimulus}.
     \item Added discussion of the ambiguity of temporal \p{over}: \psst{Duration} versus \rf{Time}{Duration}.
     \item Extensively clarified \psst{Purpose} and \psst{Beneficiary}, 
@@ -1226,7 +1230,7 @@ With a negated event, we use \psst{Duration}:
 \end{exe}
 The \psst{Locus} may be a part of another scene argument:
 part of a figure whose static orientation is described, 
-or a focal part of a ground where contact with the figure occurs:\footnote{\psst{Part/Portion} 
+or a focal part of a ground where contact with the figure occurs:\footnote{\psst{PartPortion} 
 was considered but rejected for these cases. Instead we assume the verb 
 semantics would stipulate that it licenses a \psst{Theme} as well as a (core) \psst{Locus} 
 which must be a part of that \psst{Theme}.}
@@ -2844,7 +2848,7 @@ where the semantic criteria for \psst{Possessor} are not met.
 For instance, s-genitive marking of participant roles (\psst{Agent}, \psst{Experiencer}, 
 etc.)\ are analyzed with \psst{Gestalt} as the function. 
 Moreover, the s-genitive construction, 
-unlike \p{of}, is never analyzed with \psst{Whole} as the scene role, 
+unlike \p{of}, is never analyzed with \psst{Whole} as the function, 
 so \rf{Whole}{Gestalt} is used. 
 See \cref{sec:genitives} for discussion of possessive constructions.
 
@@ -2897,7 +2901,7 @@ See \psst{SocialRel}.
 \hierCdef{Whole}
 
 \shortdef{Something described with respect to its part, portion, subevent, subset, 
-or set element. See \psst{Part/Portion}.}
+or set element. See \psst{PartPortion}.}
 
 \begin{exe}
   
@@ -2984,7 +2988,7 @@ understood with respect to that thing (the \psst{Gestalt}).}
 
 Can be used to construe person-to-person relationships such as kinship, 
 whose scene role should be \psst{SocialRel}. 
-Labels \psst{Possession}, \psst{Part/Portion}, and its subtype \psst{Stuff} 
+Labels \psst{Possession}, \psst{PartPortion}, and its subtype \psst{Stuff} 
 are defined for some important subclasses.
 
 \psst{Characteristic} applies directly to:
@@ -3011,7 +3015,7 @@ the attribute of the \psst{Theme} that is being examined:
   \ex\label{ex:search-obj-for} He searched the room \p{for} his laser pistol. [contrast intransitive \psst{Theme}, \cref{ex:search-for}]
   \ex He was tested \p{for} low blood sugar.
 \end{exe}
-\item	Anything that is borderline between subcategories \psst{Possession} and \psstX{Part/Portion}{Part\slash Portion}
+\item	Anything that is borderline between the \psst{Possession} and \mbox{\psst{PartPortion}} subcategories
 \end{itemize}
 
 Typically, one of ``\psst{Gestalt} \{HAS, CONTAINS\} \psst{Characteristic}'' is entailed. 
@@ -3062,12 +3066,12 @@ Paraphrase test: ``\psst{Possessor} POSSESSES \psst{Possession}'',
 or ``\psst{Possessor} is IN POSSESSION OF \psst{Possession}''. 
 The latter is especially appropriate for immediate concrete possession.
 
-\hierCdef{Part/Portion}
+\hierCdef{PartPortion}
 
 \shortdef{A part, portion, subevent, subset, or set element (e.g., an example or exception) 
 of some \psst{Whole}.}
 
-Anything directly labeled with \psst{Part/Portion} 
+Anything directly labeled with \psst{PartPortion} 
 is understood to be \textbf{incomplete} relative to the \psst{Whole}.
 This includes body parts and partial food ingredients.
 
@@ -3093,44 +3097,44 @@ and \p{but}, \p{except}, \p{except\_for} for exceptions:
 Some can be paraphrased with INCLUDES, but this is not determinative.
 
 \paragraph{Elements and Exceptions.} 
-\psst{Part/Portion} is used for adpositions marking a member or non-member of a set:
+\psst{PartPortion} is used for adpositions marking a member or non-member of a set:
 \begin{exe}
   \ex\label{ex:suchAs}	strategies \p{such\_as} divide-and-conquer
   \ex Everyone \p{except}/\p{but} Bob plays trombone.
 \end{exe}
 Set-membership can be construed as comparison:
 \begin{exe}
-  \ex strategies \p{like} divide-and-conquer [same reading as \cref{ex:suchAs}] (\rf{Part/Portion}{ComparisonRef})
+  \ex strategies \p{like} divide-and-conquer [same reading as \cref{ex:suchAs}] (\rf{PartPortion}{ComparisonRef})
 \end{exe}
 
 \paragraph{Diverse Examples.}
 In describing a set or whole, a sort of scanning with \p{from}\dots\p{to} can be used indicate diversity or coverage of 
 the items/parts:
 \begin{exe}
-  \ex\label{ex:diverserange} Everyone \p{from}$_{\text{\rf{Part/Portion}{Source}}}$ the peasants 
-  \p{to}$_{\text{\rf{Part/Portion}{Goal}}}$ the lord and lady gathered for the feast.
+  \ex\label{ex:diverserange} Everyone \p{from}$_{\text{\rf{PartPortion}{Source}}}$ the peasants 
+  \p{to}$_{\text{\rf{PartPortion}{Goal}}}$ the lord and lady gathered for the feast.
 \end{exe}
 
 \paragraph{\pex{Start \p{with}}, \pex{end \p{with}}, etc.}
 Along similar lines as \cref{ex:diverserange}, \p{with} can be used with 
 an aspectual verb to indicate an item in a sequence: 
 \pex{start \p{with}}, \pex{continue \p{with}}, \pex{end \p{with}}, and similar.
-Here the scene role \psst{Part/Portion} applies 
+Here the scene role \psst{PartPortion} applies 
 (though note that it is a part with respect to another argument of the verb, 
 not the verb itself):
 \begin{exe}
-  \ex\rf{Part/Portion}{Means}:\begin{xlist} 
+  \ex\rf{PartPortion}{Means}:\begin{xlist} 
     \ex My teacher started the lesson \p{with} a quiz.
     \ex The lesson started \p{with} a quiz.
   \end{xlist}
-  \ex The meal started \p{with} an appetizer. (\rf{Part/Portion}{Instrument})
+  \ex The meal started \p{with} an appetizer. (\rf{PartPortion}{Instrument})
 \end{exe}
 
 \hierDdef{Stuff}
 
 \shortdef{The members comprising a group/ensemble, 
 or the material comprising some unit of substance. 
-\psst{Stuff} is distinguished from other instances of \psst{Part/Portion}
+\psst{Stuff} is distinguished from other instances of \psst{PartPortion}
 in fully covering (or ``summarizing'') the aggregate whole.}
 
 Paraphrase test: ``\psst{Whole} CONSISTS OF \psst{Stuff}''
@@ -3256,7 +3260,7 @@ is given the label \psst{ComparisonRef}:
     \ex The shirt is more gray \p{than} black.
     %\ex She is greater in height \p{than} me.
   \end{xlist}
-  \ex \begin{xlist}
+  \ex\label{ex:comparAs} \begin{xlist}
     \ex She is as tall \p{as} I am.
     \ex Your face is (as$_{\text{\psst{Characteristic}}}$) red \p{as} a rose. (more on \p{as}-\p{as} comparatives: \cref{sec:as-as})
     \ex Your surname is the\_same \p{as} mine.
@@ -3381,7 +3385,7 @@ and merely indicating similarity, as in \cref{ex:likeSetSimilar} and \cref{ex:li
       \ex\label{ex:likeSetSimilar} [\emph{Exclusive/restrictive reading:} \emph{similar to} himself (but not including himself)]
         (\psst{ComparisonRef})
       \ex\label{ex:likeSetMember} [\emph{Inclusive/nonrestrictive reading:} \emph{such as}/\emph{including} himself (he promotes himself, among others)]
-        (\rf{Part/Portion}{ComparisonRef})
+        (\rf{PartPortion}{ComparisonRef})
     \end{xlist}
   \ex 
     \begin{xlist}
@@ -3516,7 +3520,8 @@ overlap lexically with ``true'' prepositions.}
 \shortdef{Entity, such as an institution or another individual, 
 with which an individual has a stable affiliation.}
 
-Typically, \psst{SocialRel} applies directly to interpersonal relations.
+Typically, \psst{SocialRel} applies directly to interpersonal relations 
+(versus the subtype \psst{OrgRole} for relations involving an organization).
 It does not have any prototypical adpositions. 
 Construals include:
 \begin{exe}
@@ -3796,11 +3801,13 @@ the \emph{functions} associated with passive \p{by} are limited to
 \subsection{Comparatives and Superlatives}
 
 Various constructions express a comparison between two arguments. 
+
+\paragraph{\psst{ComparisonRef} for second argument.}
 When the second argument (the point of reference) 
 is adpositionally marked, \psst{ComparisonRef} is used, regardless of 
 its complement's syntactic type: 
 \begin{exe}
-  \ex\begin{xlist} 
+  \ex\label{ex:comparisonrefArg}\begin{xlist} 
         \ex Your face is as red \p{as} \choices{a rose\\mine is}. (\psst{ComparisonRef})
         \ex Your face is redder \p{than} \choices{a rose\\mine is}. (\psst{ComparisonRef})
     \end{xlist}
@@ -3809,21 +3816,27 @@ See further examples at \psst{ComparisonRef}.
 
 \subsubsection{\p*{As}{as}-\p{as} comparative construction}\label{sec:as-as}
 
+\paragraph{\psst{Extent} argument.} 
 In an \p{as}-\p{as} comparison, the scene role of the first argument 
 (the object of the first \p{as}) is the role that would be operative 
 if the construction were removed and only the first argument remained: 
 e.g., \pex{I stayed as long as I could} $\rightarrow$ \pex{I stayed long}.
-The function of the first \p{as} is always \psst{Identity}:
+The function of the first \p{as} is always \psst{Extent} 
+to reflect that it marks the degree on a scale:
 \begin{exe}
   \ex\begin{xlist}
-    \ex Your face is \p{as} red as a rose. (\rf{Characteristic}{Identity})
-    \ex I helped \p{as} much as I could. (\rf{Extent}{Identity})
-    \ex I stayed \p{as} long as I could. (\rf{Duration}{Identity})
-    \ex I helped \p{as} often as I could. (\rf{Frequency}{Identity})
+    \ex I helped \p{as} much as I could. (\psst{Extent})
+    \ex Your face is \p{as} red as a rose. (\rf{Characteristic}{Extent})
+    \ex I helped \p{as} carefully as I could. (\rf{Manner}{Extent})
+    \ex I stayed \p{as} long as I could. (\rf{Duration}{Extent})
+    \ex I helped \p{as} often as I could. (\rf{Frequency}{Extent})
     \ex I've eaten (twice) \p{as} much (food) as you. [amount of something]\\ 
-    (\rf{Approximator}{Identity})
+    (\rf{Approximator}{Extent})
   \end{xlist}
 \end{exe}
+
+\paragraph{Second argument: \psst{ComparisonRef}.} 
+See \cref{ex:comparisonrefArg} above.
 
 \subsubsection{Superlatives}\label{sec:superlative}
 
