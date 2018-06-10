@@ -258,7 +258,7 @@
 \newcommand{\abmarker}{\ensuretext{\textcolor{purple}{\ensuremath{^{\textsc{A}}_{\textsc{B}}}}}}
 \newcommand{\jhmarker}{\ensuretext{\textcolor{cyan}{\ensuremath{^{\textsc{JD}}_{\textsc{H}}}}}}
 \newcommand{\ajbmarker}{\ensuretext{\textcolor{blue}{\ensuremath{^{\textsc{AJ}}_{\textsc{B}}}}}}
-\newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}}}
+\newcommand{\arkcomment}[3]{\ensuretext{\textcolor{#3}{[#1 #2]}\index{#1@\textcolor{#3}{#1}}}}
 %\newcommand{\arkcomment}[3]{}
 \newcommand{\cjd}[1]{\arkcomment{\cjdmarker}{#1}{green}}
 \newcommand{\nss}[1]{\arkcomment{\nssmarker}{#1}{magenta}}
@@ -831,6 +831,7 @@ and other relations that are usually semantically non-core properties of events.
     \ex\label{ex:in-activity-Circumstance} 
       You crossed the line \p{in} sharing confidential information.\\{} 
       [but see \cref{ex:in-activity-Topic} under \psst{Topic}, which is syntactically parallel]
+    \ex I found out \p{in} our conversation that she speaks 5~languages.
     \ex\rf{Circumstance}{Locus}:\begin{xlist}
       \ex I haven't seen them \p{in} that setting.
       \ex \p*{In}{in} that case, I wouldn't worry about it.
@@ -951,7 +952,15 @@ The preposition \p{over} is also ambiguous:
 \end{exe}
 See discussion under \psst{Duration}.
 
-If the scene role is \psst{Time}, the PP can be questioned with \emph{When?}.
+If the scene role is \psst{Time}, the PP can usually be questioned with \emph{When?}.
+
+\psst{Time} is also used for special clock time constructions, e.g.~identifying 
+a time via an offset:
+\begin{exe}
+  \ex The alarm rang at a quarter \p{of}/\p{to} 8.\nss{this use of \p{to} is \rf{Time}{EndTime} in the data. what about \p{of}?}
+  \ex The alarm rang at half \p{past} 8.\nss{is this a prep?}
+  \ex The alarm rang 15~minutes \p{before} 8. (\psst{Time}) [``15~minutes'' modifies the PP]
+\end{exe}
 
 \begin{history}
   In v1, point-like temporal prepositions (\p{at}, \p{on}, \p{in}, \p{as}) 
@@ -1279,6 +1288,9 @@ dynamic language may be used to describe static scenes.
 We use construal for these:
 \begin{exe}
   \ex A road runs \p{through} my property. (\rf{Locus}{Path})
+  \ex John saw Mary \choices{\p{through} the window\\\p{over} the fence}.\footnote{The scene establishes a static spatial arrangement of John, Mary, and the window\slash fence, 
+  with only metaphorical motion. Yet this is a non-prototypical \psst{Locus}: it cannot be questioned with \emph{Where?}, for example. 
+  Moreover, we understand from the scene that the object of the preposition is something with respect to which the viewer is navigating in order to see without obstruction.} (\rf{Locus}{Path})
   \ex The road extends \p{to} the river. (\rf{Locus}{Goal})
   \ex I saw him \p{from} the roof. (\rf{Locus}{Source})
   \ex\label{ex:protesters} Protesters were \choices{kept\\missing} \p{from} the area. (\rf{Locus}{Source})
@@ -1319,6 +1331,7 @@ In English, a prototypical \psst{Source} preposition is \p{from}:
   \ex people \p{from} France
   \ex The temperature is rising \p{from} a low of 30 degrees.
   \ex I have arrived \p{from} work.
+  \ex We discovered he was French \p{from} his attire. [indication]
   \ex I made it \p{out\_of} clay. [material]
   \ex\label{ex:coma} She \choices{awoke \p{from}\\came \p{out\_of}} a coma.
   \ex We are moving \p{off\_of} that strategy.
@@ -1412,6 +1425,7 @@ Prototypical prepositions include \p{to}, \p{into}, and \p{onto}:
   \ex The temperature is rising \p{to} a high of 40 degrees.
   \ex We have access \p{to} the library's extensive collections.
   \ex She slipped \p{into} a coma.
+  \ex The drugs put her \p{in} a coma. (\rf{Goal}{Locus})
   \ex \textbf{Result} \citep[p.~1224]{cgel}: \begin{xlist}
     \ex We arrived at the airport only \p{to} discover that our flight had been canceled.
     \ex May you live \p{to} be 100!
@@ -1793,9 +1807,10 @@ which typically license some sort of \pex{How?} question:
   Occasionally, a PP will mark a start or end state, in which case we collapse 
   the state/location distinction, using \psst{Source} or \psst{Goal} as the scene role:
   \begin{exe}
+    \ex John came \p{out\_of} a coma. (\psst{Source})
     \ex John slipped \p{into} a coma. (\psst{Goal})
     \ex The drugs put John \p{in} a coma. (\rf{Goal}{Locus})
-    \ex John came \p{out\_of} a coma. (\psst{Source})
+    \ex They chopped the wood \p{in} pieces. (\rf{Goal}{Locus})
   \end{exe}
   
 
@@ -1864,6 +1879,10 @@ This marks a secondary event that is asserted as the reason for the main event o
 \ex  I went outside \p{because\_of} the smell. %(Why did you go outside?)
 \ex  The rain is \p{due\_to} a cold front. %(Why is there rain?)
 \ex  He reacted \p{out\_of} anger. (\rf{Explanation}{Source})
+\ex\begin{xlist}
+  \ex He thanked her \p{for} the cookies.
+  \ex Thank you \p{for} being so helpful.
+\end{xlist}
 \end{exe}
 
 When a preposition like \p{after} is used and the relation is temporal as well as causal, 
@@ -2468,7 +2487,7 @@ which involve a back-and-forth between
     \ex I bought it \p{from} this company.
     \ex I heard the news \p{from} Larry.
   \end{xlist}
-  \ex \rf{Originator}{Possessor}: \begin{xlist}
+  \ex \rf{Originator}{Possessor}\nss{change to \rf{Originator}{Gestalt}?}: \begin{xlist}
     \ex \label{ex:worksGen} Shakespeare\p{'s} works [cf.~\cref{ex:worksOf,ex:worksBy}]
     \ex the store\p{'s} fresh produce
     \ex the restaurant\p{'s} food
@@ -2902,7 +2921,7 @@ A wearer of attire is also in this category:
 \ex the cloak \p{on} He-Who-Must-Not-Be-Named (\rf{Possessor}{Locus})
 \end{exe}
 
-See \psst{SocialRel}.
+See \psst{Accompanier}, \psst{Beneficiary}, \psst{OrgRole}.
 
 \hierCdef{Whole}
 
@@ -3224,6 +3243,21 @@ If the object denotes a item that the governor has on hand in their possession,
 then the construal \rf{Possession}{Accompanier} is used:
 \begin{exe}
   \ex I walked in \p{with} an umbrella. (\rf{Possession}{Accompanier})
+\end{exe}
+
+\paragraph{X\textsubscript{\emph{i}} \emph{bring}/\emph{take}/\dots~Y \p{with} PRON\textsubscript{\emph{i}}.} 
+This construction repeats the subject argument in a \p{with}-PP, 
+which is analyzed as \rf{Possessor}{Accompanier} or \psst{Accompanier}
+depending on whether the scene involves possession (of something nonvolitional) or not:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex I brought my friend \p{with} me. (\psst{Accompanier}) [emphasizes that the (volitional) friend is accompanying the subject]
+    \ex I brought my friend.
+  \end{xlist}
+  \ex\begin{xlist}
+    \ex I brought my backpack \p{with} me. (\rf{Possessor}{Accompanier}) [emphasizes that the (nonvolitional) backpack is in the subject's immediate control]
+    \ex I brought my backpack.
+  \end{xlist}
 \end{exe}
 
 See also: \psst{Instrument}, \psst{Manner}
@@ -3695,7 +3729,7 @@ In the present scheme, there are no supersenses that are restricted to serving a
 
 \subsection{No temporal-locational construals}\label{sec:temploc}
 
-\textbf{Temporal supersenses never occur with a function of \psst{Locus}, \psst{Path}, or \psst{Extent}.}
+\textbf{Temporal prepositions never occur with a function of \psst{Locus}, \psst{Path}, or \psst{Extent}.}
 
 Languages routinely borrow from spatial language to describe time, 
 and spatial cognition may underlie temporal cognition \citep[e.g.,][]{lakoff-80,nunez-06,casasanto-08}.
@@ -3703,7 +3737,7 @@ A liberal use of construal would treat \pex{arriving \p{in} the afternoon} as \r
 \pex{sleeping \p{through} the night} as \rf{Duration}{Path}, 
 \pex{running \p{for} 20~minutes} as \rf{Duration}{Extent}, and so forth.
 However, for simplicity and practicality, we elect not to annotate \psst{Locus}, \psst{Path}, or \psst{Extent} 
-construals on temporal adpositions. Thus:
+construals on ordinary temporal adpositions. Thus:
 \begin{xexe}
   \ex arriving \p{in} the afternoon (\psst{Time})
   \ex sleeping \p{through} the night (\psst{Duration})
@@ -3716,6 +3750,31 @@ construals on temporal adpositions. Thus:
   \ex Will you attend Saturday\p{'s} class? (\rf{Time}{Gestalt})
   \ex It took a year\p{'s} work to finish the book. (\rf{Duration}{Gestalt})
 \end{xexe}
+
+Note that the above is qualified to `ordinary temporal adpositions'. 
+\textbf{When the first argument of a comparative construction is marked with \p{as}, 
+the function is always \psst{Extent}, even if the scene role is temporal.} 
+See \cref{sec:as-as}.
+
+\subsection{Construals where the function supersense is an ancestor or descendant of the role supersense}
+
+Ordinarily, if a construal holds between two (distinct) supersenses, these are from different branches of the hierarchy.
+In a few cases, however, one is the ancestor of the other.
+
+\paragraph{Role is ancestor of function.}
+\begin{itemize}
+  \item Setting events or situations with a salient spatial metaphor are \rf{Circumstance}{Locus}.
+  \item Fictive motion (the extension of a normally dynamic preposition to a static spatial scene) 
+  can warrant \rf{Locus}{Goal} or \rf{Locus}{Source}, as discussed under \psst{Locus}.
+\end{itemize}
+
+\paragraph{Function is ancestor of role.}
+\begin{itemize}
+  \item Some s-genitives are annotated as \rf{Whole}{Gestalt}: see \cref{sec:genitives}.
+  \item When a locative PP is coerced to a goal, as with \emph{put}, \rf{Goal}{Locus} is used.
+\end{itemize}
+
+
 
 \section{Special Constructions}\label{sec:cxns}
 
@@ -3771,7 +3830,7 @@ with such roles do not need to be construed as \psst{Gestalt} or \psst{Possessor
     \ex the arrival \p{of} the queen (\psst{Theme})
     \ex \choices{the queen\p{'s} arrival\\\p{her}} (\rf{Theme}{Gestalt})
   \end{xlist}
-  \ex \choices{Shakespeare\p{'s}\\\p{his}} works [items that the creator or transferer possesses (at least initially)] (\rf{Originator}{Possessor})
+  \ex \choices{Shakespeare\p{'s}\\\p{his}} works [items that the creator or transferer possesses (at least initially)] (\rf{Originator}{Possessor}\nss{change to \rf{Originator}{Gestalt}?})
   \ex These are children\p{'s} clothes.\footnote{Cannot readily be paraphrased with \p{their} because \w{children} is not referential, 
   but rather refers to a kind. This construction has been termed the \emph{descriptive genitive} \citep[pp.~322, 327--328]{quirk-85}.} [clothes intended for use and possession by children] (\rf{Beneficiary}{Possessor})
 \end{exe}
