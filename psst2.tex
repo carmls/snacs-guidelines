@@ -279,7 +279,7 @@
 \newcommand{\citeposs}[2][]{\citeauthor{#2}'s (\citeyear[#1]{#2})}
 \newcommand{\Citeposs}[2][]{\Citeauthor{#2}'s (\citeyear[#1]{#2})}
 
-\usepackage{nameref}
+%\usepackage{nameref}
 \usepackage{cleveref}
 
 % use \S for all references to all kinds of sections, and \P to paragraphs
@@ -766,6 +766,7 @@ v2 labels.
   \item \textbf{Simplified the \psst{Temporal} subhierarchy.} See \cref{sec:Temporal}.
   \item \textbf{Removed} \sst{Activity} (mostly replaced with \psst{Circumstance} and \psst{Topic}), 
   \sst{Reciprocation} (mostly merged with \psst{Explanation}), and \sst{Material} (merged with \psst{Source}).
+  \item \textbf{Removed abstract labels} \psst{Affector}, \psst{Undergoer}, and \psst{Place}.
 \end{itemize}
 
 \subsection{Major changes from earlier versions of this document}
@@ -775,22 +776,29 @@ v2 labels.
   \begin{itemize}
     \item Policy changes reflected in STREUSLE~4.0: 
     \begin{itemize}
-      \item Rewrote \cref{sec:genitives}: Genitives/Possessives and updated corresponding examples 
+      \item Rewrote \fullref{sec:genitives} and updated corresponding examples 
       to reflect a clarified policy on possessive construals. 
       Moved wearer from \psst{Gestalt} to \psst{Possessor}
       and attire from \psst{Characteristic} to \psst{Possession}.
-      \item Added \cref{sec:passives}: Passives and updated corresponding examples.
+      \item Added \fullref{sec:passives} and updated corresponding examples.
     \end{itemize}
     \item Policy changes that will be reflected in STREUSLE~4.1: 
     \begin{itemize}
       \item In \cref{sec:as-as}, changed the function of the first \p{as} in the \p{as}-\p{as} construction 
       to \psst{Extent} (was \psst{Identity}).
+      \item Changed the function of \psst{Originator} possessives to \psst{Gestalt} (was \psst{Possessor}).
+      \item Expanded documentation and removed inconsistencies around containers and collective nouns 
+      (see \psst{Stuff}, \psst{Quantity}, \psst{Characteristic}, \psst{OrgRole}).
+      \item Revised the definition of \psst{Recipient} to relax the requirement of animacy.
       \item Renamed \sst{Part/Portion} to \psst{PartPortion} to avoid technical complications 
       of the slash.
     \end{itemize}
-    \item Added \cref{sec:constraints}: Constraints on Role and Function Combinations.
+    \item Added \fullref{sec:constraints}.
+    \item Added \fullref{sec:age}.
     \item A few additional examples and fixes.
     \item Added an index of construals by function.
+    \item Changes from v1 had neglected to mention the removal of \sst{Affector}, \sst{Undergoer}, \sst{Place}, 
+    \sst{Elements}, and \sst{Superset} (thanks to Ken Litkowski for pointing this out).
   \end{itemize}
   \item \emph{Since the \textbf{April 7, 2017} version:}
   \begin{itemize}
@@ -1312,6 +1320,7 @@ See also \rf{Locus}{Direction} for static distance measurements,
 described under \psst{Direction}.
 
 Qualitative states are analyzed as \rf{Manner}{Locus}, as described under \psst{Manner}.
+
 
 \hierCdef{Source}
 
@@ -2998,7 +3007,7 @@ or set element. See \psst{PartPortion}.}
   \end{xlist}
   \ex	the clothes are \p{in} a pile (\rf{Whole}{Manner})
   \ex There are several options to choose \p{from}. (\rf{Whole}{Source})
-  \ex Sets and ratios:
+  \ex\label{ex:sets} Sets and ratios:
     \begin{xlist}
       \ex This is one \p{of} the \choices{worst\\better} retaurants in town. (\psst{Whole})
       \ex 2 \p{in} 10 American children are redheads. (\rf{Whole}{Locus})
@@ -3029,6 +3038,12 @@ by combining two or more items in the object NP (contrast with \cref{ex:amongSet
   \ex\label{ex:betweenParties}  The negotiations \choices{\p{between}\\\p{among}} the parties went well. (\rf{Agent}{Whole})
   \exp{ex:betweenParties} The negotiations \p{by} the parties went well. (\psst{Agent})
 \end{exe}
+
+\begin{history}
+  In v1, \sst{Superset} was distinguished as a subtype of \psst{Whole} 
+  for examples such as \cref{ex:sets}, but the distinction was dropped for v2 
+  (as was \sst{Elements}: see \psst{PartPortion}).
+\end{history}
 
 \hierBdef{Characteristic}
 
@@ -3193,6 +3208,13 @@ not the verb itself):
   \end{xlist}
   \ex The meal started \p{with} an appetizer. (\rf{PartPortion}{Instrument})
 \end{exe}
+
+\begin{history}
+  In v1, instead of this category, there were separate categories 
+  \sst{Elements} for set members, \sst{Comparison/Contrast} for exemplification,
+  and \sst{Attribute} for other parts (grouped with properties, which are now \psst{Gestalt}).
+  (\sst{Superset} was removed along with \sst{Elements}: see \psst{Whole}.)
+\end{history}
 
 \hierDdef{Stuff}
 
@@ -4081,6 +4103,15 @@ Alone; unaccompanied:
   \ex I am \p{by} myself right now. (\psst{Accompanier})
 \end{exe}
 
+\subsection{Ages}\label{sec:age}
+
+An individual's age is a temporal property, licensing both \psst{Time} and \psst{Characteristic} prepositions:
+\begin{exe}
+  \ex\begin{xlist} 
+    \ex a child \p{of} (age) 5 (years) (\psst{Characteristic})
+    \ex Martha was already reading \choices{\p{at}/\p{by}/\p{before}} (the age of$_{\text{\psst{Identity}}}$) 5 (years). (\psst{Time})
+  \end{xlist}
+\end{exe}
 
 \section{Special Labels}\label{sec:special}
 
