@@ -970,17 +970,21 @@ See discussion under \psst{Duration}.
 
 If the scene role is \psst{Time}, the PP can usually be questioned with \emph{When?}.
 
-\psst{Time} is also used for special clock time constructions, e.g.~identifying 
+\psst{Time} is also used for special constructions for expressing clock times, e.g.~identifying 
 a time via an offset:
 \begin{exe}
-  \ex The alarm rang at a quarter \p{of}/\p{to} 8.\nss{this use of \p{to} is \rf{Time}{EndTime} in the data. what about \p{of}?}
-  \ex The alarm rang at half \p{past} 8.\nss{is this a prep?}
+  \ex\begin{xlist}
+    \ex The alarm rang at \choices{a quarter \p{after}\\half \p{past}} 8. (\psst{Time})
+    \ex\label{ex:quarterTo} The alarm rang at a quarter \p{to} 8. (\rf{Time}{Goal})
+    \ex The alarm rang at a quarter \p{of} 8.\footnote{In some dialects, this is an alternate way to express the same meaning as \cref{ex:quarterTo}. 
+    It seems that \p{to} and \p{of} construe the same time interval from opposite directions.} (\rf{Time}{Source})
+  \end{xlist}
   \ex The alarm rang 15~minutes \p{before} 8. (\psst{Time}) [``15~minutes'' modifies the PP]
 \end{exe}
 
 \begin{history}
   In v1, point-like temporal prepositions (\p{at}, \p{on}, \p{in}, \p{as}) 
-  were distinguished from displaced temporal prepositions (\p{before}, \p{after}, etc.) 
+  were distinguished from displaced temporal prepositions (\p{before}, \p{after}, etc.)\ 
   which present the two times in the relation as unequal. 
   \sst{RelativeTime} inherited from \psst{Time} and was reserved for the 
   displaced temporal prepositions, as well as subclasses \psst{StartTime}, 
@@ -989,7 +993,7 @@ a time via an offset:
   For v2, \sst{RelativeTime} was merged into \psst{Time}: the distinction 
   was found to be entirely lexical and lacked parallelism with the spatial hierarchy. 
   \sst{ClockTimeCxn} was also merged with \psst{Time}, the usages covered by the former 
-  (expressions of clock time like \pex{ten \p{of} seven})
+  (expressions of clock time like \pex{ten \p{to} seven})
   being exceedingly rare and not very different semantically from 
   prepositions like \p{before}.
   \sst{DeicticTime} became \psst{Interval}.
