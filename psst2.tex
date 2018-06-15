@@ -789,6 +789,7 @@ v2 labels.
       \item Changed the function of \psst{Originator} possessives to \psst{Gestalt} (was \psst{Possessor}).
       \item Expanded documentation and removed inconsistencies around containers and collective nouns 
       (see \psst{Stuff}, \psst{Quantity}, \psst{Characteristic}, \psst{OrgRole}).
+      \item Specified \rf{Manner}{ComparisonRef} for certain adverbial uses of \p{like}.
       \item Revised the definition of \psst{Recipient} to relax the requirement of animacy.
       \item Renamed \sst{Part/Portion} to \psst{PartPortion} to avoid technical complications 
       of the slash.
@@ -845,6 +846,11 @@ and other relations that are usually semantically non-core properties of events.
       \ex \p*{In}{in} that case, I wouldn't worry about it.
     \end{xlist}
     \ex Bipartisan compromise is unlikely \p{with} the election just around the corner.
+    \ex \p*{As}{as} meaning `when' or `while':\begin{xlist}
+      \ex I ran into her \p{as} I was leaving.\nss{seems like Time}
+      \ex \p*{As}{as} we watched, she transformed into a cat.
+      \ex We will continue to update you \p{as} information arrives. 
+    \end{xlist}
   \end{exe}
   For these cases, the preposition helps situate 
   the background context in which the main event takes place. 
@@ -1689,6 +1695,11 @@ which typically license some sort of \pex{How?} question:
     \ex He reacted \p{with} nervous laughter. [contrast: \psst{Means}]
 %His reaction was angry; His angry reaction: also Manner, though not prepositional
     \ex I made the decision \choices{\p{by} myself\\\p{without} anyone else\\\p{on}\_~~my~~\_own}. [see \cref{sec:refl}]
+    \ex \rf{Manner}{ComparisonRef}:\begin{xlist}
+      \ex You eat \p{like} a pig (eats).
+      \ex You smell \p{like} a pig.
+    \end{xlist}
+    \ex\label{ex:smellOf} \choices{Your father smells\\The soup tastes} \p{of} elderberries. (\rf{Manner}{Topic}) [also~\cref{ex:smellOfNotCmp}]
   \end{exe}
   
   \item An adverbial \textbf{depictive} characterizing a participant of an event:
@@ -1708,7 +1719,6 @@ which typically license some sort of \pex{How?} question:
       \ex music \p{in} C major
       \ex She loves teaching, and it shows \p{in} her smile.
     \end{xlist}
-    \ex\label{ex:smellOf} \choices{Your father smells\\The soup tastes} \p{of} elderberries. (\rf{Manner}{Topic}) [also~\cref{ex:smellOfNotCmp}]
   \end{exe}
   
   \item \emph{What} + \p{like} (\emph{what he looks \p{like}}, etc.): see \cref{ex:whatlike} under \psst{ComparisonRef}.
@@ -3435,7 +3445,26 @@ They amount to saying
 \pex{He is shorter than the height he would have to be in order to play basketball}, 
 which features separate constructions for comparison and necessity-for-purpose.
 
-\paragraph{Versus \psst{Manner}.} \nss{TODO}
+\paragraph{\rf{Manner}{ComparisonRef} construal.}
+This applies to an analogy that describes the \emph{how} of an event 
+(be it agentive or perceptual):
+\begin{exe}
+\ex \rf{Manner}{ComparisonRef}:\begin{xlist}
+  \ex You eat \p{like} a pig (eats).
+  \ex You smell \p{like} a pig.
+\end{xlist}
+\end{exe}
+However, where an analogy is an external comment on an event 
+rather than filling in a role of the event, it is simply \psst{ComparisonRef}. 
+Contrast:
+\begin{exe}
+  \ex You ate a whole pie \p{like} my cousin did.
+  \begin{xlist}
+    \ex \emph{Role reading:} The way in which you ate a pie was similar. (\rf{Manner}{ComparisonRef})
+    \ex \emph{External comment reading:} You ate a whole pie, and so did my cousin. (\psst{ComparisonRef})
+  \end{xlist}
+  %\ex I was elated, \p{like}/\p{as\_if} I had just won the lottery. (\psst{ComparisonRef})
+\end{exe}
 
 \paragraph{Analogy and non-analogy readings of \p{like}.}
 In descriptions, adverbial \p{like}, \p{as\_if}, etc.\  %with an extracted object of \pex{what} 
@@ -3444,12 +3473,12 @@ For example:
 \begin{exe}
   \ex This looks \p{like} a Van Gogh painting.
   \begin{xlist}
-    \ex \emph{Analogy reading:} This looks similar to a Van Gogh painting. (\psst{ComparisonRef})
+    \ex \emph{Analogy reading:} This looks similar to a Van Gogh painting. (\rf{Manner}{ComparisonRef})
     \ex \emph{Conclusion reading:} This looks to be a Van Gogh painting (it probably is one). (\rf{Theme}{ComparisonRef})
   \end{xlist}
   \ex It sounded \p{like}/\p{as\_if}
   \begin{xlist}
-    \ex \dots he had drunk a gallon of helium. (\psst{ComparisonRef}: analogy reading more likely)
+    \ex \dots he had drunk a gallon of helium. (\rf{Manner}{ComparisonRef}: analogy reading more likely)
     \ex \dots they weren't taking me seriously. (\rf{Theme}{ComparisonRef}: conclusion reading more likely)
   \end{xlist}
 \end{exe}
