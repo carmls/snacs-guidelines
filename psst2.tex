@@ -793,6 +793,7 @@ v2 labels.
       (see \psst{Stuff}, \psst{Quantity}, \psst{Characteristic}, \psst{OrgRole}).
       \item Specified \rf{Manner}{ComparisonRef} for certain adverbial uses of \p{like}.
       \item Revised the definition of \psst{Recipient} to relax the requirement of animacy.
+      \item Mentioned conditions as a subclass of \psst{Circumstance}.
       \item Renamed \sst{Part/Portion} to \psst{PartPortion} to avoid technical complications 
       of the slash.
     \end{itemize}
@@ -848,11 +849,8 @@ and other relations that are usually semantically non-core properties of events.
       \ex \p*{In}{in} that case, I wouldn't worry about it.
     \end{xlist}
     \ex Bipartisan compromise is unlikely \p{with} the election just around the corner.
-    \ex \p*{As}{as} meaning `when' or `while':\begin{xlist}
-      \ex I ran into her \p{as} I was leaving.\nss{seems like Time}
-      \ex \p*{As}{as} we watched, she transformed into a cat.
-      \ex We will continue to update you \p{as} information arrives. 
-    \end{xlist}
+    \ex\label{ex:as-while} \p*{As}{as} we watched, she transformed into a cat. 
+    [`while', `unfolding at the same time as'; not simply providing a `when'---contrast~\cref{ex:as-when} under \psst{Time}]
   \end{exe}
   For these cases, the preposition helps situate 
   the background context in which the main event takes place. 
@@ -903,6 +901,12 @@ and other relations that are usually semantically non-core properties of events.
   \begin{exe}
     \ex\label{ex:over-lunch} Let's discuss the matter \p{over} lunch. [compare \cref{ex:at-lunch}]
   \end{exe}
+
+\item \textbf{Conditions}
+\begin{exe}
+  \ex You can leave \choices{\p{as\_long\_as}\\provided} your work is done.
+  \ex Whether you can leave \choices{depends \p{on}\\is subject \p{to}} whether your work is done.
+\end{exe}
 \end{itemize}
 
 \hierBdef{Temporal}
@@ -937,8 +941,13 @@ use of locational metaphors for temporal relations.}
     \ex They will greet us \choices{\p{on}\\\p{upon}} our arrival.
     \ex\label{ex:onXOccasion} I succeeded \p{on} \choices{the fourth attempt\\several occasions}. [contrast \emph{on occasion}, \cref{ex:onOccasion}]
   \end{xlist}
+  \ex\label{ex:as-when}\p*{As}{as} meaning `when' (contrast \cref{ex:as-while} under \psst{Circumstance}):\begin{xlist}
+    \ex The lights went out \p{as} I opened the door.
+    \ex A bee stung me \p{as} I was eating lunch.
+  \end{xlist}
   \ex I will finish \p{after} \choices{tomorrow\\lunch\\you (do)}.
   \ex I will finish \p{by} \choices{tomorrow\\lunch}.
+  \ex I will contact you \choices{\p{as\_soon\_as}\\once} it's ready.
 \end{exe}
 
 The preposition \p{since} is ambiguous:
@@ -1717,7 +1726,7 @@ which typically license some sort of \pex{How?} question:
       \ex You eat \p{like} a pig (eats).
       \ex You smell \p{like} a pig.
     \end{xlist}
-    \ex\label{ex:smellOf} \choices{Your father smells\\The soup tastes} \p{of} elderberries. (\rf{Manner}{Topic}) [also~\cref{ex:smellOfNotCmp}]
+    \ex\label{ex:smellOf} \choices{Your father smells\\The soup tastes} \p{of} elderberries. (\rf{Manner}{Stuff}) [also~\cref{ex:smellOfNotCmp}]
   \end{exe}
   
   \item An adverbial \textbf{depictive} characterizing a participant of an event:
@@ -1728,9 +1737,10 @@ which typically license some sort of \pex{How?} question:
   \item The \textbf{form or shape} that something takes, including language of communication 
   and shape of motion:
   \begin{exe}
-    \ex \rf{Manner}{Locus}:\begin{xlist}
+    \ex\label{ex:in-shape} \rf{Manner}{Locus}:\begin{xlist}
+      \ex The clothes are (sitting) \p{in} a pile. [contrast adnominal use: \cref{ex:in-pile-adnominal} under \psst{Whole}]
+      \ex The ribbon is (tied) \p{in} a bow.
       \ex The sand is \p{in} a pyramid shape.
-      \ex The clothes are (sitting) \p{in} a pile.
       \ex\label{ex:pathmanner} They dance \p{in} a circle.
       \ex I read the book \p{in} French.
       \ex The book is \p{in} French.
@@ -2330,6 +2340,11 @@ mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene 
     \ex I was accused \p{of} treason.
     \ex a picture \p{of} Whistler's mother
     \ex three \choices{copies\\versions} \p{of} the test
+    \ex\rf{Topic}{Identity}---see discussion at \psst{Identity}:
+      \begin{xlist}
+        \ex the topic/issue/question \p{of} semantics
+        \ex the idea \p{of} raising money
+      \end{xlist}
     \ex The \choices{ratings\\reviews} \p{for} this film are atrocious.
     \ex I did not hazard a guess \p{as\_to} the cause.
   \end{xexe}
@@ -2819,10 +2834,14 @@ and \p{as} (where the object is the category):
   \ex \p*{As}{as} a liberal state, Washington has not been receptive to Trump's message.
   \ex\label{ex:ascolleague} I like Bob \p{as} a colleague. [but not as a friend]
   \ex What a gem \p{of} a restaurant! [exclamative idiom: both NPs are indefinite]
-  \ex the \choices{idea\\task\\hassle} \p{of} opening a new business
-  \ex\label{ex:shell} the \choices{topic\\issue} \p{of} semantics
+  \ex the problem/task/hassle \p{of} raising money
   \ex the age \p{of} eight
   \ex They did a great job \p{of} cleaning my windows.
+  \ex\label{ex:shell} \rf{Topic}{Identity}, with a governing noun in the domain of communication or cognition:
+    \begin{xlist}
+      \ex the topic/issue/question \p{of} semantics
+      \ex the idea \p{of} raising money
+    \end{xlist}
 \end{exe}
 Something may be specified with a category in order to disambiguate it \cref{ex:stateof}, 
 or to provide an interpretation or frame of reference with which that entity is to be considered.
@@ -3033,7 +3052,7 @@ or set element. See \psst{PartPortion}.}
     \ex the escape key \p{on} the keyboard
     \ex the flaxen hair \p{on} the girl
   \end{xlist}
-  \ex	the clothes are \p{in} a pile (\rf{Whole}{Manner})
+  \ex\label{ex:in-pile-adnominal}	the clothes \p{in} that pile are dirty (\rf{Whole}{Locus}) [but contrast adverbial/predicative \p{in}+shape: \cref{ex:in-shape} under \psst{Manner}]
   \ex There are several options to choose \p{from}. (\rf{Whole}{Source})
   \ex\label{ex:sets} Sets and ratios:
     \begin{xlist}
@@ -3121,6 +3140,14 @@ the attribute of the \psst{Theme} that is being examined:
   \ex He examined the vase \p{for} damage.
   \ex\label{ex:search-obj-for} He searched the room \p{for} his laser pistol. [contrast intransitive \psst{Theme}, \cref{ex:search-for}]
   \ex He was tested \p{for} low blood sugar.
+\end{exe}
+\item The scale or dimension by which items are compared:
+\begin{exe}
+  \ex The children are \choices{sorted\\screened} \p{by} height
+  \ex\begin{xlist}
+    \ex She exceeds him \p{in} height
+    \ex There is no difference \p{in} height
+  \end{xlist}
 \end{exe}
 \item	Anything that is borderline between the \psst{Possession} and \mbox{\psst{PartPortion}} subcategories
 \end{itemize}
@@ -3520,7 +3547,7 @@ a positive or negative evaluation is available, whereas \pex{what} is more neutr
 
 Constrast unaccusative perception verb + \p{of} combinations:
 \begin{exe}
-  \ex\label{ex:smellOfNotCmp} \choices{Your father smells\\The soup tastes} \p{of} elderberries. (\rf{Manner}{Topic}\nss{\rf{Manner}{Stuff}?}) [also~\cref{ex:smellOf}]
+  \ex\label{ex:smellOfNotCmp} \choices{Your father smells\\The soup tastes} \p{of} elderberries. (\rf{Manner}{Stuff}) [also~\cref{ex:smellOf}]
 \end{exe}
 
 \paragraph{Category exemplars and set members.} 
