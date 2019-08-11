@@ -2251,13 +2251,13 @@ Adpositional \psst{Theme}s are usually, but not always, construed as something e
 
 \paragraph{Goods and services.}
 In a commercial scene, the preposition introducing the item or event 
-incurring a cost receives \psst{Theme} as its scene role. 
+incurring a cost receives \psst{Theme} as its scene role.\nss{rev: change to limit Theme to events, Possession for items?} 
 If the object of the preposition denotes an event and the preposition 
 is \p{to}, \p{for}, or similar, then the construal \rf{Theme}{Purpose} is used:
 \begin{exe}
   \ex \begin{xlist}
-    \ex They spent \$500 \p{on} the repairs. (\psst{Theme})
-    \ex They charged/paid/owed \$500 \p{for} the bicycle. (\psst{Theme})
+    \ex They spent \$500 \p{on} the repairs. (\psst{Theme})\nss{rev: spent \$500 on a bicycle would be \rf{Possession}{Theme}?}
+    \ex They charged/paid/owed \$500 \p{for} the bicycle. (\psst{Theme}\nss{rev: \rf{Possession}{Theme}?})
     \ex They charged/paid/owed \$500 \p{for} the repairs. (\rf{Theme}{Purpose})
     \ex They asked \$500 \p{to} make the repairs. (\rf{Theme}{Purpose})
     \ex \$500 \choices{\p{for}\\\p{to} make} the repairs was excessive. (\rf{Theme}{Purpose})
@@ -2532,6 +2532,9 @@ in the languages we have looked at. In English, it can be construed in several w
 
 Bodily events with an \psst{Experiencer} are limited to \textbf{perceptions} like seeing and hearing, and \textbf{sensations} such as pain and hunger.
 The undergoer of an involuntary bodily event like sneezing, bleeding, falling asleep, breaking a limb, or dying would instead be a \psst{Theme}, as these events are primarily physical in nature.
+
+One whose \textbf{mental state} (including events of knowledge, memory, belief, desire, intention) or \textbf{emotion} is described is an \psst{Experiencer}. 
+However, the individual is an \psst{Agent} if exhibiting or acting on their thoughts\slash emotions, even internally (e.g.~making a decision).
 
 Less canonically, \psst{Experiencer} applies to semi-pragmatic usages meaning `from the perspective of':\footnote{Interestingly, 
 many uses of \p{for} carry an information structural association of delimiting the scope of an assertion. 
@@ -3000,9 +3003,10 @@ See \cref{sec:genitives} for discussion of possessive constructions.
 
 \hierCdef{Possessor}
 
-\shortdef{Animate who \textbf{has} something (the \psst{Possession}) 
-which is not part of their body 
-or inherent to their identity/character but could, in principle, be taken away.}
+% \shortdef{Animate who \textbf{has} something (the \psst{Possession}) 
+% which is not part of their body 
+% or inherent to their identity/character but could, in principle, be taken away.}
+\shortdef{Animate party that has a piece of \textbf{property} (something potentially with monetary value: the \psst{Possession}) on a permanent or temporary basis. The \psst{Possession} must be \emph{alienable}, i.e.~not a part or attribute of the \psst{Possessor}.} 
 
 Prototypically expressed with the \emph{s-genitive} (\cref{sec:genitives}: \p{'s} and possessive pronouns), 
 and \p{of} (the \emph{of-genitive}):
@@ -3025,12 +3029,19 @@ and \p{of} (the \emph{of-genitive}):
 \end{multicols}}
 \end{exe}
 \psst{Possessor} is not limited to cases of \emph{ownership}, but also includes temporary forms of possession, 
-such when something is on loan to or under the control of the possessor:
+such when something is on loan to or under the control of the possessor. 
+The \psst{Possessor} may be \textit{borrowing}, \textit{renting}, \textit{wearing}, or \textit{holding} the property:
 \begin{exe}
   \ex John\p{'s} hotel room [the room John is staying in as a guest]
   \ex Mary\p{'s} delivery truck [the company truck that Mary drives as an employee]
 \end{exe}
-A wearer of attire is also in this category:
+
+There may be an implicit piece of property of which the stated item is a part:
+\begin{exe}
+  \ex \p*{My}{my} windshield (= the windshield of my vehicle) is foggy.
+\end{exe}
+
+A wearer of attire may be construed in multiple ways:
 \begin{exe}
 {\setlength\multicolsep{0pt}%
 \begin{multicols}{2}
@@ -3042,7 +3053,34 @@ A wearer of attire is also in this category:
 \ex the cloak \p{on} He-Who-Must-Not-Be-Named (\rf{Possessor}{Locus})
 \end{exe}
 
-See \psst{Accompanier}, \psst{Beneficiary}, \psst{OrgRole}.
+\textbf{Pets}, by default, are treated as property rather than family members:
+\begin{exe}
+  \ex Hermione\p{'s} cat
+\end{exe}
+
+\paragraph{Abstract possession.} 
+For \psst{Possessor}\slash \psst{Possession} to apply to an abstract piece of property, the property must be a commodity in the financial/commercial domain, or information stored externally to the \psst{Possessor} in physical or electronic media.
+\begin{exe}
+  \ex Commodity: \begin{xlist}
+    \ex \p{my} shares of stock
+    \ex \p{my} insurance (= insurance that I ``own'')
+    \end{xlist}
+  \ex Stored information: \begin{xlist}
+    \ex \p{my} computer file
+    \ex \p{my} website
+    \ex \p{my} contract
+    \end{xlist}
+\end{exe}
+This excludes other abstract notions that can be metaphorically possessed or transferred:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex the president\p{'s} power (\psst{Gestalt})
+    \ex \p{my} memories of childhood (\rf{Experiencer}{Gestalt})
+    \end{xlist}
+\end{exe}
+
+The initial possessor of something that is created or transferred is labeled \psst{Originator}, and the final possessor of something transferred is the \psst{Recipient}.
+See also \psst{Accompanier}, \psst{Beneficiary}, \psst{OrgRole}, and \fullref{sec:genitives}.
 
 \hierCdef{Whole}
 
@@ -3200,19 +3238,29 @@ This does not help to distinguish subtypes.
 
 \hierCdef{Possession}
 
-\shortdef{That which some \psst{Possessor} (animate or personified, e.g.~an institution) 
-\textbf{has}, and which is not part of their body or inherent to their identity/character 
-but could, in principle, be taken away.}
+%\shortdef{That which some \psst{Possessor} (animate or personified, e.g.~an institution) 
+%\textbf{has}, and which is not part of their body or inherent to their identity/character 
+%but could, in principle, be taken away.}
+% Sometimes called \emph{alienable} possession. 
+% The possession may be concrete or abstract, and temporary or permanent.
 
-Sometimes called \emph{alienable} possession. 
-The possession may be concrete or abstract, and temporary or permanent.
+\shortdef{Piece of \textbf{property} (something potentially with monetary value) that an animate party has on a permanent or temporary basis, or that is transferred between parties. The \psst{Possession} must be \emph{alienable}, i.e.~not a part or attribute of the \psst{Possessor}.} 
+
+The \psst{Possessor} may \textit{own} or may be \textit{borrowing}, \textit{renting}, \textit{wearing}, or \textit{holding} the property.
 
 Prototypical prepositions are \p{with} and \p{without}:
 \begin{exe}
-\ex	People \p{with} money
+  \ex	People \choices{\p{with}\\\p{without}} money
+\end{exe}
+There is also a (negated) possession sense of \p{out}/\p{out\_of}:
+\begin{exe}
+  \ex\begin{xlist} 
+    \ex We are \p{out\_of} toilet paper.
+    \ex Toilet paper? We are \p{out}.
+  \end{xlist}
 \end{exe}
 
-Attire is included here as well:
+Attire may be construed in multiple ways:
 \begin{exe}
   \ex the kid \p{with} \choices{a vest\\makeup} (on)
   \ex the kid \p{in} a vest (\rf{Possession}{Locus})
@@ -3223,18 +3271,14 @@ Immediate concrete possession uses an \psst{Accompanier} construal:
   \ex Hagrid exited the shop \p{with} (= carrying) a snowy owl. (\rf{Possession}{Accompanier})
 \end{exe}
 
-There is also a (negated) possession sense of \p{out}/\p{out\_of}:
-\begin{exe}
-  \ex\begin{xlist} 
-    \ex We are \p{out\_of} toilet paper.
-    \ex Toilet paper? We are \p{out}.
-  \end{xlist}
-\end{exe}
+
 
 Paraphrase test: ``\psst{Possessor} POSSESSES \psst{Possession}'', 
 ``\psst{Possessor} is IN POSSESSION OF \psst{Possession}'', or 
 ``\psst{Possessor} HAS ON \psst{Possession}''. 
-The latter is especially appropriate for immediate concrete possession.
+``IN POSSESSION OF'' is especially appropriate for immediate concrete possession.
+
+See further discussion at \psst{Possessor}.
 
 \hierCdef{PartPortion}
 
