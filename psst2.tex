@@ -782,11 +782,17 @@ v2 labels.
   \item \emph{Version 2.3pre (\nss{release date TBD}):} %\emph{Since the \textbf{July 2, 2018} version:}
   \begin{itemize}
     \item Added \fullref{sec:ppmwp}.
-    \item Clarify that \psst{Experiencer} applies to bodily \emph{sensations} (not physical bodily changes), and add cognition examples.
+    \item \textbf{Substantially revised \psst{Possessor} and \psst{Possession} to clarify their scope.}
+    \item \textbf{For \psst{Possession} and \psst{Theme}, added discussion of transfer, goods, and services. 
+    Goods and other transferred items are now \psst{Possession}, while services remain as \psst{Theme}.}
+    \item At \psst{Cost}, clarified the explanation of when money should be treated like any other possession.
+    \item \textbf{Reclassified adverbial and predicative entity-descriptions (depictives, shapes, states) from \psst{Manner} to \psst{Characteristic}, and revised their definitions accordingly.}
+    \item Revised the definition of \psst{Means} and clarified its relationship to \psst{Manner}.
+    \item Clarified that \psst{Experiencer} applies to bodily \emph{sensations} (not physical bodily changes), and added cognition examples.
     \item Changed the treatment of replacees from \psst{InsteadOf} to \psst{Co-Theme}.
     \item List PP idioms in the index.
-    \item At \psst{Path}, clarified that motion events can be located as points (\psst{Locus}).
-    \item Rectify inconsistent treatment of a family member in relation to the family (now always \psst{OrgRole}).
+    \item At \psst{Path}, clarified that motion events can be located as points (\psst{Locus}), and relocated \cref{ex:pathmanner} from \psst{Manner}.
+    \item Rectified inconsistent treatment of a family member in relation to the family (now always \psst{OrgRole}).
     \item Organizational collective members: now \rf{OrgRole}{PartPortion}, formerly \rf{OrgRole}{Characteristic}.
     \item Added dotted version number to title and adjusted author list.
   \end{itemize}
@@ -1570,6 +1576,7 @@ specific starting and ending points:
   \ex The bird flew \p{over} the building.
   \ex The sun traveled \p{across} the sky.
   \ex Hot water is running \p{through} the pipes.
+  \ex\label{ex:pathmanner} They dance \p{in} a circle. (\rf{Path}{Locus})\nss{rev}
 \end{exe}
 
 It can also be a waypoint\slash something that must be passed or encircled. 
@@ -1694,8 +1701,11 @@ Typically these are licensed by a verb or adjective.
 
 \hierBdef{Means}
 
-\shortdef{Secondary action or event that characterizes \textbf{how} 
-the main event happens or is achieved.}
+\shortdef{Secondary action or event presented as playing 
+an intermediate causal role in facilitating 
+(but not instigating) the main event.\nss{rev}}
+% \shortdef{Secondary action or event that characterizes \textbf{how} 
+% the main event happens or is achieved.}
 
 Prototypically a volitional action, though not necessarily \cref{ex:chlorophyll}. 
 A volitional \psst{Means} will often modify an intended result, 
@@ -1709,12 +1719,16 @@ though the outcome can be unintended as well \cref{ex:oops}.
 
 \psst{Means} is similar to \psst{Instrument}, which is used for causally supporting entities 
 and is a kind of \psst{Participant}.
-See also \psst{Manner}, \psst{Topic}.
+%See also \psst{Manner}, \psst{Topic}.
 
 Contrast with \psst{Explanation}, which characterizes \textbf{why} 
 something happens. I.e., an \psst{Explanation} portrays the secondary event 
 as the causal \emph{instigator} of the main event, whereas \psst{Means} 
 portrays it merely as a \emph{facilitator}.
+
+Contrast also with \psst{Manner}. Both \psst{Means} and \psst{Manner} elaborate on the \textbf{how} of an event; 
+however, a \psst{Manner} describes a \emph{quality} of the main event, 
+rather than specifying a facilitating event.\nss{rev}
 
 \begin{history}
   In v1, \psst{Means} was a subtype of \psst{Instrument}, 
@@ -1725,8 +1739,9 @@ portrays it merely as a \emph{facilitator}.
 
 \hierBdef{Manner}
 
-\shortdef{The style in which an event unfolds, the form that something takes, 
-or the condition that something is in.}
+% \shortdef{The style in which an event unfolds, the form that something takes, 
+% or the condition that something is in.}
+\shortdef{Qualitative description of a situation, adding color to the main scene.}
 
 % FN definition of Manner under Expend_resource: 
 %Any description of the intentional act which is not covered by more specific FEs, 
@@ -1744,37 +1759,27 @@ which typically license some sort of \pex{How?} question:
     \ex He reacted \choices{\p{with} anger\\\p{in} anger\\angrily}.\footnote{\pex{He reacted \p{out\_of} anger} is \rf{Explanation}{Source}.}
     \ex He reacted \p{with} nervous laughter. [contrast: \psst{Means}]
 %His reaction was angry; His angry reaction: also Manner, though not prepositional
+    \ex\label{ex:wroteinfrench} \choices{I wrote the book\\They chatted} \p{in} French. [contrast \cref{ex:bookinfrench}]
     \ex I made the decision \choices{\p{by} myself\\\p{without} anyone else\\\lex[on\_my\_own]{\p{on}\_~~my~~\_own}}. [see \cref{sec:refl}]
+    \ex We talked \p{in} person.
     \ex \rf{Manner}{ComparisonRef}:\begin{xlist}
       \ex You eat \p{like} a pig (eats).
       \ex You smell \p{like} a pig.
     \end{xlist}
     \ex\label{ex:smellOf} \choices{Your father smells\\The soup tastes} \p{of} elderberries. (\rf{Manner}{Stuff}) [also~\cref{ex:smellOfNotCmp}]
+    \ex She loves teaching, and it shows \p{in} her smile. (\rf{Manner}{Locus})
   \end{exe}
   
-  \item An adverbial \textbf{depictive} characterizing a participant of an event:
+By contrast, depictives characterizing a participant of an event have a scene role of \psst{Characteristic}:
   \begin{exe}
-    \ex She entered the room \choices{\p{in} a stupor\\drunk}. (\rf{Manner}{Locus})
+    \ex She entered the room \choices{\p{in} a stupor\\drunk}. (= she was in a stupor when she entered) (\rf{Characteristic}{Locus}) [repeated: \psst{Characteristic}]
   \end{exe}
 
-  \item The \textbf{form or shape} that something takes, including language of communication 
-  and shape of motion:
-  \begin{exe}
-    \ex\label{ex:in-shape} \rf{Manner}{Locus}:\begin{xlist}
-      \ex The clothes are (sitting) \p{in} a pile. [contrast adnominal use: \cref{ex:in-pile-adnominal} under \psst{Whole}]
-      \ex The ribbon is (tied) \p{in} a bow.
-      \ex The sand is \p{in} a pyramid shape.
-      \ex\label{ex:pathmanner} They dance \p{in} a circle.
-      \ex I read the book \p{in} French.
-      \ex The book is \p{in} French.
-      \ex music \p{in} C major
-      \ex She loves teaching, and it shows \p{in} her smile.
-    \end{xlist}
-  \end{exe}
+
   
   \item \emph{What} + \p{like} (\emph{what he looks \p{like}}, etc.): see \cref{ex:whatlike} under \psst{ComparisonRef}.
   
-  \item The \textbf{state or condition} that something is in. 
+  \item \nss{TODO: from here} The \textbf{state or condition} that something is in. 
   The PP or intransitive preposition is used (especially predicatively) 
   to describe a qualitative state or condition of something (especially an entity) 
   that is not simply a relation of location, time, possession, quantity, causation, etc.\ 
@@ -1931,6 +1936,8 @@ However, the feasibility of this distinction may be worth revisiting in the futu
 to consider for v3: merge Characteristic and Manner as Quality,
 and treat the partiality difference as a matter of construal with different functions.
 E.g. Quality construed as State/Predicate vs. Quality construed as Component.}}
+
+\paragraph{Versus \psst{Means}.} See \psst{Means}.
 
 \paragraph{Versus \psst{ComparisonRef}.}
 See \psst{ComparisonRef}.
@@ -3140,7 +3147,7 @@ or set element. See \psst{PartPortion}.}
     \ex the escape key \p{on} the keyboard
     \ex the flaxen hair \p{on} the girl
   \end{xlist}
-  \ex\label{ex:in-pile-adnominal}	the clothes \p{in} that pile are dirty (\rf{Whole}{Locus}) [but contrast adverbial/predicative \p{in}+shape: \cref{ex:in-shape} under \psst{Manner}]
+  \ex\label{ex:in-pile-adnominal}	the clothes \p{in} that pile are dirty (\rf{Whole}{Locus}) %[but contrast adverbial/predicative \p{in}+shape: \cref{ex:in-shape} under \psst{Manner}]
   \ex There are several options to choose \p{from}. (\rf{Whole}{Source})
   \ex\label{ex:sets} Sets and ratios:
     \begin{xlist}
@@ -3182,9 +3189,11 @@ by combining two or more items in the object NP (contrast with \cref{ex:amongSet
 
 \hierBdef{Characteristic}
 
-\shortdef{Generalized notion of a part, feature, possession, 
+\shortdef{Generalized notion of a part, 
+feature\slash property\slash attribute name or value, 
+qualitative state\slash condition, possession, 
 or the contents or composition of something, 
-understood with respect to that thing (the \psst{Gestalt}).}
+understood with respect to that thing (the \psst{Gestalt}).\nss{rev}}
 
 Can be used to construe person-to-person relationships such as kinship, 
 whose scene role should be \psst{SocialRel}. 
@@ -3233,6 +3242,20 @@ the attribute of the \psst{Theme} that is being examined:
     \ex There is no difference \p{in} height
   \end{xlist}
 \end{exe}
+\item The \textbf{form or shape} that an entity takes, including language of communication within an information source:\nss{rev}
+  \begin{exe}
+    \ex\label{ex:in-shape} \rf{Characteristic}{Locus}:\begin{xlist}
+      %\ex The clothes are (sitting) \p{in} a pile. [contrast adnominal use: \cref{ex:in-pile-adnominal} under \psst{Whole}]
+      \ex The ribbon is (tied) \p{in} a bow.
+      \ex The sand is \p{in} a pyramid shape.
+      \ex\label{ex:bookinfrench} The book is \p{in} French. [contrast \cref{ex:wroteinfrench}]
+      \ex music \p{in} C major
+    \end{xlist}
+  \end{exe}
+\item An adverbial \textbf{depictive} characterizing a participant of an event:\nss{rev}
+  \begin{exe}
+    \ex She entered the room \choices{\p{in} a stupor\\drunk}. (= she was in a stupor when she entered) (\rf{Characteristic}{Locus}) [repeated at \psst{Manner} for contrast]
+    \end{exe}
 \item	Anything that is borderline between the \psst{Possession} and \mbox{\psst{PartPortion}} subcategories
 \end{itemize}
 
