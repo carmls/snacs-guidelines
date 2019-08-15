@@ -788,6 +788,7 @@ v2 labels.
     Goods and other transferred items are now \psst{Possession}, while services remain as \psst{Theme}.}
     \item \psst{Cost}: Clarified the explanation of when money should be treated like any other possession.
     \item \textbf{Reclassified adverbial and predicative entity-descriptions (depictives, shapes, states) from \psst{Manner} to \psst{Characteristic}, and revised their definitions accordingly.}
+    \item \textbf{Specified that \psst{Temporal} should be used directly for aspectual prepositions (previously it was an abstract category: \cref{sec:abstractlabels}).}
     \item Moved journey-type PPs from \psst{Manner} to \psst{Circumstance}.
     \item \psst{Means}: Revised the definition and clarified relationship to \psst{Manner}.
     \item Reworded the definition of \psst{SocialRel}.
@@ -943,9 +944,19 @@ and other relations that are usually semantically non-core properties of events.
 
 \hierBdef{Temporal}
 
-\shortdef{Abstract supercategory for temporal descriptions: 
+\shortdef{Supercategory for temporal descriptions: 
 \textbf{when}, \textbf{for how long}, \textbf{how often}, \textbf{how many times}, 
 etc.\ something happened or will happen.}
+
+Applies directly only to event descriptors with an aspectual quality that do not fit any of the subcategories:
+\begin{exe}
+  \ex The party is \p{over}. (= complete) (\psst{Temporal})
+  \ex The plans are \choices{\p{in} progress\\\p{on} hold\\\p{in} limbo}. (\rf{Temporal}{Locus})
+  \ex\begin{xlist}
+    \ex The party tomorrow is \p{on}. (= still scheduled to happen in the future) (\rf{Temporal}{Locus}) [see discussion at \psst{Characteristic}]
+    \ex The party tomorrow is \p{off}. (= canceled) (\rf{Temporal}{Locus})
+    \end{xlist}
+\end{exe}\nss{rev}
 
 \begin{history}
   The v1 category \sst{Age} (e.g., \pex{a child \p{of} five}) 
@@ -3215,10 +3226,13 @@ the attribute of the \psst{Theme} that is being examined:
     \item Intransitive prepositions expressing a qualitative state (not location, time, etc.):
     \begin{exe}
       \ex\rf{Characteristic}{Locus}:\begin{xlist}
-        \ex The lights are \p{off}.
-        \ex The party tonight is \p{on}. [scheduled to happen; not canceled]\nss{rev: TODO}
+        \ex The lights are \choices{\p{on}\\\p{off}\\\p{out}}. [also at \psst{Source} for contrast]
         \ex Political TV shows are \p{in}. [in fashion]
       \end{xlist}
+    \end{exe}
+    Contrast intransitive predicative prepositions describing an \emph{event}:
+    \begin{exe}
+      \ex The party tomorrow is \p{on}. (\rf{Temporal}{Locus}) [see: \psst{Temporal}]
     \end{exe}
   \end{itemize}
   
@@ -4004,10 +4018,10 @@ to cover every possible role\slash function combination for English,
 let alone other languages. 
 Below are the few categorical restrictions that seem warranted for English.
 
-\subsection{Supersenses that are purely abstract}
+\subsection{Supersenses that are purely abstract}\label{sec:abstractlabels}
 
-\psst{Participant}, \psst{Configuration}, and \psst{Temporal} are intended only to 
-organize subtrees of the hierarchy, and not to be used directly. 
+\psst{Participant} and \psst{Configuration} are intended only to 
+organize subtrees of the hierarchy, and not to be used directly.\nss{rev} 
 
 \subsection{Supersenses that cannot serve as functions}
 
