@@ -3045,6 +3045,19 @@ However, when there is a possessed item whose transfer is merely assumed from co
   \ex Waiter, is \p{my} food ready? [item identified or ordered for purchase]
   \ex Use \p{my} money (the money that I gave you) wisely! [item that was transferred]
 \end{exe}
+Possessed nouns like \emph{gift} and \emph{contribution} that refer to an entity
+but lexically imply a previous transfer event should be \psst{Possessor}
+unless another argument of the noun disambiguates \psst{Originator} vs.~\psst{Recipient}
+by process of elimination:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex That was \p{my} gift. (\psst{Possessor})
+    \ex That was \p{my} gift to$_{\text{\rf{Recipient}{Goal}}}$ John. (\rf{Originator}{Gestalt})
+    \ex That was \p{my} gift from$_{\text{\rf{Originator}{Source}}}$ Mary. (\rf{Recipient}{Gestalt})
+  \end{xlist}
+\end{exe}
+
+
 
 \paragraph{Communication.} 
 Communicative acts are treated as transfer of information, and thus \psst{Originator} 
