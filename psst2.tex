@@ -396,7 +396,7 @@
 \newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}\index[construals]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}}
 \newcommand{\backc}[0]{\hyperref[sec:coord]{\olbl{\backtick c}}\index{\backtick c@\olbl{\backtick c}}\xspace}
 \newcommand{\backd}[0]{\hyperref[sec:discourse]{\olbl{\backtick d}}\index{\backtick d@\olbl{\backtick d}}\xspace}
-\newcommand{\backi}[0]{\hyperref[sec:inf]{\olbl{\backtick i}}\index{\backtick i@\olbl{\backtick i}}\xspace}
+\newcommand{\backi}[0]{\hyperref[sec:specialinf]{\olbl{\backtick i}}\index{\backtick i@\olbl{\backtick i}}\xspace}
 \newcommand{\backposs}[0]{\hyperref[sec:possidiom]{\olbl{\backtick \$}}\index{\backtick \$@\olbl{\backtick \$}}\xspace}
 
 \newcommand{\tg}[1]{\texttt{#1}}	% supersense tag name
@@ -1509,7 +1509,7 @@ Prototypical prepositions include \p{to}, \p{into}, and \p{onto}:
   \ex We have access \p{to} the library's extensive collections.
   \ex She slipped \p{into} a coma.
   \ex The drugs put her \p{in} a coma. (\rf{Goal}{Locus})
-  \ex \textbf{Result} \citep[p.~1224]{cgel}: \begin{xlist}
+  \ex\label{ex:result} \textbf{Result} \citep[p.~1224]{cgel}: \begin{xlist}
     \ex We arrived at the airport only \p{to} discover that our flight had been canceled.
     \ex May you live \p{to} be 100!
   \end{xlist}
@@ -1899,11 +1899,15 @@ Question test: \psst{Explanation} and its subtype \psst{Purpose} license
 
 \hierCdef{Purpose}
 
-\shortdef{Something that somebody wants to bring about,
-asserted to be why something was done, is the case, or exists.}
+\shortdef{A desired outcome presented as contingent on some event, situation, entity, or resource.
+The \psst{Purpose} may be specific (e.g., an outcome that somebody tries to achieve by performing an action)
+or generic (e.g., an entity that was designed for or incidentally provides some affordance).}
 
-Central usages of \psst{Purpose} explain the motivation behind an action.
-Typically the governing event serves as a means for achieving or facilitating the \psst{Purpose}. 
+Central usages of \psst{Purpose} explain the motivation behind
+(hence subtype of \psst{Explanation}) an action;
+the action serves as a means for achieving or facilitating the \psst{Purpose}.
+Yet it is possible to complete the action without realizing the purpose.
+
 Prototypical markers include \p{for} and infinitive marker \p{to}:
 \begin{exe}
   \ex\begin{xlist}
@@ -1919,85 +1923,139 @@ for the desired event:
   \ex surgery \p{for} a leg injury [understood: `to treat a leg injury']
 \end{xlist}\end{exe}
 
-\noindent The following subcases serve to clarify the boundaries of \psst{Purpose}:
-\begin{itemize}
-\item	A desired outcome that is separate from, but typically a motivation for 
-(hence subtype of \psst{Explanation}), the main event. 
-It is possible to complete the main event without realizing the purpose.
-\item \textbf{Inanimate} thing or event which is aided\slash facilitated\slash addressed\slash achieved\slash acquired 
-as a consequence of the main event:
-\begin{exe}
-  \ex We hired a caterer \p{for} the party.
-  \ex surgery \p{for} an ingrown toenail
-  \ex Call the doctor \p{for} an appointment.
-  \ex Go to the store \p{for} eggs.
-\end{exe}
-For \textbf{animates} who are aided or harmed as a consequence of the main event, see \psst{Beneficiary}.
-\item	Something characterized as good/appropriate (or not) for some kind of use\slash activity\slash occasion 
-or inanimate thing affected\slash addressed\slash etc., 
-delimiting the applicability of a descriptor to that aspect of the thing:
-\begin{exe}
-  \ex \begin{xlist}
-      \ex This place is great \p{for} ping-pong. 
-      %[no commitment to evaluating the place in general]
-      \ex This is a great place \p{for} ping-pong.
-    \end{xlist}
-  \ex This cleaner is good \p{for} hardwood floors.
-  \ex\label{ex:greatForDinner} This restaurant is great \p{for} dinner.
-\end{exe}
-The evaluation is being delimited to a particular purpose:
-\cref{ex:greatForDinner} is not claiming the restaurant is great \emph{in general}, 
-just with respect to dinner.
-
-For \textbf{animates} used in similar constructions, see \psst{Beneficiary}.
-\end{itemize}
-
-%●	Intended use of something. “a shoulder TO cry on”, “a shoulder FOR crying on": Characteristic ~> Purpose
-
-Question test: \psst{Explanation} and its subtype \psst{Purpose}, 
-when used adverbially, license \pex{Why?} questions. 
-\psst{Purpose} usually licenses an \pex{in order to} 
-or \pex{for the purpose of} paraphrase.
-
-\paragraph{Goods and services.} See discussion at \psst{Theme}.
-
-\paragraph{Inherent purposes.}
-An \emph{entity} (typically an artifact) can be modified to explicate an intended use or affordance. 
-We analyze such a relationship with the construal \rf{Characteristic}{Purpose}: 
-the function of \psst{Purpose} reflects the \emph{intended use} aspect of the meaning, 
-while the scene role of \psst{Characteristic}
-highlights that the intended use can be understood as a \emph{static property} of the entity (part of its qualia structure).%
-\footnote{In FrameNet 
-as of v1.7, these sorts of purposes are labeled as \sst{Inherent\_purpose}. 
-See, e.g., the example ``MONEY [to support yourself and your family]'' in the \textbf{Money} frame 
+Less central usages present a potentially desirable outcome that could be
+brought about thanks to the availablility of an entity,
+such as a tool, facility, or expendable resource:\footnote{In FrameNet
+as of v1.7, these sorts of purposes are labeled as \sst{Inherent\_purpose}.
+See, e.g., the example ``MONEY [to support yourself and your family]'' in the \textbf{Money} frame
 (\url{https://framenet2.icsi.berkeley.edu/fnReports/data/lu/lu13361.xml?mode=annotation}).}
+
 \begin{exe}
-  \ex\label{ex:charPurp} \rf{Characteristic}{Purpose}:
-  \begin{xlist}
-    \ex a shoulder \p{to} cry on
-    \ex something \p{to} eat
-    \ex cleaner \p{for} hardwood floors
-%    \ex a good store \p{for} eggs [understood: `for acquiring/buying eggs']
-%    \ex a good book \p{to} give to young readers
-%    \ex a good book \p{for} young readers [understood: `for giving to young readers']
-    %\ex physical therapy \p{for} a leg injury. [understood: `treating a leg injury']
+  \ex\label{ex:inherentPurp} \begin{xlist}
+    \ex There is some wood \p{to} start a fire (with).
+    \ex Do you have a couch \choices{\p{to} sleep on\\\p{for} sleeping on}?
+    \ex This place is great \p{for} ping-pong.
+    \end{xlist}
+\end{exe}
+
+However, this category \emph{excludes} infinitival complements of modal and
+aspectual predicates \emph{that lack a direct object}:
+\begin{exe}
+  \ex\label{ex:NotPurpose}\begin{xlist}\ex He wants/needs \p{to} leave. (\backi)
+    \ex He is ready \p{to} leave. (\backi)
+    \ex He started/managed \p{to} leave. (\backi)
+    \end{xlist}
+\end{exe}
+
+The following tests help to clarify the boundaries of \psst{Purpose}:
+\begin{enumerate}
+\item If a relation can be phrased as \textbf{\pex{\textsc{in order} to \emph{VP}}}
+or \textbf{\pex{\textsc{in order} for \emph{NP} to \emph{VP}}}, it is a \psst{Purpose}.
+\begin{exe}
+  \ex\begin{xlist}
+    \ex I arrived (\textsc{in order}) \p{to} see the movie.
+    \ex I need \$10 (\textsc{in order}) \p{to} see the movie.
+    \ex It takes \$10 (\textsc{in order}) \p{to} see the movie.
+    \ex Bring the product to the store (\textsc{in order}) for$_{\text{\backi}}$ us \p{to} service it.
+    \ex Bring the product to the store (\textsc{in order}) for$_{\text{\backi}}$ the part \p{to} be replaced.
+    \end{xlist}
+\end{exe}
+
+\item If a relation can be phrased as \textbf{\pex{for \textsc{the purpose of} \emph{NP}}},
+or \textbf{\pex{for \textsc{the purpose of} \emph{<inferred verb>} \emph{NP}}}
+(provided that the meaning is not better captured by another label,
+e.g.~\psst{Beneficiary}), or \textbf{\pex{that \emph{<someone>} \textsc{intends} to \emph{VP}}}, it is a \psst{Purpose}.
+\begin{exe}
+  \ex\begin{xlist}
+    \ex I arrived \p{for} (\textsc{the purpose of}) the movie.
+    \ex I need \$10 \p{for} (\textsc{the purpose of} seeing) the movie.
+    \ex I went to the store \p{for} (\textsc{the purpose of} buying) eggs.
+    \ex a couch \p{for} (\textsc{the purpose of}) sleeping on
+    \ex a couch \p{to} sleep on $\Rightarrow$ a couch \p{for} \textsc{the purpose of} sleeping on
+    \ex I found a party (that I \textsc{intend}) \p{to} attend
+    \end{xlist}
+\end{exe}
+Be careful, however, with inserting an inferred verb, as sometimes it is better
+captured by another label:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex I babysat \p{for} (\textsc{the purpose of} helping) my aunt and uncle (= as a favor) (\psst{Beneficiary})
+    \ex I made a cake \p{for} (\textsc{the purpose of} celebrating) your birthday (= on the occasion of your birthday) (\psst{Circumstance})
+    \end{xlist}
+\end{exe}
+
+\item If a relation can be phrased as \textbf{\pex{\emph{NP} is good/bad for \emph{V}-ing}}, it is a \psst{Purpose}.\footnote{The positive or negative evaluation is being delimited to a particular purpose:
+\cref{ex:GoodGym} is not claiming the gym is good \emph{in general}, just with respect to lifting weights.}
+\begin{exe}
+  \ex\begin{xlist}
+    \ex\label{ex:GoodGym} This is a good gym \p{to} lift weights at.\\
+      $\Rightarrow$ This is a good gym \p{for} (lifting) weights.\\
+      $\Rightarrow$ This gym is good \p{for} (lifting) weights.
+    \ex This cleaner is good \p{for} (cleaning) hardwood floors.
   \end{xlist}
 \end{exe}
 
-Question test: \pex{What is this \_ for?}
-
-
-\paragraph{Necessity.}
-\psst{Purpose} marks the consequence enabled or prevented by some condition, 
-typically a resource:
+\item An infinitival modifier of an indefinite pronoun (\w{anything}, \w{someone}) or vague noun (\w{thing}, \w{stuff}) is \psst{Purpose} if the pronoun or vague noun has an entity referent that is involved in the infinitival event.
 \begin{exe}
-  \ex I need another course \p{in\_order\_to} graduate. (\psst{Purpose})
-  \ex I need \$20 \choices{\p{for}\\\p{to} attend} the show. (\psst{Purpose})
-  \ex The dough takes an hour \p{to} rise. (\psst{Purpose})
+  \ex\begin{xlist}
+    \ex I can't think of anybody/a single person \p{to} ask.
+    \ex I found something \p{to} eat.
+    \end{xlist}
+  \ex I found \choices{something\\stuff} \p{to} do. (\w{something}/\w{stuff} does not refer to an entity) (\backi)
 \end{exe}
 
+\item An infinitive clause not meeting the above criteria
+may express the \textbf{result} of an event, in which case the appropriate
+label is \psst{Goal}: see \cref{ex:result}.
+
+\item Many uses of infinitives are not purposes, including complements of
+modal\slash aspectual predicates that lack a direct object \cref{ex:NotPurpose},
+and syntactic constructions like clausal subjects and certain clefts:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex \p*{To}{to} see the movie is a joy. (\backi)
+    \ex It is fun \p{to} see the movie. (\backi)
+    \end{xlist}
+\end{exe}
+
+
+\end{enumerate}
+
+
+
+\paragraph{Commercial services.}
+A special qualification to the above tests applies to commercial scenes
+(\w{buying}, \w{paying}, \w{hiring}, \w{costing}, etc.):
+for explicitly commercial scenes,\footnote{A more general predicate such as \w{give}, \w{need}, or \w{request} is not considered to evoke a commercial scene, even if it involves money exchanged for a service.}
+if the \psst{Purpose} tests pass, the appropriate label is \rf{Theme}{Purpose}.
+This expresses that the \psst{Purpose} is not merely a desired outcome,
+but is actually promised and paid for in a transaction:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex It costs \$10 \p{to} see the movie. (\rf{Theme}{Purpose})
+    \ex I hired John \p{to} fix the problem. (\rf{Theme}{Purpose})
+    \end{xlist}
+\end{exe}
+See additional examples at \cref{ex:services} under \psst{Theme}.
+
+
 \paragraph{Sufficiency and excess.}
-See \psst{ComparisonRef}.
+Expressions of sufficiency/excess with an infinitival that passes the above tests
+for \psst{Purpose} are labeled \rf{ComparisonRef}{Purpose}.
+\begin{exe}
+  \ex a bag large enough \choices{\p{for}\\\p{to} hold} the groceries (\rf{ComparisonRef}{Purpose})\\[3pt]
+  $\Rightarrow$ a bag large enough \p{for} (\textsc{the purpose of} holding) the groceries
+\end{exe}
+Sufficiency/excess usages failing the tests are \rf{ComparisonRef}{Goal},
+as this is similar to how an infinitival can express a result---cf.~\cref{ex:result} under \psst{Goal}:
+\begin{exe}
+  \ex a forest canopy too dense \p{to} admit sunlight (\rf{ComparisonRef}{Goal})
+  \begin{xlist}
+    \ex *a forest canopy too dense in order to admit sunlight
+    \ex *a forest canopy too dense for the purpose of admitting sunlight [would imply that somebody was trying to admit sunlight]
+  \end{xlist}
+\end{exe}
+There is additional discussion under \psst{ComparisonRef}.
 
 
 \paragraph{Versus \psst{Circumstance} for ritualized occasions.}
@@ -2028,9 +2086,11 @@ if \emph{went} is ambiguous between journeying and attending.
 
 
 \begin{history}
-  In v1, the usages illustrated in \cref{ex:charPurp} were assigned a separate label, 
+  In v1, the usages illustrated in \cref{ex:inherentPurp} were assigned a separate label,
   \sst{Function}, which inherited from both \sst{Attribute} and \psst{Purpose}.
-  The ability to use construal removes the need for a separate label.
+  With the introduction of construal, v2.0--v2.3 labeled these \rf{Characteristic}{Purpose}.
+  As of v2.4 this distinction has been abandoned, as it was inconsistent with the policies
+  for spatial and temporal labels: now purposes of entities are simply \psst{Purpose}.
 \end{history}
 
 \hierAdef{Participant}
@@ -2195,6 +2255,7 @@ The construal \rf{Theme}{Purpose} is used for services marked by \p{to}, \p{for}
     \ex \$500 \choices{\p{for}\\\p{to} make} the repairs was excessive. (\rf{Theme}{Purpose})
   \end{xlist}
 \end{exe}
+See \psst{Purpose} for additional discussion.
 Contrast \cref{ex:goods} under \psst{Possession}.
 
 
@@ -3697,22 +3758,25 @@ The category stands for its members or prototypes. For example, in:
 the category \pex{basketball player} serves as the standard against which \pex{he} is deemed short.
 
 \paragraph{Sufficiency and excess.}
-In a statement of sufficiency or excess, 
-\rf{ComparisonRef}{Purpose} marks the consequence enabled or prevented by some condition.
-This is similar to \textbf{necessity} (discussed under \psst{Purpose}), 
-only here, the condition involves a comparison; the standard of comparison 
-is implied by the consequence:
+Sufficiency and excess can be expressed with
+adverbs (\pex{too}, \pex{enough}, \pex{insufficiently}, etc.)\ and
+adjectives (\pex{insufficient}) that license a PP or infinitival expressing the consequence.\footnote{See the Degree-Consequence construction \citep{bonial-18}.}
+For example:
 \begin{exe}
-  \ex\rf{ComparisonRef}{Purpose}:\begin{xlist}
+  \ex\label{ex:BasketballCmp}\rf{ComparisonRef}{Purpose}:\begin{xlist}
     \ex\label{ex:tooShort} He is \choices{too short\\not tall enough} \choices{\p{for}\\\p{to} play} basketball.
     \ex\label{ex:insufficient} His height is insufficient \p{for} basketball.
   \end{xlist}
 \end{exe}
-In these constructions, an adverb (\pex{too}, \pex{enough}, \pex{insufficiently}, etc.)\ 
-or an adjective (\pex{insufficient}) licenses the PP or infinitival expressing the consequence.\footnote{See the Degree-Consequence construction \citep{bonial-18}.}
-They amount to saying
-\pex{He is shorter than the height he would have to be in order to play basketball}, 
-which features separate constructions for comparison and necessity-for-purpose.
+Playing basketball is the desired outcome, but it is conditional
+on some scalar property relative to an implicit point on the scale---in \cref{ex:BasketballCmp},
+a minimum height associated with playing basketball.
+As a consequence, the desired outcome may or may not be blocked.
+Thus, the consequence phrase helps to establish a reference point of comparison.
+
+As discussed under \psst{Purpose}, if the consequence phrase in such a construction
+meets the criteria for purposes, it is labeled \rf{ComparisonRef}{Purpose}.
+Otherwise, the non-purpose consequence is labeled \rf{ComparisonRef}{Goal}.
 
 \paragraph{\rf{Manner}{ComparisonRef} construal.}
 This applies to an analogy that describes the \emph{how} of an event 
@@ -4328,16 +4392,14 @@ with \p{for}-PP purpose adjuncts:
 Thus, from a practical point of view, we might as well treat infinitival \p{to} 
 as capable of marking a \psst{Purpose}.
 
-The following is an exhaustive list of semantic analyses that we consider for infinitivals: 
+The following list summarizes semantic analyses that we consider for infinitivals,
+which are detailed under \psst{Purpose}:
 \begin{itemize}
-  \item \textbf{Purpose adjuncts}, generally adverbial, as in \cref{ex:infPurpose}. 
-  These are labeled \psst{Purpose}. They can generally be paraphrased with \p{in\_order\_to}.
-  
-  \item \textbf{Inherent purposes}, generally adnominal, as in \cref{ex:charPurp}, 
-  described under \psst{Purpose}. 
-  These are labeled \rf{Characteristic}{Purpose}.
-  
-  \item In a \textbf{commercial scene}, that which costs money; labeled \rf{Theme}{Purpose}.
+  \item \textbf{Purpose adjuncts}, whether are adverbial or adnominal.
+  These are labeled \psst{Purpose}. Some be paraphrased with \p{in\_order\_to}.
+
+  \item In a \textbf{commercial scene}, a service to performed in exchange for
+  payment; labeled \rf{Theme}{Purpose}.
   Repeated from the discussion under \psst{Theme}:
   \begin{exe}
     \ex\begin{xlist}
@@ -4345,12 +4407,16 @@ The following is an exhaustive list of semantic analyses that we consider for in
       \ex \$500 \p{to} make the repairs was excessive. (\rf{Theme}{Purpose})
     \end{xlist}
   \end{exe}
-  
-  \item Constructions of \textbf{sufficiency and excess}---\pex{too short \p{to} ride}, 
-  \pex{not tall enough \p{to} ride}, etc., where the assertion of sufficiency or excess 
-  licenses an infinitival, labeled \rf{ComparisonRef}{Purpose}. 
-  See discussion at \psst{ComparisonRef}.
+
+  \item \textbf{Result} infinitives, such as those in \cref{ex:result},
+  are labeled \psst{Goal}.
+
+  \item Constructions of \textbf{sufficiency and excess}---\pex{too short \p{to} ride},
+  \pex{not tall enough \p{to} ride}, etc., where the assertion of sufficiency or excess
+  licenses an infinitival, labeled \rf{ComparisonRef}{Purpose} or \rf{ComparisonRef}{Goal}.
+  See discussions at \psst{ComparisonRef} and \psst{Purpose}.
 \end{itemize}
+The non-semantic label \backi applies to all other uses of the infinitive.
 
 
 \subsubsection{Infinitivals with \p{for}-subject}
@@ -4505,8 +4571,9 @@ rather than in a figure/ground relationship:
 
 As described in \cref{sec:inf}, infinitive clauses are analyzed with a supersense 
 if and only if they serve as a purpose adjunct, or in certain purpose-related constructions 
-(inherent purpose, action that costs money in a commercial scene, 
-that which something is sufficient or excessive for).
+(result; complement of entity-referring indefinite pronoun;
+commercial service;
+that which something is good or bad for, or sufficient or excessive for).
 The special label \backi is reserved for all other uses of infinitival \p{to}, 
 as well as \p{for} whenever it introduces the subject of an infinitive clause.\footnote{Essentially, 
 our position is that these uses of infinitivals are more like syntactically core elements 
@@ -4521,14 +4588,14 @@ Infinitivals warranting \backi include:
   \ex You have an opportunity \p{to} succeed. [complement of noun]
   \ex I'm ready \p{to} leave. [complement of adjective]
   \ex I'm glad \p{to} hear you're engaged! [complement of emotion adjective]
-  \ex You're great/a pleasure \p{to} work with. [complement of evaluative adjective or noun]
+  %\ex You're great/a pleasure \p{to} work with. [complement of evaluative adjective or noun]
   \ex These new keys are expensive \p{to} copy. [tough-movement]
   \ex My plan is \p{to} eat at noon. [infinitival as NP]
   \ex It's impossible \p{to} get an appointment. [infinitival as NP, with cleft]
   \ex I know how \p{to} lead. [complement of wh-word]
-  \ex I have nothing \p{to} hide. [complement of indefinite pronoun]
-  \ex Do you have time \p{to} help me? [with resource, not necessity]
-  \ex They took\_the\_time \p{to} listen to my concerns. [complement of verbal idiom]
+  \ex I have something \p{to} do. [complement of indefinite pronoun that doesn't refer to an entity]
+  %\ex Do you have time \p{to} help me? [with resource, not necessity]
+  %\ex They took\_the\_time \p{to} listen to my concerns. [complement of verbal idiom]
 \end{xlist}\end{exe}
 
 Multiword auxiliaries---such as quasi-modals \lex[have\_to]{\pex{have\_to}} `must', \lex[ought\_to]{\pex{ought\_to}} `should', etc., 
