@@ -776,7 +776,7 @@ v2 labels.
   \item \textbf{Simplified the \psst{Temporal} subhierarchy.} See \cref{sec:Temporal}.
   \item \textbf{Removed} \sst{Activity} (mostly replaced with \psst{Circumstance} and \psst{Topic}), 
   \sst{Reciprocation} (mostly merged with \psst{Explanation}), and \sst{Material} (merged with \psst{Source}).
-  \item \textbf{Removed abstract labels} \psst{Affector}, \psst{Undergoer}, and \psst{Place}.
+  \item \textbf{Removed abstract labels} \sst{Affector}, \sst{Undergoer}, and \sst{Place}.
 \end{itemize}
 
 \subsection{Changes from earlier versions of this document}
@@ -787,6 +787,8 @@ v2 labels.
     \item \textbf{Overhauled definition and criteria for \psst{Purpose} versus other infinitivals.}
     Updated \psst{ComparisonRef}, \fullref{sec:inf}, \fullref{sec:specialinf} accordingly.
     \item Several more \textbf{possessive} clarifications under \psst{Gestalt}, \psst{Possessor}, \fullref{sec:genitives}, \fullref{sec:possidiom} (GitHub issues \ghi{32}, \ghi{33}, \ghi{34}, \ghi{35}, \ghi{37}, \ghi{38})
+    \item Several more verbs that select for prepositions under \psst{Theme} (\ghi{4}, \ghi{15}, \ghi{22}, \ghi{24}, \ghi{28}, \ghi{42}) and \psst{Species} (\ghi{39})
+    \item Added an example of an informational \psst{Locus} (\ghi{14}).
   \end{itemize}
   \item \emph{Version 2.3 (August 18, 2019):} %\emph{Since the \textbf{July 2, 2018} version:}
   \begin{itemize}
@@ -1317,6 +1319,7 @@ With a negated event, we use \psst{Duration}:
   %\ex the wheels \p{on} the bus % Whole ~> Locus
   \ex\label{ex:onRight} When you drive north, the river is \p{on} the right.
   \ex I read it \choices{\p{in} a book\\\p{on} a website}.
+  \ex the data \p{in} the study
   \ex The charge is \p{on} my credit card.
   \ex We met \p{on} a trip to Paris.
   \ex The Dow is \p{at} \choices{a new high\\20,000}.
@@ -2197,6 +2200,7 @@ Adpositional \psst{Theme}s are usually, but not always, construed as something e
       \ex The food was covered \p{in} grease. (\rf{Theme}{Locus})
     \end{xlist}
   \ex My hovercraft is full \p{of} eels.
+  \ex a copy \p{of} the key
   %\ex I wouldn't want to deprive you \p{of} this opportunity. - Theme or Possession?
   \ex \begin{xlist}
       \ex\label{ex:search-for} Sheldukher \choices{looked\\searched\\fumbled} \p{for} his laser pistol.\\{}
@@ -2205,7 +2209,16 @@ Adpositional \psst{Theme}s are usually, but not always, construed as something e
       \ex There is a significant demand \p{for} new housing.
       \ex Let's wait \p{for} \choices{Steve\\more information\\the end of the party}.
     \end{xlist}
-  \ex The mechanic made a repair \p{to} the engine. (\rf{Theme}{Goal})
+  \ex \begin{xlist}
+      \ex What happened \p{to} you?
+      \ex This species is specific\lex*[specific to]{specific \p{to}}/\lex[native to]{native \p{to}} North America.
+      \ex Balancing of risk and reward is \lex[inherent to]{inherent \p{to}} the game.
+      \ex The mechanic made a repair \p{to} the engine. (\rf{Theme}{Goal})
+      \ex Due to my injury, I am \choices{limited\lex*[limited to]{limited \p{to}}\\
+        constrained\lex*[constrained to]{constrained \p{to}}\\
+        restricted\lex*[restricted to]{restricted \p{to}}} \p{to} working from home. (\rf{Theme}{Goal})
+      \ex It is important to adhere\lex*[adhere to]{adhere \p{to}}/keep\lex*[keep to]{keep \p{to}}/\lex[stick to]{stick \p{to}} your convictions. (\rf{Theme}{Goal})
+    \end{xlist}
   \ex
   {\setlength\multicolsep{0pt}%
   \begin{multicols}{2}
@@ -2233,7 +2246,9 @@ Adpositional \psst{Theme}s are usually, but not always, construed as something e
     \end{xlist}
   \ex \begin{xlist}
       \ex There was an increase \p{in} oil prices.
+      \ex Bad weather may result \p{in} a delay.
       \ex I'm covered \p{in} bees! (\rf{Theme}{Locus})
+      \ex I put a hole \p{in} the box. (= punctured the box) (\rf{Theme}{Locus})
     \end{xlist}
   \ex \begin{xlist}
       \ex The training saved us \p{from} almost certain death. (\rf{Theme}{Source})
@@ -2423,13 +2438,13 @@ mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene 
 
 A few specific governors merit further discussion:
 
-\paragraph{\pex{agree}.}
+\paragraph{\pex{\lex[agree]{agree}}.}
 \begin{xexe}
   \ex Let us agree \p{on} the deal. (\psst{Topic})
   \ex Let us agree \p{to} the deal. (\rf{Topic}{Goal})
 \end{xexe}
 
-\paragraph{\pex{answer}, \pex{respond}, etc.}
+\paragraph{\pex{\lex[answer]{answer}}, \pex{\lex[respond]{respond}}, etc.}
 \begin{exe}
   \ex\rf{Topic}{Goal}:\begin{xlist}
     \ex the answer \p{to} the question
@@ -2437,7 +2452,7 @@ A few specific governors merit further discussion:
   \end{xlist}
 \end{exe}
 
-For \w{respond \p{with}} and similar, it depends whether the object is an action, 
+For \w{\lex[respond]{respond} \p{with}} and similar, it depends whether the object is an action, 
 a device facilitating communication, or some aspect of transferred information:
 \begin{xexe}
   \ex He responded to my kick \p{with} a punch. (\psst{Means})
@@ -2446,7 +2461,7 @@ a device facilitating communication, or some aspect of transferred information:
   \ex He responded to my accusation \p{with} falsehoods. (\psst{Topic})
 \end{xexe}
 
-\paragraph{\pex{problem \p{with}}, \pex{experience \p{with}}, etc.} 
+\paragraph{\pex{\lex[problem with]{problem \p{with}}}, \pex{\lex[experience with]{experience \p{with}}}, etc.} 
 These are simply \psst{Topic}:
 \begin{xexe}
   \ex \choices{There was\\We had} a problem \p{with} mice in the basement.
@@ -2939,7 +2954,9 @@ meaning `many different kinds'.}
   \ex Modern breeds \p{of} these homing pigeons return reliably
   \ex Some poor sap applied the wrong brand \p{of} paint
   \ex This store offers a wide selection \p{of} footstools
-\end{xlist}\end{exe}
+\end{xlist}
+  \ex \choices{an example\\the epitome} \p{of} Italian Renaissance architecture
+\end{exe}
 
 \psst{Species} is \emph{not} used if the sort/variety noun 
 is the object rather than the governor:
