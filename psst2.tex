@@ -786,6 +786,7 @@ v2 labels.
   \begin{itemize}
     \item \textbf{Overhauled definition and criteria for \psst{Purpose} versus other infinitivals.}
     Updated \psst{ComparisonRef}, \fullref{sec:inf}, \fullref{sec:specialinf} accordingly.
+    \item \textbf{New section: \fullref{sec:fixed}}
     \item Several more \textbf{possessive} clarifications under \psst{Gestalt}, \psst{Possessor}, \fullref{sec:genitives}, \fullref{sec:possidiom} (GitHub issues \ghi{32}, \ghi{33}, \ghi{34}, \ghi{35}, \ghi{37}, \ghi{38})
     \item Several more verbs that select for prepositions under \psst{Theme} (\ghi{4}, \ghi{15}, \ghi{22}, \ghi{24}, \ghi{28}, \ghi{42}) and \psst{Species} (\ghi{39})
     \item Added an example of an informational \psst{Locus} (\ghi{14}).
@@ -1548,7 +1549,7 @@ which mark an intended destination that is not necessarily reached:
 %     \ex I am a great hairdresser---please refer me \p{to} your friends! (\rf{Recipient}{Goal})
 % \end{exe}
 
-\paragraph{\emph{go to}.} A conventional way to express one's status as a student at some school is 
+\paragraph{\emph{go to\lex*[go to]{go \p{to}}}.} A conventional way to express one's status as a student at some school is
 with the expression \pex{go \p{to} (name or kind of school)}.
 Construal is used when \pex{go \p{to}} indicates student status, rather than 
 (or in addition to) physical attendance:
@@ -3553,7 +3554,7 @@ the items/parts:
   \p{to}$_{\text{\rf{PartPortion}{Goal}}}$ the lord and lady gathered for the feast.
 \end{exe}
 
-\paragraph{\pex{Start \p{with}}, \pex{end \p{with}}, etc.}
+\paragraph{\pex{Start \p{with}}\lex*[start with]{start \p{with}}, \pex{end \p{with}}, etc.}
 Along similar lines as \cref{ex:diverserange}, \p{with} can be used with 
 an aspectual verb to indicate an item in a sequence: 
 \pex{start \p{with}}, \pex{continue \p{with}}, \pex{end \p{with}}, and similar.
@@ -4533,6 +4534,50 @@ An individual's age is a temporal property, licensing both \psst{Time} and \psst
     \ex Martha was already reading \choices{\p{at}/\p{by}/\p{before}} (the age of$_{\text{\psst{Identity}}}$) 5 (years). (\psst{Time})
   \end{xlist}
 \end{exe}
+
+\subsection{Fixed expressions considered non-adpositional}\label{sec:fixed}
+
+\begin{itemize}
+\item \textbf{Named entities}, including multiword names (e.g., \emph{Out of Africa},
+\emph{The Taming of the Shrew}), are treated as single lexemes
+and should receive a nominal\slash entity type, not a SNACS supersense.
+
+\item \textbf{Grammaticalized multiword expressions} like the hedges in \cref{ex:hedges} and the
+semi-auxiliaries in \cref{sec:specialinf} should not receive a SNACS supersense.
+
+\begin{exe}
+  \ex\label{ex:hedges} I'm \choices{\lex[kind\_of]{\w{kind\_of}}\\\lex[sort\_of]{\w{sort\_of}}} hungry. (non-SNACS)
+\end{exe}
+
+\item \textbf{Verb-particle combinations} where the particle is not adding a compositional
+spatial meaning are treated as verbal multiword expressions
+and do not receive a SNACS supersense.
+
+\begin{exe}
+  \ex Compositional spatial meanings:\begin{xlist}
+    \ex The leaves blew \p{up}. (= blew into the air) (\psst{Direction})
+    \ex The fan blew the leaves \p{up}. (\psst{Direction})
+  \end{xlist}
+  \ex Idiomatic/non-spatial meanings:\begin{xlist}
+    \ex\begin{xlist}
+      \ex I \w{blew\_up} the balloon. (= inflated) (non-SNACS)
+      \ex I \w{blew\_} the balloon \w{\_up}. (= inflated) (non-SNACS)
+    \end{xlist}
+    \ex The bomb \w{blew\_up}. (= literally exploded) (non-SNACS)
+    \ex My friend \w{blew\_up} at$_{\text{\rf{Beneficiary}{Direction}}}$ me. (= exploded in anger) (non-SNACS)
+  \end{xlist}
+\end{exe}
+
+\item Where a verb or other content word absolutely requires a transitive preposition
+to receive the correct meaning, as in \cref{ex:come-across},\footnote{These can be called \textbf{integral prepositions}\index{integral preposition}. Verbs with integral prepositions consitute a subtype of \textbf{prepositional verbs}\index{prepositional verb}, i.e.~verbs that select for a particular preposition.
+Both \cref{ex:wait-for} and \cref{ex:come-across} can be considered prepositional verbs.} it is treated as a content multiword expression
+and does not receive a SNACS supersense.
+
+\begin{exe}
+  \ex\label{ex:wait-for} I decided to wait \p{for} someone. (How long did you wait?) (\psst{Theme})
+  \ex\label{ex:come-across} At the library I \w{came\_across} an interesting book. (\#When did you come?) (non-SNACS)
+\end{exe}
+\end{itemize}
 
 \section{Special Labels}\label{sec:special}
 
