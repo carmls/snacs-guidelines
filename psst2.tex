@@ -690,7 +690,6 @@ and \psst{Configuration} (18~labels).
       ]
     ]
     [{\hierB{Accompanier}}]
-    [{\hierB{InsteadOf}}]
     [{\hierB{ComparisonRef}}]
     [{\hierB{RateUnit}}]
     [{\hierB{Quantity}}
@@ -2363,7 +2362,7 @@ Multiple \psst{Theme}s can also be licensed by 2-argument adjectives:
   \end{xlist}
 \end{exe}
 
-See also: \psst{InsteadOf}, \psst{Agent}, \psst{Beneficiary}
+See also: \psst{ComparisonRef}, \psst{Agent}, \psst{Beneficiary}
 
 \begin{history}
   In v1, following many thematic role inventories,
@@ -3682,32 +3681,14 @@ depending on whether the scene involves possession (of something nonvolitional) 
 
 See also: \psst{Instrument}, \psst{Manner}
 
-\hierBdef{InsteadOf}
 
-\shortdef{A default or already established thing for which something else stands in 
-or is chosen as an alternative.}
-
-\begin{exe}
-  \ex I ordered soup \choices{\p{instead\_of}\\\p{rather\_than}} salad.
-  \ex \p*{Instead\_of}{instead\_of} ordering salad, I ordered soup.
-  %\ex They replaced \uline{my old tires} with new ones. %#nonprep
-  \ex The new shirts were gray \p{instead\_of} black.
-  %\ex\label{ex:subst-for} They substituted new tires \p{for} my old ones. [replacee; contrast \cref{ex:repl-with}] % CHANGED TO CO-THEME
-\end{exe}
-May be construed spatially:
-\begin{exe}
-  \ex I chose soup \p{over} salad. (\rf{InsteadOf}{Locus})
-\end{exe}
-But when \p{over} is used for a scene of liking or preference, see \psst{ComparisonRef}.
-
-See also: \psst{Accompanier}, \psst{ComparisonRef}, \psst{Theme}
 
 \hierBdef{ComparisonRef}
 
-\shortdef{The reference point in an explicit comparison (or contrast), i.e., 
-an expression indicating that something is 
-\textbf{similar/analogous to}, \textbf{different from}, or \textbf{the same as}
-something else.}
+\shortdef{The reference point in an explicit comparison (or contrast), i.e.,
+an expression indicating that something is
+\textbf{similar/analogous to}, \textbf{different from}, \textbf{the same as},
+or an \textbf{alternative to} something else.}
 
 The marker of the ``something else'' (the ground in the figure–ground relationship) 
 is given the label \psst{ComparisonRef}:
@@ -3744,10 +3725,10 @@ and \p{from} (\psst{Source} for dissimilar-thing).
 \paragraph{\psst{Locus} construal.}
 If something is preferred or appreciated \p{over} something else, \rf{ComparisonRef}{Locus} is used:
 \begin{exe}
-  \ex I prefer this restaurant \p{over} that one. (\rf{ComparisonRef}{Locus})\\{} 
+  \ex\label{ex:preferOver} I prefer this restaurant \p{over} that one. (\rf{ComparisonRef}{Locus})\\{} 
   [paraphrase: I like this restaurant better \p{than} that one.]
 \end{exe}
-But for scenes of choice and substitution, see \psst{InsteadOf}.
+This is closely related to the notion of an alternative as in \cref{ex:alternativeOver}.
 
 \paragraph{\psst{Source} and \psst{Goal} construals.}
 Resemblance and equivalence may be expressed with \p{to}, 
@@ -3878,6 +3859,29 @@ and merely indicating similarity, as in \cref{ex:likeSetSimilar} and \cref{ex:li
       [It must be great to have her because she is a wonderful doctor]\\ (\rf{Identity}{ComparisonRef})
     \end{xlist}
 \end{exe}
+
+\paragraph{Instead-of alternatives.}
+\psst{ComparisonRef} also applies to a default or already established thing
+for which something else stands in or is chosen as an alternative.
+\begin{exe}
+  \ex I ordered soup \choices{\p{instead\_of}\\\p{rather\_than}} salad.
+  \ex \p*{Instead\_of}{instead\_of} ordering salad, I ordered soup.
+  %\ex They replaced \uline{my old tires} with new ones. %#nonprep
+  \ex The new shirts were gray \p{instead\_of} black.
+  %\ex\label{ex:subst-for} They substituted new tires \p{for} my old ones. [replacee; contrast \cref{ex:repl-with}] % CHANGED TO CO-THEME
+\end{exe}
+May be construed spatially:
+\begin{exe}
+  \ex\label{ex:alternativeOver} I chose soup \p{over} salad. (\rf{ComparisonRef}{Locus})
+\end{exe}
+This is similar to the static-preference use of \p{over} illustrated in \cref{ex:preferOver}.
+See also \psst{Accompanier} and \psst{Theme}.
+
+\begin{history}
+  A separate category \sst{InsteadOf} was introduced in v2.0 for alternatives,
+  but in v2.5 it was merged with \psst{ComparisonRef} after the distinction
+  became fraught for some uses of \p{instead\_of} and \p{rather\_than}.
+\end{history}
 
 \hierBdef{RateUnit}
 
