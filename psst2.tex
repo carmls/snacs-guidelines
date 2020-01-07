@@ -483,7 +483,7 @@
 \hyphenation{shriv-eled}
 \hyphenation{Huddle-ston}
 
-\title{Adposition and Case Supersenses v2.4:\\ Guidelines for English}
+\title{Adposition and Case Supersenses v2.5pre:\\ Guidelines for English}
 
 \newcommand{\emldisplay}[2]{\texttt{\href{mailto:#1}{#2}}}
 \newcommand{\eml}[1]{\textsmaller[1.5]{\emldisplay{#1}{#1}}}
@@ -653,7 +653,6 @@ and \psst{Configuration} (18~labels).
   [{\hierA{Participant}}
     [{\hierB{Causer}}
       [{\hierC{Agent}}
-        [{\hierD{Co-Agent}}]
       ]
     ]
     [{\hierB{Theme}}
@@ -782,6 +781,13 @@ v2 labels.
 \subsection{Changes from earlier versions of this document}
 
 \begin{itemize}
+  \item \emph{Version 2.5 (DATE TBA):}
+  \begin{itemize}
+    \item \textbf{\sst{Co-Agent} has been merged with \psst{Agent}, and \sst{Co-Theme} with \psst{Theme}.}
+    \item \textbf{\sst{InsteadOf} has been merged with \psst{ComparisonRef}.}
+    \item \textbf{\sst{OrgRole} has been split into \psst{Org} and \psst{OrgMember}, reflecting
+    the asymmetry of the relation.}
+  \end{itemize}
   \item \emph{Version 2.4 (January 2, 2020):}
   \begin{itemize}
     \item \textbf{Overhauled definition and criteria for \psst{Purpose} versus other infinitivals.}
@@ -1542,7 +1548,7 @@ which mark an intended destination that is not necessarily reached:
 % \end{exe}
 % When it means `make a referral', i.e.~`direct somebody to a business or service-provider', 
 % and \p{to} marks the suggested business or service-provider, it is labeled \psst{Goal}.
-% However, when \p{to} marks the recommendation-seeker, it is labeled \psst{Recipient}{Goal}:
+% However, when \p{to} marks the recommendation-seeker, it is labeled \rf{Recipient}{Goal}:
 % \begin{exe}
 %   \ex\begin{xlist}
 %     \ex I needed a hairdresser, so my friend referred me \p{to} \choices{Natasha\\Hair Inc.}. (\psst{Goal})
@@ -2132,10 +2138,13 @@ See also: \psst{Instrument}
 
 \hierCdef{Agent}
 
-\shortdef{Animate instigator of an action (typically volitional).}
+\shortdef{Animate instigator of an action (typically volitional).
+In reciprocal or cooperative activites, there are considered to be multiple
+\psst{Agent}s unless one of the parties is portrayed as an \psst{Instrument}
+or affectee.}
 
 %Prototypical prepositions are \p{by} (prominently including passive-\p{by}), \p{of}, and \p{'s}:
-This is most directly associated with the passive \p{by}-phrase (\cref{sec:passives}), 
+\psst{Agent} is most directly associated with the passive \p{by}-phrase (\cref{sec:passives}),
 but also permits other construals:
 \begin{exe}
   \ex the decisive vote \p{by} the City Council
@@ -2159,24 +2168,39 @@ functioning as a set, it is marked as a \psst{Whole} construal:
 
 \end{exe}
 
-Compare: \psst{Co-Agent}; 
-see also: \psst{OrgRole}, \psst{Originator}, \psst{Source}, \psst{Stimulus}
-
-
-\hierDdef{Co-Agent}
-
-\shortdef{Second semantically core participant that would otherwise be labeled \psst{Agent}, 
-but which is adpositionally marked in contrast with an \psst{Agent} 
-occupying a non-oblique syntactic position (subject or object).
-Typically, the \psst{Agent} and \psst{Co-Agent} engage in the event 
-in a reciprocal fashion.}
+\paragraph{Secondary agents.}
+Many events involve multiple agentive participants,
+whether this is inherently due to the nature of the activity
+(e.g., a conversation or fight), or because a second party is joining
+the first in performing the activity.
+Both \psst{Agents} are involved in the activity in a similar manner,
+and may be working in concert or at odds:
 
 \begin{exe}
-  \ex I fought in a war \p{against} the Germans.
-  \ex I \choices{talked\\argued} \p{with} my roommate about cleaning duties.
+  \ex I fought in a war \p{against} the Germans. (\rf{Agent}{Beneficiary})
+  \ex\label{ex:talkWith} I \choices{talked\\argued} \p{with} my roommate about cleaning duties. (\rf{Agent}{Accompanier})
+  \ex\label{ex:argueWith} \p*{With}{with} my roommate, I argued that it was unfair of the landlord to increase our rent. (\rf{Agent}{Accompanier})
 \end{exe}
 
-See also: \psst{Accompanier}, \psst{SocialRel}
+Note that \p{with} may be ambiguous between a co-agent acting contrary to or reciprocally
+with the main agent, as in \cref{ex:talkWith}, and an extra agent, as in \cref{ex:argueWith}.
+In both cases it is annotated \rf{Agent}{Accompanier} in order to avoid
+formalizing a coreness distinction.\footnote{Predicate-centric
+lexical resources tend to use separate labels for agents vs.~\textbf{co-agents}
+(semantically core secondary agents) vs.~agentive non-core participants introduced via adjuncts.}
+
+The distinction between primary and secondary \psst{Agent}s is one of syntactic framing:
+the primary agent is the one in the ``high-agency'' position (active subject or
+passive \p{by} with a verbal predicate,
+or genitive \p{'s}, \p{of}, or \p{by} with a nominal predicate).
+This is reflected in the construal, but both \psst{Agents} are considered
+to perform essentially the same roles within the basic scene.
+
+See also: \psst{OrgRole}, \psst{Originator}, \psst{Source}, \psst{Stimulus}, \psst{Accompanier}, \psst{SocialRel}
+
+
+
+
 
 \hierBdef{Theme}
 
@@ -2361,7 +2385,7 @@ argument would be \psst{Theme}---e.g.~2-argument adjectives:
   See note at \psst{Theme}.
 \end{history}
 
-See also: \psst{InsteadOf}, \psst{Co-Agent}
+See also: \psst{InsteadOf}, \psst{Agent}
 
 \hierCdef{Topic}
 
@@ -2584,7 +2608,7 @@ and direct object position as a \psst{Theme} construal, then we can add examples
 \pex{They robbed \uline{her} of her life savings} (\rf{Originator}{Theme}).
 \psst{Originator} does not apply to the subject of events like \pex{exchange} or \pex{talk/chat (with)}, 
 which involve a back-and-forth between 
-\psst{Agent} and \psst{Co-Agent} (or a plural \psst{Agent}).}
+multiple \psst{Agent}s.}
 \begin{exe}
   \ex \rf{Originator}{Agent} (passive-\p{by} or adnominal \p{by}):
   \begin{xlist}
@@ -2659,14 +2683,14 @@ yelling from a distance at someone does not imply criticism,
 and criticism about someone who is absent is not yelling at them.})
   \ex The news was not well received \p{by} the White House. (\rf{Recipient}{Agent})
   \ex Timmy\p{'s} piano lesson (\rf{Recipient}{Gestalt})
-  \ex I'll have to check \p{with} my supervisor. (\rf{Recipient}{Co-Agent})
+  \ex I'll have to check \p{with} my supervisor. (\rf{Recipient}{Theme})
 \end{exe}
 
 \psst{Recipient} does not apply to events like \pex{exchange/talk/chat (\p{with})}, 
 which involve a back-and-forth between 
-\psst{Agent} and \psst{Co-Agent} (or a plural \psst{Agent} subject):
+multiple \psst{Agent}s:
 \begin{exe}
-  \ex She \choices{swapped stories\\chatted} \p{with} her friends. (\psst{Co-Agent})
+  \ex She \choices{swapped stories\\chatted} \p{with} her friends. (\rf{Agent}{Accompanier})
 \end{exe}
 
 See also: \psst{Beneficiary}
@@ -3631,30 +3655,14 @@ provide slightly different interpretations of the same spatial scene:
   \ex\label{ex:nextToMom} The girl is standing \p{next\_to} her mother. (\psst{Locus})
 \end{xexe}
 
-For an ``extra participant'' in an activity, 
-where two parties perform the activity together 
-(but the nature of the activity would not fundamentally 
-change if they each performed it independently), 
-a \psst{Co-Agent} construal is used:
+The construal \rf{Agent}{Accompanier} is used
+for a second agentive participant in an activity,
+however central that participant is to the activity:
 \begin{exe}
-  \ex Do you want to walk \p{with} me? (\rf{Accompanier}{Co-Agent})
-\end{exe}
-By contrast, if the nature of the scene fundamentally requires multiple participants, 
-simple \psst{Co-Agent} is used. Often there is ambiguity:\footnote{Adding \p{together} 
-seems to favor the (b)~readings: \pex{I fought \p{together\_with} them}, \pex{We fought \p{together}} 
-can only mean we were on the same side. Contrastive stress can also force one reading: 
-\pex{I fought \p*{WITH}{with} them (not \p*{AGAINST}{against} them)}.}
-\begin{exe}
-  \ex Do you want to talk \p{with} me? 
-  \begin{xlist}
-    \ex {}[\emph{The reading:} Should we have a conversation?] (\psst{Co-Agent})
-    \ex {}[\emph{The reading:} Do you want to join me in talking to a third party?] 
-      (\rf{Accompanier}{Co-Agent})
-  \end{xlist}
-  \ex I fought \p{with} them to reform the regulation.
-  \begin{xlist}
-    \ex {}[\emph{The reading:} I fought against them.] (\psst{Co-Agent})
-    \ex {}[\emph{The reading:} I was on the same side as them.] (\rf{Accompanier}{Co-Agent})
+  \ex \rf{Agent}{Accompanier}:\begin{xlist}
+    \ex Do you want to walk \p{with} me?
+    \ex Do you want to talk \p{with} me? (\emph{Either of two readings:} `Should we have a conversation?', or `Do you want to join me in talking to a third party?')
+    \ex I fought \p{with} them to reform the regulation. (\emph{Either of two readings:} `I fought against them', or `We fought together for a common goal.')
   \end{xlist}
 \end{exe}
 
@@ -4010,8 +4018,8 @@ It does not have any prototypical adpositions.
 Construals include:
 \begin{exe}
   \ex \begin{xlist}
-      \ex\label{ex:workwithSR} I work \p{with} Michael. (\rf{SocialRel}{Co-Agent})
-      \ex Joan has a class \p{with} Miss Zarves. (\rf{SocialRel}{Co-Agent})
+      \ex\label{ex:workwithSR} I work \p{with} Michael. (\rf{SocialRel}{Accompanier})
+      \ex Joan has a class \p{with} Miss Zarves. (\rf{SocialRel}{Accompanier})
     \end{xlist}
   \ex people \p{with} children (\rf{SocialRel}{Characteristic})
   \ex\rf{SocialRel}{Gestalt} 
@@ -4039,7 +4047,7 @@ Note, however, that \emph{work \p{with}} is ambiguous between
 being in an established professional relationship \cref{ex:workwithSR}, 
 and engaging temporarily in a joint productive activity:
 \begin{exe}
-  \ex\label{ex:workwithCA} I was working \p{with} Michael after lunch. (\psst{Co-Agent})
+  \ex\label{ex:workwithCA} I was working \p{with} Michael after lunch. (\rf{Agent}{Accompanier})
 \end{exe}
 It is up to annotators to decide from context which interpretation 
 better fits the context.
@@ -4097,7 +4105,7 @@ lacks any prototypical adposition, but participates in numerous construals:
     \ex Mr. Dursley is \p{with} Grunnings. (\rf{OrgRole}{Accompanier})
     \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{OrgRole}{Agent}) %\nss{or do we say `employ' is just a regular Agent/Theme verb?}
   \end{xlist}
-  \ex I always do business \p{with} this company. (\rf{OrgRole}{Co-Agent})
+  \ex I always do business \p{with} this company. (\rf{OrgRole}{Accompanier})
   \ex\rf{OrgRole}{Accompanier}:\begin{xlist}
     \ex I bank \p{with} TSB.
     \ex my phone service \p{with} Verizon
