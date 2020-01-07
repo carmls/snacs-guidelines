@@ -656,7 +656,6 @@ and \psst{Configuration} (18~labels).
       ]
     ]
     [{\hierB{Theme}}
-      [{\hierC{Co-Theme}}]
       [{\hierC{Topic}}]
     ]
     [{\hierB{Stimulus}}]
@@ -2198,7 +2197,10 @@ to perform essentially the same roles within the basic scene.
 
 See also: \psst{OrgRole}, \psst{Originator}, \psst{Source}, \psst{Stimulus}, \psst{Accompanier}, \psst{SocialRel}
 
-
+\begin{history}
+In v1 and v2.0--2.4, \psst{Agent} had a subtype \sst{Co-Agent} for core secondary agents.
+The two were merged in v2.5.
+\end{history}
 
 
 
@@ -2310,29 +2312,12 @@ functioning as a set, it is marked as a \psst{Whole} construal:
   \ex Links \p{between} science and industry are important. (\rf{Locus}{Whole})
 \end{exe}
 
-\begin{history}
-  In v1, following many thematic role inventories, 
-  \sst{Patient} was a distinct label for undergoers that were 
-  affected (undergoing an internal change of state). 
-  It was merged into \psst{Theme} for v2 because the affectedness criterion can be subtle 
-  and difficult to apply.
-\end{history}
-
-Compare: \psst{Co-Theme}
-
-See also: \psst{Beneficiary}
-
-\hierCdef{Co-Theme}
-
-\shortdef{Second semantically core undergoer that would otherwise be labeled \psst{Theme}, 
-but which is adpositionally marked in contrast with a \psst{Theme} 
-occupying a non-oblique syntactic position (subject or object).}
-
-Often, the \psst{Theme} and the \psst{Co-Theme} are similarly situated entities---rather than 
-one being more figure-like and the other more ground-like---but the \psst{Co-Theme} 
-is an oblique (adpositionally marked) argument.
-This includes concrete scenes of combination, attachment, separation, and substitution 
-of two similar entities. 
+\paragraph{Secondary themes.}
+Often, multiple similarly situated entities meet the criteria for \psst{Theme},
+in which case both are labeled \psst{Theme} for the scene role.\footnote{As with \psst{Agent},
+the scene role does not distinguish syntactically more prominent vs.~more oblique positions.}
+For example, this can occur in concrete scenes of contact, separation, attachment,
+combination, and substitution of two similar entities.
 
 \begin{exe}
   \ex\begin{xlist}
@@ -2345,9 +2330,9 @@ of two similar entities.
   \end{xlist}
   \ex\begin{xlist}
     %\ex You can't create something \p{from} nothing. (\rf{Co-Theme}{Source})
-    \ex The boys were separated \p{from} the girls. (\rf{Co-Theme}{Source})
-    \ex Keep the dogs \p{from} the cats. (\rf{Co-Theme}{Source})
-    \ex The shin bone is connected \p{to} the knee bone. (\rf{Co-Theme}{Goal})
+    \ex The boys were separated \p{from} the girls. (\rf{Theme}{Source})
+    \ex Keep the dogs \p{from} the cats. (\rf{Theme}{Source})
+    \ex The shin bone is connected \p{to} the knee bone. (\rf{Theme}{Goal})
   \end{xlist}
 \end{exe}
 
@@ -2369,23 +2354,31 @@ that entity is typically a \psst{Locus}, \psst{Source}, or \psst{Goal}:
 For creation or transformation of a whole entity (or a group of entities, such as ingredients) 
 into another entity, \psst{Source} applies to the initial entity and \psst{Goal} to the result.
 
-With abstract scenes, \psst{Co-Theme} is sometimes needed because another 
-argument would be \psst{Theme}---e.g.~2-argument adjectives:
+Multiple \psst{Theme}s can also be licensed by 2-argument adjectives:
 \begin{exe}
   \ex\begin{xlist}
-    \ex You shouldn't confuse/associate Mozart \p{with} Rossini. (\psst{Co-Theme})
-    \ex We are ready/eligible/due \p{for} an upgrade. (\rf{Co-Theme}{Purpose})
-    \ex They prevented us \p{from} entering. (\rf{Co-Theme}{Source})
+    \ex You shouldn't confuse/associate Mozart \p{with} Rossini. (\psst{Theme})
+    \ex We are ready/eligible/due \p{for} an upgrade. (\rf{Theme}{Purpose})
+    \ex They prevented us \p{from} entering. (\rf{Theme}{Source})
   \end{xlist}
 \end{exe}
 
-\begin{history}
-  In v1, \sst{Co-Patient} was a distinct label, and the two shared a common supertype, 
-  \sst{Co-Participant}. 
-  See note at \psst{Theme}.
-\end{history}
+See also: \psst{InsteadOf}, \psst{Agent}, \psst{Beneficiary}
 
-See also: \psst{InsteadOf}, \psst{Agent}
+\begin{history}
+  In v1, following many thematic role inventories,
+  \sst{Patient} was a distinct label for undergoers that were
+  affected (undergoing an internal change of state).
+  It was merged into \psst{Theme} for v2 because the affectedness criterion can be subtle
+  and difficult to apply.
+
+
+  In v1 and v2.0--2.4, \psst{Theme} had a subtype \sst{Co-Theme} for core secondary themes.
+  In v1, \sst{Co-Patient} was distinguished, in parallel with the \psst{Theme} vs.~\sst{Patient}
+  distinction.
+  \sst{Co-Patient} was merged with \sst{Co-Theme} in v2.0,
+  and \sst{Co-Theme} was merged with \psst{Theme} in v2.5.
+\end{history}
 
 \hierCdef{Topic}
 
@@ -2683,7 +2676,7 @@ yelling from a distance at someone does not imply criticism,
 and criticism about someone who is absent is not yelling at them.})
   \ex The news was not well received \p{by} the White House. (\rf{Recipient}{Agent})
   \ex Timmy\p{'s} piano lesson (\rf{Recipient}{Gestalt})
-  \ex I'll have to check \p{with} my supervisor. (\rf{Recipient}{Theme})
+  \ex I'll have to check \p{with} my supervisor. (\rf{Recipient}{Theme}\nss{or Recip/Acc?})
 \end{exe}
 
 \psst{Recipient} does not apply to events like \pex{exchange/talk/chat (\p{with})}, 
@@ -3707,7 +3700,7 @@ May be construed spatially:
 \end{exe}
 But when \p{over} is used for a scene of liking or preference, see \psst{ComparisonRef}.
 
-See also: \psst{Accompanier}, \psst{ComparisonRef}, \psst{Co-Theme}
+See also: \psst{Accompanier}, \psst{ComparisonRef}, \psst{Theme}
 
 \hierBdef{ComparisonRef}
 
@@ -4038,8 +4031,8 @@ Construals include:
   \end{multicols}}
   \ex the rivalry \p{between} the teams (\rf{SocialRel}{Whole}) [see \cref{ex:betweenParties}]
   \ex Joan is studying \p{under} Prof.~Smith. (\rf{SocialRel}{Locus})
-  \ex Joan is married \p{to} John. (\rf{SocialRel}{Co-Theme})
-  \ex Joan is divorced \p{from} John. (\rf{SocialRel}{Co-Theme})
+  \ex Joan is married \p{to} John. (\rf{SocialRel}{Goal}\nss{OK? was Co-Theme as function})
+  \ex Joan is divorced \p{from} John. (\rf{SocialRel}{Source}\nss{OK?})
   \ex Joan bought her house \p{through} a real estate agent. [intermediary] (\rf{SocialRel}{Instrument})
 \end{exe}
 
