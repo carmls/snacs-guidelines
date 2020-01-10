@@ -393,6 +393,7 @@
 %\newcommand{\psst}[1]{\sst{#1\raisebox{2pt}{\rotatebox{180}{\textsublhalfring{\phantom{.}}}}}} %\textcorner % preposition supersense tag label
 
 \newcommand{\rf}[2]{\psst{#1}$\leadsto$\psst{#2}\index[construals]{\protect\psst{#1}$\leadsto$\protect\psst{#2}}\index[revconstruals]{#2 #1@\protect\psst{#1}$\leadsto$\protect\psst{#2}}}
+\newcommand{\Rf}[2]{\sst{#1}$\leadsto$\psst{#2}}
 \newcommand{\rff}[3]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}\index[construals]{\psst{#1}$\leadsto$\psst{#2}$\leadsto$\psst{#3}}}
 \newcommand{\backc}[0]{\hyperref[sec:coord]{\olbl{\backtick c}}\index{\backtick c@\olbl{\backtick c}}\xspace}
 \newcommand{\backd}[0]{\hyperref[sec:discourse]{\olbl{\backtick d}}\index{\backtick d@\olbl{\backtick d}}\xspace}
@@ -599,9 +600,9 @@ and some uses of the infinitive marker \p{to}, as detailed in \cref{sec:cxns}.
 
 \subsection{Inventory}
 
-The v2 hierarchy is a tree with 50~labels.
+The v2.5 hierarchy is a tree with 48~labels.
 They are organized into three major subhierarchies: 
-\psst{Circumstance} (18~labels), \psst{Participant} (14~labels), 
+\psst{Circumstance} (18~labels), \psst{Participant} (12~labels),
 and \psst{Configuration} (18~labels). 
 
 \begin{minipage}{\textwidth}
@@ -682,12 +683,14 @@ and \psst{Configuration} (18~labels).
     [{\hierB{Gestalt}}
       [{\hierC{Possessor}}]
       [{\hierC{Whole}}]
+      [{\hierC{Org}}]
     ]
     [{\hierB{Characteristic}}
       [{\hierC{Possession}}]
       [{\hierC{PartPortion}}
         [{\hierD{Stuff}}]
       ]
+      [{\hierC{OrgMember}}]
     ]
     [{\hierB{Accompanier}}]
     [{\hierB{ComparisonRef}}]
@@ -695,9 +698,7 @@ and \psst{Configuration} (18~labels).
     [{\hierB{Quantity}}
       [{\hierC{Approximator}}]
     ]
-    [{\hierB{SocialRel}}
-      [{\hierC{OrgRole}}]
-    ]
+    [{\hierB{SocialRel}}]
   ]
 \end{forest}
 \end{ggroup}
@@ -713,6 +714,13 @@ entities functioning as arguments to an event.
 \item Items in the \psst{Configuration} subhierarchy are prototypically
 entities or properties in a static relationship to some entity.
 \end{itemize}
+
+\begin{history}
+  v2.0--2.4 had 50~labels. In v2.5, the inventory was modified slightly:
+  \sst{Co-Agent}, \sst{Co-Theme}, and \sst{InsteadOf}
+  were removed (a mostly deterministic change as each was merged with another label),
+  while \sst{OrgRole} was split into \psst{Org} and \psst{OrgMember}.
+\end{history}
 
 \subsection{Limitations}
 
@@ -774,6 +782,9 @@ v2 labels.
   \item \textbf{Removed} \sst{Activity} (mostly replaced with \psst{Circumstance} and \psst{Topic}), 
   \sst{Reciprocation} (mostly merged with \psst{Explanation}), and \sst{Material} (merged with \psst{Source}).
   \item \textbf{Removed abstract labels} \sst{Affector}, \sst{Undergoer}, and \sst{Place}.
+  \item \textbf{Removed the theme/patient distinction.} \psst{Theme} now includes patients.
+  \item \textbf{Removed the primary/secondary participant distinction.} Whereas v1 had \sst{Co-\{Agent,Patient,Theme\}}, v2.5 allows multiple \psst{Agent} arguments
+  or multiple \psst{Theme} arguments of the same predicate.
 \end{itemize}
 
 \subsection{Changes from earlier versions of this document}
@@ -783,8 +794,7 @@ v2 labels.
   \begin{itemize}
     \item \textbf{\sst{Co-Agent} has been merged with \psst{Agent}, and \sst{Co-Theme} with \psst{Theme}.}
     \item \textbf{\sst{InsteadOf} has been merged with \psst{ComparisonRef}.}
-    \item \textbf{\sst{OrgRole} has been split into \psst{Org} and \psst{OrgMember}, reflecting
-    the asymmetry of the relation.}
+    \item \textbf{\sst{OrgRole}, which was under \sst{SocialRel}, has been split into \psst{Org} (under \psst{Gestalt}) and \psst{OrgMember} (under \psst{Characteristic}) in order to reflect the asymmetry of the relation.}
   \end{itemize}
   \item \emph{Version 2.4 (January 2, 2020):}
   \begin{itemize}
@@ -812,8 +822,8 @@ v2 labels.
     \item Changed the treatment of replacees from \psst{InsteadOf} to \psst{Co-Theme}.
     \item List PP idioms in the index.
     \item \psst{Path}: Clarified that motion events can be located as points (\psst{Locus}), and relocated \cref{ex:pathmanner} from \psst{Manner}.
-    \item Rectified inconsistent treatment of a family member in relation to the family (now always \psst{OrgRole}).
-    \item Organizational collective members: now \rf{OrgRole}{PartPortion}, formerly \rf{OrgRole}{Characteristic}.
+    \item Rectified inconsistent treatment of a family member in relation to the family (now always \sst{OrgRole}).
+    \item Organizational collective members: now \Rf{OrgRole}{PartPortion}, formerly \Rf{OrgRole}{Characteristic}.
     \item Added dotted version number to title and adjusted author list.
   \end{itemize}
   \item \emph{Version 2.2 (July 2, 2018):} %\emph{Since the \textbf{January 16, 2018} version:}
@@ -832,7 +842,7 @@ v2 labels.
       to \psst{Extent} (was \psst{Identity}).
       \item Changed the function of \psst{Originator} possessives to \psst{Gestalt} (was \psst{Possessor}).
       \item Expanded documentation and removed inconsistencies around containers and collective nouns 
-      (see \psst{Stuff}, \psst{Quantity}, \psst{Characteristic}, \psst{OrgRole}).
+      (see \psst{Stuff}, \psst{Quantity}, \psst{Characteristic}, \sst{OrgRole}).
       \item Specified \rf{Manner}{ComparisonRef} for certain adverbial uses of \p{like}.
       \item Revised the definition of \psst{Recipient} to relax the requirement of animacy.
       \item Mentioned conditions as a subclass of \psst{Circumstance}.
@@ -1558,7 +1568,7 @@ with the expression \pex{go \p{to} (name or kind of school)}.
 Construal is used when \pex{go \p{to}} indicates student status, rather than 
 (or in addition to) physical attendance:
 \begin{exe}
-  \ex\label{ex:student} I went \p{to} (school at$_{\psst{Locus}}$) UC Berkeley. (\rf{OrgRole}{Goal})
+  \ex\label{ex:student} I went \p{to} (school at$_{\psst{Locus}}$) UC Berkeley. (\rf{Org}{Goal})
   \exp{ex:student} I went \p{to} UC Berkeley for the football game. (\psst{Goal})
 \end{exe}
 Going to a business as a customer, going to an attorney as a client, 
@@ -2194,7 +2204,7 @@ or genitive \p{'s}, \p{of}, or \p{by} with a nominal predicate).
 This is reflected in the construal, but both \psst{Agents} are considered
 to perform essentially the same roles within the basic scene.
 
-See also: \psst{OrgRole}, \psst{Originator}, \psst{Source}, \psst{Stimulus}, \psst{Accompanier}, \psst{SocialRel}
+See also: \psst{Org}, \psst{Originator}, \psst{Source}, \psst{Stimulus}, \psst{Accompanier}, \psst{SocialRel}
 
 \begin{history}
 In v1 and v2.0--2.4, \psst{Agent} had a subtype \sst{Co-Agent} for core secondary agents.
@@ -2675,7 +2685,7 @@ yelling from a distance at someone does not imply criticism,
 and criticism about someone who is absent is not yelling at them.})
   \ex The news was not well received \p{by} the White House. (\rf{Recipient}{Agent})
   \ex Timmy\p{'s} piano lesson (\rf{Recipient}{Gestalt})
-  \ex I'll have to check \p{with} my supervisor. (\rf{Recipient}{Theme}\nss{or Recip/Acc?})
+  \ex I'll have to check \p{with} my supervisor. (\rf{Recipient}{Accompanier})
 \end{exe}
 
 \psst{Recipient} does not apply to events like \pex{exchange/talk/chat (\p{with})}, 
@@ -2826,7 +2836,7 @@ and benefit or harm is no more than an inference, then the scene role is \psst{R
   \ex a \choices{package} \p{for} the front office (\rf{Recipient}{Direction})
 \end{exe}
 
-See also: \psst{Experiencer}, \psst{OrgRole}
+See also: \psst{Experiencer}, \psst{Org}
 
 \hierBdef{Instrument}
 
@@ -2878,7 +2888,7 @@ and people\slash organizations serving as intermediaries:
   \ex We flew to London \p{via} Paris. (\rf{Instrument}{Path})
   \ex I found out the news \p{via} Sharon. (\rf{Instrument}{Path})
   \ex Joan bought her house \p{through} a real estate agent. (\rf{SocialRel}{Instrument})
-  \ex For my Honda I always got replacement parts \p{through} the dealership. (\rf{OrgRole}{Instrument})
+  \ex For my Honda I always got replacement parts \p{through} the dealership. (\rf{Org}{Instrument})
 \end{exe}
 
 Conversely, roadways count as \psst{Path}s but can be construed as \psst{Instrument}s:
@@ -3162,7 +3172,7 @@ Communicative acts are treated as transfer of information, and thus \psst{Origin
 and \psst{Recipient} apply to the communicator and addressee, respectively.
 
   
-See also \psst{Accompanier}, \psst{Beneficiary}, \psst{OrgRole}, and \fullref{sec:genitives}.
+See also \psst{Accompanier}, \psst{Beneficiary}, \psst{Org}, \psst{OrgMember}, and \fullref{sec:genitives}.
 
 \hierCdef{Whole}
 
@@ -3253,6 +3263,109 @@ by combining two or more items in the object NP (contrast with \cref{ex:amongSet
   for examples such as \cref{ex:sets}, but the distinction was dropped for v2 
   (as was \sst{Elements}: see \psst{PartPortion}).
 \end{history}
+
+
+\hierCdef{Org}
+
+\shortdef{An organization\slash institution when mentioned in relation to an \psst{OrgMember},
+i.e., an individual who has a stable affiliation with that organization,
+such as membership or a business relationship.}
+
+We define \textbf{organization} as an established group of people with some social or societal purpose/function; this includes families, performing arts groups, schools, businesses, and governmental units:
+\begin{exe}
+  \ex\begin{xlist}
+    \ex employees \p{of} the company (\rf{Org}{Gestalt})
+    \ex I work \p{for} the United Nations (\rf{Org}{Beneficiary})
+    \ex actors \p{in} the troupe (\rf{Org}{Locus})
+  \end{xlist}
+\end{exe}
+
+Stative scenes include someone belonging to, being an employee of,
+or being in a business relationship with an \psst{Org};
+dynamic scenes include someone joining or leaving\slash beginning or ending
+an engagement with an \psst{Org}.
+\begin{exe}
+  \ex I was hired \p{by} Microsoft. (\rf{Org}{Agent})
+\end{exe}
+
+Relations between organizations such as partnerships, subsidiaries,
+and super-organization\slash sub-organization are \emph{not} covered by \psst{Org}, nor are general mentions of organizations:
+
+\begin{exe}
+  \ex My business was destroyed \p{by} Microsoft. (\psst{Agent})
+  \ex Microsoft\p{'s} cloud services division (\psst{Whole})
+\end{exe}
+
+\psst{Org} lacks any prototypical adpositions in English, but participates in numerous construals:
+
+\begin{exe}
+  \ex \rf{Org}{Gestalt} with the institution as possessor:
+  {\setlength\multicolsep{0pt}%
+  \begin{multicols}{2}
+    \begin{xlist}
+      \ex the chairman \p{of} the board
+      \ex the president \p{of} France
+      \ex \choices{employees\\customers} \p{of} Grunnings
+
+      \sn the board\p{'s} chairman
+      \sn France\p{'s} president
+      \sn Grunnings\p{'s} \choices{employees\\customers}
+    \end{xlist}
+  \end{multicols}}
+  \ex\begin{xlist}
+    \ex Mr. Dursley works \p{for} Grunnings. (\rf{Org}{Beneficiary})
+    \ex Mr. Dursley works \p{at} Grunnings. (\rf{Org}{Locus})
+    \ex Mr. Dursley is \p{from} Grunnings. (\rf{Org}{Source})
+    \ex Mr. Dursley is \p{with} Grunnings. (\rf{Org}{Accompanier})
+    \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{Org}{Agent}) %\nss{or do we say `employ' is just a regular Agent/Theme verb?}
+  \end{xlist}
+  \ex\rf{Org}{Accompanier}:\begin{xlist}
+    \ex I always do business \p{with} this company.
+    \ex I bank \p{with} TSB.
+    \ex my phone service \p{with} Verizon
+  \end{xlist}
+  \ex For my Honda I always got replacement parts \p{through} the dealership. [intermediary business] (\rf{Org}{Instrument})
+  \ex I serve \p{on} the committee. (\rf{Org}{Locus})
+  \ex\rf{Org}{Stuff} if the governor is an organizational collective noun
+  and the object of the preposition describes the full membership:
+    \begin{xlist}
+      \ex An order \p{of} nuns [repeated at \psst{Stuff}]
+      \ex A chamber group \choices{\p{of}\\\p{with}} 5 players [repeated at \psst{Stuff}]
+    \end{xlist}
+\end{exe}
+
+A family counts as an institution
+construed as a \psst{Whole} (set of its members)
+or as a \psst{Locus}:
+\begin{exe}
+  \ex I am the baby \p{of} the family. (\rf{Org}{Whole})
+  \ex people \p{in} my family (\rf{Org}{Locus})
+\end{exe}
+
+For a relation between a unit and a larger institution,
+use \psst{Whole}:
+\begin{exe}
+  \ex the Principals Committee \p{of} the National Security Council (\psst{Whole})
+\end{exe}
+
+See also: \psst{Stuff}
+
+\begin{history}
+  In v1, \sst{ProfessionalAspect} marked relations between an employee
+  and an employer, supervisor, or coworker.
+  In v2.0, this was revised to \sst{OrgRole}, for relations between an individual and an organization,
+  and a supertype \psst{SocialRel} covering all established social relationships.
+  This was further refined in v2.5, when \sst{OrgRole} was split into two supersenses,
+  \psst{Org} and \psst{OrgMember}, so the directionality of the (asymmetric) relation would be specified.
+  Instead of being under \psst{SocialRel}, these are under \psst{Gestalt} and \psst{Characteristic}, respectively.
+
+  The separation of individual--organization and individual--individual relations
+  follows the precedent of the Abstract Meaning Representation \citep[AMR;][]{amr,amr-guidelines},
+  where \texttt{have-org-role-91} captures relations between
+  an individual and an institution (such as an organization or family),
+  and \texttt{have-rel-role-91} is used for relations between two individuals.
+\end{history}
+
 
 \hierBdef{Characteristic}
 
@@ -3559,7 +3672,7 @@ Set-membership can be construed as comparison:
 \end{exe}
 The set may be an organizational collective:
 \begin{exe}
-  \ex	A piano quintet is a chamber group \p{with} a piano (in it)\\ (\rf{OrgRole}{PartPortion}) [repeated at \psst{OrgRole}]
+  \ex	A piano quintet is a chamber group \p{with} a piano (in it)\\ (\rf{OrgMember}{PartPortion}) [repeated at \psst{OrgMember}]
 \end{exe}
 
 \paragraph{Diverse Examples.}
@@ -3618,14 +3731,54 @@ Paraphrase test: ``\psst{Whole} CONSISTS OF \psst{Stuff}''
   %     \ex A bag('s worth) \p{of} chips
   %   \end{xlist}
   \ex A group/throng \p{of} vacationers (\rf{Quantity}{Stuff}) [governor is collective noun not denoting an organization; more at \psst{Quantity}]
-  \ex \rf{OrgRole}{Stuff}:
+  \ex \rf{OrgMember}{Stuff}:
   	\begin{xlist}
-      \ex An order \p{of} nuns [repeated at \psst{OrgRole}]
-      \ex	A chamber group \choices{\p{of}\\\p{with}} 5 players [repeated at \psst{OrgRole}]
+      \ex An order \p{of} nuns [repeated at \psst{OrgMember}]
+      \ex	A chamber group \choices{\p{of}\\\p{with}} 5 players [repeated at \psst{OrgMember}]
     \end{xlist}
 \end{exe}
 
 \psst{Stuff} has no specific counterpart under \psst{Whole}.
+
+\hierCdef{OrgMember}
+
+\shortdef{Individual(s) who are members of an organization, when mentioned in relation to the organization (\psst{Org}).}
+
+\begin{exe}
+\ex \rf{OrgMember}{Gestalt} with possessive marking on the individual:
+  \begin{xlist}
+    \ex \p{my} school/gym [that I attend]
+    \ex \p{my} work [the place where I work]
+    \ex \p{my} landscaping company [that I hired]
+    \ex the family \p{of} Miss Zarves
+    \ex Miss Zarves\p{'s} family
+  \end{xlist}
+\ex \rf{OrgMember}{Possessor} if the individual is understood to possess authority
+  within or as a representative of the institution:
+  \begin{xlist}
+    \ex \p{my} small business [that I own or operate]
+    \ex the president\p{'s} administration
+  \end{xlist}
+\ex\rf{OrgMember}{PartPortion} if the governor is an organizational collective noun
+  and the object of the preposition denotes a subset of members:
+    \begin{xlist}
+      \ex	A piano quintet is a chamber group \p{with} a piano (in it) [repeated at \psst{PartPortion}]
+    \end{xlist}
+\end{exe}
+
+\psst{OrgMember}s are generally people; sub-organizations within a larger organization are excluded.
+
+Note that relations between persons, even in the context of an organization, fall under \psst{SocialRel} (e.g.~\pex{\p{my} boss}).
+
+A member of an organization is only labeled \psst{OrgMember} when the relationship to the \psst{Org} is in focus: e.g., an activity done as part of a job with an organization will not trigger \psst{OrgMember}:
+
+\begin{exe}
+  \ex At the restaurant we were seated \p{by} the host. (\psst{Agent})
+\end{exe}
+
+\begin{history}
+  See history note at \psst{Org}.
+\end{history}
 
 \hierBdef{Accompanier}
 
@@ -3960,7 +4113,7 @@ the construal \rf{Quantity}{Stuff} is used
     \ex	\choices{A group\\2 groups\\A throng} \p{of} vacationers just arrived.
   \end{xlist}
 \end{exe}
-For organizational collectives, see \psst{OrgRole}.
+For organizational collectives, see \psst{OrgMember}.
 
 \item Otherwise, if the object refers to \textbf{a specific item or set}, 
 and the quantity measures a portion of that item 
@@ -4010,7 +4163,7 @@ overlap lexically with ``true'' prepositions.}
 with which another party has a stable affiliation.}
 
 Typically, \psst{SocialRel} applies directly to interpersonal relations 
-(versus the subtype \psst{OrgRole} for relations involving an organization).
+(versus \psst{Org} and \psst{OrgMember} for relations involving an organization).
 It does not have any prototypical adpositions. 
 Construals include:
 \begin{exe}
@@ -4035,8 +4188,8 @@ Construals include:
   \end{multicols}}
   \ex the rivalry \p{between} the teams (\rf{SocialRel}{Whole}) [see \cref{ex:betweenParties}]
   \ex Joan is studying \p{under} Prof.~Smith. (\rf{SocialRel}{Locus})
-  \ex Joan is married \p{to} John. (\rf{SocialRel}{Goal}\nss{OK? was Co-Theme as function})
-  \ex Joan is divorced \p{from} John. (\rf{SocialRel}{Source}\nss{OK?})
+  \ex Joan is married \p{to} John. (\rf{SocialRel}{Goal})
+  \ex Joan is divorced \p{from} John. (\rf{SocialRel}{Source})
   \ex Joan bought her house \p{through} a real estate agent. [intermediary] (\rf{SocialRel}{Instrument})
 \end{exe}
 
@@ -4055,96 +4208,10 @@ better fits the context.
   The name \psst{SocialRel} reflects
   a broader set of stative relations involving an individual 
   in a social context, including kinship and friendship.
-  See also note under \psst{OrgRole}.
+  See also note under \psst{Org}.
 \end{history}
 
-\hierCdef{OrgRole}
 
-\shortdef{Either party in a relation between an 
-organization\slash institution and an individual who has a stable affiliation 
-with that organization, such as membership or a business relationship.}
-
-Like its supertype \psst{SocialRel}, \psst{OrgRole} 
-lacks any prototypical adposition, but participates in numerous construals:
-
-\begin{exe}
-  \ex \rf{OrgRole}{Gestalt} with the institution as possessor:
-  {\setlength\multicolsep{0pt}%
-  \begin{multicols}{2}
-    \begin{xlist}
-      \ex the chairman \p{of} the board
-      \ex the president \p{of} France
-      \ex \choices{employees\\customers} \p{of} Grunnings
-      
-      \sn the board\p{'s} chairman
-      \sn France\p{'s} president
-      \sn Grunnings\p{'s} \choices{employees\\customers}
-    \end{xlist}
-  \end{multicols}}
-  \ex \rf{OrgRole}{Gestalt} with possessive marking on the individual:
-    \begin{xlist}
-      \ex \p{my} school/gym [that I attend]
-      \ex \p{my} work [the place where I work]
-      \ex \p{my} landscaping company [that I hired]
-      \ex the family \p{of} Miss Zarves
-      \ex Miss Zarves\p{'s} family 
-    \end{xlist}
-  \ex \rf{OrgRole}{Possessor} if the individual is understood to possess authority 
-    within or as a representative of the institution:
-    \begin{xlist}
-      \ex \p{my} small business [that I own or operate]
-      \ex the president\p{'s} administration
-    \end{xlist}
-  \ex\begin{xlist}
-    \ex Mr. Dursley works \p{for} Grunnings. (\rf{OrgRole}{Beneficiary})
-    \ex Mr. Dursley works \p{at} Grunnings. (\rf{OrgRole}{Locus})
-    \ex Mr. Dursley is \p{from} Grunnings. (\rf{OrgRole}{Source})
-    \ex Mr. Dursley is \p{with} Grunnings. (\rf{OrgRole}{Accompanier})
-    \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{OrgRole}{Agent}) %\nss{or do we say `employ' is just a regular Agent/Theme verb?}
-  \end{xlist}
-  \ex I always do business \p{with} this company. (\rf{OrgRole}{Accompanier})
-  \ex\rf{OrgRole}{Accompanier}:\begin{xlist}
-    \ex I bank \p{with} TSB.
-    \ex my phone service \p{with} Verizon
-  \end{xlist}
-  \ex For my Honda I always got replacement parts \p{through} the dealership. [intermediary business] (\rf{OrgRole}{Instrument})
-  \ex I serve \p{on} the committee. (\rf{OrgRole}{Locus})
-  \ex\rf{OrgRole}{Stuff} if the governor is an organizational collective noun 
-  and the object of the preposition describes the full membership:
-  	\begin{xlist}
-      \ex An order \p{of} nuns [repeated at \psst{Stuff}]
-      \ex	A chamber group \choices{\p{of}\\\p{with}} 5 players [repeated at \psst{Stuff}]
-    \end{xlist}
-  \ex\rf{OrgRole}{PartPortion} if the governor is an organizational collective noun 
-  and the object of the preposition denotes a subset of members:
-  	\begin{xlist}
-      \ex	A piano quintet is a chamber group \p{with} a piano (in it) [repeated at \psst{PartPortion}]
-    \end{xlist}
-\end{exe}
-
-A family counts as an institution 
-construed as a \psst{Whole} (set of its members) 
-or as a \psst{Locus}:
-\begin{exe}
-  \ex I am the baby \p{of} the family. (\rf{OrgRole}{Whole})
-  \ex people \p{in} my family (\rf{OrgRole}{Locus})
-\end{exe}
-
-For a relation between a unit and a larger institution, 
-use \psst{Whole}:
-\begin{exe}
-  \ex the Principals Committee \p{of} the National Security Council (\psst{Whole})
-\end{exe}
-
-See also: \psst{Stuff}
-
-\begin{history}
-  \psst{OrgRole} is now distinguished within the broader \psst{SocialRel} category 
-  following the precedent of the Abstract Meaning Representation \citep[AMR;][]{amr,amr-guidelines}. 
-  In AMR, \texttt{have-org-role-91} captures relations between 
-  an individual and an institution (such as an organization or family),
-  whereas \texttt{have-rel-role-91} is used for relations between two individuals.
-\end{history}
 
 \section{Constraints on Role and Function Combinations}\label{sec:constraints}
 
@@ -4161,7 +4228,7 @@ organize subtrees of the hierarchy, and not to be used directly.
 
 \subsection{Supersenses that cannot serve as functions}
 
-\textbf{For English prepositions and possessives, \psst{Experiencer}, \psst{Stimulus}, \psst{Originator}, \psst{Recipient}, \psst{SocialRel}, and \psst{OrgRole} 
+\textbf{For English prepositions and possessives, \psst{Experiencer}, \psst{Stimulus}, \psst{Originator}, \psst{Recipient}, \psst{SocialRel}, \psst{Org}, and \psst{OrgMember}
 can only serve as scene roles, not functions.} 
 Though scenes of perception, transfer, and interpersonal/organizational relationships 
 are fundamental in language, they always seem to exploit construals from other domains 
@@ -4337,7 +4404,7 @@ the \emph{functions} associated with passive \p{by} are limited to
   \ex the devastation wreaked \p{by} the fire (\psst{Causer})
   \ex This story was told \p{by} my grandmother. (\rf{Originator}{Agent})
   \ex The news was not well received \p{by} the White House. (\rf{Recipient}{Agent})
-  \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{OrgRole}{Agent})
+  \ex Mr. Dursley is employed \p{by} Grunnings. (\rf{Org}{Agent})
   \ex The window was broken \p{by} the hammer. (\rf{Instrument}{Causer})
   \ex scared \p{by} the bear (\rf{Stimulus}{Causer})
 \end{xexe}
