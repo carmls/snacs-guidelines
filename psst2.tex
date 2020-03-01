@@ -149,6 +149,10 @@
 \usepackage{amssymb}	%amsfonts,eucal,amsbsy,amsthm,amsopn
 \usepackage{amsmath}
 
+\usepackage{pifont}
+\newcommand{\chk}{\ding{51}}
+\newcommand{\xxx}{\textcolor{mdred}{\ding{55}}}
+
 %\usepackage{mathptmx}	% txfonts
 \usepackage{fourier}
 \usepackage[scaled=.87]{helvet}
@@ -208,6 +212,7 @@
 \newcommand\bmmax{0} % magic to avoid 'too many math alphabets' error
 \usepackage{bm}
 \definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{mdred}{rgb}{0.8,0,0}
 \definecolor{mdgreen}{rgb}{0,0.6,0}
 \definecolor{mdblue}{rgb}{0,0,0.7}
 \definecolor{dkblue}{rgb}{0,0,0.5}
@@ -484,7 +489,7 @@
 \hyphenation{shriv-eled}
 \hyphenation{Huddle-ston}
 
-\title{Adposition and Case Supersenses v2.5pre:\\ Guidelines for English}
+\title{Adposition and Case Supersenses v2.5:\\ Guidelines for English}
 
 \newcommand{\emldisplay}[2]{\texttt{\href{mailto:#1}{#2}}}
 \newcommand{\eml}[1]{\textsmaller[1.5]{\emldisplay{#1}{#1}}}
@@ -516,8 +521,9 @@
     {\smaller[1.5] \{\emldisplay{ajb341@georgetown.edu}{ajb341},\emldisplay{jp1724@georgetown.edu}{jp1724}\}\texttt{@georgetown.edu}}
 }
 
-\date{January 2, 2020}
-%\today \nss{insert arXiv date here}}
+\date{
+%\today 
+\nss{insert arXiv date here}}
 
 \begin{document}
 \maketitle
@@ -598,9 +604,9 @@ we also apply adposition supersenses to possessive case marking
 (the clitic \p{'s} and possessive pronouns),
 and some uses of the infinitive marker \p{to}, as detailed in \cref{sec:cxns}.
 
-\subsection{Inventory}
+\subsection{Inventory}\label{sec:hier}
 
-The v2.5 hierarchy is a tree with 50~labels.
+The v2.5 hierarchy is a tree with 50~supersense labels.
 They are organized into three major subhierarchies: 
 \psst{Circumstance} (18~labels), \psst{Participant} (13~labels),
 and \psst{Configuration} (19~labels).
@@ -721,7 +727,8 @@ entities or properties in a static relationship to some entity.
   v2.0--2.4 had 50~labels. In v2.5, the inventory was modified slightly:
   \sst{Co-Agent}, \sst{Co-Theme}, and \sst{InsteadOf}
   were removed (a mostly deterministic change as each was merged with another label),
-  while \sst{OrgRole} was split into \psst{Org} and \psst{OrgMember}
+  \sst{OrgRole} was split into \psst{Org} and \psst{OrgMember},
+  \sst{Quantity} was split into \psst{QuantityItem} and \psst{QuantityValue},
   and \sst{Accompanier} was split into \psst{Ancillary} and \psst{Ensemble}.
 \end{history}
 
@@ -739,7 +746,7 @@ or pragmatics (see \cref{sec:discourse}).
 \end{itemize}
 Moreover, this inventory only captures semantic distinctions 
 that tend to correlate with major differences in syntactic distribution. 
-Thus, while there are labels for locative (\psst{Locus}), ablative (\psst{Source}), 
+Thus, while there are supersense labels for locative (\psst{Locus}), ablative (\psst{Source}),
 allative (\psst{Goal}), and \psst{Path} semantics---and analogous temporal categories---%
 finer-grained details of spatiotemporal meaning are for the most part lexical 
 (viz.: the difference between \pex{\p{in} the box} and \pex{\p{on} the box}, 
@@ -749,6 +756,53 @@ that all members of a category can be grammatical in all the same contexts:
 though the prepositions are by no means interchangeable in American English. 
 We are simply asserting that the different constructions specific to days of the week 
 versus times of the day are minor aspects of the grammar of English.}
+
+
+\subsection{Construal}\label{sec:construal}
+
+In some cases, following \citet{hwang-17}, an adposition usage will be analyzed with
+\emph{two} of the supersenses from the inventory.
+This is done when the choice of adposition is analyzed as inviting a construal
+that might not otherwise be the default for the semantic relation it marks
+(perhaps due to semantic extension beyond the adposition's more prototypical meanings).
+
+This is illustrated in \cref{SNACS-adpositions-table}.
+The two semantic dimensions of an adposition usage are:
+
+\textbf{Scene Role}: What is the basic semantic relation between the preposition-linked elements (e.g., governor and object)?
+With a PP argument to a semantic predicate such as a content verb,
+this will often correspond to a semantic role like \psst{Agent}, \psst{Theme}, or \psst{Recipient}.
+
+\textbf{Function}: What semantic relation literally or metaphorically present in the scene
+is higlighted by the choice of adposition?
+Often this is a spatial meaning like \psst{Locus}, \psst{Source}, or \psst{Goal},
+even if the situation is not literally spatial.
+
+\textbf{In this document, construal is notated by \rf{Scene Role}{Function}
+when the supersenses differ.}\footnote{This can be read as ``\psst{Scene Role} realized as \psst{Function}'' (or, ``an underlying \psst{Scene Role}
+relation that is realized via an adposition coding for \psst{Function}'').}
+Token annotations given as \psst{Supersense} are shorthand for a \textbf{congruent}
+construal whose full form would be \rf{Supersense}{Supersense}.
+
+\begin{table*}[t!]
+\centering\small
+\begin{tabular}{|l|l|l|l|c|}
+\hline \textbf{Phrase} & \textbf{Scene Role} & \textbf{Coding} & \textbf{Function} & \textbf{Congruent?} \\ \hline
+The ball was hit \p{by} the batter & \psst{Agent} & \p{by} & \psst{Agent} & \chk  \\[3pt]
+Put the book \p{on} the shelf & \psst{Goal} & \p{on} & \psst{Locus} & \xxx  \\
+Put the book \p{onto} the shelf & \psst{Goal} & \p{onto} & \psst{Goal} & \chk  \\[3pt]
+I talked \p{to} her & \psst{Recipient} & \p{to} & \psst{Goal} & \xxx  \\[3pt]
+I heard it \p{in} my bedroom & \psst{Locus} & \p{in} & \psst{Locus} & \chk  \\
+I heard it \p{from} my bedroom & \psst{Locus}  & \p{from} & \psst{Source} & \xxx  \\[3pt]
+John\p{'s} death & \psst{Theme} & \p{'s} & \psst{Gestalt} & \xxx \\
+the windshield \p{of} the car & \psst{Whole} & \p{of} & \psst{Whole} & \chk \\
+\hline
+\end{tabular}
+\caption{\label{SNACS-adpositions-table} Examples from \citet{shalev-19} illustrating construal analysis in terms of scene role, morphosyntactic coding, and function. The scene role and function annotations are labels from \cref{sec:hier} and are often but not always congruent for a particular token. The function annotation reflects the semantics of the morphosyntactic coding (i.e.~the choice of adposition).}
+\end{table*}
+
+Constraints on the supersenses that can serve as roles or as functions for English
+adpositions are discussed in \cref{sec:constraints}.
 
 \subsection{Major changes from v1}\label{sec:v1v2}
 
@@ -795,8 +849,9 @@ v2 labels.
 \begin{itemize}
   \item \emph{Version 2.5 (DATE TBA):}
   Several structural changes to the hierarchy for better internal consistency
-  and clearer annotation guidelines:
+  and clarity:
   \begin{itemize}
+    \item Added \fullref{sec:construal} (\ghi{64}).
     \item \textbf{\sst{Co-Agent} has been merged with \psst{Agent}, and \sst{Co-Theme} with \psst{Theme}.}
     \item \textbf{\sst{Accompanier} has been split into \psst{Ancillary} and \psst{Ensemble}.}
     \item \textbf{\sst{InsteadOf} has been merged with \psst{ComparisonRef}} (GitHub issue \ghi{5}).
