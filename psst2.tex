@@ -804,148 +804,6 @@ the windshield \p{of} the car & \psst{Whole} & \p{of} & \psst{Whole} & \chk \\
 Constraints on the supersenses that can serve as roles or as functions for English
 adpositions are discussed in \cref{sec:constraints}.
 
-\subsection{Major changes from v1}\label{sec:v1v2}
-
-Changes that affect only a single label are explained below the relevant 
-v2 labels.
-
-\begin{itemize}
-  \item \textbf{Removed multiple inheritance.} 
-  The v1 network was quite tangled. The structure is greatly simplified 
-  by analyzing some tokens as \emph{construals} \citep{hwang-17}.
-  \item \textbf{Revised and expanded the \psst{Configuration} subhierarchy.}
-  \item \textbf{Removed the locative concreteness distinction.}
-  In v1, labels \sst{Location}, \sst{InitialLocation}, and \sst{Destination} 
-  were reserved for concrete locations, and the respective supertypes 
-  \psst{Locus}, \psst{Source}, and \psst{Goal} used to cover abstract locations.
-  This distinction was found to be difficult and without apparent
-  relevance to preposition system of English or the other languages considered. 
-  The concrete labels were thus removed.
-  \item \textbf{Removed the location/state/value distinction.}
-  The v1 scheme attempted to make an elaborate distinction between 
-  values, states, and other kinds of abstract locations. 
-  However, the English preposition system does not seem particularly 
-  sensitive to these distinctions. (We are not aware of any prepositions 
-  that mark primarily values or primarily states; rather, productive 
-  metaphors allow locative prepositions to be extended to cover these, 
-  and there are cases where teasing apart abstract location vs.~state vs.~value 
-  is difficult.) Therefore, \sst{State}, \sst{StartState}, \sst{EndState}, 
-  \sst{Value}, and \sst{ValueComparison} were removed. %\footnote{\nss{In v1, 10 tokens of \sst{StartState} and 20 of \sst{EndState}, mostly involving values on a scale, now merged with \psst{Source} and \psst{Goal}, resp.}}
-  \item \textbf{Revised the treatment of comparison and related notions.} 
-  Removed \sst{Comparison/Contrast}, \sst{Scalar/Rank}, \sst{ValueComparison}; 
-  moved \psst{Approximator} under \sst{Quantity}.
-  \item \textbf{Greatly simplified the \psst{Path} subhierarchy.} See \cref{sec:Path}.
-  \item \textbf{Simplified the \psst{Temporal} subhierarchy.} See \cref{sec:Temporal}.
-  \item \textbf{Removed} \sst{Activity} (mostly replaced with \psst{Circumstance} and \psst{Topic}), 
-  \sst{Reciprocation} (mostly merged with \psst{Explanation}), and \sst{Material} (merged with \psst{Source}).
-  \item \textbf{Removed abstract labels} \sst{Affector}, \sst{Undergoer}, and \sst{Place}.
-  \item \textbf{Removed the theme/patient distinction.} \psst{Theme} now includes patients.
-  \item \textbf{Removed the primary/secondary participant distinction.} Whereas v1 had \sst{Co-\{Agent,Patient,Theme\}}, v2.5 allows multiple \psst{Agent} arguments
-  or multiple \psst{Theme} arguments of the same predicate.
-\end{itemize}
-
-\subsection{Changes from earlier versions of this document}
-
-\begin{itemize}
-  \item \emph{Version 2.5 (DATE TBA):}
-  Several structural changes to the hierarchy for better internal consistency
-  and clarity:
-  \begin{itemize}
-    \item \textbf{\sst{Co-Agent} has been merged with \psst{Agent}, and \sst{Co-Theme} with \psst{Theme}.}
-    \item \textbf{\sst{Accompanier} has been split into \psst{Ancillary} and \psst{Ensemble}.}
-    \item \textbf{\sst{InsteadOf} has been merged with \psst{ComparisonRef}} (GitHub issue \ghi{5}).
-    \item \textbf{\sst{OrgRole}, which was under \sst{SocialRel}, has been split into \psst{Org} (under \psst{Gestalt}) and \psst{OrgMember} (under \psst{Characteristic}) in order to reflect the asymmetry of the relation.}
-    \item \textbf{\sst{Quantity} has been renamed \psst{QuantityItem}, and its inverse \psst{QuantityValue} has been added.} \psst{Approximator} has been moved under \psst{QuantityValue}.
-    \item Revised the definition of \psst{Approximator}, and established the use of \rf{ComparisonRef}{Locus} for some uses of relative locative prepositions (see \psst{ComparisonRef}: ``\psst{Locus} construal for relative locative position on scale'') (\ghi{59}, \ghi{16}, \ghi{20}).
-    \item Added \fullref{sec:construal} (\ghi{64}).
-    \item An example labeled \rf{Theme}{Purpose}, \cref{ex:readyFOR},
-    has been relabeled to plain \psst{Theme} for consistency with current guidelines for \psst{Purpose}.
-  \end{itemize}
-  \item \emph{Version 2.4 (January 2, 2020):}
-  \begin{itemize}
-    \item \textbf{Overhauled definition and criteria for \psst{Purpose} versus other infinitivals.}
-    Updated \psst{ComparisonRef}, \fullref{sec:inf}, \fullref{sec:specialinf} accordingly.
-    \item \textbf{New section: \fullref{sec:fixed}}
-    \item Several more \textbf{possessive} clarifications under \psst{Gestalt}, \psst{Possessor}, \fullref{sec:genitives}, \fullref{sec:possidiom} (GitHub issues \ghi{32}, \ghi{33}, \ghi{34}, \ghi{35}, \ghi{37}, \ghi{38})
-    \item Several more verbs that select for prepositions under \psst{Theme} (\ghi{4}, \ghi{15}, \ghi{22}, \ghi{24}, \ghi{28}, \ghi{42}) and \psst{Species} (\ghi{39})
-    \item Added an example of an informational \psst{Locus} (\ghi{14}).
-  \end{itemize}
-  \item \emph{Version 2.3 (August 18, 2019):} %\emph{Since the \textbf{July 2, 2018} version:}
-  \begin{itemize}
-    \item Added \fullref{sec:ppmwp}.
-    \item \textbf{\psst{Possessor}, \psst{Possession}: Substantially revised  to clarify their scope.}
-    \item Added some difficult possessive examples in \psst{Gestalt}, and elsewhere for \rf{Agent}{Gestalt}, \rf{Theme}{Gestalt}, \rf{SocialRel}{Gestalt}, and \rf{Experiencer}{Gestalt} construals
-    \item \textbf{\psst{Possession}, \psst{Theme}: Added discussion of transfer, goods, and services. 
-    Goods and other transferred items are now \psst{Possession}, while services remain as \psst{Theme}.}
-    \item \psst{Cost}: Clarified the explanation of when money should be treated like any other possession.
-    \item \textbf{Reclassified adverbial and predicative entity-descriptions (depictives, shapes, states) from \psst{Manner} to \psst{Characteristic}, and revised their definitions accordingly.}
-    \item \textbf{Specified that \psst{Temporal} should be used directly for aspectual prepositions (previously it was an abstract category: \cref{sec:abstractlabels}).}
-    \item Moved journey-type PPs from \psst{Manner} to \psst{Circumstance}.
-    \item \psst{Means}: Revised the definition and clarified relationship to \psst{Manner}.
-    \item \psst{SocialRel}: Reworded the definition and added a kinship example for \rf{SocialRel}{Characteristic}.
-    \item Clarified that \psst{Experiencer} applies to bodily \emph{sensations} (not physical bodily changes), and added cognition examples.
-    \item Changed the treatment of replacees from \sst{InsteadOf} to \sst{Co-Theme}.
-    \item List PP idioms in the index.
-    \item \psst{Path}: Clarified that motion events can be located as points (\psst{Locus}), and relocated \cref{ex:pathmanner} from \psst{Manner}.
-    \item Rectified inconsistent treatment of a family member in relation to the family (now always \sst{OrgRole}).
-    \item Organizational collective members: now \Rf{OrgRole}{PartPortion}, formerly \Rf{OrgRole}{Characteristic}.
-    \item Added dotted version number to title and adjusted author list.
-  \end{itemize}
-  \item \emph{Version 2.2 (July 2, 2018):} %\emph{Since the \textbf{January 16, 2018} version:}
-  \begin{itemize}
-    \item Policy changes reflected in STREUSLE~4.0: 
-    \begin{itemize}
-      \item Rewrote \fullref{sec:genitives} and updated corresponding examples 
-      to reflect a clarified policy on possessive construals. 
-      Moved wearer from \psst{Gestalt} to \psst{Possessor}
-      and attire from \psst{Characteristic} to \psst{Possession}.
-      \item Added \fullref{sec:passives} and updated corresponding examples.
-    \end{itemize}
-    \item Policy changes that are reflected in STREUSLE~4.1: 
-    \begin{itemize}
-      \item In \cref{sec:as-as}, changed the function of the first \p{as} in the \p{as}-\p{as} construction 
-      to \psst{Extent} (was \psst{Identity}).
-      \item Changed the function of \psst{Originator} possessives to \psst{Gestalt} (was \psst{Possessor}).
-      \item Expanded documentation and removed inconsistencies around containers and collective nouns 
-      (see \psst{Stuff}, \sst{Quantity}, \psst{Characteristic}, \sst{OrgRole}).
-      \item Specified \rf{Manner}{ComparisonRef} for certain adverbial uses of \p{like}.
-      \item Revised the definition of \psst{Recipient} to relax the requirement of animacy.
-      \item Mentioned conditions as a subclass of \psst{Circumstance}.
-      \item Renamed \sst{Part/Portion} to \psst{PartPortion} to avoid technical complications 
-      of the slash.
-    \end{itemize}
-    \item Added \fullref{sec:constraints}.
-    \item Added \fullref{sec:age}.
-    \item A few additional examples and fixes.
-    \item Added an index of construals by function.
-    \item Changes from v1 had neglected to mention the removal of \sst{Affector}, \sst{Undergoer}, \sst{Place}, 
-    \sst{Elements}, and \sst{Superset} (thanks to Ken Litkowski for pointing this out).
-  \end{itemize}
-  \item \emph{Version 2.1 (January 16, 2018):} %\emph{Since the \textbf{April 7, 2017} version:}
-  \begin{itemize}
-    \item Broadened and clarified \sst{DeicticTime}, moved it up a level in the hierarchy, 
-      and renamed it to \psst{Interval}. Clarified the distinction between \psst{Interval} and \psst{Duration}.
-    \item Clarified \psst{Locus}, \psst{Source}, \psst{Goal}, \psst{Path}, and 
-      \psst{Direction}, especially with regard to (i)~intransitive prepositions, 
-      (ii)~distance measurements, and (iii)~inherent parts.
-    \item Significantly expanded the scope of \psst{Manner} to cover states of entities and depictives.
-    \item Clarified \p{like} as \psst{ComparisonRef} with regard to categories and sets, 
-    and \psst{PartPortion} with regard to elements and exceptions.
-    \item Clarified \p{with} in regard to \psst{Topic} and \psst{Stimulus}.
-    \item Added discussion of the ambiguity of temporal \p{over}: \psst{Duration} versus \rf{Time}{Duration}.
-    \item Extensively clarified \psst{Purpose} and \psst{Beneficiary}, 
-    and their relationship to \psst{ComparisonRef}, \psst{Recipient}, \psst{Experiencer}, and \psst{Stimulus}.
-    \item Clarified that goods and services are \psst{Theme}; expanded on \sst{Co-Theme} examples.
-    \item \psst{Frequency} used for an iteration.
-    \item Various selectional verbs and miscellaneous constructions.
-    \item Added examples of \p{'s} possessive/genitive marking.
-    \item Added section for special syntactic constructions (\cref{sec:cxns}).
-    \item Added special labels (\cref{sec:special}).
-    \item Added an index of adpositions and supersenses, and an index of construals.
-    \item Revised the title, abstract, and introductory material.
-  \end{itemize}
-  \item \emph{Version 2.0 (April 7, 2017): See \cref{sec:v1v2}}
-\end{itemize}
 
 \hierAdef{Circumstance}
 
@@ -5068,6 +4926,153 @@ contrast
   \ex She will arrive soon: she is on\_~~\p{her}~~\_way. (\backposs) [see \cref{ex:on-way}]
   \ex I don't want to drive there because it is out\_of\_~~\p{my}~~\_way. (\backposs)
 \end{exe}
+
+
+\section{Changelog}
+
+\subsection{Changes from earlier versions of this document}
+
+\begin{itemize}
+  \item \emph{Version 2.5 (DATE TBA):}
+  Several structural changes to the hierarchy for better internal consistency
+  and clarity:
+  \begin{itemize}
+    \item \textbf{\sst{Co-Agent} has been merged with \psst{Agent}, and \sst{Co-Theme} with \psst{Theme}.}
+    \item \textbf{\sst{Accompanier} has been split into \psst{Ancillary} and \psst{Ensemble}.}
+    \item \textbf{\sst{InsteadOf} has been merged with \psst{ComparisonRef}} (GitHub issue \ghi{5}).
+    \item \textbf{\sst{OrgRole}, which was under \sst{SocialRel}, has been split into \psst{Org} (under \psst{Gestalt}) and \psst{OrgMember} (under \psst{Characteristic}) in order to reflect the asymmetry of the relation.}
+    \item \textbf{\sst{Quantity} has been renamed \psst{QuantityItem}, and its inverse \psst{QuantityValue} has been added.} \psst{Approximator} has been moved under \psst{QuantityValue}.
+    \item Revised the definition of \psst{Approximator}, and established the use of \rf{ComparisonRef}{Locus} for some uses of relative locative prepositions (see \psst{ComparisonRef}: ``\psst{Locus} construal for relative locative position on scale'') (\ghi{59}, \ghi{16}, \ghi{20}).
+    \item Added \fullref{sec:construal} (\ghi{64}).
+    \item An example labeled \rf{Theme}{Purpose}, \cref{ex:readyFOR},
+    has been relabeled to plain \psst{Theme} for consistency with current guidelines for \psst{Purpose}.
+  \end{itemize}
+  \item \emph{Version 2.4 (January 2, 2020):}
+  \begin{itemize}
+    \item \textbf{Overhauled definition and criteria for \psst{Purpose} versus other infinitivals.}
+    Updated \psst{ComparisonRef}, \fullref{sec:inf}, \fullref{sec:specialinf} accordingly.
+    \item \textbf{New section: \fullref{sec:fixed}}
+    \item Several more \textbf{possessive} clarifications under \psst{Gestalt}, \psst{Possessor}, \fullref{sec:genitives}, \fullref{sec:possidiom} (GitHub issues \ghi{32}, \ghi{33}, \ghi{34}, \ghi{35}, \ghi{37}, \ghi{38})
+    \item Several more verbs that select for prepositions under \psst{Theme} (\ghi{4}, \ghi{15}, \ghi{22}, \ghi{24}, \ghi{28}, \ghi{42}) and \psst{Species} (\ghi{39})
+    \item Added an example of an informational \psst{Locus} (\ghi{14}).
+  \end{itemize}
+  \item \emph{Version 2.3 (August 18, 2019):} %\emph{Since the \textbf{July 2, 2018} version:}
+  \begin{itemize}
+    \item Added \fullref{sec:ppmwp}.
+    \item \textbf{\psst{Possessor}, \psst{Possession}: Substantially revised  to clarify their scope.}
+    \item Added some difficult possessive examples in \psst{Gestalt}, and elsewhere for \rf{Agent}{Gestalt}, \rf{Theme}{Gestalt}, \rf{SocialRel}{Gestalt}, and \rf{Experiencer}{Gestalt} construals
+    \item \textbf{\psst{Possession}, \psst{Theme}: Added discussion of transfer, goods, and services. 
+    Goods and other transferred items are now \psst{Possession}, while services remain as \psst{Theme}.}
+    \item \psst{Cost}: Clarified the explanation of when money should be treated like any other possession.
+    \item \textbf{Reclassified adverbial and predicative entity-descriptions (depictives, shapes, states) from \psst{Manner} to \psst{Characteristic}, and revised their definitions accordingly.}
+    \item \textbf{Specified that \psst{Temporal} should be used directly for aspectual prepositions (previously it was an abstract category: \cref{sec:abstractlabels}).}
+    \item Moved journey-type PPs from \psst{Manner} to \psst{Circumstance}.
+    \item \psst{Means}: Revised the definition and clarified relationship to \psst{Manner}.
+    \item \psst{SocialRel}: Reworded the definition and added a kinship example for \rf{SocialRel}{Characteristic}.
+    \item Clarified that \psst{Experiencer} applies to bodily \emph{sensations} (not physical bodily changes), and added cognition examples.
+    \item Changed the treatment of replacees from \sst{InsteadOf} to \sst{Co-Theme}.
+    \item List PP idioms in the index.
+    \item \psst{Path}: Clarified that motion events can be located as points (\psst{Locus}), and relocated \cref{ex:pathmanner} from \psst{Manner}.
+    \item Rectified inconsistent treatment of a family member in relation to the family (now always \sst{OrgRole}).
+    \item Organizational collective members: now \Rf{OrgRole}{PartPortion}, formerly \Rf{OrgRole}{Characteristic}.
+    \item Added dotted version number to title and adjusted author list.
+  \end{itemize}
+  \item \emph{Version 2.2 (July 2, 2018):} %\emph{Since the \textbf{January 16, 2018} version:}
+  \begin{itemize}
+    \item Policy changes reflected in STREUSLE~4.0: 
+    \begin{itemize}
+      \item Rewrote \fullref{sec:genitives} and updated corresponding examples 
+      to reflect a clarified policy on possessive construals. 
+      Moved wearer from \psst{Gestalt} to \psst{Possessor}
+      and attire from \psst{Characteristic} to \psst{Possession}.
+      \item Added \fullref{sec:passives} and updated corresponding examples.
+    \end{itemize}
+    \item Policy changes that are reflected in STREUSLE~4.1: 
+    \begin{itemize}
+      \item In \cref{sec:as-as}, changed the function of the first \p{as} in the \p{as}-\p{as} construction 
+      to \psst{Extent} (was \psst{Identity}).
+      \item Changed the function of \psst{Originator} possessives to \psst{Gestalt} (was \psst{Possessor}).
+      \item Expanded documentation and removed inconsistencies around containers and collective nouns 
+      (see \psst{Stuff}, \sst{Quantity}, \psst{Characteristic}, \sst{OrgRole}).
+      \item Specified \rf{Manner}{ComparisonRef} for certain adverbial uses of \p{like}.
+      \item Revised the definition of \psst{Recipient} to relax the requirement of animacy.
+      \item Mentioned conditions as a subclass of \psst{Circumstance}.
+      \item Renamed \sst{Part/Portion} to \psst{PartPortion} to avoid technical complications 
+      of the slash.
+    \end{itemize}
+    \item Added \fullref{sec:constraints}.
+    \item Added \fullref{sec:age}.
+    \item A few additional examples and fixes.
+    \item Added an index of construals by function.
+    \item Changes from v1 had neglected to mention the removal of \sst{Affector}, \sst{Undergoer}, \sst{Place}, 
+    \sst{Elements}, and \sst{Superset} (thanks to Ken Litkowski for pointing this out).
+  \end{itemize}
+  \item \emph{Version 2.1 (January 16, 2018):} %\emph{Since the \textbf{April 7, 2017} version:}
+  \begin{itemize}
+    \item Broadened and clarified \sst{DeicticTime}, moved it up a level in the hierarchy, 
+      and renamed it to \psst{Interval}. Clarified the distinction between \psst{Interval} and \psst{Duration}.
+    \item Clarified \psst{Locus}, \psst{Source}, \psst{Goal}, \psst{Path}, and 
+      \psst{Direction}, especially with regard to (i)~intransitive prepositions, 
+      (ii)~distance measurements, and (iii)~inherent parts.
+    \item Significantly expanded the scope of \psst{Manner} to cover states of entities and depictives.
+    \item Clarified \p{like} as \psst{ComparisonRef} with regard to categories and sets, 
+    and \psst{PartPortion} with regard to elements and exceptions.
+    \item Clarified \p{with} in regard to \psst{Topic} and \psst{Stimulus}.
+    \item Added discussion of the ambiguity of temporal \p{over}: \psst{Duration} versus \rf{Time}{Duration}.
+    \item Extensively clarified \psst{Purpose} and \psst{Beneficiary}, 
+    and their relationship to \psst{ComparisonRef}, \psst{Recipient}, \psst{Experiencer}, and \psst{Stimulus}.
+    \item Clarified that goods and services are \psst{Theme}; expanded on \sst{Co-Theme} examples.
+    \item \psst{Frequency} used for an iteration.
+    \item Various selectional verbs and miscellaneous constructions.
+    \item Added examples of \p{'s} possessive/genitive marking.
+    \item Added section for special syntactic constructions (\cref{sec:cxns}).
+    \item Added special labels (\cref{sec:special}).
+    \item Added an index of adpositions and supersenses, and an index of construals.
+    \item Revised the title, abstract, and introductory material.
+  \end{itemize}
+  \item \emph{Version 2.0 (April 7, 2017): See \cref{sec:v1v2}}
+\end{itemize}
+
+\subsection{Major changes from v1}\label{sec:v1v2}
+
+Changes that affect only a single label are explained below the relevant 
+v2 labels.
+
+\begin{itemize}
+  \item \textbf{Removed multiple inheritance.} 
+  The v1 network was quite tangled. The structure is greatly simplified 
+  by analyzing some tokens as \emph{construals} \citep{hwang-17}.
+  \item \textbf{Revised and expanded the \psst{Configuration} subhierarchy.}
+  \item \textbf{Removed the locative concreteness distinction.}
+  In v1, labels \sst{Location}, \sst{InitialLocation}, and \sst{Destination} 
+  were reserved for concrete locations, and the respective supertypes 
+  \psst{Locus}, \psst{Source}, and \psst{Goal} used to cover abstract locations.
+  This distinction was found to be difficult and without apparent
+  relevance to preposition system of English or the other languages considered. 
+  The concrete labels were thus removed.
+  \item \textbf{Removed the location/state/value distinction.}
+  The v1 scheme attempted to make an elaborate distinction between 
+  values, states, and other kinds of abstract locations. 
+  However, the English preposition system does not seem particularly 
+  sensitive to these distinctions. (We are not aware of any prepositions 
+  that mark primarily values or primarily states; rather, productive 
+  metaphors allow locative prepositions to be extended to cover these, 
+  and there are cases where teasing apart abstract location vs.~state vs.~value 
+  is difficult.) Therefore, \sst{State}, \sst{StartState}, \sst{EndState}, 
+  \sst{Value}, and \sst{ValueComparison} were removed. %\footnote{\nss{In v1, 10 tokens of \sst{StartState} and 20 of \sst{EndState}, mostly involving values on a scale, now merged with \psst{Source} and \psst{Goal}, resp.}}
+  \item \textbf{Revised the treatment of comparison and related notions.} 
+  Removed \sst{Comparison/Contrast}, \sst{Scalar/Rank}, \sst{ValueComparison}; 
+  moved \psst{Approximator} under \sst{Quantity}.
+  \item \textbf{Greatly simplified the \psst{Path} subhierarchy.} See \cref{sec:Path}.
+  \item \textbf{Simplified the \psst{Temporal} subhierarchy.} See \cref{sec:Temporal}.
+  \item \textbf{Removed} \sst{Activity} (mostly replaced with \psst{Circumstance} and \psst{Topic}), 
+  \sst{Reciprocation} (mostly merged with \psst{Explanation}), and \sst{Material} (merged with \psst{Source}).
+  \item \textbf{Removed abstract labels} \sst{Affector}, \sst{Undergoer}, and \sst{Place}.
+  \item \textbf{Removed the theme/patient distinction.} \psst{Theme} now includes patients.
+  \item \textbf{Removed the primary/secondary participant distinction.} Whereas v1 had \sst{Co-\{Agent,Patient,Theme\}}, v2.5 allows multiple \psst{Agent} arguments
+  or multiple \psst{Theme} arguments of the same predicate.
+\end{itemize}
+
 
 \bibliographystyle{plainnat}
 \bibliography{psst2.bib}
