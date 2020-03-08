@@ -533,7 +533,7 @@ This document offers a detailed linguistic description of SNACS \citep[Semantic 
 an inventory of 50~semantic labels (``supersenses'')
 that characterize the use of adpositions and case markers 
 at a somewhat coarse level of granularity, 
-as demonstrated in the STREUSLE corpus (\url{https://github.com/nert-gu/streusle/}; version~4.2 tracks guidelines version~2.4).
+as demonstrated in the STREUSLE corpus (\url{https://github.com/nert-gu/streusle/}; version~4.3 tracks guidelines version~2.5).
 Though the SNACS inventory aspires to be universal, this document is specific to English; 
 documentation for other languages will be published separately.
 
@@ -851,13 +851,13 @@ v2 labels.
   Several structural changes to the hierarchy for better internal consistency
   and clarity:
   \begin{itemize}
-    \item Added \fullref{sec:construal} (\ghi{64}).
     \item \textbf{\sst{Co-Agent} has been merged with \psst{Agent}, and \sst{Co-Theme} with \psst{Theme}.}
     \item \textbf{\sst{Accompanier} has been split into \psst{Ancillary} and \psst{Ensemble}.}
     \item \textbf{\sst{InsteadOf} has been merged with \psst{ComparisonRef}} (GitHub issue \ghi{5}).
     \item \textbf{\sst{OrgRole}, which was under \sst{SocialRel}, has been split into \psst{Org} (under \psst{Gestalt}) and \psst{OrgMember} (under \psst{Characteristic}) in order to reflect the asymmetry of the relation.}
     \item \textbf{\sst{Quantity} has been renamed \psst{QuantityItem}, and its inverse \psst{QuantityValue} has been added.} \psst{Approximator} has been moved under \psst{QuantityValue}.
     \item Revised the definition of \psst{Approximator}, and established the use of \rf{ComparisonRef}{Locus} for some uses of relative locative prepositions (see \psst{ComparisonRef}: ``\psst{Locus} construal for relative locative position on scale'') (\ghi{59}, \ghi{16}, \ghi{20}).
+    \item Added \fullref{sec:construal} (\ghi{64}).
     \item An example labeled \rf{Theme}{Purpose}, \cref{ex:readyFOR},
     has been relabeled to plain \psst{Theme} for consistency with current guidelines for \psst{Purpose}.
   \end{itemize}
@@ -2688,9 +2688,9 @@ then the construal \rf{Possession}{Ancillary} is used:
 
 \paragraph{X\textsubscript{\emph{i}} \emph{bring}/\emph{take}/\dots~Y \p{with} PRON\textsubscript{\emph{i}}.}
 This construction involves a \p{with}-PP that is coreferent with the subject
-and analyzed as \rf{Locus}{Ancillary}:\footnote{\w{Bring} and similar verbs (\w{take}, \w{carry}, etc.)\ specify
+and analyzed as \rf{Locus}{Ancillary}:\footnote{\label{fn:bring-with}\w{Bring} and similar verbs (\w{take}, \w{carry}, etc.)\ specify
 motion-with-possession in their most literal sense (e.g., bringing a backpack).
-If applying supersenses also to subjects and objects \citep{shalev-19},
+If applying supersenses also to subjects and objects (\citealp{shalev-19}; see also \cref{fn:orig-subj-obj,fn:recip-subj-obj})
 we would use \psst{Possession}/\psst{Possessor} as the scene roles of the subject/object respectively.
 But if the object is volitional (e.g., bringing a friend),
 the possession is bleached away,
@@ -2826,11 +2826,11 @@ Excludes events where transfer/communication is not framed as unidirectional.}
 A ``source'' in the broadest sense of a starting point/condition. 
 Contrasts with \psst{Recipient} if there is transfer/communication.
 
-English construals:\footnote{If we consider subject position as an \psst{Agent} construal 
-and direct object position as a \psst{Theme} construal, then we can add examples like 
-\pex{\uline{She} talked to her editor} (\rf{Originator}{Agent}) and 
+English construals:\footnote{\label{fn:orig-subj-obj}If we consider subject position as an \psst{Agent} construal
+and direct object position as a \psst{Theme} construal (\citealp{shalev-19}; cf.~\cref{fn:bring-with,fn:recip-subj-obj}), then we can add examples like
+\pex{\uline{She} talked to her editor} (\rf{Originator}{Agent}) and
 \pex{They robbed \uline{her} of her life savings} (\rf{Originator}{Theme}).
-\psst{Originator} does not apply to the subject of events like \pex{exchange} or \pex{talk/chat (with)}, 
+\psst{Originator} does not apply to the subject of events like \pex{exchange} or \pex{talk/chat (with)},
 which involve a back-and-forth between 
 multiple \psst{Agent}s.}
 \begin{exe}
@@ -2891,10 +2891,12 @@ Excludes events where transfer/communication is not framed as unidirectional.}
 A ``goal'' in the broadest sense of an ending point/condition. 
 Contrasts with \psst{Originator}.
 
-English construals:\footnote{If subject position is viewed as an \psst{Agent} construal, 
-then active subject with a transfer verbs like \pex{get} or \pex{receive} is \rf{Recipient}{Agent}.
-If direct object position is viewed as a \psst{Theme} construal, 
-then \pex{She informed \uline{her editor}} are \rf{Recipient}{Theme}.}
+English construals:\footnote{\label{fn:recip-subj-obj}
+\Citet{shalev-19} propose generalizing SNACS supersenses to include subjects and objects (see also \cref{fn:bring-with,fn:orig-subj-obj}).
+If subject position is viewed as an \psst{Agent} construal,
+then an active subject of a transfer verb like \pex{get} or \pex{receive} is \rf{Recipient}{Agent}.
+If direct object position is viewed as a \psst{Theme} construal,
+then \pex{She informed \uline{her editor}} is \rf{Recipient}{Theme}.}
 \begin{exe}
   \ex She \choices{gave the story\\spoke} \p{to} her editor. (\rf{Recipient}{Goal})
   \ex What title did you give \p{to} your essay? [inanimate] (\rf{Recipient}{Goal})
