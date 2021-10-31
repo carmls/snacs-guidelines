@@ -528,7 +528,7 @@
 \begin{abstract}
 \noindent 
 This document offers a detailed linguistic description of SNACS \citep[Semantic Network of Adposition and Case Supersenses;][]{schneider-18}, 
-an inventory of 50~semantic labels (``supersenses'')
+an inventory of 51~semantic labels (``supersenses'')
 that characterize the use of adpositions and case markers 
 at a somewhat coarse level of granularity, 
 as demonstrated in the STREUSLE corpus (\url{https://github.com/nert-gu/streusle/}; version~4.3 tracks guidelines version~2.5).
@@ -604,9 +604,9 @@ and some uses of the infinitive marker \p{to}, as detailed in \cref{sec:cxns}.
 
 \subsection{Inventory}\label{sec:hier}
 
-The v2.5 hierarchy is a tree with 50~supersense labels.
+The v2.6 hierarchy is a tree with 52~supersense labels.
 They are organized into three major subhierarchies: 
-\psst{Circumstance} (18~labels), \psst{Participant} (13~labels),
+\psst{Circumstance} (18~labels), \psst{Participant} (15~labels),
 and \psst{Configuration} (19~labels).
 
 \begin{minipage}{\textwidth}
@@ -656,12 +656,14 @@ and \psst{Configuration} (19~labels).
     inner ysep=.75,
   }
   [{\hierA{Participant}}
-    [{\hierB{Causer}}
+    [{\hierB{Causer}}]
+    [{\hierB{Force}}
       [{\hierC{Agent}}
       ]
     ]
     [{\hierB{Theme}}
       [{\hierC{Topic}}]
+      [{\hierC{Content}}]
     ]
     [{\hierB{Ancillary}}]
     [{\hierB{Stimulus}}]
@@ -703,7 +705,7 @@ and \psst{Configuration} (19~labels).
     ]
     [{\hierB{Ensemble}}]
     [{\hierB{ComparisonRef}}]
-    [{\hierB{RateUnit}}]
+    [{\hierB{SetIteration}}]
     [{\hierB{SocialRel}}]
   ]
 \end{forest}
@@ -1057,7 +1059,7 @@ If the ordinal number is optional, the preposition presumably receives another l
   \end{xlist}
 \end{exe}
 
-Contrast: \psst{RateUnit}
+Contrast: \psst{SetIteration}
 
 \hierCdef{Duration}
 
@@ -2043,28 +2045,57 @@ Not used directly---see subtypes.
 
 \hierBdef{Causer}
 
+\shortdef{External instigator of an event.}
+
+This label is for a role introduced by certain constructions (e.g., causative constructions)
+in which an event that ordinarily has a certain set of core participants (possibly including a \psst{Force} or \psst{Agent}) is framed as caused by another participant via valency-augmentation. 
+
+In English, this is rarely expressed with a preposition, 
+but may be seen in the passive \p{by}-phrase of 
+a Caused Motion Construction:
+\begin{exe}
+    \ex The horse was jumped over the fence \p{by} Claire.\\{} 
+    [active paraphrase: Claire jumped the horse over the fence.]
+\end{exe}
+Note that in the example, the horse is the one actually jumping, and (if annotated) would thus be the \psst{Agent}; whereas Claire is the \psst{Causer} of that semi-volitional jumping event.
+
+\begin{history}
+  The label \psst{Causer} has a new interpretation in v2.6. 
+  See note at \psst{Force}.
+\end{history}
+
+\hierBdef{Force}
+
 \shortdef{Instigator of, and a core participant in, an event.}
 
-\psst{Causer} is applied directly to inanimate things or forces conceptualized as entities, 
+\psst{Force} is a generalization of \psst{Agent} with respect to animacy.
+\psst{Force} is applied directly to \emph{inanimate} things or forces conceptualized as entities, 
 such as in a passive \p{by}-phrase (\cref{sec:passives}):
 %Prototypical prepositions are \p{by} (prominently including passive-\p{by}), \p{of}, and \p{'s}:
 \begin{exe}
   \ex the devastation of$_{\psst{Theme}}$ the town wreaked \p{by} the fire
-  \ex\rf{Causer}{Gestalt}:\begin{xlist} 
+  \ex\rf{Force}{Gestalt}:\begin{xlist} 
     \ex the devastation \p{of} the fire on$_{\psst{Theme}}$ the town
     \ex the fire\p{'s} devastation of$_{\psst{Theme}}$ the town
   \end{xlist}
 \end{exe}
-The \psst{Causer} is sometimes construed as a \psst{Source}:
+The \psst{Force} is sometimes construed as a \psst{Source}:
 \begin{exe}
-  \ex\rf{Causer}{Source}: \begin{xlist}
+  \ex\rf{Force}{Source}: \begin{xlist}
     \ex the devastation \p{from} the fire
     \ex fatalities \p{from} cancer
     \ex FDR suffered \p{from} polio.
   \end{xlist}
 \end{exe}
 
+Contrast: \psst{Causer}
+
 See also: \psst{Instrument}
+
+\begin{history}
+  Until v2.6, this was called \sst{Causer} (following VerbNet). 
+  In v2.6 it was renamed following UMR \citep{umr} so that \psst{Causer} could be used for external causers.
+\end{history}
 
 \hierCdef{Agent}
 
@@ -4292,23 +4323,32 @@ See also \psst{Ancillary} and \psst{Theme}.
   became fraught for some uses of \p{instead\_of} and \p{rather\_than}.
 \end{history}
 
-\hierBdef{RateUnit}
+\hierBdef{SetIteration}
 
-\shortdef{Unit of measure in a rate expression.}
+\shortdef{Set-wise relation such as the unit of measure in a rate expression.}
 
-This is for constructions using \p{per} or \p{by} to specify a unit:
+This applies to rates using \p{per} or \p{by} to specify a unit, or atemporal \p{for} + \w{each}/\w{every} indicating a regular correspondence:
 
 \begin{exe} \ex \begin{xlist}
   \ex The cost is \$10 \p{per} item.
+  \ex \p*{For}{for} every 10 you buy, you get 1 free.
   \ex A fuel efficiency of 40 miles \p{per} gallon (of gas)
   \ex Pizza is sold \p{by} the slice.
   \ex They charge \p{by} the hour.
 \end{xlist}\end{exe}
 
-Paraphrase: The adposition can be paraphrased as ``for each/every''.
+It also applies to expressions that denote a generalization over a set:
+\begin{exe} \ex \begin{xlist}
+  \ex Pets \lex[in\_general]{\p{in}\_general} tend to trigger my allergies.
+  \ex Supposedly, \lex[on\_average]{\p{on}\_average} we consume a gallon of milk every day.
+\end{xlist}\end{exe}
+
+Contrast \psst{Frequency}, which describes \emph{how often} an \emph{event} occurs.
 
 \begin{history}
-  In v1, this fell under \sst{Value}.
+  In v1, this fell under \sst{Value}. 
+  In v2.0, it was called \sst{RateUnit}.
+  In v2.6, it was broadened and renamed from \sst{RateUnit} to \sst{SetIteration}.
 \end{history}
 
 
