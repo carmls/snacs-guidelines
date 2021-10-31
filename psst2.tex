@@ -2366,8 +2366,11 @@ See also: \psst{ComparisonRef}, \psst{Agent}, \psst{Beneficiary}
 
 \hierCdef{Topic}
 
-\shortdef{Information content or subject matter in communication or cognition, 
+\shortdef{Subject matter in communication or cognition, 
 or the matter something pertains to.}
+
+This label describes what something is \emph{about} or \emph{in regard to}.
+Contrast \psst{Content}, which applies to propositions describing or quotations from a message or thought.
 
 A variety of prepositions---including the vast majority of occurrences of \p{about}---can 
 mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene role:
@@ -2378,14 +2381,6 @@ mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene 
   \begin{xexe}
     \ex I \choices{gave a presentation\\spoke} \p{about}/\p{on} politics.
     \ex They wouldn't stop arguing \p{over} the plan.
-    \ex I was accused \p{of} treason.
-    \ex a picture \p{of} Whistler's mother
-    \ex three \choices{copies\\versions} \p{of} the test
-    \ex\rf{Topic}{Identity}---see discussion at \psst{Identity}:
-      \begin{xlist}
-        \ex the topic/issue/question \p{of} semantics
-        \ex the idea \p{of} raising money
-      \end{xlist}
     \ex The \choices{ratings\\reviews} \p{for} this film are atrocious.
     \ex I did not hazard a guess \p{as\_to} the cause.
   \end{xexe}
@@ -2400,12 +2395,12 @@ mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene 
       \ex There is not enough research \p{on} the effects of global warming.
       \ex She was dumbfounded \p{as\_to} why the police had done that.
       \ex Think \p{of} all the possibilities!
-      \ex I have no memory \p{of} the incident.
-      \ex I am aware \p{of} the problem.
-      \ex You can have your choice \p{of} chicken or fish.
-      \ex I disagree \p{with} that statement.
+      \ex I have no memory \p{of} the incident.\nss{content?}
+      \ex I am aware \p{of} the problem.\nss{content?}
+      \ex You can have your choice \p{of} chicken or fish.\nss{content?}
+      \ex I disagree \p{with} that statement.\nss{content?}
       \ex I am familiar \p{with} this topic.
-      \ex Are you interested \p{in} politics?
+      \ex Are you interested \p{in} politics?\nss{going to the party?}
       \ex I'm confident \p{in} your abilities.
     \end{xlist}
   \ex\label{ex:Activity}\begin{xlist}
@@ -2476,11 +2471,38 @@ These are simply \psst{Topic}:
 See also: \psst{Stimulus}
 
 \begin{history}
-  Previously, \lbl{Activity} covered usages such as in \cref{ex:Activity}, 
+  In v1, \lbl{Activity} covered usages such as in \cref{ex:Activity}, 
   but such usages were found to be infrequent and 
   \lbl{Activity} was deemed too narrow.
+  In v2.6, \psst{Content} was split off from \psst{Topic}, 
+  in part to accommodate languages (such as Korean) with adpositional quotative marking.
 \end{history}
 
+\hierBdef{Content}
+
+\shortdef{What is thought or communicated.}
+
+This label is for communicative or mental information content---i.e., a message or contemplated proposition:
+
+\begin{exe}
+    \ex I was accused \p{of} treason.
+    \ex a picture \p{of} Whistler's mother
+    \ex three \choices{copies\\versions} \p{of} the test
+    \ex\rf{Topic}{Identity}---see discussion at \psst{Identity}:
+      \begin{xlist}
+        \ex the topic/issue/question \p{of} semantics
+        \ex the idea \p{of} raising money
+      \end{xlist}
+\end{exe}
+
+Outside of English, \psst{Content} may apply to adpositional or case marking of quoted speech (e.g., quotative markers).
+
+Contrast \psst{Topic}, which is for the \emph{subject matter} of information, rather than the information itself.
+
+\begin{history}
+  In v2.6 this was split off from \psst{Topic}. 
+  For comparison, FrameNet distinguishes \sst{Content} vs.~\sst{Topic} in the \href{https://framenet2.icsi.berkeley.edu/fnReports/data/frame/Mental_activity.xml}{Mental\_activity frame}, and \sst{Message} vs.~\sst{Topic} in the \href{https://framenet2.icsi.berkeley.edu/fnReports/data/frame/Communication.xml}{Communication frame}. The \psst{Content} supersense encompasses FrameNet's \sst{Message} as well as \sst{Content}.
+\end{history}
 
 \hierBdef{Ancillary}
 
