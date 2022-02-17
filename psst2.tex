@@ -489,7 +489,7 @@
 \hyphenation{shriv-eled}
 \hyphenation{Huddle-ston}
 
-\title{Adposition and Case Supersenses v2.6pre:\\ Guidelines for English}
+\title{Adposition and Case Supersenses v2.6pre:\\ Guidelines for English\nss{TODO: affiliations}}
 
 \newcommand{\emldisplay}[2]{\texttt{\href{mailto:#1}{#2}}}
 \newcommand{\eml}[1]{\textsmaller[1.5]{\emldisplay{#1}{#1}}}
@@ -499,13 +499,15 @@
 \author{\hspace{.2cm}\textbf{Nathan Schneider}\hspace{.2cm} \\ 
   \hspace{.2cm}Georgetown University\hspace{.2cm} \\
      \hspace{.2cm}\eml{nathan.schneider@georgetown.edu}\hspace{.2cm} \and
-\textbf{Jena D. Hwang} \quad
-\textbf{Archna Bhatia} \\
- 	IHMC \\
-     {\smaller[1.5] \{\emldisplay{jhwang@ihmc.us}{jhwang},\emldisplay{abhatia@ihmc.us}{abhatia}\}\texttt{@ihmc.us}} \and
+\textbf{Jena D. Hwang} \\
+    Allen Institute for AI \\
+    \eml{jenah@allenai.org} \and
 \textbf{Vivek Srikumar} \\
 	\hspace{1.25cm}University of Utah\hspace{1.25cm} \\
     \eml{svivek@cs.utah.edu} \and
+\textbf{Archna Bhatia} \\
+ 	IHMC \\
+     {\smaller[1.5]\eml{abhatia@ihmc.us}} \and
 \textbf{Na-Rae Han} \\
 	\hspace{.75cm}University of Pittsburgh\hspace{.75cm} \\
     \eml{naraehan@pitt.edu} \and 
@@ -528,7 +530,7 @@
 \begin{abstract}
 \noindent 
 This document offers a detailed linguistic description of SNACS \citep[Semantic Network of Adposition and Case Supersenses;][]{schneider-18}, 
-an inventory of 51~semantic labels (``supersenses'')
+an inventory of 52~semantic labels (``supersenses'')
 that characterize the use of adpositions and case markers 
 at a somewhat coarse level of granularity, 
 as demonstrated in the STREUSLE corpus (\url{https://github.com/nert-gu/streusle/}; version~4.3 tracks guidelines version~2.5).
@@ -2370,7 +2372,7 @@ See also: \psst{ComparisonRef}, \psst{Agent}, \psst{Beneficiary}
 or the matter something pertains to.}
 
 This label describes what something is \emph{about} or \emph{in regard to}.
-Contrast \psst{Content}, which applies to propositions describing or quotations from a message or thought.
+Contrast \psst{Content}, which applies to a message or thought itself.\footnote{For example, \pex{his claim \uline{\p{about} the moon landing}} is \psst{Topic}, whereas \pex{his claim \uline{that the moon landing was faked}} is \psst{Content}. Other variants---\pex{his claim \uline{\p{about} the faking of the moon landing}}, \pex{his claim \uline{\p{about} how the moon landing was faked}}---may permit multiple readings.}
 
 A variety of prepositions---including the vast majority of occurrences of \p{about}---can 
 mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene role:
@@ -2381,6 +2383,14 @@ mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene 
   \begin{xexe}
     \ex I \choices{gave a presentation\\spoke} \p{about}/\p{on} politics.
     \ex They wouldn't stop arguing \p{over} the plan.
+    \ex I was accused \p{of} treason.
+    \ex a picture \p{of} Whistler's mother
+    \ex three \choices{copies\\versions} \p{of} the test
+    \ex\rf{Topic}{Identity}---see discussion at \psst{Identity}:
+      \begin{xlist}
+        \ex the topic/issue/question \p{of} semantics
+        \ex the idea \p{of} raising money
+      \end{xlist}
     \ex The \choices{ratings\\reviews} \p{for} this film are atrocious.
     \ex I did not hazard a guess \p{as\_to} the cause.
   \end{xexe}
@@ -2474,25 +2484,19 @@ See also: \psst{Stimulus}
   In v1, \lbl{Activity} covered usages such as in \cref{ex:Activity}, 
   but such usages were found to be infrequent and 
   \lbl{Activity} was deemed too narrow.
-  In v2.6, \psst{Content} was split off from \psst{Topic}, 
-  in part to accommodate languages (such as Korean) with adpositional quotative marking.
 \end{history}
 
-\hierBdef{Content}
+\hierCdef{Content}
 
-\shortdef{What is thought or communicated.}
+\shortdef{Information that is thought or communicated.}
 
-This label is for communicative or mental information content---i.e., a message or contemplated proposition:
+This label is for communicative or mental information content---i.e., a message or contemplated proposition---expressed more directly than a \psst{Topic}.
+
+In English, this is usually conveyed not with an adposition, but with a \emph{content clause}\index{content clause} possibly marked by a complementizer:
 
 \begin{exe}
-    \ex I was accused \p{of} treason.
-    \ex a picture \p{of} Whistler's mother
-    \ex three \choices{copies\\versions} \p{of} the test
-    \ex\rf{Topic}{Identity}---see discussion at \psst{Identity}:
-      \begin{xlist}
-        \ex the topic/issue/question \p{of} semantics
-        \ex the idea \p{of} raising money
-      \end{xlist}
+  \ex I said/believed/discovered \uline{that it was time to leave}.
+  \ex the news \uline{that Nixon had resigned}
 \end{exe}
 
 Outside of English, \psst{Content} may apply to adpositional or case marking of quoted speech (e.g., quotative markers).
@@ -2500,7 +2504,9 @@ Outside of English, \psst{Content} may apply to adpositional or case marking of 
 Contrast \psst{Topic}, which is for the \emph{subject matter} of information, rather than the information itself.
 
 \begin{history}
-  In v2.6 this was split off from \psst{Topic}. 
+  In v2.6, \psst{Content} was introduced
+  chiefly to accommodate languages (such as Korean) with adpositional quotative marking. 
+  It was decided that \psst{Content} should be separate from \psst{Topic}.
   For comparison, FrameNet distinguishes \sst{Content} vs.~\sst{Topic} in the \href{https://framenet2.icsi.berkeley.edu/fnReports/data/frame/Mental_activity.xml}{Mental\_activity frame}, and \sst{Message} vs.~\sst{Topic} in the \href{https://framenet2.icsi.berkeley.edu/fnReports/data/frame/Communication.xml}{Communication frame}. The \psst{Content} supersense encompasses FrameNet's \sst{Message} as well as \sst{Content}.
 \end{history}
 
@@ -4994,7 +5000,11 @@ contrast
 
 \begin{itemize}
   \item \emph{Version 2.6 (TBD):}
-    \item Fix typos
+  \begin{itemize}
+    \item \textbf{Rename \sst{Causer}$\rightarrow$\psst{Force} and \sst{RateUnit}$\rightarrow$\psst{SetIteration}.}
+    \item \textbf{2 new categories, \psst{Causer} and \psst{Content}, necessary for other languages.}
+    \item Fix typos.
+  \end{itemize}
   \item \emph{Version 2.5 (April 1, 2020):}
   Several structural changes to the hierarchy for better internal consistency
   and clarity:
