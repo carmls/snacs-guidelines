@@ -2076,6 +2076,7 @@ such as in a passive \p{by}-phrase (\cref{sec:passives}):
 %Prototypical prepositions are \p{by} (prominently including passive-\p{by}), \p{of}, and \p{'s}:
 \begin{exe}
   \ex the devastation of$_{\psst{Theme}}$ the town wreaked \p{by} the fire
+  \ex dying \p{of} cancer % https://github.com/carmls/snacs-guidelines/issues/150
   \ex\rf{Force}{Gestalt}:\begin{xlist} 
     \ex the devastation \p{of} the fire on$_{\psst{Theme}}$ the town
     \ex the fire\p{'s} devastation of$_{\psst{Theme}}$ the town
@@ -4199,12 +4200,13 @@ See also \psst{Approximator}.
 
 
 \paragraph{\psst{Source} and \psst{Goal} construals.}
-Resemblance and equivalence may be expressed with \p{to}, 
+Relations of congruence (resemblance, equivalence, proportionality, etc.)\ may be expressed with \p{to}, 
 while difference may be expressed with \p{from}:
 \begin{exe}
   \ex\rf{ComparisonRef}{Goal}:\begin{xlist}
     \ex Shall I compare thee \p{to} a summer's day?
     \ex Her height is \choices{equal\\close} \p{to} mine.
+    \ex The cost should be proportional \p{to} the number of attendees. % https://github.com/carmls/snacs-guidelines/issues/72
   \end{xlist}
   \ex\rf{ComparisonRef}{Source}:\begin{xlist}
     \ex We need to distinguish what is achievable \p{from} what is desirable.
@@ -4365,8 +4367,6 @@ This applies to rates using \p{per} or \p{by} to specify a unit, or atemporal \p
   \ex They charge \p{by} the hour.
 \end{xlist}\end{exe}
 
-\nss{minute by minute; we'll match you dollar for dollar? \url{https://github.com/carmls/snacs-guidelines/issues/62}}
-
 It also applies to expressions that denote a generalization over a set:
 \begin{exe} \ex \begin{xlist}
   \ex Pets \lex[in\_general]{\p{in}\_general} tend to trigger my allergies.
@@ -4374,6 +4374,31 @@ It also applies to expressions that denote a generalization over a set:
 \end{xlist}\end{exe}
 
 Contrast \psst{Frequency}, which describes \emph{how often} an \emph{event} occurs.
+
+\paragraph{NPN Construction.} \psst{SetIteration} applies to the preposition linking two nominals (often the same noun) when the combination carries a meaning of iteration or regular correspondence. This applies whether the nouns are temporal or atemporal:
+
+\begin{exe} \ex\label{ex:npn} \begin{xlist}
+  \ex day \p{to} day tasks
+  \ex day \p{by} day
+  \ex day \p{after} day
+  \ex We interviewed candidate \p{after} disappointing candidate.
+  \ex We'll match your contribution dollar \p{for} dollar.
+  \ex They went house \p{to} house in search of the fugitive.
+\end{xlist}\end{exe}
+
+\Cref{ex:npn} exemplifies what is known as the \emph{NPN Construction}: it is syntactically idiosyncratic, as the preposition and second noun cannot necessarily be omitted (\pex{*We'll match your contribution dollar.})\ \citep{jackendoff-08}.\footnote{Only a few prepositions occur productively in this construction. In the interest of simplicity, we refrain from attempting to assign a separate function (such as \psst{Goal} for \p{to} or \psst{Time} for \p{after}) that may explain why certain prepositions participate in the construction with a certain meaning.}
+
+Not all instances of the construction have an iterative meaning, however: 
+\begin{exe} \ex\label{ex:npn2} \begin{xlist}
+  \ex morning \p{to} night talks (\rf{Duration}{EndTime})
+  \ex wall \p{to} wall carpeting (\rf{Extent}{Goal})
+  \ex We met face \p{to} face. (\rf{Direction}{Goal})
+\end{xlist}\end{exe}
+
+Note that in \cref{ex:npn,ex:npn2}, the scene role technically represents the semantic output of the whole construction. In \cref{ex:npn2}, the function is different from the scene role, focusing on the preposition as a marker of the second nominal.
+
+% https://github.com/carmls/snacs-guidelines/issues/1 "for each/every"
+% https://github.com/carmls/snacs-guidelines/issues/62 "year AFTER year" etc.
 
 \begin{history}
   In v1, this fell under \sst{Value}. 
@@ -5003,7 +5028,7 @@ contrast
 \begin{itemize}
   \item \emph{Version 2.6 (TBD):}
   \begin{itemize}
-    \item \textbf{Rename \sst{Causer}$\rightarrow$\psst{Force} and \sst{RateUnit}$\rightarrow$\psst{SetIteration}.}
+    \item \textbf{Rename \sst{Causer}$\rightarrow$\psst{Force} and \sst{RateUnit}$\rightarrow$\psst{SetIteration}.} The latter is expanded in scope.
     \item \textbf{2 new categories, \psst{Causer} and \psst{Content}, necessary for other languages.}
     \item Fix typos.
   \end{itemize}
