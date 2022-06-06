@@ -489,39 +489,53 @@
 \hyphenation{shriv-eled}
 \hyphenation{Huddle-ston}
 
-\title{Adposition and Case Supersenses v2.6pre:\\ Guidelines for English\nss{TODO: affiliations}}
+\title{Adposition and Case Supersenses v2.6pre:\\ Guidelines for English}
 
 \newcommand{\emldisplay}[2]{\texttt{\href{mailto:#1}{#2}}}
 \newcommand{\eml}[1]{\textsmaller[1.5]{\emldisplay{#1}{#1}}}
 
+\newcommand{\affil}[1]{\textsuperscript{\,\textsf{\textsmaller{#1}}}}
 
-
-\author{\hspace{.2cm}\textbf{Nathan Schneider}\hspace{.2cm} \\ 
-  \hspace{.2cm}Georgetown University\hspace{.2cm} \\
-     \hspace{.2cm}\eml{nathan.schneider@georgetown.edu}\hspace{.2cm} \and
-\textbf{Jena D. Hwang} \\
-    Allen Institute for AI \\
-    \eml{jenah@allenai.org} \and
-\textbf{Vivek Srikumar} \\
-	\hspace{1.25cm}University of Utah\hspace{1.25cm} \\
-    \eml{svivek@cs.utah.edu} \and
-\textbf{Archna Bhatia} \\
- 	IHMC \\
-     {\smaller[1.5]\eml{abhatia@ihmc.us}} \and
-\textbf{Na-Rae Han} \\
-	\hspace{.75cm}University of Pittsburgh\hspace{.75cm} \\
-    \eml{naraehan@pitt.edu} \and 
-\textbf{Tim O'Gorman} \quad \textbf{Sarah R. Moeller} \\
-  University of Colorado Boulder \\
-    {\smaller[1.5] \{\emldisplay{timothy.ogorman@colorado.edu}{timothy.ogorman},\emldisplay{samo9533@colorado.edu}{samo9533}\}\texttt{@colorado.edu}} \and
-\textbf{Omri Abend \quad Adi Shalev} \\
-  Hebrew University of Jerusalem \\
-    {\smaller[1.5] \{\emldisplay{omri.abend@mail.huji.ac.il}{omri.abend},\emldisplay{adi.bitan@mail.huji.ac.il}{adi.bitan}\}\texttt{@mail.huji.ac.il}}
-    \and
-\textbf{Austin Blodgett \quad \textbf{Jakob Prange}} \\
-  Georgetown University \\
-    {\smaller[1.5] \{\emldisplay{ajb341@georgetown.edu}{ajb341},\emldisplay{jp1724@georgetown.edu}{jp1724}\}\texttt{@georgetown.edu}}
+\author{\textbf{Nathan Schneider}\affil{G} \quad \textbf{Jena D.~Hwang}\affil{A} \quad \textbf{Vivek Srikumar}\affil{U,A} \\
+\textbf{Archna Bhatia}\affil{I} \quad \textbf{Na-Rae Han}\affil{P} \quad \textbf{Tim O'Gorman}\affil{C} \quad \textbf{Sarah R.~Moeller}\affil{C} \\
+\textbf{Omri Abend}\affil{H} \quad \textbf{Adi Shalev}\affil{H} \quad \textbf{Austin Blodgett}\affil{G} \quad \textbf{Jakob Prange}\affil{G} \\
+  \affil{G} Georgetown University \quad 
+  \affil{A} Allen Institute for AI \quad
+  \affil{U} University of Utah \\
+  \affil{I} IHMC \quad
+  \affil{P} University of Pittsburgh \quad
+  \affil{C} University of Colorado Boulder \\
+  \affil{H} Hebrew University of Jerusalem \\
+\eml{nathan.schneider@georgetown.edu} \quad \eml{jenah@allenai.org} \quad \eml{svivek@cs.utah.edu}
 }
+
+% \author{\hspace{.2cm}\textbf{Nathan Schneider}\hspace{.2cm} \\ 
+%   \hspace{.2cm}Georgetown University\hspace{.2cm} \\
+%      \hspace{.2cm}\eml{nathan.schneider@georgetown.edu}\hspace{.2cm} 
+%      \and
+% \textbf{Jena D. Hwang} \\
+%     Allen Institute for AI \\
+%     \eml{jenah@allenai.org} \and
+% \textbf{Vivek Srikumar} \\
+% 	\hspace{1.25cm}University of Utah\hspace{1.25cm} \\
+%     \eml{svivek@cs.utah.edu} \and
+% \textbf{Archna Bhatia} \\
+%  	IHMC \\
+%      {\smaller[1.5]\eml{abhatia@ihmc.us}} \and
+% \textbf{Na-Rae Han} \\
+% 	\hspace{.75cm}University of Pittsburgh\hspace{.75cm} \\
+%     \eml{naraehan@pitt.edu} \and 
+% \textbf{Tim O'Gorman} \quad \textbf{Sarah R. Moeller} \\
+%   University of Colorado Boulder \\
+%     {\smaller[1.5] \{\emldisplay{timothy.ogorman@colorado.edu}{timothy.ogorman},\emldisplay{samo9533@colorado.edu}{samo9533}\}\texttt{@colorado.edu}} \and
+% \textbf{Omri Abend \quad Adi Shalev} \\
+%   Hebrew University of Jerusalem \\
+%     {\smaller[1.5] \{\emldisplay{omri.abend@mail.huji.ac.il}{omri.abend},\emldisplay{adi.bitan@mail.huji.ac.il}{adi.bitan}\}\texttt{@mail.huji.ac.il}}
+%     \and
+% \textbf{Austin Blodgett \quad \textbf{Jakob Prange}} \\
+%   Georgetown University \\
+%     {\smaller[1.5] \{\emldisplay{ajb341@georgetown.edu}{ajb341},\emldisplay{jp1724@georgetown.edu}{jp1724}\}\texttt{@georgetown.edu}}
+% }
 
 \date{\nss{\today}}
 
@@ -938,6 +952,7 @@ use of locational metaphors for temporal relations.}
   \ex\label{ex:as-when}\p*{As}{as} meaning `when' (contrast \cref{ex:as-while} under \psst{Circumstance}):\begin{xlist}
     \ex The lights went out \p{as} I opened the door.
     \ex A bee stung me \p{as} I was eating lunch.
+    \ex\label{ex:as-a-child} I played the piano \p{as} a child. (\rf{Time}{Identity}) [also~\cref{ex:as-a-child2}]
   \end{xlist}
   \ex I will finish \p{after} \choices{tomorrow\\lunch\\you (do)}.
   \ex I will finish \p{by} \choices{tomorrow\\lunch}.
@@ -2138,6 +2153,7 @@ even if one (typically realized in a syntactically more prominent position, such
 is perhaps understood as slightly more agentive:
 \begin{exe}
   \ex I fought in a war \p{against} the Germans. (\rf{Agent}{Beneficiary})
+  \ex a match \p{versus} Serena Williams (\rf{Agent}{Beneficiary}) % https://github.com/carmls/snacs-guidelines/issues/78
   \ex\label{ex:talkWith} I \choices{talked\\argued} \p{with} my roommate about cleaning duties. (\rf{Agent}{Ancillary})
 \end{exe}
 
@@ -2373,7 +2389,8 @@ See also: \psst{ComparisonRef}, \psst{Agent}, \psst{Beneficiary}
 or the matter something pertains to.}
 
 This label describes what something is \emph{about} or \emph{in regard to}.
-Contrast \psst{Content}, which applies to a message or thought itself.\footnote{For example, \pex{his claim \uline{\p{about} the moon landing}} is \psst{Topic}, whereas \pex{his claim \uline{that the moon landing was faked}} is \psst{Content}. Other variants---\pex{his claim \uline{\p{about} the faking of the moon landing}}, \pex{his claim \uline{\p{about} how the moon landing was faked}}---may permit multiple readings.}
+Contrast \psst{Content}, which applies to a message or thought itself.\footnote{For example, \pex{his claim \uline{\p{about} the moon landing}} is \psst{Topic}, whereas \pex{his claim \uline{that the moon landing was faked}} is \psst{Content}. %Other variants---\pex{his claim \uline{\p{about} the faking of the moon landing}}, \pex{his claim \uline{\p{about} how the moon landing was faked}}---may permit multiple readings.
+}
 
 A variety of prepositions---including the vast majority of occurrences of \p{about}---can 
 mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene role:
@@ -2382,10 +2399,11 @@ mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene 
   \item \textbf{Communication} scenes: the content or subject matter of 
   speech, writing, art, performance, etc.
   \begin{xexe}
-    \ex I \choices{gave a presentation\\spoke} \p{about}/\p{on} politics.
+    \ex I \choices{gave a presentation\\spoke} \choices{\p{about}/\p{on}} politics.
     \ex They wouldn't stop arguing \p{over} the plan.
     \ex I was accused \p{of} treason.
     \ex a picture \p{of} Whistler's mother
+    \ex two counts \p{of} making false statements % https://github.com/carmls/snacs-guidelines/issues/75
     \ex three \choices{copies\\versions} \p{of} the test
     \ex\rf{Topic}{Identity}---see discussion at \psst{Identity}:
       \begin{xlist}
@@ -2406,16 +2424,16 @@ mark a \psst{Topic}. The following subclasses warrant \psst{Topic} as the scene 
       \ex There is not enough research \p{on} the effects of global warming.
       \ex She was dumbfounded \p{as\_to} why the police had done that.
       \ex Think \p{of} all the possibilities!
-      \ex I have no memory \p{of} the incident.\nss{content?}
-      \ex I am aware \p{of} the problem.\nss{content?}
-      \ex You can have your choice \p{of} chicken or fish.\nss{content?}
-      \ex I disagree \p{with} that statement.\nss{content?}
+      \ex I have no memory \p{of} the incident.
+      \ex I am aware \p{of} the problem.
+      \ex You can have your choice \p{of} chicken or fish.
+      \ex I disagree \p{with} that statement.
       \ex I am familiar \p{with} this topic.
-      \ex Are you interested \p{in} politics?\nss{going to the party?}
+      \ex Are you interested \p{in} \choices{politics?\\going to the party?}
       \ex I'm confident \p{in} your abilities.
     \end{xlist}
   \ex\label{ex:Activity}\begin{xlist}
-    \ex My daughter excels \choices{\p{in}\\\p{at}} sports.
+    \ex My daughter excels \choices{\p{in}/\p{at}} sports.
     \ex\label{ex:cookieExpert} I'm \choices{an expert\\talented\\good} \p{at} baking cookies.
     \ex\label{ex:in-activity-Topic} 
       I wouldn't hesitate \p{in} seeing a doctor.\\{} 
@@ -2480,6 +2498,8 @@ These are simply \psst{Topic}:
 \end{xexe}
 
 See also: \psst{Stimulus}
+
+Counterpart: \psst{Experiencer}
 
 \begin{history}
   In v1, \lbl{Activity} covered usages such as in \cref{ex:Activity}, 
@@ -2602,8 +2622,10 @@ then the construal \rf{Possession}{Ancillary} is used:
 \end{exe}
 
 \paragraph{X\textsubscript{\emph{i}} \emph{bring}/\emph{take}/\dots~Y \p{with} PRON\textsubscript{\emph{i}}.}
-This construction involves a \p{with}-PP that is coreferent with the subject
-and analyzed as \rf{Locus}{Ancillary}:\footnote{\label{fn:bring-with}\w{Bring} and similar verbs (\w{take}, \w{carry}, etc.)\ specify
+This construction involves a \p{with}-PP that is coreferent with the subject.
+The most basic meanings of these argument structures 
+bundle motion, possession, location, and accompaniment. 
+In such cases, the \p{with} is analyzed as \rf{Locus}{Ancillary}:\footnote{\label{fn:bring-with}\w{Bring} and similar verbs (\w{take}, \w{carry}, etc.)\ specify
 motion-with-possession in their most literal sense (e.g., bringing a backpack).
 If applying supersenses also to subjects and objects (\citealp{shalev-19}; see also \cref{fn:orig-subj-obj,fn:recip-subj-obj})
 we would use \psst{Possession}/\psst{Possessor} as the scene roles of the subject/object respectively.
@@ -2617,6 +2639,11 @@ so it receives \rf{Locus}{Ancillary}.}
   [emphasizes that the backpack\slash friend is located with the speaker]
   \ex I brought my backpack/friend.
 \end{xexe}
+
+When the verb in this construction bears an extended meaning of stative or abstract accompaniment, \p{with} may be more appropriately analyzed as \rf{Ensemble}{Ancillary}:
+\begin{exe}
+    \ex\label{ex:bring-with-stative} The new year brings \p{with} it many challenges. (\rf{Ensemble}{Ancillary}) % https://github.com/carmls/snacs-guidelines/issues/76
+\end{exe}
 
 \paragraph{\p*{Together}{together}.}
 The word \p{together}, when not followed by \p{with},
@@ -2648,8 +2675,8 @@ See also: \psst{Instrument}, \psst{Manner}
 \psst{Stimulus} does not seem to have any prototypical adposition 
 in the languages we have looked at. In English, it can be construed in several ways:
 \begin{exe}
-  \ex My affection \p{for} you (\rf{Stimulus}{Beneficiary})
-  \ex Scared \p{by} the bear (\rf{Stimulus}{Causer})
+  \ex my affection \p{for} you (\rf{Stimulus}{Beneficiary})
+  \ex scared \p{by} the bear (\rf{Stimulus}{Causer})
   %\ex We were listening \p{to} the music. (\rf{Stimulus}{Goal})
   \ex You should \choices{listen\\pay attention} \p{to} the music. (\rf{Stimulus}{Goal})
   \ex \rf{Stimulus}{Direction}:
@@ -2687,24 +2714,24 @@ Counterpart: \psst{Experiencer}
 in the languages we have looked at. In English, it can be construed in several ways:
 \begin{exe}
   \ex\begin{xlist}
-    \ex The anger \p{of} the students (\rf{Experiencer}{Gestalt})
-    \ex The student\p{s'} anger (\rf{Experiencer}{Gestalt})
+    \ex the anger \p{of} the students (\rf{Experiencer}{Gestalt})
+    \ex the student\p{s'} anger over$_{\psst{Topic}}$ the decision (\rf{Experiencer}{Gestalt})
   \end{xlist}
   \ex\begin{xlist} 
-    \ex Running is enjoyable \p{for} me (\rf{Experiencer}{Beneficiary})
-    \ex The pizza was (too) salty \p{for} me (\rf{Experiencer}{Beneficiary})
+    \ex Running is enjoyable \p{for} me. (\rf{Experiencer}{Beneficiary})
+    \ex The pizza was (too) salty \p{for} me. (\rf{Experiencer}{Beneficiary})
   \end{xlist}
   \ex\begin{xlist}
-    \ex It feels hot \p{to} me (\rf{Experiencer}{Goal})
-    \ex That was astounding \p{to} me (\rf{Experiencer}{Goal})
-    \ex This is \p{my} favorite movie (\rf{Experiencer}{Gestalt})
+    \ex It feels hot \p{to} me. (\rf{Experiencer}{Goal})
+    \ex That was astounding \p{to} me. (\rf{Experiencer}{Goal})
+    \ex This is \p{my} favorite movie. (\rf{Experiencer}{Gestalt})
   \end{xlist}
   \ex\begin{xlist}
     %\ex The decision was made \p{by} me (\rf{Experiencer}{Agent}) \nss{cognitive events, or just mental STATES?}
-    \ex The answer is known \p{by} me (\rf{Experiencer}{Agent})
-    \ex The answer is known \p{to} me (\rf{Experiencer}{Goal})
-    \ex That is \p{my} opinion (\rf{Experiencer}{Gestalt})
-    \ex That was \p{my} experience (\rf{Experiencer}{Gestalt})
+    \ex The answer is known \p{by} me. (\rf{Experiencer}{Agent})
+    \ex The answer is known \p{to} me. (\rf{Experiencer}{Goal})
+    \ex That is \p{my} opinion. (\rf{Experiencer}{Gestalt})
+    \ex That was \p{my} experience. (\rf{Experiencer}{Gestalt})
   \end{xlist}
 \end{exe}
 
@@ -2730,7 +2757,7 @@ As the present scheme targets semantic relations, it is not equipped to formaliz
 Elsewhere, the term \emph{cognizer} is sometimes used for one whose 
 mental state is described.
 
-Counterpart: \psst{Stimulus}
+Counterpart: \psst{Stimulus} or \psst{Topic}
 
 \hierBdef{Originator}
 
@@ -3054,17 +3081,19 @@ or something belonging to the category denoted by the governor.}
 Prototypical prepositions are \p{of} (where the governor is the category) 
 and \p{as} (where the object is the category):
 \begin{exe}
-  \ex\label{ex:stateof} the state \p{of} Washington [as opposed to the city]
+  \ex\label{ex:stateof} the state \p{of} Washington [as opposed to the city\footnote{\Citet[p.~448]{cgel} use the term \emph{appositive oblique} when \p{of} marks a proper name in relation to a category such as \w{month}, \w{city}, or \w{state}.}]
   \ex The liberal state \p{of} Washington has not been receptive to Trump's message.
   \ex \p*{As}{as} a liberal state, Washington has not been receptive to Trump's message.
   \ex\label{ex:ascolleague} I like Bob \p{as} a colleague. [but not as a friend]
+  \ex\label{ex:as-a-child2} I played the piano \p{as} a child. (\rf{Time}{Identity}) [also~\cref{ex:as-a-child}]
   \ex What a gem \p{of} a restaurant! [exclamative idiom: both NPs are indefinite]
-  \ex the problem/task/hassle \p{of} raising money
+  \ex the \choices{problem/task/hassle} \p{of} raising money
   \ex the age \p{of} eight
+  \ex a \choices{height/distance} \p{of} 10m %  https://github.com/carmls/snacs-guidelines/issues/140
   \ex They did a great job \p{of} cleaning my windows.
   \ex\label{ex:shell} \rf{Topic}{Identity}, with a governing noun in the domain of communication or cognition:
     \begin{xlist}
-      \ex the topic/issue/question \p{of} semantics
+      \ex the \choices{topic/issue/question} \p{of} semantics
       \ex the idea \p{of} raising money
     \end{xlist}
 \end{exe}
@@ -3760,8 +3789,11 @@ the attribute of the \psst{Theme} that is being examined:
   \begin{exe}
     \ex John came \p{out\_of} a coma. (\psst{Source})
     \ex John slipped \p{into} a coma. (\psst{Goal})
-    \ex The drugs put John \p{in} a coma. (\rf{Goal}{Locus})
-    \ex They chopped the wood \p{in} pieces. (\rf{Goal}{Locus})
+    \ex \rf{Goal}{Locus}: \begin{xlist} 
+        \ex The drugs put John \p{in} a coma.
+        \ex They chopped the wood \p{in} pieces.
+        \ex The devices may become \p{out\_of} sync.
+    \end{xlist}
   \end{exe}
 \end{itemize}
 
@@ -3886,7 +3918,8 @@ Some can be paraphrased with INCLUDES, but this is not determinative.
 \psst{PartPortion} is used for adpositions marking a member or non-member of a set:
 \begin{exe}
   \ex\label{ex:suchAs}	strategies \p{such\_as} divide-and-conquer
-  \ex Everyone \p{except}/\p{but} Bob plays trombone.
+  \ex Everyone \choices{\p{except}/\p{but}} Bob plays trombone.
+  \ex\label{ex:no-openings-except} There are no openings \p{except} on Friday.\footnote{\Citet[pp.~641--643]{cgel} discuss how \p{except} and other prepositions of inclusion/exclusion may occur with \emph{matrix-licensed complements}. \Cref{ex:no-openings-except} is an example: it implies that there are no openings in general, but there are openings on Friday---that is, \pex{on Friday} is a time adjunct licensed by the clause rather than \p{except} itself.}
 \end{exe}
 Set-membership can be construed as comparison:
 \begin{exe}
@@ -4099,12 +4132,13 @@ but may also be construed via \psst{Ancillary} adpositions:
   \ex\rf{Ensemble}{Ancillary}:\begin{xlist}
     \ex rice \choices{\p{with}\\\p{without}} beans (= served or mixed together)
     \ex A smile \p{with} a nod was his answer.
+    \ex Do these shoes go \p{with} this outfit? [cf.~\cref{ex:bring-with-stative} at \psst{Ancillary}] % https://github.com/carmls/snacs-guidelines/issues/74
   \end{xlist}
 \end{exe}
 
 \paragraph{Versus \psst{Ancillary}.}
 \psst{Ensemble} is used for a relation directly between entities,
-whereas \psst{Ancillary} descibes a relation of an entity to an event/situation.
+whereas \psst{Ancillary} describes a relation of an entity to an event/situation.
 
 \begin{history}
     Prior to v2.5, a single label, \sst{Accompanier} (under \psst{Configuration}),
@@ -4281,7 +4315,7 @@ For example:
     \ex \emph{Analogy reading:} This looks similar to a Van Gogh painting. (\rf{Manner}{ComparisonRef})
     \ex \emph{Conclusion reading:} This looks to be a Van Gogh painting (it probably is one). (\rf{Theme}{ComparisonRef})
   \end{xlist}
-  \ex It sounded \p{like}/\p{as\_if}
+  \ex It sounded \choices{\p{like}/\p{as\_if}}
   \begin{xlist}
     \ex \dots he had drunk a gallon of helium. (\rf{Manner}{ComparisonRef}: analogy reading more likely)
     \ex \dots they weren't taking me seriously. (\rf{Theme}{ComparisonRef}: conclusion reading more likely)
@@ -4637,8 +4671,15 @@ Otherwise, a person in relation to an associated place is \psst{Gestalt}.
   \ex \p{my} \choices{hometown\\birthplace} (\psst{Gestalt})
 \end{exe}
 
-\paragraph{Idioms.}
-Certain idioms require an s-genitive argument that does not participate in 
+\paragraph{Lexicalized expressions and idioms.}
+If the genitive is lexicalized as part of a name or term, it is not separately annotated:
+\begin{exe} \ex \begin{xlist}
+  \ex a \w{master\_'s} degree (non-SNACS)
+  \ex a \w{New\_Year\_'s} resolution; a resolution for \w{New\_Year\_'s} (non-SNACS)
+  \end{xlist}
+\end{exe}
+
+Certain idioms require an s-genitive \textbf{argument} that does not participate in 
 any transparent semantic relationship; for these, \backposs is used (\cref{sec:possidiom}).
 
 %\subsubsection{Construct State Genitive in Hebrew}
@@ -4953,6 +4994,7 @@ the two elements in the relation are semantically on an equal footing,
 rather than in a figure/ground relationship: 
 \begin{exe}
   \ex They serve coffee \p{as\_well\_as} tea. [`They serve coffee and also tea']
+  \ex Make sure to separate the dark \p{versus} light clothes. % https://github.com/carmls/snacs-guidelines/issues/78
 \end{exe}
 
 \subsection{OTHER INFINITIVE (\backi)}\label{sec:specialinf}
@@ -5020,6 +5062,10 @@ contrast
   \ex I don't want to drive there because it is out\_of\_~~\p{my}~~\_way. (\backposs)
 \end{exe}
 
+Note that in the above examples, the possessive referent is variable, 
+as reflected in the form of the pronoun.
+For fully lexicalized phrases with genitive marking, see \cref{sec:genitives}.
+
 
 \section{Changelog}
 
@@ -5030,7 +5076,7 @@ contrast
   \begin{itemize}
     \item \textbf{Rename \sst{Causer}$\rightarrow$\psst{Force} and \sst{RateUnit}$\rightarrow$\psst{SetIteration}.} The latter is expanded in scope.
     \item \textbf{2 new categories, \psst{Causer} and \psst{Content}, necessary for other languages.}
-    \item Fix typos.
+    \item Miscellaneous new examples and clarifications (\href{https://github.com/carmls/snacs-guidelines/milestone/4?closed=1}{Milestone 2.6}).
   \end{itemize}
   \item \emph{Version 2.5 (April 1, 2020):}
   Several structural changes to the hierarchy for better internal consistency
