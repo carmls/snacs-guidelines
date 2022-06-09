@@ -2033,6 +2033,7 @@ when it marks a ritualized activity such as a meal or holiday/commemoration for 
 \end{exe}
 However, if the activity marked by \p{for} is interpreted as \textbf{containing} the main event, 
 then we use \psst{Circumstance}: 
+\needspace{1em}
 \begin{exe}
   \ex \psst{Circumstance}: 
     \begin{xlist}
@@ -2078,6 +2079,7 @@ Note that in the example, the horse is the one actually jumping, and (if annotat
 
 \begin{history}
   The label \psst{Causer} has a new interpretation in v2.6. 
+  The new category is motivated by causative constructions in languages like Hindi, where the case marking of the external causer needs to be accounted for.
   See note at \psst{Force}.
 \end{history}
 
@@ -2642,7 +2644,7 @@ so it receives \rf{Locus}{Ancillary}.}
 
 When the verb in this construction bears an extended meaning of stative or abstract accompaniment, \p{with} may be more appropriately analyzed as \rf{Ensemble}{Ancillary}:
 \begin{exe}
-    \ex\label{ex:bring-with-stative} The new year brings \p{with} it many challenges. (\rf{Ensemble}{Ancillary}) % https://github.com/carmls/snacs-guidelines/issues/76
+    \ex\label{ex:bring-with-stative} The new year brings \p{with} it many challenges. (\rf{Ensemble}{Ancillary}) [cf.~\cref{ex:go-with-stative} at \psst{Ensemble}] % https://github.com/carmls/snacs-guidelines/issues/76
 \end{exe}
 
 \paragraph{\p*{Together}{together}.}
@@ -3919,7 +3921,7 @@ Some can be paraphrased with INCLUDES, but this is not determinative.
 \begin{exe}
   \ex\label{ex:suchAs}	strategies \p{such\_as} divide-and-conquer
   \ex Everyone \choices{\p{except}/\p{but}} Bob plays trombone.
-  \ex\label{ex:no-openings-except} There are no openings \p{except} on Friday.\footnote{\Citet[pp.~641--643]{cgel} discuss how \p{except} and other prepositions of inclusion/exclusion may occur with \emph{matrix-licensed complements}. \Cref{ex:no-openings-except} is an example: it implies that there are no openings in general, but there are openings on Friday---that is, \pex{on Friday} is a time adjunct licensed by the clause rather than \p{except} itself.}
+  \ex\label{ex:no-openings-except} There are no openings \p{except} on$_{\psst{Time}}$ Friday.\footnote{\Citet[pp.~641--643]{cgel} discuss how \p{except} and other prepositions of inclusion/exclusion may occur with \emph{matrix-licensed complements}. \Cref{ex:no-openings-except} is an example: it implies that there are no openings in general, but there are openings on Friday---that is, \pex{on Friday} is a time adjunct licensed by the clause rather than \p{except} itself.}
 \end{exe}
 Set-membership can be construed as comparison:
 \begin{exe}
@@ -4132,7 +4134,7 @@ but may also be construed via \psst{Ancillary} adpositions:
   \ex\rf{Ensemble}{Ancillary}:\begin{xlist}
     \ex rice \choices{\p{with}\\\p{without}} beans (= served or mixed together)
     \ex A smile \p{with} a nod was his answer.
-    \ex Do these shoes go \p{with} this outfit? [cf.~\cref{ex:bring-with-stative} at \psst{Ancillary}] % https://github.com/carmls/snacs-guidelines/issues/74
+    \ex\label{ex:go-with-stative} Do these shoes go \p{with} this outfit? [cf.~\cref{ex:bring-with-stative} at \psst{Ancillary}] % https://github.com/carmls/snacs-guidelines/issues/74
   \end{xlist}
 \end{exe}
 
@@ -4426,7 +4428,7 @@ Not all instances of the construction have an iterative meaning, however:
 \begin{exe} \ex\label{ex:npn2} \begin{xlist}
   \ex morning \p{to} night talks (\rf{Duration}{EndTime})
   \ex wall \p{to} wall carpeting (\rf{Extent}{Goal})
-  \ex We met face \p{to} face. (\rf{Direction}{Goal})
+%  \ex We met face \p{to} face. (\rf{Direction}{Goal})  % unclear whether this is the right analysis (and also, could be an MWE)
 \end{xlist}\end{exe}
 
 Note that in \cref{ex:npn,ex:npn2}, the scene role technically represents the semantic output of the whole construction. In \cref{ex:npn2}, the function is different from the scene role, focusing on the preposition as a marker of the second nominal.
